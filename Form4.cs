@@ -10,8 +10,6 @@ namespace projetofinal
 {
     public partial class Form4 : Form
     {
-        FormAjuda Fajuda = new FormAjuda();
-
         public Form4()
         {
             InitializeComponent();

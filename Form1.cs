@@ -95,7 +95,42 @@ namespace projetofinal
                 alunos[a] = new Aluno(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, int.Parse(tbidade.Text), cbaula.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), a + 1);
                 a++;
                 F2.insereDados(int.Parse(tbmatricula.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), cbaula.Text);
-                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = "INSERT INTO Alunos VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @peso, @altura, @aula)";
+                try
+                {
+                    conexao.Open();
+                    for (int i = 0; i < F2.dgpessoas.Rows.Count - 1; i++)
+                    {
+                        SqlCommand comando = new SqlCommand(sql, conexao);
+                        comando.Parameters.AddWithValue("@matricula", F2.dgpessoas.Rows[i].Cells[0].Value);
+                        comando.Parameters.AddWithValue("@nome", F2.dgpessoas.Rows[i].Cells[1].Value);
+                        comando.Parameters.AddWithValue("@cpf", F2.dgpessoas.Rows[i].Cells[2].Value);
+                        comando.Parameters.AddWithValue("@idade", F2.dgpessoas.Rows[i].Cells[3].Value.ToString());
+                        comando.Parameters.AddWithValue("@endereco", F2.dgpessoas.Rows[i].Cells[4].Value);
+                        comando.Parameters.AddWithValue("@celular", F2.dgpessoas.Rows[i].Cells[5].Value);
+                        comando.Parameters.AddWithValue("@email", F2.dgpessoas.Rows[i].Cells[6].Value);
+                        comando.Parameters.AddWithValue("@peso", F2.dgpessoas.Rows[i].Cells[7].Value.ToString());
+                        comando.Parameters.AddWithValue("@altura", F2.dgpessoas.Rows[i].Cells[8].Value.ToString());
+                        comando.Parameters.AddWithValue("@aula", F2.dgpessoas.Rows[i].Cells[9].Value);
+
+                        comando.CommandText = sql;
+                        comando.ExecuteNonQuery();
+                        MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    conexao.Close();
+                }
+                F2.dgpessoas.Rows.Clear();
+
                 tbnome.Clear();
                 mtbcpf.Clear();
                 tbidade.Clear();
@@ -108,6 +143,7 @@ namespace projetofinal
                 tabControl1.SelectedTab = tabPage1;
                 tbmatricula.Text = (a + 1).ToString();
             }
+            
         }
 
         private void btlimpar_Click(object sender, EventArgs e)

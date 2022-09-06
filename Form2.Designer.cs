@@ -31,9 +31,6 @@ namespace projetofinal
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dgpessoas = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbalunoscadastrados = new System.Windows.Forms.Label();
             this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,6 +41,9 @@ namespace projetofinal
             this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbalunoscadastrados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgpessoas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -69,37 +69,6 @@ namespace projetofinal
             this.dgpessoas.RowTemplate.Height = 25;
             this.dgpessoas.Size = new System.Drawing.Size(1122, 351);
             this.dgpessoas.TabIndex = 2;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1188, 31);
-            this.menuStrip1.TabIndex = 3;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
-            this.sairToolStripMenuItem.Text = "Retornar";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
-            // 
-            // lbalunoscadastrados
-            // 
-            this.lbalunoscadastrados.AutoSize = true;
-            this.lbalunoscadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbalunoscadastrados.Location = new System.Drawing.Point(442, 52);
-            this.lbalunoscadastrados.Name = "lbalunoscadastrados";
-            this.lbalunoscadastrados.Size = new System.Drawing.Size(273, 31);
-            this.lbalunoscadastrados.TabIndex = 16;
-            this.lbalunoscadastrados.Text = "ALUNOS CADASTRADOS";
             // 
             // matricula
             // 
@@ -173,6 +142,37 @@ namespace projetofinal
             this.aula.Name = "aula";
             this.aula.Width = 120;
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1188, 31);
+            this.menuStrip1.TabIndex = 3;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.sairToolStripMenuItem.Text = "Retornar";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // lbalunoscadastrados
+            // 
+            this.lbalunoscadastrados.AutoSize = true;
+            this.lbalunoscadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbalunoscadastrados.Location = new System.Drawing.Point(442, 52);
+            this.lbalunoscadastrados.Name = "lbalunoscadastrados";
+            this.lbalunoscadastrados.Size = new System.Drawing.Size(273, 31);
+            this.lbalunoscadastrados.TabIndex = 16;
+            this.lbalunoscadastrados.Text = "ALUNOS CADASTRADOS";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -199,8 +199,6 @@ namespace projetofinal
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgpessoas;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label lbalunoscadastrados;
@@ -214,5 +212,6 @@ namespace projetofinal
         private System.Windows.Forms.DataGridViewTextBoxColumn peso;
         private System.Windows.Forms.DataGridViewTextBoxColumn altura;
         private System.Windows.Forms.DataGridViewTextBoxColumn aula;
+        public System.Windows.Forms.DataGridView dgpessoas;
     }
 }

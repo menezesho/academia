@@ -11,8 +11,6 @@ namespace projetofinal
 {
     public partial class Form2 : Form
     {
-        FormAjuda Fajuda = new FormAjuda();
-
         public Form2()
         {
             InitializeComponent();
@@ -20,40 +18,7 @@ namespace projetofinal
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-            SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = "INSERT INTO Alunos VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @peso, @altura, @aula)";
-            try
-            {
-                conexao.Open();
-                for (int i = 0; i < dgpessoas.Rows.Count - 1; i++)
-                {
-                    SqlCommand comando = new SqlCommand(sql, conexao);
-                    comando.Parameters.AddWithValue("@matricula", dgpessoas.Rows[i].Cells[0].Value);
-                    comando.Parameters.AddWithValue("@nome", dgpessoas.Rows[i].Cells[1].Value);
-                    comando.Parameters.AddWithValue("@cpf", dgpessoas.Rows[i].Cells[2].Value);
-                    comando.Parameters.AddWithValue("@idade", dgpessoas.Rows[i].Cells[3].Value.ToString());
-                    comando.Parameters.AddWithValue("@endereco", dgpessoas.Rows[i].Cells[4].Value);
-                    comando.Parameters.AddWithValue("@celular", dgpessoas.Rows[i].Cells[5].Value);
-                    comando.Parameters.AddWithValue("@email", dgpessoas.Rows[i].Cells[6].Value);
-                    comando.Parameters.AddWithValue("@peso", dgpessoas.Rows[i].Cells[7].Value.ToString());
-                    comando.Parameters.AddWithValue("@altura", dgpessoas.Rows[i].Cells[8].Value.ToString());
-                    comando.Parameters.AddWithValue("@aula", dgpessoas.Rows[i].Cells[9].Value);
-
-                    comando.CommandText = sql;
-                    comando.ExecuteNonQuery();
-                    MessageBox.Show("Dados upados com sucesso!", "Banco de dados", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                conexao.Close();
-            }
-            dgpessoas.Rows.Clear();
+            
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
