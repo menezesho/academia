@@ -31,6 +31,9 @@ namespace projetofinal
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.dgpessoas = new System.Windows.Forms.DataGridView();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lbalunoscadastrados = new System.Windows.Forms.Label();
             this.matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -41,10 +44,6 @@ namespace projetofinal
             this.peso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.altura = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aula = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lbalunoscadastrados = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgpessoas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -70,89 +69,6 @@ namespace projetofinal
             this.dgpessoas.RowTemplate.Height = 25;
             this.dgpessoas.Size = new System.Drawing.Size(1122, 351);
             this.dgpessoas.TabIndex = 2;
-            this.dgpessoas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgpessoas_CellContentClick);
-            // 
-            // matricula
-            // 
-            this.matricula.HeaderText = "Matrícula";
-            this.matricula.MinimumWidth = 6;
-            this.matricula.Name = "matricula";
-            this.matricula.ReadOnly = true;
-            this.matricula.Width = 80;
-            // 
-            // nome
-            // 
-            this.nome.FillWeight = 200F;
-            this.nome.HeaderText = "Nome";
-            this.nome.MinimumWidth = 6;
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            this.nome.Width = 125;
-            // 
-            // cpf
-            // 
-            this.cpf.HeaderText = "CPF";
-            this.cpf.MinimumWidth = 6;
-            this.cpf.Name = "cpf";
-            this.cpf.ReadOnly = true;
-            this.cpf.Width = 125;
-            // 
-            // idade
-            // 
-            this.idade.FillWeight = 50F;
-            this.idade.HeaderText = "Idade";
-            this.idade.MinimumWidth = 6;
-            this.idade.Name = "idade";
-            this.idade.ReadOnly = true;
-            this.idade.Width = 60;
-            // 
-            // endereco
-            // 
-            this.endereco.HeaderText = "Endereço";
-            this.endereco.MinimumWidth = 6;
-            this.endereco.Name = "endereco";
-            this.endereco.ReadOnly = true;
-            this.endereco.Width = 150;
-            // 
-            // celular
-            // 
-            this.celular.HeaderText = "Celular";
-            this.celular.MinimumWidth = 6;
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            this.celular.Width = 125;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "E-mail";
-            this.email.MinimumWidth = 6;
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            this.email.Width = 170;
-            // 
-            // peso
-            // 
-            this.peso.HeaderText = "Peso";
-            this.peso.MinimumWidth = 6;
-            this.peso.Name = "peso";
-            this.peso.ReadOnly = true;
-            this.peso.Width = 50;
-            // 
-            // altura
-            // 
-            this.altura.HeaderText = "Altura";
-            this.altura.MinimumWidth = 6;
-            this.altura.Name = "altura";
-            this.altura.ReadOnly = true;
-            this.altura.Width = 70;
-            // 
-            // aula
-            // 
-            this.aula.HeaderText = "Aula";
-            this.aula.MinimumWidth = 6;
-            this.aula.Name = "aula";
-            this.aula.ReadOnly = true;
-            this.aula.Width = 120;
             // 
             // menuStrip1
             // 
@@ -160,8 +76,7 @@ namespace projetofinal
             this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem,
-            this.ajudaToolStripMenuItem});
+            this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
@@ -176,13 +91,6 @@ namespace projetofinal
             this.sairToolStripMenuItem.Text = "Retornar";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(64, 25);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
-            // 
             // lbalunoscadastrados
             // 
             this.lbalunoscadastrados.AutoSize = true;
@@ -192,7 +100,78 @@ namespace projetofinal
             this.lbalunoscadastrados.Size = new System.Drawing.Size(273, 31);
             this.lbalunoscadastrados.TabIndex = 16;
             this.lbalunoscadastrados.Text = "ALUNOS CADASTRADOS";
-            this.lbalunoscadastrados.Click += new System.EventHandler(this.lbalunoscadastrados_Click);
+            // 
+            // matricula
+            // 
+            this.matricula.HeaderText = "Matrícula";
+            this.matricula.MinimumWidth = 6;
+            this.matricula.Name = "matricula";
+            this.matricula.Width = 80;
+            // 
+            // nome
+            // 
+            this.nome.FillWeight = 200F;
+            this.nome.HeaderText = "Nome";
+            this.nome.MinimumWidth = 6;
+            this.nome.Name = "nome";
+            this.nome.Width = 125;
+            // 
+            // cpf
+            // 
+            this.cpf.HeaderText = "CPF";
+            this.cpf.MinimumWidth = 6;
+            this.cpf.Name = "cpf";
+            this.cpf.Width = 125;
+            // 
+            // idade
+            // 
+            this.idade.FillWeight = 50F;
+            this.idade.HeaderText = "Idade";
+            this.idade.MinimumWidth = 6;
+            this.idade.Name = "idade";
+            this.idade.Width = 60;
+            // 
+            // endereco
+            // 
+            this.endereco.HeaderText = "Endereço";
+            this.endereco.MinimumWidth = 6;
+            this.endereco.Name = "endereco";
+            this.endereco.Width = 150;
+            // 
+            // celular
+            // 
+            this.celular.HeaderText = "Celular";
+            this.celular.MinimumWidth = 6;
+            this.celular.Name = "celular";
+            this.celular.Width = 125;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "E-mail";
+            this.email.MinimumWidth = 6;
+            this.email.Name = "email";
+            this.email.Width = 170;
+            // 
+            // peso
+            // 
+            this.peso.HeaderText = "Peso";
+            this.peso.MinimumWidth = 6;
+            this.peso.Name = "peso";
+            this.peso.Width = 50;
+            // 
+            // altura
+            // 
+            this.altura.HeaderText = "Altura";
+            this.altura.MinimumWidth = 6;
+            this.altura.Name = "altura";
+            this.altura.Width = 70;
+            // 
+            // aula
+            // 
+            this.aula.HeaderText = "Aula";
+            this.aula.MinimumWidth = 6;
+            this.aula.Name = "aula";
+            this.aula.Width = 120;
             // 
             // Form2
             // 
@@ -224,7 +203,6 @@ namespace projetofinal
         private System.Windows.Forms.DataGridView dgpessoas;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.Label lbalunoscadastrados;
         private System.Windows.Forms.DataGridViewTextBoxColumn matricula;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;

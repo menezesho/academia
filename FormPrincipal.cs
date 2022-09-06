@@ -21,80 +21,42 @@ namespace projetofinal
             InitializeComponent();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void visualizarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void sairToolStripMenuItem_Click_2(object sender, EventArgs e)
-        {
-            //sai do programa
-            if (MessageBox.Show("Deseja mesmo finalizar o programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Application.Exit();
+            MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void alunoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //chama o forms para o cadastro de aluno
+        {//strip >> cadastrar >> aluno
             F1.ShowDialog();
         }
 
         private void professorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //chama o forms para o cadastro de professor
+        {//strip >> visualizar >> aluno
             F3.ShowDialog();
-
         }
 
         private void alunosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //chama o forms que mostra os dados cadastrados em alunos e os mostra numa tabela
+        {//strip >> cadastrar >> professor
             F2.ShowDialog();
-
         }
 
         private void professoresToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            //chama o forms que mostra os dados cadastrados de professores em uma tabela, como a de alunos
+        {//strip >> visualizar >> aluno
             F4.ShowDialog();
-
         }
-        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
-        {//STRIP >> AJUDA
-            Fajuda.ShowDialog();
+
+        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
+        {//strip >> retornar
+            if (MessageBox.Show("Deseja mesmo sair para a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
         }
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
-        {//ESC PARA SAIR
+        {//ESC para retornar
             if (e.KeyValue.Equals(27))
-            {
-                if (MessageBox.Show("Deseja mesmo finalizar o programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Application.Exit();
-            }
-        }
-
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cadastrosToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+                if (MessageBox.Show("Deseja mesmo sair para a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
         }
     }
 }

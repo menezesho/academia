@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace projetofinal
 {
@@ -8,7 +10,7 @@ namespace projetofinal
         int a = 0;
         Aluno[] alunos = new Aluno[20];
         Form2 F2 = new Form2();
-        FormAjuda Fajuda = new FormAjuda();
+
         public Form1()
         {
             InitializeComponent();
@@ -26,57 +28,11 @@ namespace projetofinal
             tbmatricula.Text = nmatricula.ToString();
 
         }
-        private void btsalvar_Click(object sender, EventArgs e)
-        {//SALVAR
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "" || cbaula.Text == "Selecione")
-                MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-            {
-                alunos[a] = new Aluno(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, int.Parse(tbidade.Text), cbaula.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), a + 1);
-                a++;
-                F2.insereDados(int.Parse(tbmatricula.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), cbaula.Text);
-                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                tbnome.Clear();
-                mtbcpf.Clear();
-                tbidade.Clear();
-                tbendereco.Clear();
-                mtbcelular.Clear();
-                tbemail.Clear();
-                tbpeso.Clear();
-                tbaltura.Clear();
-                cbaula.SelectedIndex = 0;
-                tabControl1.SelectedTab = tabPage1;
-                tbmatricula.Text = (a + 1).ToString();
-            }
-        }
-        private void btlimpar_Click(object sender, EventArgs e)
-        {//LIMPAR
-            tbnome.Enabled = true;
-            mtbcpf.Enabled = true;
-            tbidade.Enabled = true;
-            tbendereco.Enabled = true;
-            mtbcelular.Enabled = true;
-            tbemail.Enabled = true;
-            tbpeso.Enabled = true;
-            tbaltura.Enabled = true;
-            cbaula.Enabled = true;
-            btsalvar.Enabled = true;
-            tbnome.Clear();
-            mtbcpf.Clear();
-            tbidade.Clear();
-            tbendereco.Clear();
-            mtbcelular.Clear();
-            tbemail.Clear();
-            tbpeso.Clear();
-            tbaltura.Clear();
-            cbaula.SelectedIndex = 0;
-            tbmatricula.Text = (a + 1).ToString();
-            MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        }
-        private void btsair_Click(object sender, EventArgs e)
-        {//SAIR
+
+        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
+        {//strip >> retornar
             if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {//se a resposta do retorno for positiva o programa apaga as informações preenchidas e retorna a janela anterior
+            {
                 Close();
                 tbnome.Clear();
                 tbnome.Enabled = true;
@@ -99,17 +55,97 @@ namespace projetofinal
                 tabControl1.SelectedTab = tabPage1;
             }
         }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {//ESC para retornar
+            if (e.KeyValue.Equals(27))
+            {
+                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    Close();
+                    tbnome.Clear();
+                    tbnome.Enabled = true;
+                    mtbcpf.Clear();
+                    mtbcpf.Enabled = true;
+                    tbidade.Clear();
+                    tbidade.Enabled = true;
+                    tbendereco.Clear();
+                    tbendereco.Enabled = true;
+                    mtbcelular.Clear();
+                    mtbcelular.Enabled = true;
+                    tbemail.Clear();
+                    tbemail.Enabled = true;
+                    tbpeso.Clear();
+                    tbpeso.Enabled = true;
+                    tbaltura.Clear();
+                    tbaltura.Enabled = true;
+                    cbaula.SelectedIndex = 0;
+                    cbaula.Enabled = true;
+                    tabControl1.SelectedTab = tabPage1;
+                }
+            }
+        }
+
+        private void btsalvar_Click(object sender, EventArgs e)
+        {//btsalvar
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "" || cbaula.Text == "Selecione")
+                MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                alunos[a] = new Aluno(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, int.Parse(tbidade.Text), cbaula.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), a + 1);
+                a++;
+                F2.insereDados(int.Parse(tbmatricula.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), cbaula.Text);
+                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                tbnome.Clear();
+                mtbcpf.Clear();
+                tbidade.Clear();
+                tbendereco.Clear();
+                mtbcelular.Clear();
+                tbemail.Clear();
+                tbpeso.Clear();
+                tbaltura.Clear();
+                cbaula.SelectedIndex = 0;
+                tabControl1.SelectedTab = tabPage1;
+                tbmatricula.Text = (a + 1).ToString();
+            }
+        }
+
+        private void btlimpar_Click(object sender, EventArgs e)
+        {//btlimpar
+            tbnome.Enabled = true;
+            mtbcpf.Enabled = true;
+            tbidade.Enabled = true;
+            tbendereco.Enabled = true;
+            mtbcelular.Enabled = true;
+            tbemail.Enabled = true;
+            tbpeso.Enabled = true;
+            tbaltura.Enabled = true;
+            cbaula.Enabled = true;
+            btsalvar.Enabled = true;
+            tbnome.Clear();
+            mtbcpf.Clear();
+            tbidade.Clear();
+            tbendereco.Clear();
+            mtbcelular.Clear();
+            tbemail.Clear();
+            tbpeso.Clear();
+            tbaltura.Clear();
+            cbaula.SelectedIndex = 0;
+            tbmatricula.Text = (a + 1).ToString();
+            MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void btbuscar_Click(object sender, EventArgs e)
-        {//BUSCAR
+        {//btbuscar
             string cpf = mtbcpf.Text;
             bool achou = false;
-            if (mtbcpf.Text == "   .   .   -") //verifica se o cpf não for digitado, imprime erro na tela
+            if (mtbcpf.Text == "   .   .   -")
                 MessageBox.Show("Nenhum CPF foi digitado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else //caso contrário, prossegue com o código
+            else
             {
-                for (int i = 0; i < a; i++) //percorre os cadastros
+                for (int i = 0; i < a; i++)
                 {
-                    if (alunos[i].cpf == cpf) //caso encontre um cpf já cadastrado, mostra o cadastro na tela
+                    if (alunos[i].cpf == cpf)
                     {
                         tbmatricula.Text = alunos[i].matricula.ToString();
                         tbnome.Enabled = false;
@@ -135,98 +171,9 @@ namespace projetofinal
                         MessageBox.Show("Aluno localizado!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                if (!achou) //caso não encontre o cadastro, imprime erro na tela
+                if (!achou)
                     MessageBox.Show("Aluno não cadastrado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//STRIP >> RETORNAR | sai do forms e apaga os dados que antes foram digitados da tela
-            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-            {//se a resposta do retorno for positiva o programa apaga as informações preenchidas e retorna a janela anterior
-                Close();
-                tbnome.Clear();
-                tbnome.Enabled = true;
-                mtbcpf.Clear();
-                mtbcpf.Enabled = true;
-                tbidade.Clear();
-                tbidade.Enabled = true;
-                tbendereco.Clear();
-                tbendereco.Enabled = true;
-                mtbcelular.Clear();
-                mtbcelular.Enabled = true;
-                tbemail.Clear();
-                tbemail.Enabled = true;
-                tbpeso.Clear();
-                tbpeso.Enabled = true;
-                tbaltura.Clear();
-                tbaltura.Enabled = true;
-                cbaula.SelectedIndex = 0;
-                cbaula.Enabled = true;
-                tabControl1.SelectedTab = tabPage1;
-            }
-        }
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {//ESC PARA RETORNAR | sai do forms e apaga os dados que antes foram digitados da tela
-            if (e.KeyValue.Equals(27))
-            {
-                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                {//se a resposta do retorno for positiva o programa apaga as informações preenchidas e retorna a janela anterior
-                    Close();
-                    tbnome.Clear();
-                    tbnome.Enabled = true;
-                    mtbcpf.Clear();
-                    mtbcpf.Enabled = true;
-                    tbidade.Clear();
-                    tbidade.Enabled = true;
-                    tbendereco.Clear();
-                    tbendereco.Enabled = true;
-                    mtbcelular.Clear();
-                    mtbcelular.Enabled = true;
-                    tbemail.Clear();
-                    tbemail.Enabled = true;
-                    tbpeso.Clear();
-                    tbpeso.Enabled = true;
-                    tbaltura.Clear();
-                    tbaltura.Enabled = true;
-                    cbaula.SelectedIndex = 0;
-                    cbaula.Enabled = true;
-                    tabControl1.SelectedTab = tabPage1;
-                }
-            }
-        }
-        private void ajudaToolStripMenuItem_Click(object sender, EventArgs e)
-        {//STRIP >> AJUDA
-            Fajuda.ShowDialog();
-        }
-        private void tabPage1_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void cbaula_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        //especifica a aula que será matriculado o aluno
-        }
-        private void tbpeso_TextChanged(object sender, EventArgs e)
-        {
-        //recebe peso
-        }
-        private void tbaltura_TextChanged(object sender, EventArgs e)
-        {
-            //recebe altura
-        }
-        private void tbendereco_TextChanged(object sender, EventArgs e)
-        {
-        //recebe o endereço do aluno
-        }
-        private void tbmatricula_TextChanged(object sender, EventArgs e)
-        {
-        //recebe o numero da matrícula do aluno
-        }
-        private void mtbcpf_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-        //recebe o cpf do aluno cadastrado
         }
     }
 }

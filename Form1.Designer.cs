@@ -30,7 +30,6 @@ namespace projetofinal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btretornar = new System.Windows.Forms.Button();
             this.btbuscar = new System.Windows.Forms.Button();
             this.btlimpar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
@@ -62,7 +61,6 @@ namespace projetofinal
             this.lbpeso = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1.SuspendLayout();
@@ -73,51 +71,41 @@ namespace projetofinal
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btretornar
-            // 
-            this.btretornar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btretornar.Location = new System.Drawing.Point(379, 321);
-            this.btretornar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btretornar.Name = "btretornar";
-            this.btretornar.Size = new System.Drawing.Size(95, 29);
-            this.btretornar.TabIndex = 13;
-            this.btretornar.Text = "🔙 SAIR";
-            this.btretornar.UseVisualStyleBackColor = false;
-            this.btretornar.Click += new System.EventHandler(this.btsair_Click);
-            // 
             // btbuscar
             // 
             this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.Location = new System.Drawing.Point(278, 321);
+            this.btbuscar.Location = new System.Drawing.Point(278, 318);
             this.btbuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(95, 29);
+            this.btbuscar.Size = new System.Drawing.Size(218, 29);
             this.btbuscar.TabIndex = 12;
-            this.btbuscar.Text = "❓BUSCAR";
+            this.btbuscar.Text = "BUSCAR";
             this.btbuscar.UseVisualStyleBackColor = false;
             this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
             // 
             // btlimpar
             // 
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btlimpar.Location = new System.Drawing.Point(176, 321);
+            this.btlimpar.Location = new System.Drawing.Point(50, 318);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
-            this.btlimpar.Size = new System.Drawing.Size(95, 29);
+            this.btlimpar.Size = new System.Drawing.Size(218, 29);
             this.btlimpar.TabIndex = 11;
-            this.btlimpar.Text = "❌ LIMPAR";
+            this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
             // 
             // btsalvar
             // 
+            this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(177)))), ((int)(((byte)(205)))));
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btsalvar.Location = new System.Drawing.Point(74, 321);
+            this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btsalvar.Location = new System.Drawing.Point(50, 355);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(95, 29);
+            this.btsalvar.Size = new System.Drawing.Size(446, 29);
             this.btsalvar.TabIndex = 10;
-            this.btsalvar.Text = "✔️ SALVAR";
+            this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
             // 
@@ -151,7 +139,6 @@ namespace projetofinal
             this.tabPage1.Size = new System.Drawing.Size(446, 180);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Pessoais";
-            this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
             // tbmatricula
             // 
@@ -162,7 +149,6 @@ namespace projetofinal
             this.tbmatricula.Size = new System.Drawing.Size(63, 27);
             this.tbmatricula.TabIndex = 5;
             this.tbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.tbmatricula.TextChanged += new System.EventHandler(this.tbmatricula_TextChanged);
             // 
             // lbmatricula
             // 
@@ -182,7 +168,6 @@ namespace projetofinal
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
             this.mtbcpf.TabIndex = 2;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbcpf.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mtbcpf_MaskInputRejected);
             // 
             // tbidade
             // 
@@ -270,7 +255,6 @@ namespace projetofinal
             this.tbendereco.Name = "tbendereco";
             this.tbendereco.Size = new System.Drawing.Size(273, 27);
             this.tbendereco.TabIndex = 9;
-            this.tbendereco.TextChanged += new System.EventHandler(this.tbendereco_TextChanged);
             // 
             // lbemail
             // 
@@ -359,7 +343,6 @@ namespace projetofinal
             this.cbaula.Name = "cbaula";
             this.cbaula.Size = new System.Drawing.Size(151, 28);
             this.cbaula.TabIndex = 16;
-            this.cbaula.SelectedIndexChanged += new System.EventHandler(this.cbaula_SelectedIndexChanged);
             // 
             // tbaltura
             // 
@@ -368,7 +351,6 @@ namespace projetofinal
             this.tbaltura.Name = "tbaltura";
             this.tbaltura.Size = new System.Drawing.Size(61, 27);
             this.tbaltura.TabIndex = 15;
-            this.tbaltura.TextChanged += new System.EventHandler(this.tbaltura_TextChanged);
             // 
             // tbpeso
             // 
@@ -377,7 +359,6 @@ namespace projetofinal
             this.tbpeso.Name = "tbpeso";
             this.tbpeso.Size = new System.Drawing.Size(61, 27);
             this.tbpeso.TabIndex = 14;
-            this.tbpeso.TextChanged += new System.EventHandler(this.tbpeso_TextChanged);
             // 
             // lbaltura
             // 
@@ -403,8 +384,7 @@ namespace projetofinal
             this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.retornarToolStripMenuItem,
-            this.ajudaToolStripMenuItem});
+            this.retornarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
@@ -418,13 +398,6 @@ namespace projetofinal
             this.retornarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.retornarToolStripMenuItem.Text = "Retornar";
             this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
-            // 
-            // ajudaToolStripMenuItem
-            // 
-            this.ajudaToolStripMenuItem.Name = "ajudaToolStripMenuItem";
-            this.ajudaToolStripMenuItem.Size = new System.Drawing.Size(64, 25);
-            this.ajudaToolStripMenuItem.Text = "Ajuda";
-            this.ajudaToolStripMenuItem.Click += new System.EventHandler(this.ajudaToolStripMenuItem_Click);
             // 
             // label2
             // 
@@ -451,9 +424,8 @@ namespace projetofinal
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(546, 384);
+            this.ClientSize = new System.Drawing.Size(546, 426);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btretornar);
             this.Controls.Add(this.btbuscar);
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btsalvar);
@@ -485,8 +457,6 @@ namespace projetofinal
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btretornar;
         private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.Button btlimpar;
         private System.Windows.Forms.Button btsalvar;
@@ -516,7 +486,6 @@ namespace projetofinal
         private System.Windows.Forms.Label lbmatricula;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajudaToolStripMenuItem;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lbcm;
         private System.Windows.Forms.Label lbkg;
