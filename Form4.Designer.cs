@@ -31,8 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form4));
             this.lbprofessorescadastrados = new System.Windows.Forms.Label();
             this.dgprofessores = new System.Windows.Forms.DataGridView();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cracha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpf = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +38,9 @@
             this.endereco = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.senha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgprofessores)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -66,35 +66,14 @@
             this.endereco,
             this.celular,
             this.email,
-            this.senha});
+            this.aula});
             this.dgprofessores.Location = new System.Drawing.Point(30, 107);
             this.dgprofessores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgprofessores.Name = "dgprofessores";
             this.dgprofessores.RowHeadersWidth = 45;
             this.dgprofessores.RowTemplate.Height = 25;
-            this.dgprofessores.Size = new System.Drawing.Size(1007, 348);
+            this.dgprofessores.Size = new System.Drawing.Size(1002, 348);
             this.dgprofessores.TabIndex = 17;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(1074, 31);
-            this.menuStrip1.TabIndex = 19;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // sairToolStripMenuItem
-            // 
-            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
-            this.sairToolStripMenuItem.Text = "Retornar";
-            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // cracha
             // 
@@ -154,20 +133,41 @@
             this.email.ReadOnly = true;
             this.email.Width = 170;
             // 
-            // senha
+            // aula
             // 
-            this.senha.HeaderText = "Senha";
-            this.senha.MinimumWidth = 6;
-            this.senha.Name = "senha";
-            this.senha.ReadOnly = true;
-            this.senha.Width = 125;
+            this.aula.HeaderText = "Aula";
+            this.aula.MinimumWidth = 6;
+            this.aula.Name = "aula";
+            this.aula.ReadOnly = true;
+            this.aula.Width = 120;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(18, 18);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sairToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 3, 0, 3);
+            this.menuStrip1.Size = new System.Drawing.Size(1062, 31);
+            this.menuStrip1.TabIndex = 19;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
+            this.sairToolStripMenuItem.Text = "Retornar";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1074, 485);
+            this.ClientSize = new System.Drawing.Size(1062, 485);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.lbprofessorescadastrados);
             this.Controls.Add(this.dgprofessores);
@@ -177,7 +177,7 @@
             this.Name = "Form4";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Visualização";
+            this.Text = "Cadastros de Professores";
             this.Load += new System.EventHandler(this.Form4_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form4_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgprofessores)).EndInit();
@@ -200,6 +200,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn endereco;
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
-        private System.Windows.Forms.DataGridViewTextBoxColumn senha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn aula;
     }
 }

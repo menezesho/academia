@@ -19,7 +19,7 @@ namespace projetofinal
 
         }
 
-        public void insereDados2(int cracha, string nome, string cpf, int idade, string endereco, string celular, string email, string senha)
+        public void insereDados2(int cracha, string nome, string cpf, int idade, string endereco, string celular, string email, string aula)
         {
             DataGridViewRow linha = (DataGridViewRow)dgprofessores.Rows[0].Clone();
             linha.Cells[0].Value = cracha;
@@ -29,7 +29,7 @@ namespace projetofinal
             linha.Cells[4].Value = endereco;
             linha.Cells[5].Value = celular;
             linha.Cells[6].Value = email;
-            linha.Cells[7].Value = senha;
+            linha.Cells[7].Value = aula;
             dgprofessores.Rows.Add(linha);
         }
 

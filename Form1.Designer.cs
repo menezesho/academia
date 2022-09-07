@@ -51,10 +51,10 @@ namespace projetofinal
             this.lbcelular = new System.Windows.Forms.Label();
             this.lbendereco = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tbsenha = new System.Windows.Forms.TextBox();
-            this.lbsenha = new System.Windows.Forms.Label();
             this.lbcm = new System.Windows.Forms.Label();
             this.lbkg = new System.Windows.Forms.Label();
+            this.lbaula = new System.Windows.Forms.Label();
+            this.cbaula = new System.Windows.Forms.ComboBox();
             this.tbaltura = new System.Windows.Forms.TextBox();
             this.tbpeso = new System.Windows.Forms.TextBox();
             this.lbaltura = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@ namespace projetofinal
             this.btbuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btbuscar.Name = "btbuscar";
             this.btbuscar.Size = new System.Drawing.Size(218, 29);
-            this.btbuscar.TabIndex = 11;
+            this.btbuscar.TabIndex = 12;
             this.btbuscar.Text = "BUSCAR";
             this.btbuscar.UseVisualStyleBackColor = false;
             this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
@@ -90,7 +90,7 @@ namespace projetofinal
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(218, 29);
-            this.btlimpar.TabIndex = 10;
+            this.btlimpar.TabIndex = 11;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
@@ -104,7 +104,7 @@ namespace projetofinal
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(446, 29);
-            this.btsalvar.TabIndex = 12;
+            this.btsalvar.TabIndex = 10;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -142,11 +142,12 @@ namespace projetofinal
             // 
             // tbmatricula
             // 
+            this.tbmatricula.Enabled = false;
             this.tbmatricula.Location = new System.Drawing.Point(245, 21);
             this.tbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbmatricula.Name = "tbmatricula";
             this.tbmatricula.Size = new System.Drawing.Size(63, 27);
-            this.tbmatricula.TabIndex = 1;
+            this.tbmatricula.TabIndex = 5;
             this.tbmatricula.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbmatricula
@@ -165,7 +166,7 @@ namespace projetofinal
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
-            this.mtbcpf.TabIndex = 3;
+            this.mtbcpf.TabIndex = 2;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbidade
@@ -174,7 +175,7 @@ namespace projetofinal
             this.tbidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbidade.Name = "tbidade";
             this.tbidade.Size = new System.Drawing.Size(53, 27);
-            this.tbidade.TabIndex = 4;
+            this.tbidade.TabIndex = 3;
             this.tbidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbnome
@@ -183,7 +184,7 @@ namespace projetofinal
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(269, 27);
-            this.tbnome.TabIndex = 2;
+            this.tbnome.TabIndex = 1;
             // 
             // lbidade
             // 
@@ -236,7 +237,7 @@ namespace projetofinal
             this.mtbcelular.Mask = "(99) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
             this.mtbcelular.Size = new System.Drawing.Size(127, 27);
-            this.mtbcelular.TabIndex = 6;
+            this.mtbcelular.TabIndex = 10;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbemail
@@ -245,7 +246,7 @@ namespace projetofinal
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(273, 27);
-            this.tbemail.TabIndex = 7;
+            this.tbemail.TabIndex = 11;
             // 
             // tbendereco
             // 
@@ -253,7 +254,7 @@ namespace projetofinal
             this.tbendereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbendereco.Name = "tbendereco";
             this.tbendereco.Size = new System.Drawing.Size(273, 27);
-            this.tbendereco.TabIndex = 5;
+            this.tbendereco.TabIndex = 9;
             // 
             // lbemail
             // 
@@ -285,10 +286,10 @@ namespace projetofinal
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage3.Controls.Add(this.tbsenha);
-            this.tabPage3.Controls.Add(this.lbsenha);
             this.tabPage3.Controls.Add(this.lbcm);
             this.tabPage3.Controls.Add(this.lbkg);
+            this.tabPage3.Controls.Add(this.lbaula);
+            this.tabPage3.Controls.Add(this.cbaula);
             this.tabPage3.Controls.Add(this.tbaltura);
             this.tabPage3.Controls.Add(this.tbpeso);
             this.tabPage3.Controls.Add(this.lbaltura);
@@ -300,28 +301,10 @@ namespace projetofinal
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Informações";
             // 
-            // tbsenha
-            // 
-            this.tbsenha.Location = new System.Drawing.Point(174, 122);
-            this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(189, 27);
-            this.tbsenha.TabIndex = 20;
-            this.tbsenha.UseSystemPasswordChar = true;
-            // 
-            // lbsenha
-            // 
-            this.lbsenha.AutoSize = true;
-            this.lbsenha.Location = new System.Drawing.Point(102, 124);
-            this.lbsenha.Name = "lbsenha";
-            this.lbsenha.Size = new System.Drawing.Size(49, 20);
-            this.lbsenha.TabIndex = 21;
-            this.lbsenha.Text = "Senha";
-            // 
             // lbcm
             // 
             this.lbcm.AutoSize = true;
-            this.lbcm.Location = new System.Drawing.Point(235, 72);
+            this.lbcm.Location = new System.Drawing.Point(245, 121);
             this.lbcm.Name = "lbcm";
             this.lbcm.Size = new System.Drawing.Size(29, 20);
             this.lbcm.TabIndex = 19;
@@ -330,32 +313,57 @@ namespace projetofinal
             // lbkg
             // 
             this.lbkg.AutoSize = true;
-            this.lbkg.Location = new System.Drawing.Point(235, 36);
+            this.lbkg.Location = new System.Drawing.Point(245, 85);
             this.lbkg.Name = "lbkg";
             this.lbkg.Size = new System.Drawing.Size(25, 20);
             this.lbkg.TabIndex = 18;
             this.lbkg.Text = "kg";
             // 
+            // lbaula
+            // 
+            this.lbaula.AutoSize = true;
+            this.lbaula.Location = new System.Drawing.Point(112, 51);
+            this.lbaula.Name = "lbaula";
+            this.lbaula.Size = new System.Drawing.Size(39, 20);
+            this.lbaula.TabIndex = 17;
+            this.lbaula.Text = "Aula";
+            // 
+            // cbaula
+            // 
+            this.cbaula.FormattingEnabled = true;
+            this.cbaula.Items.AddRange(new object[] {
+            "Selecione",
+            "Personal",
+            "Box",
+            "Jiu-Jitsu",
+            "Karatê",
+            "Funcional",
+            "Dança"});
+            this.cbaula.Location = new System.Drawing.Point(184, 48);
+            this.cbaula.Name = "cbaula";
+            this.cbaula.Size = new System.Drawing.Size(151, 28);
+            this.cbaula.TabIndex = 16;
+            // 
             // tbaltura
             // 
-            this.tbaltura.Location = new System.Drawing.Point(174, 68);
+            this.tbaltura.Location = new System.Drawing.Point(184, 117);
             this.tbaltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbaltura.Name = "tbaltura";
             this.tbaltura.Size = new System.Drawing.Size(61, 27);
-            this.tbaltura.TabIndex = 9;
+            this.tbaltura.TabIndex = 15;
             // 
             // tbpeso
             // 
-            this.tbpeso.Location = new System.Drawing.Point(174, 34);
+            this.tbpeso.Location = new System.Drawing.Point(184, 83);
             this.tbpeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpeso.Name = "tbpeso";
             this.tbpeso.Size = new System.Drawing.Size(61, 27);
-            this.tbpeso.TabIndex = 8;
+            this.tbpeso.TabIndex = 14;
             // 
             // lbaltura
             // 
             this.lbaltura.AutoSize = true;
-            this.lbaltura.Location = new System.Drawing.Point(102, 72);
+            this.lbaltura.Location = new System.Drawing.Point(112, 121);
             this.lbaltura.Name = "lbaltura";
             this.lbaltura.Size = new System.Drawing.Size(49, 20);
             this.lbaltura.TabIndex = 13;
@@ -364,7 +372,7 @@ namespace projetofinal
             // lbpeso
             // 
             this.lbpeso.AutoSize = true;
-            this.lbpeso.Location = new System.Drawing.Point(102, 36);
+            this.lbpeso.Location = new System.Drawing.Point(112, 85);
             this.lbpeso.Name = "lbpeso";
             this.lbpeso.Size = new System.Drawing.Size(39, 20);
             this.lbpeso.TabIndex = 12;
@@ -430,7 +438,7 @@ namespace projetofinal
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro";
+            this.Text = "Cadastro de Aluno";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.tabControl1.ResumeLayout(false);
@@ -454,16 +462,27 @@ namespace projetofinal
         private System.Windows.Forms.Button btsalvar;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.MaskedTextBox mtbcpf;
+        private System.Windows.Forms.TextBox tbnome;
         private System.Windows.Forms.Label lbidade;
         private System.Windows.Forms.Label lbcpf;
         private System.Windows.Forms.Label lbnome;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.MaskedTextBox mtbcelular;
+        private System.Windows.Forms.TextBox tbemail;
+        private System.Windows.Forms.TextBox tbendereco;
         private System.Windows.Forms.Label lbemail;
         private System.Windows.Forms.Label lbcelular;
         private System.Windows.Forms.Label lbendereco;
+        private System.Windows.Forms.TextBox tbidade;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox tbaltura;
+        private System.Windows.Forms.TextBox tbpeso;
         private System.Windows.Forms.Label lbaltura;
         private System.Windows.Forms.Label lbpeso;
+        private System.Windows.Forms.ComboBox cbaula;
+        private System.Windows.Forms.Label lbaula;
+        private System.Windows.Forms.TextBox tbmatricula;
         private System.Windows.Forms.Label lbmatricula;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
@@ -471,17 +490,6 @@ namespace projetofinal
         private System.Windows.Forms.Label lbcm;
         private System.Windows.Forms.Label lbkg;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbsenha;
-        private System.Windows.Forms.MaskedTextBox mtbcpf;
-        private System.Windows.Forms.TextBox tbnome;
-        private System.Windows.Forms.MaskedTextBox mtbcelular;
-        private System.Windows.Forms.TextBox tbemail;
-        private System.Windows.Forms.TextBox tbendereco;
-        private System.Windows.Forms.TextBox tbidade;
-        private System.Windows.Forms.TextBox tbaltura;
-        private System.Windows.Forms.TextBox tbpeso;
-        private System.Windows.Forms.TextBox tbmatricula;
-        private System.Windows.Forms.TextBox tbsenha;
     }
 }
 

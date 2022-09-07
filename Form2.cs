@@ -18,7 +18,7 @@ namespace projetofinal
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
@@ -26,7 +26,7 @@ namespace projetofinal
             
         }
 
-        public void insereDados(int matricula, string nome, string cpf, int idade, string endereco, string celular, string email, string senha, float peso, float altura)
+        public void insereDados(int matricula, string nome, string cpf, int idade, string endereco, string celular, string email, float peso, float altura, string aula)
         {
             DataGridViewRow linha = (DataGridViewRow)dgpessoas.Rows[0].Clone();
             linha.Cells[0].Value = matricula;
@@ -38,7 +38,7 @@ namespace projetofinal
             linha.Cells[6].Value = email;
             linha.Cells[7].Value = peso;
             linha.Cells[8].Value = altura;
-            linha.Cells[9].Value = senha;
+            linha.Cells[9].Value = aula;
             dgpessoas.Rows.Add(linha);
         }
 
@@ -47,11 +47,6 @@ namespace projetofinal
             if (e.KeyValue.Equals(27))
                 if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
-        }
-
-        public void dgpessoas_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
