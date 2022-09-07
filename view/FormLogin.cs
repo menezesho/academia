@@ -11,12 +11,10 @@ namespace projetofinal
 {
     public partial class FormLogin : Form
     {
-        FormAjuda Fajuda = new FormAjuda();
         FormPrincipal Fprincipal = new FormPrincipal();
 
         //int u = 0;
         bool cadastrar = false;
-        Login[] logins = new Login[20];
 
         public FormLogin()
         {
@@ -49,7 +47,7 @@ namespace projetofinal
         }
 
         private void FormLogin_KeyUp(object sender, KeyEventArgs e)
-        {//Enter para salvar
+        {//ENTER para salvar
             if (e.KeyValue.Equals(13))
             {
                 if (cadastrar)

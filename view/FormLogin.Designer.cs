@@ -80,6 +80,7 @@ namespace projetofinal
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(232, 27);
             this.tbsenha.TabIndex = 3;
+            this.tbsenha.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
