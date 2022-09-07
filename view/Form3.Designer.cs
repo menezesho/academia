@@ -48,21 +48,21 @@ namespace projetofinal
             this.lbemail = new System.Windows.Forms.Label();
             this.lbcelular = new System.Windows.Forms.Label();
             this.lbendereco = new System.Windows.Forms.Label();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lbaula = new System.Windows.Forms.Label();
-            this.cbaula = new System.Windows.Forms.ComboBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btbuscar = new System.Windows.Forms.Button();
             this.btlimpar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tbsenha = new System.Windows.Forms.TextBox();
+            this.lbsenha = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label2
@@ -82,6 +82,7 @@ namespace projetofinal
             this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Location = new System.Drawing.Point(46, 101);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tabControl1.Multiline = true;
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(454, 213);
@@ -113,7 +114,7 @@ namespace projetofinal
             this.tbcracha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcracha.Name = "tbcracha";
             this.tbcracha.Size = new System.Drawing.Size(63, 27);
-            this.tbcracha.TabIndex = 5;
+            this.tbcracha.TabIndex = 1;
             this.tbcracha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbcracha
@@ -132,7 +133,7 @@ namespace projetofinal
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
-            this.mtbcpf.TabIndex = 2;
+            this.mtbcpf.TabIndex = 3;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbidade
@@ -141,7 +142,7 @@ namespace projetofinal
             this.tbidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbidade.Name = "tbidade";
             this.tbidade.Size = new System.Drawing.Size(53, 27);
-            this.tbidade.TabIndex = 3;
+            this.tbidade.TabIndex = 4;
             this.tbidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbnome
@@ -150,7 +151,7 @@ namespace projetofinal
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(269, 27);
-            this.tbnome.TabIndex = 1;
+            this.tbnome.TabIndex = 2;
             // 
             // lbidade
             // 
@@ -203,7 +204,7 @@ namespace projetofinal
             this.mtbcelular.Mask = "(99) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
             this.mtbcelular.Size = new System.Drawing.Size(127, 27);
-            this.mtbcelular.TabIndex = 10;
+            this.mtbcelular.TabIndex = 6;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbemail
@@ -212,7 +213,7 @@ namespace projetofinal
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(273, 27);
-            this.tbemail.TabIndex = 11;
+            this.tbemail.TabIndex = 7;
             // 
             // tbendereco
             // 
@@ -220,7 +221,7 @@ namespace projetofinal
             this.tbendereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbendereco.Name = "tbendereco";
             this.tbendereco.Size = new System.Drawing.Size(273, 27);
-            this.tbendereco.TabIndex = 9;
+            this.tbendereco.TabIndex = 5;
             // 
             // lbemail
             // 
@@ -248,43 +249,6 @@ namespace projetofinal
             this.lbendereco.Size = new System.Drawing.Size(71, 20);
             this.lbendereco.TabIndex = 7;
             this.lbendereco.Text = "Endereço";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage3.Controls.Add(this.lbaula);
-            this.tabPage3.Controls.Add(this.cbaula);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(446, 180);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Informações";
-            // 
-            // lbaula
-            // 
-            this.lbaula.AutoSize = true;
-            this.lbaula.Location = new System.Drawing.Point(114, 81);
-            this.lbaula.Name = "lbaula";
-            this.lbaula.Size = new System.Drawing.Size(39, 20);
-            this.lbaula.TabIndex = 17;
-            this.lbaula.Text = "Aula";
-            // 
-            // cbaula
-            // 
-            this.cbaula.FormattingEnabled = true;
-            this.cbaula.Items.AddRange(new object[] {
-            "Selecione",
-            "Personal",
-            "Box",
-            "Jiu-Jitsu",
-            "Karatê",
-            "Funcional",
-            "Dança"});
-            this.cbaula.Location = new System.Drawing.Point(183, 75);
-            this.cbaula.Name = "cbaula";
-            this.cbaula.Size = new System.Drawing.Size(151, 28);
-            this.cbaula.TabIndex = 16;
             // 
             // menuStrip1
             // 
@@ -324,7 +288,7 @@ namespace projetofinal
             this.btbuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btbuscar.Name = "btbuscar";
             this.btbuscar.Size = new System.Drawing.Size(218, 29);
-            this.btbuscar.TabIndex = 26;
+            this.btbuscar.TabIndex = 9;
             this.btbuscar.Text = "BUSCAR";
             this.btbuscar.UseVisualStyleBackColor = false;
             this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click_1);
@@ -336,7 +300,7 @@ namespace projetofinal
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(218, 29);
-            this.btlimpar.TabIndex = 25;
+            this.btlimpar.TabIndex = 8;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click_1);
@@ -350,10 +314,40 @@ namespace projetofinal
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(446, 29);
-            this.btsalvar.TabIndex = 24;
+            this.btsalvar.TabIndex = 10;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage3.Controls.Add(this.tbsenha);
+            this.tabPage3.Controls.Add(this.lbsenha);
+            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(446, 180);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Informações";
+            // 
+            // tbsenha
+            // 
+            this.tbsenha.Location = new System.Drawing.Point(165, 77);
+            this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbsenha.Name = "tbsenha";
+            this.tbsenha.Size = new System.Drawing.Size(189, 27);
+            this.tbsenha.TabIndex = 22;
+            this.tbsenha.UseSystemPasswordChar = true;
+            // 
+            // lbsenha
+            // 
+            this.lbsenha.AutoSize = true;
+            this.lbsenha.Location = new System.Drawing.Point(93, 79);
+            this.lbsenha.Name = "lbsenha";
+            this.lbsenha.Size = new System.Drawing.Size(49, 20);
+            this.lbsenha.TabIndex = 23;
+            this.lbsenha.Text = "Senha";
             // 
             // Form3
             // 
@@ -371,7 +365,7 @@ namespace projetofinal
             this.KeyPreview = true;
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro de Professor";
+            this.Text = "Cadastro";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form3_KeyDown);
             this.tabControl1.ResumeLayout(false);
@@ -379,11 +373,11 @@ namespace projetofinal
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage3.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
+            this.tabPage3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,14 +403,14 @@ namespace projetofinal
         private System.Windows.Forms.Label lbemail;
         private System.Windows.Forms.Label lbcelular;
         private System.Windows.Forms.Label lbendereco;
-        private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label lbaula;
-        private System.Windows.Forms.ComboBox cbaula;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.Button btlimpar;
         private System.Windows.Forms.Button btsalvar;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox tbsenha;
+        private System.Windows.Forms.Label lbsenha;
     }
 }

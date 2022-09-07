@@ -23,7 +23,6 @@ namespace projetofinal
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            cbaula.SelectedIndex = 0;
             int nmatricula = a + 1;
             tbmatricula.Text = nmatricula.ToString();
 
@@ -50,8 +49,6 @@ namespace projetofinal
                 tbpeso.Enabled = true;
                 tbaltura.Clear();
                 tbaltura.Enabled = true;
-                cbaula.SelectedIndex = 0;
-                cbaula.Enabled = true;
                 tabControl1.SelectedTab = tabPage1;
             }
         }
@@ -79,8 +76,6 @@ namespace projetofinal
                     tbpeso.Enabled = true;
                     tbaltura.Clear();
                     tbaltura.Enabled = true;
-                    cbaula.SelectedIndex = 0;
-                    cbaula.Enabled = true;
                     tabControl1.SelectedTab = tabPage1;
                 }
             }
@@ -88,17 +83,18 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "" || cbaula.Text == "Selecione")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                alunos[a] = new Aluno(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, int.Parse(tbidade.Text), cbaula.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), a + 1);
+                //alunos[a] = new Aluno(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, tbsenha.Text, int.Parse(tbidade.Text), float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), a + 1);
                 a++;
-                F2.insereDados(int.Parse(tbmatricula.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text), cbaula.Text);
+                F2.insereDados(int.Parse(tbmatricula.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, tbsenha.Text, float.Parse(tbpeso.Text), float.Parse(tbaltura.Text));
 
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = "INSERT INTO Alunos VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @peso, @altura, @aula)";
+                string sql = "INSERT INTO aluno VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @senha, @peso, @altura)";
+                
                 try
                 {
                     conexao.Open();
@@ -112,18 +108,18 @@ namespace projetofinal
                         comando.Parameters.AddWithValue("@endereco", F2.dgpessoas.Rows[i].Cells[4].Value);
                         comando.Parameters.AddWithValue("@celular", F2.dgpessoas.Rows[i].Cells[5].Value);
                         comando.Parameters.AddWithValue("@email", F2.dgpessoas.Rows[i].Cells[6].Value);
-                        comando.Parameters.AddWithValue("@peso", F2.dgpessoas.Rows[i].Cells[7].Value.ToString());
-                        comando.Parameters.AddWithValue("@altura", F2.dgpessoas.Rows[i].Cells[8].Value.ToString());
-                        comando.Parameters.AddWithValue("@aula", F2.dgpessoas.Rows[i].Cells[9].Value);
+                        comando.Parameters.AddWithValue("@senha", F2.dgpessoas.Rows[i].Cells[7].Value);
+                        comando.Parameters.AddWithValue("@peso", F2.dgpessoas.Rows[i].Cells[8].Value.ToString());
+                        comando.Parameters.AddWithValue("@altura", F2.dgpessoas.Rows[i].Cells[9].Value.ToString());
 
                         comando.CommandText = sql;
                         comando.ExecuteNonQuery();
                         MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                catch (Exception ex)
+                catch (Exception erro)
                 {
-                    MessageBox.Show(ex.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 finally
                 {
@@ -139,11 +135,9 @@ namespace projetofinal
                 tbemail.Clear();
                 tbpeso.Clear();
                 tbaltura.Clear();
-                cbaula.SelectedIndex = 0;
                 tabControl1.SelectedTab = tabPage1;
                 tbmatricula.Text = (a + 1).ToString();
             }
-            
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
@@ -156,7 +150,6 @@ namespace projetofinal
             tbemail.Enabled = true;
             tbpeso.Enabled = true;
             tbaltura.Enabled = true;
-            cbaula.Enabled = true;
             btsalvar.Enabled = true;
             tbnome.Clear();
             mtbcpf.Clear();
@@ -166,7 +159,6 @@ namespace projetofinal
             tbemail.Clear();
             tbpeso.Clear();
             tbaltura.Clear();
-            cbaula.SelectedIndex = 0;
             tbmatricula.Text = (a + 1).ToString();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -200,8 +192,6 @@ namespace projetofinal
                         tbpeso.Text = alunos[i].peso.ToString();
                         tbaltura.Enabled = false;
                         tbaltura.Text = alunos[i].altura.ToString();
-                        cbaula.Enabled = false;
-                        cbaula.Text = alunos[i].aula;
                         btsalvar.Enabled = false;
                         achou = true;
                         MessageBox.Show("Aluno localizado!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -210,6 +200,11 @@ namespace projetofinal
                 if (!achou)
                     MessageBox.Show("Aluno não cadastrado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void bteditar_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

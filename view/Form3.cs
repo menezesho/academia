@@ -26,7 +26,6 @@ namespace projetofinal
         }
         private void Form3_Load(object sender, EventArgs e)
         {
-            cbaula.SelectedIndex = 0;
             int ncracha = p + 1;
             tbcracha.Text = ncracha.ToString();
         }
@@ -49,8 +48,6 @@ namespace projetofinal
                 mtbcelular.Enabled = true;
                 tbemail.Clear();
                 tbemail.Enabled = true;
-                cbaula.SelectedIndex = 0;
-                cbaula.Enabled = true;
                 tabControl1.SelectedTab = tabPage1;
             }
         }
@@ -74,8 +71,6 @@ namespace projetofinal
                     mtbcelular.Enabled = true;
                     tbemail.Clear();
                     tbemail.Enabled = true;
-                    cbaula.SelectedIndex = 0;
-                    cbaula.Enabled = true;
                     tabControl1.SelectedTab = tabPage1;
                 }
             }
@@ -89,7 +84,6 @@ namespace projetofinal
             tbendereco.Enabled = true;
             mtbcelular.Enabled = true;
             tbemail.Enabled = true;
-            cbaula.Enabled = true;
             btsalvar.Enabled = true;
             tbnome.Clear();
             mtbcpf.Clear();
@@ -97,7 +91,6 @@ namespace projetofinal
             tbendereco.Clear();
             mtbcelular.Clear();
             tbemail.Clear();
-            cbaula.SelectedIndex = 0;
             tbcracha.Text = (p + 1).ToString();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -127,8 +120,6 @@ namespace projetofinal
                         mtbcelular.Text = professores[i].celular;
                         tbemail.Enabled = false;
                         tbemail.Text = professores[i].email;
-                        cbaula.Enabled = false;
-                        cbaula.Text = professores[i].aula;
                         btsalvar.Enabled = false;
                         achou = true;
                         MessageBox.Show("Professor localizado!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -141,13 +132,13 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || cbaula.Text == "Selecione")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                professores[p] = new Professor(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, int.Parse(tbidade.Text), cbaula.Text, p + 1);
+                //professores[p] = new Professor(tbnome.Text, mtbcpf.Text, tbendereco.Text, mtbcelular.Text, tbemail.Text, tbsenha.Text, int.Parse(tbidade.Text), p + 1);
                 p++;
-                F4.insereDados2(int.Parse(tbcracha.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, cbaula.Text);
+                F4.insereDados2(int.Parse(tbcracha.Text), tbnome.Text, mtbcpf.Text, int.Parse(tbidade.Text), tbendereco.Text, mtbcelular.Text, tbemail.Text, tbsenha.Text);
                 MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 tbnome.Clear();
                 mtbcpf.Clear();
@@ -155,7 +146,6 @@ namespace projetofinal
                 tbendereco.Clear();
                 mtbcelular.Clear();
                 tbemail.Clear();
-                cbaula.SelectedIndex = 0;
                 tbcracha.Text = (p + 1).ToString();
                 tabControl1.SelectedTab = tabPage1;
             }
