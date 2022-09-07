@@ -1,1 +1,3 @@
-Sistema de cadastro de academia com a utilização de windows forms, porem ainda sem o relacionamento direto com algum serviço de banco de dados.
+- Sistema de cadastro de alunos e professores para academia com a utilização de Windows Forms;
+- Atualmente utilizando bando de dados SQLServer;
+- O programa possibilita o cadastro de alunos e professores até o momento.
