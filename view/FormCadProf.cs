@@ -16,11 +16,7 @@ namespace projetofinal
         {
             InitializeComponent();
         }
-        /*public FormCadProf(Form4 f)
-        {
-            InitializeComponent();
-            F4 = f;
-        }*/
+
         private void Form3_Load(object sender, EventArgs e)
         {//load
             int ncracha = p + 1;
@@ -41,19 +37,6 @@ namespace projetofinal
             tbsenha.Clear();
             tbsenha.Enabled = true;
             tabControl1.SelectedTab = tabPage1;
-        }
-
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> retornar
-            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
-        }
-
-        private void Form3_KeyDown(object sender, KeyEventArgs e)
-        {//ESC para retornar
-            if (e.KeyValue.Equals(27))
-                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Close();
         }
 
         private void btlimpar_Click_1(object sender, EventArgs e)
@@ -143,5 +126,22 @@ namespace projetofinal
                 tabControl1.SelectedTab = tabPage1;
             }
         }
+
+        #region Retornar
+
+        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
+        {//strip >> retornar
+            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
+        }
+
+        private void Form3_KeyDown(object sender, KeyEventArgs e)
+        {//ESC para retornar
+            if (e.KeyValue.Equals(27))
+                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
+        }
+
+        #endregion
     }
 }

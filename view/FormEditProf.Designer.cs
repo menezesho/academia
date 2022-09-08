@@ -1,7 +1,7 @@
 ﻿
 namespace projetofinal
 {
-    partial class FormCadProf
+    partial class FormEditProf
     {
         /// <summary>
         /// Required designer variable.
@@ -29,13 +29,14 @@ namespace projetofinal
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadProf));
-            this.label2 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btbuscar = new System.Windows.Forms.Button();
-            this.btlimpar = new System.Windows.Forms.Button();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditProf));
+            this.btexcluir = new System.Windows.Forms.Button();
+            this.lbeditarcadastro = new System.Windows.Forms.Label();
+            this.bteditar = new System.Windows.Forms.Button();
+            this.btcancelar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -57,92 +58,82 @@ namespace projetofinal
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.lbsenha = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.lbalunoscadastrados = new System.Windows.Forms.Label();
+            this.dgprofs = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgprofs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // btexcluir
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(125, 51);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(298, 31);
-            this.label2.TabIndex = 21;
-            this.label2.Text = "CADASTRO DE PROFESSOR";
+            this.btexcluir.BackColor = System.Drawing.Color.Lavender;
+            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btexcluir.Location = new System.Drawing.Point(48, 352);
+            this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btexcluir.Name = "btexcluir";
+            this.btexcluir.Size = new System.Drawing.Size(220, 29);
+            this.btexcluir.TabIndex = 11;
+            this.btexcluir.Text = "EXCLUIR";
+            this.btexcluir.UseVisualStyleBackColor = false;
+            this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
             // 
-            // menuStrip1
+            // lbeditarcadastro
             // 
-            this.menuStrip1.Font = new System.Drawing.Font("Calibri Light", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.retornarToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(547, 31);
-            this.menuStrip1.TabIndex = 12;
-            this.menuStrip1.Text = "menuStrip1";
+            this.lbeditarcadastro.AutoSize = true;
+            this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbeditarcadastro.Location = new System.Drawing.Point(164, 45);
+            this.lbeditarcadastro.Name = "lbeditarcadastro";
+            this.lbeditarcadastro.Size = new System.Drawing.Size(214, 31);
+            this.lbeditarcadastro.TabIndex = 31;
+            this.lbeditarcadastro.Text = "EDITAR CADASTRO";
             // 
-            // retornarToolStripMenuItem
+            // bteditar
             // 
-            this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
-            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
-            this.retornarToolStripMenuItem.Text = "Retornar";
-            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
+            this.bteditar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bteditar.Location = new System.Drawing.Point(48, 315);
+            this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bteditar.Name = "bteditar";
+            this.bteditar.Size = new System.Drawing.Size(220, 29);
+            this.bteditar.TabIndex = 9;
+            this.bteditar.Text = "EDITAR";
+            this.bteditar.UseVisualStyleBackColor = false;
+            this.bteditar.Click += new System.EventHandler(this.bteditar_Click);
             // 
-            // pictureBox1
+            // btcancelar
             // 
-            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(461, 33);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(86, 79);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 23;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btbuscar
-            // 
-            this.btbuscar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btbuscar.Location = new System.Drawing.Point(278, 318);
-            this.btbuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(218, 29);
-            this.btbuscar.TabIndex = 10;
-            this.btbuscar.Text = "BUSCAR";
-            this.btbuscar.UseVisualStyleBackColor = false;
-            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click_1);
-            // 
-            // btlimpar
-            // 
-            this.btlimpar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlimpar.Location = new System.Drawing.Point(50, 318);
-            this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btlimpar.Name = "btlimpar";
-            this.btlimpar.Size = new System.Drawing.Size(218, 29);
-            this.btlimpar.TabIndex = 9;
-            this.btlimpar.Text = "LIMPAR";
-            this.btlimpar.UseVisualStyleBackColor = false;
-            this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click_1);
+            this.btcancelar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btcancelar.Location = new System.Drawing.Point(274, 315);
+            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btcancelar.Name = "btcancelar";
+            this.btcancelar.Size = new System.Drawing.Size(220, 29);
+            this.btcancelar.TabIndex = 10;
+            this.btcancelar.Text = "CANCELAR";
+            this.btcancelar.UseVisualStyleBackColor = false;
+            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
             // 
             // btsalvar
             // 
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(50, 355);
+            this.btsalvar.Location = new System.Drawing.Point(274, 352);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(446, 29);
-            this.btsalvar.TabIndex = 11;
+            this.btsalvar.Size = new System.Drawing.Size(220, 29);
+            this.btsalvar.TabIndex = 12;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -152,7 +143,7 @@ namespace projetofinal
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(47, 97);
+            this.tabControl1.Location = new System.Drawing.Point(44, 94);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -226,7 +217,7 @@ namespace projetofinal
             // lbidade
             // 
             this.lbidade.AutoSize = true;
-            this.lbidade.Location = new System.Drawing.Point(62, 134);
+            this.lbidade.Location = new System.Drawing.Point(63, 133);
             this.lbidade.Name = "lbidade";
             this.lbidade.Size = new System.Drawing.Size(47, 20);
             this.lbidade.TabIndex = 2;
@@ -235,7 +226,7 @@ namespace projetofinal
             // lbcpf
             // 
             this.lbcpf.AutoSize = true;
-            this.lbcpf.Location = new System.Drawing.Point(62, 99);
+            this.lbcpf.Location = new System.Drawing.Point(63, 98);
             this.lbcpf.Name = "lbcpf";
             this.lbcpf.Size = new System.Drawing.Size(33, 20);
             this.lbcpf.TabIndex = 1;
@@ -244,7 +235,7 @@ namespace projetofinal
             // lbnome
             // 
             this.lbnome.AutoSize = true;
-            this.lbnome.Location = new System.Drawing.Point(62, 64);
+            this.lbnome.Location = new System.Drawing.Point(63, 63);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(50, 20);
             this.lbnome.TabIndex = 0;
@@ -296,7 +287,7 @@ namespace projetofinal
             // lbemail
             // 
             this.lbemail.AutoSize = true;
-            this.lbemail.Location = new System.Drawing.Point(51, 116);
+            this.lbemail.Location = new System.Drawing.Point(52, 116);
             this.lbemail.Name = "lbemail";
             this.lbemail.Size = new System.Drawing.Size(52, 20);
             this.lbemail.TabIndex = 9;
@@ -305,7 +296,7 @@ namespace projetofinal
             // lbcelular
             // 
             this.lbcelular.AutoSize = true;
-            this.lbcelular.Location = new System.Drawing.Point(51, 80);
+            this.lbcelular.Location = new System.Drawing.Point(52, 80);
             this.lbcelular.Name = "lbcelular";
             this.lbcelular.Size = new System.Drawing.Size(55, 20);
             this.lbcelular.TabIndex = 8;
@@ -314,7 +305,7 @@ namespace projetofinal
             // lbendereco
             // 
             this.lbendereco.AutoSize = true;
-            this.lbendereco.Location = new System.Drawing.Point(51, 46);
+            this.lbendereco.Location = new System.Drawing.Point(52, 46);
             this.lbendereco.Name = "lbendereco";
             this.lbendereco.Size = new System.Drawing.Size(71, 20);
             this.lbendereco.TabIndex = 7;
@@ -344,34 +335,113 @@ namespace projetofinal
             // lbsenha
             // 
             this.lbsenha.AutoSize = true;
-            this.lbsenha.Location = new System.Drawing.Point(101, 82);
+            this.lbsenha.Location = new System.Drawing.Point(102, 81);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(49, 20);
             this.lbsenha.TabIndex = 21;
             this.lbsenha.Text = "Senha";
             // 
-            // FormCadProf
+            // lbalunoscadastrados
+            // 
+            this.lbalunoscadastrados.AutoSize = true;
+            this.lbalunoscadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbalunoscadastrados.Location = new System.Drawing.Point(691, 45);
+            this.lbalunoscadastrados.Name = "lbalunoscadastrados";
+            this.lbalunoscadastrados.Size = new System.Drawing.Size(333, 31);
+            this.lbalunoscadastrados.TabIndex = 26;
+            this.lbalunoscadastrados.Text = "PROFESSORES CADASTRADOS";
+            // 
+            // dgprofs
+            // 
+            this.dgprofs.AllowUserToAddRows = false;
+            this.dgprofs.AllowUserToDeleteRows = false;
+            this.dgprofs.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgprofs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgprofs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgprofs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgprofs.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgprofs.Location = new System.Drawing.Point(531, 94);
+            this.dgprofs.Name = "dgprofs";
+            this.dgprofs.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgprofs.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgprofs.RowHeadersWidth = 51;
+            this.dgprofs.RowTemplate.Height = 29;
+            this.dgprofs.Size = new System.Drawing.Size(590, 287);
+            this.dgprofs.TabIndex = 25;
+            this.dgprofs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgprofs_CellClick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
+            this.pictureBox1.Location = new System.Drawing.Point(624, 36);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.retornarToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1164, 28);
+            this.menuStrip1.TabIndex = 34;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // retornarToolStripMenuItem
+            // 
+            this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
+            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.retornarToolStripMenuItem.Text = "Retornar";
+            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
+            // 
+            // FormEditProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 428);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.btbuscar);
-            this.Controls.Add(this.btlimpar);
+            this.ClientSize = new System.Drawing.Size(1164, 426);
+            this.Controls.Add(this.btexcluir);
+            this.Controls.Add(this.lbeditarcadastro);
+            this.Controls.Add(this.bteditar);
+            this.Controls.Add(this.btcancelar);
             this.Controls.Add(this.btsalvar);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.lbalunoscadastrados);
+            this.Controls.Add(this.dgprofs);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.label2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.Name = "FormCadProf";
+            this.MainMenuStrip = this.menuStrip1;
+            this.Name = "FormEditProf";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastro";
-            this.Load += new System.EventHandler(this.Form3_Load);
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form3_KeyDown);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Text = "Professores cadastrados";
+            this.Load += new System.EventHandler(this.FormEditProf_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormEditProf_KeyDown);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -379,6 +449,10 @@ namespace projetofinal
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgprofs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -386,12 +460,10 @@ namespace projetofinal
 
         #endregion
 
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btbuscar;
-        private System.Windows.Forms.Button btlimpar;
+        private System.Windows.Forms.Button btexcluir;
+        private System.Windows.Forms.Label lbeditarcadastro;
+        private System.Windows.Forms.Button bteditar;
+        private System.Windows.Forms.Button btcancelar;
         private System.Windows.Forms.Button btsalvar;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -413,5 +485,10 @@ namespace projetofinal
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.TextBox tbsenha;
         private System.Windows.Forms.Label lbsenha;
+        private System.Windows.Forms.Label lbalunoscadastrados;
+        private System.Windows.Forms.DataGridView dgprofs;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
     }
 }

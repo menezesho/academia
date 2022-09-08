@@ -72,14 +72,14 @@ namespace projetofinal
             this.tbusuario.Location = new System.Drawing.Point(396, 102);
             this.tbusuario.Name = "tbusuario";
             this.tbusuario.Size = new System.Drawing.Size(232, 27);
-            this.tbusuario.TabIndex = 2;
+            this.tbusuario.TabIndex = 0;
             // 
             // tbsenha
             // 
             this.tbsenha.Location = new System.Drawing.Point(396, 168);
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(232, 27);
-            this.tbsenha.TabIndex = 3;
+            this.tbsenha.TabIndex = 1;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // pictureBox1
@@ -94,46 +94,49 @@ namespace projetofinal
             // 
             // btlogin
             // 
-            this.btlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(177)))), ((int)(((byte)(205)))));
+            this.btlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlogin.Location = new System.Drawing.Point(396, 228);
             this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlogin.Name = "btlogin";
             this.btlogin.Size = new System.Drawing.Size(130, 35);
-            this.btlogin.TabIndex = 13;
+            this.btlogin.TabIndex = 2;
             this.btlogin.Text = "LOGIN";
             this.btlogin.UseVisualStyleBackColor = false;
             this.btlogin.Click += new System.EventHandler(this.btlogin_Click);
             // 
             // btlimpar
             // 
+            this.btlimpar.BackColor = System.Drawing.Color.GhostWhite;
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlimpar.Location = new System.Drawing.Point(532, 228);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
             this.btlimpar.Size = new System.Drawing.Size(96, 35);
-            this.btlimpar.TabIndex = 14;
+            this.btlimpar.TabIndex = 3;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
             // 
             // btsair
             // 
+            this.btsair.BackColor = System.Drawing.Color.GhostWhite;
             this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsair.Location = new System.Drawing.Point(396, 271);
             this.btsair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsair.Name = "btsair";
             this.btsair.Size = new System.Drawing.Size(232, 33);
-            this.btsair.TabIndex = 15;
+            this.btsair.TabIndex = 4;
             this.btsair.Text = "SAIR";
             this.btsair.UseVisualStyleBackColor = false;
             this.btsair.Click += new System.EventHandler(this.btsair_Click);
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.sairToolStripMenuItem,
@@ -180,6 +183,7 @@ namespace projetofinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(669, 356);
             this.Controls.Add(this.lbversao);
             this.Controls.Add(this.btsair);

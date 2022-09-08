@@ -29,11 +29,20 @@ namespace projetofinal
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAluno));
             this.dgalunos = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbalunoscadastrados = new System.Windows.Forms.Label();
+            this.btcancelar = new System.Windows.Forms.Button();
+            this.btsalvar = new System.Windows.Forms.Button();
+            this.bteditar = new System.Windows.Forms.Button();
+            this.lbeditarcadastro = new System.Windows.Forms.Label();
+            this.btexcluir = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tbmatricula = new System.Windows.Forms.TextBox();
@@ -60,30 +69,53 @@ namespace projetofinal
             this.tbpeso = new System.Windows.Forms.TextBox();
             this.lbaltura = new System.Windows.Forms.Label();
             this.lbpeso = new System.Windows.Forms.Label();
-            this.btcancelar = new System.Windows.Forms.Button();
-            this.btsalvar = new System.Windows.Forms.Button();
-            this.bteditar = new System.Windows.Forms.Button();
-            this.lbeditarcadastro = new System.Windows.Forms.Label();
-            this.btexcluir = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgalunos)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dgalunos
             // 
+            this.dgalunos.AllowUserToAddRows = false;
+            this.dgalunos.AllowUserToDeleteRows = false;
+            this.dgalunos.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.dgalunos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgalunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgalunos.Location = new System.Drawing.Point(531, 94);
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgalunos.Location = new System.Drawing.Point(532, 95);
             this.dgalunos.Name = "dgalunos";
+            this.dgalunos.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgalunos.RowHeadersWidth = 51;
             this.dgalunos.RowTemplate.Height = 29;
             this.dgalunos.Size = new System.Drawing.Size(590, 287);
-            this.dgalunos.TabIndex = 0;
+            this.dgalunos.TabIndex = 15;
             this.dgalunos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgalunos_CellClick);
             // 
             // menuStrip1
@@ -94,7 +126,7 @@ namespace projetofinal
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1166, 28);
-            this.menuStrip1.TabIndex = 2;
+            this.menuStrip1.TabIndex = 16;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // retornarToolStripMenuItem
@@ -108,23 +140,99 @@ namespace projetofinal
             // 
             this.lbalunoscadastrados.AutoSize = true;
             this.lbalunoscadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbalunoscadastrados.Location = new System.Drawing.Point(727, 45);
+            this.lbalunoscadastrados.Location = new System.Drawing.Point(728, 46);
             this.lbalunoscadastrados.Name = "lbalunoscadastrados";
             this.lbalunoscadastrados.Size = new System.Drawing.Size(273, 31);
             this.lbalunoscadastrados.TabIndex = 17;
             this.lbalunoscadastrados.Text = "ALUNOS CADASTRADOS";
+            // 
+            // btcancelar
+            // 
+            this.btcancelar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btcancelar.Location = new System.Drawing.Point(275, 316);
+            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btcancelar.Name = "btcancelar";
+            this.btcancelar.Size = new System.Drawing.Size(220, 29);
+            this.btcancelar.TabIndex = 12;
+            this.btcancelar.Text = "CANCELAR";
+            this.btcancelar.UseVisualStyleBackColor = false;
+            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click_1);
+            // 
+            // btsalvar
+            // 
+            this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btsalvar.Location = new System.Drawing.Point(275, 353);
+            this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btsalvar.Name = "btsalvar";
+            this.btsalvar.Size = new System.Drawing.Size(220, 29);
+            this.btsalvar.TabIndex = 14;
+            this.btsalvar.Text = "SALVAR";
+            this.btsalvar.UseVisualStyleBackColor = false;
+            this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
+            // 
+            // bteditar
+            // 
+            this.bteditar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bteditar.Location = new System.Drawing.Point(49, 316);
+            this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bteditar.Name = "bteditar";
+            this.bteditar.Size = new System.Drawing.Size(220, 29);
+            this.bteditar.TabIndex = 11;
+            this.bteditar.Text = "EDITAR";
+            this.bteditar.UseVisualStyleBackColor = false;
+            this.bteditar.Click += new System.EventHandler(this.bteditar_Click_1);
+            // 
+            // lbeditarcadastro
+            // 
+            this.lbeditarcadastro.AutoSize = true;
+            this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbeditarcadastro.Location = new System.Drawing.Point(165, 46);
+            this.lbeditarcadastro.Name = "lbeditarcadastro";
+            this.lbeditarcadastro.Size = new System.Drawing.Size(214, 31);
+            this.lbeditarcadastro.TabIndex = 22;
+            this.lbeditarcadastro.Text = "EDITAR CADASTRO";
+            // 
+            // btexcluir
+            // 
+            this.btexcluir.BackColor = System.Drawing.Color.Lavender;
+            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btexcluir.Location = new System.Drawing.Point(49, 353);
+            this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btexcluir.Name = "btexcluir";
+            this.btexcluir.Size = new System.Drawing.Size(220, 29);
+            this.btexcluir.TabIndex = 13;
+            this.btexcluir.Text = "EXCLUIR";
+            this.btexcluir.UseVisualStyleBackColor = false;
+            this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
+            this.pictureBox1.Location = new System.Drawing.Point(661, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(44, 94);
+            this.tabControl1.Location = new System.Drawing.Point(46, 95);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(454, 213);
-            this.tabControl1.TabIndex = 18;
+            this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
@@ -147,7 +255,7 @@ namespace projetofinal
             // 
             // tbmatricula
             // 
-            this.tbmatricula.Location = new System.Drawing.Point(245, 21);
+            this.tbmatricula.Location = new System.Drawing.Point(240, 24);
             this.tbmatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbmatricula.Name = "tbmatricula";
             this.tbmatricula.Size = new System.Drawing.Size(63, 27);
@@ -157,7 +265,7 @@ namespace projetofinal
             // lbmatricula
             // 
             this.lbmatricula.AutoSize = true;
-            this.lbmatricula.Location = new System.Drawing.Point(144, 28);
+            this.lbmatricula.Location = new System.Drawing.Point(144, 27);
             this.lbmatricula.Name = "lbmatricula";
             this.lbmatricula.Size = new System.Drawing.Size(92, 20);
             this.lbmatricula.TabIndex = 4;
@@ -165,7 +273,7 @@ namespace projetofinal
             // 
             // mtbcpf
             // 
-            this.mtbcpf.Location = new System.Drawing.Point(121, 92);
+            this.mtbcpf.Location = new System.Drawing.Point(116, 95);
             this.mtbcpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
@@ -175,7 +283,7 @@ namespace projetofinal
             // 
             // tbidade
             // 
-            this.tbidade.Location = new System.Drawing.Point(121, 127);
+            this.tbidade.Location = new System.Drawing.Point(116, 130);
             this.tbidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbidade.Name = "tbidade";
             this.tbidade.Size = new System.Drawing.Size(53, 27);
@@ -184,7 +292,7 @@ namespace projetofinal
             // 
             // tbnome
             // 
-            this.tbnome.Location = new System.Drawing.Point(121, 57);
+            this.tbnome.Location = new System.Drawing.Point(116, 60);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(269, 27);
@@ -193,7 +301,7 @@ namespace projetofinal
             // lbidade
             // 
             this.lbidade.AutoSize = true;
-            this.lbidade.Location = new System.Drawing.Point(62, 135);
+            this.lbidade.Location = new System.Drawing.Point(64, 133);
             this.lbidade.Name = "lbidade";
             this.lbidade.Size = new System.Drawing.Size(47, 20);
             this.lbidade.TabIndex = 2;
@@ -202,7 +310,7 @@ namespace projetofinal
             // lbcpf
             // 
             this.lbcpf.AutoSize = true;
-            this.lbcpf.Location = new System.Drawing.Point(62, 99);
+            this.lbcpf.Location = new System.Drawing.Point(64, 98);
             this.lbcpf.Name = "lbcpf";
             this.lbcpf.Size = new System.Drawing.Size(33, 20);
             this.lbcpf.TabIndex = 1;
@@ -211,7 +319,7 @@ namespace projetofinal
             // lbnome
             // 
             this.lbnome.AutoSize = true;
-            this.lbnome.Location = new System.Drawing.Point(60, 64);
+            this.lbnome.Location = new System.Drawing.Point(64, 63);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(50, 20);
             this.lbnome.TabIndex = 0;
@@ -236,7 +344,7 @@ namespace projetofinal
             // 
             // mtbcelular
             // 
-            this.mtbcelular.Location = new System.Drawing.Point(134, 77);
+            this.mtbcelular.Location = new System.Drawing.Point(126, 77);
             this.mtbcelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbcelular.Mask = "(99) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
@@ -246,7 +354,7 @@ namespace projetofinal
             // 
             // tbemail
             // 
-            this.tbemail.Location = new System.Drawing.Point(134, 113);
+            this.tbemail.Location = new System.Drawing.Point(126, 113);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(273, 27);
@@ -254,7 +362,7 @@ namespace projetofinal
             // 
             // tbendereco
             // 
-            this.tbendereco.Location = new System.Drawing.Point(134, 43);
+            this.tbendereco.Location = new System.Drawing.Point(126, 43);
             this.tbendereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbendereco.Name = "tbendereco";
             this.tbendereco.Size = new System.Drawing.Size(273, 27);
@@ -263,7 +371,7 @@ namespace projetofinal
             // lbemail
             // 
             this.lbemail.AutoSize = true;
-            this.lbemail.Location = new System.Drawing.Point(45, 120);
+            this.lbemail.Location = new System.Drawing.Point(51, 116);
             this.lbemail.Name = "lbemail";
             this.lbemail.Size = new System.Drawing.Size(52, 20);
             this.lbemail.TabIndex = 9;
@@ -272,7 +380,7 @@ namespace projetofinal
             // lbcelular
             // 
             this.lbcelular.AutoSize = true;
-            this.lbcelular.Location = new System.Drawing.Point(42, 85);
+            this.lbcelular.Location = new System.Drawing.Point(51, 80);
             this.lbcelular.Name = "lbcelular";
             this.lbcelular.Size = new System.Drawing.Size(55, 20);
             this.lbcelular.TabIndex = 8;
@@ -281,7 +389,7 @@ namespace projetofinal
             // lbendereco
             // 
             this.lbendereco.AutoSize = true;
-            this.lbendereco.Location = new System.Drawing.Point(42, 49);
+            this.lbendereco.Location = new System.Drawing.Point(51, 46);
             this.lbendereco.Name = "lbendereco";
             this.lbendereco.Size = new System.Drawing.Size(71, 20);
             this.lbendereco.TabIndex = 7;
@@ -307,17 +415,17 @@ namespace projetofinal
             // 
             // tbsenha
             // 
-            this.tbsenha.Location = new System.Drawing.Point(174, 122);
+            this.tbsenha.Location = new System.Drawing.Point(162, 123);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(189, 27);
-            this.tbsenha.TabIndex = 20;
+            this.tbsenha.TabIndex = 10;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // lbsenha
             // 
             this.lbsenha.AutoSize = true;
-            this.lbsenha.Location = new System.Drawing.Point(105, 127);
+            this.lbsenha.Location = new System.Drawing.Point(109, 127);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(49, 20);
             this.lbsenha.TabIndex = 21;
@@ -326,7 +434,7 @@ namespace projetofinal
             // lbcm
             // 
             this.lbcm.AutoSize = true;
-            this.lbcm.Location = new System.Drawing.Point(238, 75);
+            this.lbcm.Location = new System.Drawing.Point(226, 73);
             this.lbcm.Name = "lbcm";
             this.lbcm.Size = new System.Drawing.Size(29, 20);
             this.lbcm.TabIndex = 19;
@@ -335,7 +443,7 @@ namespace projetofinal
             // lbkg
             // 
             this.lbkg.AutoSize = true;
-            this.lbkg.Location = new System.Drawing.Point(238, 39);
+            this.lbkg.Location = new System.Drawing.Point(226, 37);
             this.lbkg.Name = "lbkg";
             this.lbkg.Size = new System.Drawing.Size(25, 20);
             this.lbkg.TabIndex = 18;
@@ -343,7 +451,7 @@ namespace projetofinal
             // 
             // tbaltura
             // 
-            this.tbaltura.Location = new System.Drawing.Point(174, 68);
+            this.tbaltura.Location = new System.Drawing.Point(162, 69);
             this.tbaltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbaltura.Name = "tbaltura";
             this.tbaltura.Size = new System.Drawing.Size(61, 27);
@@ -351,7 +459,7 @@ namespace projetofinal
             // 
             // tbpeso
             // 
-            this.tbpeso.Location = new System.Drawing.Point(174, 34);
+            this.tbpeso.Location = new System.Drawing.Point(162, 35);
             this.tbpeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbpeso.Name = "tbpeso";
             this.tbpeso.Size = new System.Drawing.Size(61, 27);
@@ -360,7 +468,7 @@ namespace projetofinal
             // lbaltura
             // 
             this.lbaltura.AutoSize = true;
-            this.lbaltura.Location = new System.Drawing.Point(105, 75);
+            this.lbaltura.Location = new System.Drawing.Point(109, 73);
             this.lbaltura.Name = "lbaltura";
             this.lbaltura.Size = new System.Drawing.Size(49, 20);
             this.lbaltura.TabIndex = 13;
@@ -369,97 +477,23 @@ namespace projetofinal
             // lbpeso
             // 
             this.lbpeso.AutoSize = true;
-            this.lbpeso.Location = new System.Drawing.Point(105, 39);
+            this.lbpeso.Location = new System.Drawing.Point(109, 39);
             this.lbpeso.Name = "lbpeso";
             this.lbpeso.Size = new System.Drawing.Size(39, 20);
             this.lbpeso.TabIndex = 12;
             this.lbpeso.Text = "Peso";
             // 
-            // btcancelar
-            // 
-            this.btcancelar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btcancelar.Location = new System.Drawing.Point(274, 315);
-            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btcancelar.Name = "btcancelar";
-            this.btcancelar.Size = new System.Drawing.Size(220, 29);
-            this.btcancelar.TabIndex = 19;
-            this.btcancelar.Text = "CANCELAR";
-            this.btcancelar.UseVisualStyleBackColor = false;
-            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click_1);
-            // 
-            // btsalvar
-            // 
-            this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(177)))), ((int)(((byte)(205)))));
-            this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(274, 352);
-            this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(220, 29);
-            this.btsalvar.TabIndex = 20;
-            this.btsalvar.Text = "SALVAR";
-            this.btsalvar.UseVisualStyleBackColor = false;
-            this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
-            // 
-            // bteditar
-            // 
-            this.bteditar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.bteditar.Location = new System.Drawing.Point(48, 315);
-            this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bteditar.Name = "bteditar";
-            this.bteditar.Size = new System.Drawing.Size(220, 29);
-            this.bteditar.TabIndex = 21;
-            this.bteditar.Text = "EDITAR";
-            this.bteditar.UseVisualStyleBackColor = false;
-            this.bteditar.Click += new System.EventHandler(this.bteditar_Click_1);
-            // 
-            // lbeditarcadastro
-            // 
-            this.lbeditarcadastro.AutoSize = true;
-            this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbeditarcadastro.Location = new System.Drawing.Point(164, 45);
-            this.lbeditarcadastro.Name = "lbeditarcadastro";
-            this.lbeditarcadastro.Size = new System.Drawing.Size(214, 31);
-            this.lbeditarcadastro.TabIndex = 22;
-            this.lbeditarcadastro.Text = "EDITAR CADASTRO";
-            // 
-            // btexcluir
-            // 
-            this.btexcluir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btexcluir.Location = new System.Drawing.Point(48, 352);
-            this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btexcluir.Name = "btexcluir";
-            this.btexcluir.Size = new System.Drawing.Size(220, 29);
-            this.btexcluir.TabIndex = 23;
-            this.btexcluir.Text = "EXCLUIR";
-            this.btexcluir.UseVisualStyleBackColor = false;
-            this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(660, 36);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 24;
-            this.pictureBox1.TabStop = false;
-            // 
-            // FormListAluno
+            // FormEditAluno
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1166, 427);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btexcluir);
             this.Controls.Add(this.lbeditarcadastro);
             this.Controls.Add(this.bteditar);
             this.Controls.Add(this.btcancelar);
             this.Controls.Add(this.btsalvar);
-            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lbalunoscadastrados);
             this.Controls.Add(this.dgalunos);
             this.Controls.Add(this.menuStrip1);
@@ -467,14 +501,15 @@ namespace projetofinal
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FormListAluno";
+            this.Name = "FormEditAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Alunos Cadastrados";
+            this.Text = "Alunos cadastrados";
             this.Load += new System.EventHandler(this.FormEditUser_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormListAluno_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgalunos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -482,7 +517,6 @@ namespace projetofinal
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -494,6 +528,12 @@ namespace projetofinal
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
         private System.Windows.Forms.Label lbalunoscadastrados;
+        private System.Windows.Forms.Button btcancelar;
+        private System.Windows.Forms.Button btsalvar;
+        private System.Windows.Forms.Button bteditar;
+        private System.Windows.Forms.Label lbeditarcadastro;
+        private System.Windows.Forms.Button btexcluir;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox tbmatricula;
@@ -520,11 +560,5 @@ namespace projetofinal
         private System.Windows.Forms.TextBox tbpeso;
         private System.Windows.Forms.Label lbaltura;
         private System.Windows.Forms.Label lbpeso;
-        private System.Windows.Forms.Button btcancelar;
-        private System.Windows.Forms.Button btsalvar;
-        private System.Windows.Forms.Button bteditar;
-        private System.Windows.Forms.Label lbeditarcadastro;
-        private System.Windows.Forms.Button btexcluir;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

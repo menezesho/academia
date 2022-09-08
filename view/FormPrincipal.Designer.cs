@@ -49,6 +49,7 @@ namespace projetofinal
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Lavender;
             this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
             this.pictureBox1.Location = new System.Drawing.Point(0, 31);
             this.pictureBox1.Name = "pictureBox1";
@@ -59,6 +60,7 @@ namespace projetofinal
             // 
             // menuStrip1
             // 
+            this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.retornarToolStripMenuItem,
@@ -130,27 +132,30 @@ namespace projetofinal
             // cadastrarToolStripMenuItem1
             // 
             this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
             this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
             this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
             // 
             // listarToolStripMenuItem1
             // 
             this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
             this.listarToolStripMenuItem1.Text = "Listar";
+            this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
             // 
             // editarToolStripMenuItem1
             // 
             this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
             this.editarToolStripMenuItem1.Text = "Editar";
+            this.editarToolStripMenuItem1.Click += new System.EventHandler(this.editarToolStripMenuItem1_Click);
             // 
             // excluirToolStripMenuItem1
             // 
             this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
             this.excluirToolStripMenuItem1.Text = "Excluir";
+            this.excluirToolStripMenuItem1.Click += new System.EventHandler(this.excluirToolStripMenuItem1_Click);
             // 
             // FormPrincipal
             // 

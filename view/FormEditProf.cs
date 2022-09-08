@@ -9,19 +9,19 @@ using System.Windows.Forms;
 
 namespace projetofinal
 {
-    public partial class FormEditAluno : Form
+    public partial class FormEditProf : Form
     {
-        public FormEditAluno()
+        public FormEditProf()
         {
             InitializeComponent();
         }
 
-        private void FormEditUser_Load(object sender, EventArgs e)
+        private void FormEditProf_Load(object sender, EventArgs e)
         {//load
             Funcoes funcoes = new Funcoes();
-            dgalunos.DataSource = funcoes.listarAlunos();
+            dgprofs.DataSource = funcoes.listarProfs();
 
-            tbmatricula.Clear();
+            tbcracha.Clear();
             tbnome.Clear();
             mtbcpf.Clear();
             tbidade.Clear();
@@ -29,9 +29,7 @@ namespace projetofinal
             mtbcelular.Clear();
             tbemail.Clear();
             tbsenha.Clear();
-            tbpeso.Clear();
-            tbaltura.Clear();
-            tbmatricula.Enabled = false;
+            tbcracha.Enabled = false;
             tbnome.Enabled = false;
             mtbcpf.Enabled = false;
             tbidade.Enabled = false;
@@ -39,33 +37,29 @@ namespace projetofinal
             mtbcelular.Enabled = false;
             tbemail.Enabled = false;
             tbsenha.Enabled = false;
-            tbpeso.Enabled = false;
-            tbaltura.Enabled = false;
             bteditar.Enabled = true;
             bteditar.Text = "EDITAR";
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
         }
 
-        public void dgalunos_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgprofs_CellClick(object sender, DataGridViewCellEventArgs e)
         {//cellclick datagrid
-            tbmatricula.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
-            tbnome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
-            mtbcpf.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
-            tbidade.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
-            tbendereco.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
-            mtbcelular.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
-            tbemail.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
-            tbsenha.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
-            tbpeso.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
-            tbaltura.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
+            tbcracha.Text = dgprofs.CurrentRow.Cells[0].Value.ToString();
+            tbnome.Text = dgprofs.CurrentRow.Cells[1].Value.ToString();
+            mtbcpf.Text = dgprofs.CurrentRow.Cells[2].Value.ToString();
+            tbidade.Text = dgprofs.CurrentRow.Cells[3].Value.ToString();
+            tbendereco.Text = dgprofs.CurrentRow.Cells[4].Value.ToString();
+            mtbcelular.Text = dgprofs.CurrentRow.Cells[5].Value.ToString();
+            tbemail.Text = dgprofs.CurrentRow.Cells[6].Value.ToString();
+            tbsenha.Text = dgprofs.CurrentRow.Cells[7].Value.ToString();
         }
 
-        private void bteditar_Click_1(object sender, EventArgs e)
+        private void bteditar_Click(object sender, EventArgs e)
         {//bteditar
-            if (tbmatricula.Text != "")
+            if (tbcracha.Text != "")
             {
-                tbmatricula.Enabled = true;
+                tbcracha.Enabled = true;
                 tbnome.Enabled = true;
                 mtbcpf.Enabled = true;
                 tbidade.Enabled = true;
@@ -73,8 +67,6 @@ namespace projetofinal
                 mtbcelular.Enabled = true;
                 tbemail.Enabled = true;
                 tbsenha.Enabled = true;
-                tbpeso.Enabled = true;
-                tbaltura.Enabled = true;
                 bteditar.Enabled = false;
                 bteditar.Text = "EDITANDO...";
                 btcancelar.Enabled = true;
@@ -84,9 +76,9 @@ namespace projetofinal
                 MessageBox.Show("Nenhum cadastro foi selecionado, tente novamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void btcancelar_Click_1(object sender, EventArgs e)
+        private void btcancelar_Click(object sender, EventArgs e)
         {//btcancelar
-            tbmatricula.Clear();
+            tbcracha.Clear();
             tbnome.Clear();
             mtbcpf.Clear();
             tbidade.Clear();
@@ -94,9 +86,7 @@ namespace projetofinal
             mtbcelular.Clear();
             tbemail.Clear();
             tbsenha.Clear();
-            tbpeso.Clear();
-            tbaltura.Clear();
-            tbmatricula.Enabled = false;
+            tbcracha.Enabled = false;
             tbnome.Enabled = false;
             mtbcpf.Enabled = false;
             tbidade.Enabled = false;
@@ -104,8 +94,6 @@ namespace projetofinal
             mtbcelular.Enabled = false;
             tbemail.Enabled = false;
             tbsenha.Enabled = false;
-            tbpeso.Enabled = false;
-            tbaltura.Enabled = false;
             bteditar.Enabled = true;
             bteditar.Text = "EDITAR";
             btsalvar.Enabled = false;
@@ -115,17 +103,17 @@ namespace projetofinal
 
         private void btexcluir_Click(object sender, EventArgs e)
         {//btexcluir
-            if (tbmatricula.Text != "")
+            if (tbcracha.Text != "")
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    Aluno alunos = new Aluno();
-                    alunos.matricula = int.Parse(tbmatricula.Text);
+                    Professor profs = new Professor();
+                    profs.cracha = int.Parse(tbcracha.Text);
                     Funcoes funcoes = new Funcoes();
-                    funcoes.excluirAluno(alunos);
-                    dgalunos.DataSource = funcoes.listarAlunos();
+                    funcoes.excluirProf(profs);
+                    dgprofs.DataSource = funcoes.listarProfs();
 
-                    tbmatricula.Clear();
+                    tbcracha.Clear();
                     tbnome.Clear();
                     mtbcpf.Clear();
                     tbidade.Clear();
@@ -133,9 +121,7 @@ namespace projetofinal
                     mtbcelular.Clear();
                     tbemail.Clear();
                     tbsenha.Clear();
-                    tbpeso.Clear();
-                    tbaltura.Clear();
-                    tbmatricula.Enabled = false;
+                    tbcracha.Enabled = false;
                     tbnome.Enabled = false;
                     mtbcpf.Enabled = false;
                     tbidade.Enabled = false;
@@ -143,8 +129,6 @@ namespace projetofinal
                     mtbcelular.Enabled = false;
                     tbemail.Enabled = false;
                     tbsenha.Enabled = false;
-                    tbpeso.Enabled = false;
-                    tbaltura.Enabled = false;
                     bteditar.Enabled = true;
                     bteditar.Text = "EDITAR";
                     btsalvar.Enabled = false;
@@ -158,28 +142,26 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbsenha.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbsenha.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                Aluno alunos = new Aluno();
+                Professor profs = new Professor();
 
-                alunos.matricula = int.Parse(tbmatricula.Text);
-                alunos.nome = tbnome.Text;
-                alunos.cpf = mtbcpf.Text;
-                alunos.idade = int.Parse(tbidade.Text);
-                alunos.endereco = tbendereco.Text;
-                alunos.celular = mtbcelular.Text;
-                alunos.email = tbemail.Text;
-                alunos.senha = tbsenha.Text;
-                alunos.peso = float.Parse(tbpeso.Text);
-                alunos.altura = float.Parse(tbaltura.Text);
+                profs.cracha = int.Parse(tbcracha.Text);
+                profs.nome = tbnome.Text;
+                profs.cpf = mtbcpf.Text;
+                profs.idade = int.Parse(tbidade.Text);
+                profs.endereco = tbendereco.Text;
+                profs.celular = mtbcelular.Text;
+                profs.email = tbemail.Text;
+                profs.senha = tbsenha.Text;
 
                 Funcoes funcoes = new Funcoes();
-                funcoes.editarAluno(alunos);
-                dgalunos.DataSource = funcoes.listarAlunos();
+                funcoes.editarProf(profs);
+                dgprofs.DataSource = funcoes.listarProfs();
 
-                tbmatricula.Clear();
+                tbcracha.Clear();
                 tbnome.Clear();
                 mtbcpf.Clear();
                 tbidade.Clear();
@@ -187,9 +169,7 @@ namespace projetofinal
                 mtbcelular.Clear();
                 tbemail.Clear();
                 tbsenha.Clear();
-                tbpeso.Clear();
-                tbaltura.Clear();
-                tbmatricula.Enabled = false;
+                tbcracha.Enabled = false;
                 tbnome.Enabled = false;
                 mtbcpf.Enabled = false;
                 tbidade.Enabled = false;
@@ -197,8 +177,6 @@ namespace projetofinal
                 mtbcelular.Enabled = false;
                 tbemail.Enabled = false;
                 tbsenha.Enabled = false;
-                tbpeso.Enabled = false;
-                tbaltura.Enabled = false;
                 bteditar.Enabled = true;
                 bteditar.Text = "EDITAR";
                 btcancelar.Enabled = false;
@@ -209,7 +187,7 @@ namespace projetofinal
 
         #region Retornar
 
-        private void FormListAluno_KeyDown(object sender, KeyEventArgs e)
+        private void FormEditProf_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
             if (e.KeyValue.Equals(27))
                 if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)

@@ -13,14 +13,9 @@ namespace projetofinal
         {
             InitializeComponent();
         }
-        /*public Form1(Form2 f)
-        {
-            InitializeComponent();
-            F2 = f;
-        }*/
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        {//load
             int nmatricula = a + 1;
             tbmatricula.Text = nmatricula.ToString();
 
@@ -43,56 +38,6 @@ namespace projetofinal
             tbaltura.Clear();
             tbaltura.Enabled = true;
             tabControl1.SelectedTab = tabPage1;
-        }
-
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> retornar
-            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
-
-        }
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
-        {//ESC para retornar
-            if (e.KeyValue.Equals(27))
-                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Close();
-        }
-
-        private void btsalvar_Click(object sender, EventArgs e)
-        {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == ""  || tbsenha.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
-                MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            else
-            {
-                Aluno alunos = new Aluno();
-
-                alunos.matricula = int.Parse(tbmatricula.Text);
-                alunos.nome = tbnome.Text;
-                alunos.cpf = mtbcpf.Text;
-                alunos.idade = int.Parse(tbidade.Text);
-                alunos.endereco = tbendereco.Text;
-                alunos.celular = mtbcelular.Text;
-                alunos.email = tbemail.Text;
-                alunos.senha = tbsenha.Text;
-                alunos.peso = float.Parse(tbpeso.Text);
-                alunos.altura = float.Parse(tbaltura.Text);
-
-                Funcoes funcoes = new Funcoes();
-                funcoes.cadastrarAluno(alunos);
-
-                tbnome.Clear();
-                mtbcpf.Clear();
-                tbidade.Clear();
-                tbendereco.Clear();
-                mtbcelular.Clear();
-                tbemail.Clear();
-                tbsenha.Clear();
-                tbpeso.Clear();
-                tbaltura.Clear();
-                tabControl1.SelectedTab = tabPage1;
-                tbmatricula.Text = (a + 1).ToString();
-            }
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
@@ -158,5 +103,59 @@ namespace projetofinal
                     MessageBox.Show("Aluno não cadastrado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }*/
         }
+
+        private void btsalvar_Click(object sender, EventArgs e)
+        {//btsalvar
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbsenha.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+                MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            else
+            {
+                Aluno alunos = new Aluno();
+
+                alunos.matricula = int.Parse(tbmatricula.Text);
+                alunos.nome = tbnome.Text;
+                alunos.cpf = mtbcpf.Text;
+                alunos.idade = int.Parse(tbidade.Text);
+                alunos.endereco = tbendereco.Text;
+                alunos.celular = mtbcelular.Text;
+                alunos.email = tbemail.Text;
+                alunos.senha = tbsenha.Text;
+                alunos.peso = float.Parse(tbpeso.Text);
+                alunos.altura = float.Parse(tbaltura.Text);
+
+                Funcoes funcoes = new Funcoes();
+                funcoes.cadastrarAluno(alunos);
+
+                tbnome.Clear();
+                mtbcpf.Clear();
+                tbidade.Clear();
+                tbendereco.Clear();
+                mtbcelular.Clear();
+                tbemail.Clear();
+                tbsenha.Clear();
+                tbpeso.Clear();
+                tbaltura.Clear();
+                tabControl1.SelectedTab = tabPage1;
+                tbmatricula.Text = (a + 1).ToString();
+            }
+        }
+
+        #region Retornar
+
+        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
+        {//strip >> retornar
+            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
+
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {//ESC para retornar
+            if (e.KeyValue.Equals(27))
+                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
+        }
+
+        #endregion
     }
 }
