@@ -30,9 +30,9 @@ namespace projetofinal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tbusuario = new System.Windows.Forms.TextBox();
+            this.lbcracha = new System.Windows.Forms.Label();
+            this.lbsenha = new System.Windows.Forms.Label();
+            this.tbcracha = new System.Windows.Forms.TextBox();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btlogin = new System.Windows.Forms.Button();
@@ -40,45 +40,44 @@ namespace projetofinal
             this.btsair = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.loginToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbversao = new System.Windows.Forms.Label();
+            this.btversenha = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lbcracha
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(396, 76);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Usuário";
+            this.lbcracha.AutoSize = true;
+            this.lbcracha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbcracha.Location = new System.Drawing.Point(396, 76);
+            this.lbcracha.Name = "lbcracha";
+            this.lbcracha.Size = new System.Drawing.Size(63, 23);
+            this.lbcracha.TabIndex = 0;
+            this.lbcracha.Text = "Crachá";
             // 
-            // label2
+            // lbsenha
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(396, 142);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 23);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Senha";
+            this.lbsenha.AutoSize = true;
+            this.lbsenha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbsenha.Location = new System.Drawing.Point(396, 142);
+            this.lbsenha.Name = "lbsenha";
+            this.lbsenha.Size = new System.Drawing.Size(57, 23);
+            this.lbsenha.TabIndex = 1;
+            this.lbsenha.Text = "Senha";
             // 
-            // tbusuario
+            // tbcracha
             // 
-            this.tbusuario.Location = new System.Drawing.Point(396, 102);
-            this.tbusuario.Name = "tbusuario";
-            this.tbusuario.Size = new System.Drawing.Size(232, 27);
-            this.tbusuario.TabIndex = 0;
+            this.tbcracha.Location = new System.Drawing.Point(396, 102);
+            this.tbcracha.Name = "tbcracha";
+            this.tbcracha.Size = new System.Drawing.Size(232, 27);
+            this.tbcracha.TabIndex = 0;
             // 
             // tbsenha
             // 
             this.tbsenha.Location = new System.Drawing.Point(396, 168);
             this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(232, 27);
+            this.tbsenha.Size = new System.Drawing.Size(192, 27);
             this.tbsenha.TabIndex = 1;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
@@ -139,9 +138,7 @@ namespace projetofinal
             this.menuStrip1.BackColor = System.Drawing.Color.White;
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.sairToolStripMenuItem,
-            this.cadastrarToolStripMenuItem,
-            this.loginToolStripMenuItem});
+            this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(669, 28);
@@ -155,20 +152,6 @@ namespace projetofinal
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
-            // cadastrarToolStripMenuItem
-            // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(86, 24);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
-            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
-            // 
-            // loginToolStripMenuItem
-            // 
-            this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(60, 24);
-            this.loginToolStripMenuItem.Text = "Login";
-            this.loginToolStripMenuItem.Click += new System.EventHandler(this.loginToolStripMenuItem_Click);
-            // 
             // lbversao
             // 
             this.lbversao.AutoSize = true;
@@ -179,21 +162,32 @@ namespace projetofinal
             this.lbversao.TabIndex = 17;
             this.lbversao.Text = "v.1.1.1";
             // 
+            // btversenha
+            // 
+            this.btversenha.Image = global::projetofinal.Properties.Resources.icon_eye;
+            this.btversenha.Location = new System.Drawing.Point(594, 168);
+            this.btversenha.Name = "btversenha";
+            this.btversenha.Size = new System.Drawing.Size(34, 29);
+            this.btversenha.TabIndex = 18;
+            this.btversenha.UseVisualStyleBackColor = true;
+            this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
+            // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(669, 356);
+            this.Controls.Add(this.btversenha);
             this.Controls.Add(this.lbversao);
             this.Controls.Add(this.btsair);
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btlogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.tbsenha);
-            this.Controls.Add(this.tbusuario);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tbcracha);
+            this.Controls.Add(this.lbsenha);
+            this.Controls.Add(this.lbcracha);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
@@ -214,9 +208,9 @@ namespace projetofinal
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox tbusuario;
+        private System.Windows.Forms.Label lbcracha;
+        private System.Windows.Forms.Label lbsenha;
+        private System.Windows.Forms.TextBox tbcracha;
         private System.Windows.Forms.TextBox tbsenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btlogin;
@@ -224,8 +218,7 @@ namespace projetofinal
         private System.Windows.Forms.Button btsair;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem loginToolStripMenuItem;
         private System.Windows.Forms.Label lbversao;
+        private System.Windows.Forms.Button btversenha;
     }
 }

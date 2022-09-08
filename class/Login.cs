@@ -6,12 +6,12 @@ namespace projetofinal
 {
     class Login
     {
-        public string usuario { get; set; }
+        public string cracha { get; set; }
         public string senha { get; set; }
 
-        public Login(string usuario, string senha)
+        public Login(string cracha, string senha)
         {
-            this.usuario = usuario;
+            this.cracha = cracha;
             this.senha = senha;
         }
     }

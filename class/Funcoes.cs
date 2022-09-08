@@ -80,7 +80,7 @@ namespace projetofinal
         {
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT * FROM aluno";
+            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha, peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
@@ -183,7 +183,7 @@ namespace projetofinal
         {
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT * FROM professor";
+            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha FROM professor";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
@@ -211,6 +211,42 @@ namespace projetofinal
                 conexao.Close();
 
                 MessageBox.Show("Cadastro excluido com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        #endregion
+
+        #region Login
+
+        public void loginProf(string cracha, string senha)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM professor WHERE cracha=@cracha AND senha=@senha";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cracha", cracha);
+                comando.Parameters.AddWithValue("@senha", senha);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    FormPrincipal Fp = new FormPrincipal();
+                    Fp.ShowDialog();
+                    conexao.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Usuário ou senha incorretos, tente novamente!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexao.Close();
+                }
             }
             catch (Exception erro)
             {
