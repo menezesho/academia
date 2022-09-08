@@ -45,6 +45,9 @@ namespace projetofinal
             bteditar.Text = "EDITAR";
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
+
+            btbuscar.Enabled = true;
+            tbbusca.Clear();
         }
 
         public void dgalunos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -59,6 +62,23 @@ namespace projetofinal
             tbsenha.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
             tbpeso.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
             tbaltura.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
+        }
+
+        private void btbuscar_Click(object sender, EventArgs e)
+        {//btbuscar
+            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+            SqlConnection conexao = new SqlConnection(strConexao);
+            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha, peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno WHERE nome LIKE @nome ORDER BY nome";
+            SqlCommand comando = new SqlCommand(sql, conexao);
+
+            comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
+
+            conexao.Open();
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            DataSet tabela = new DataSet();
+            da.Fill(tabela);
+            dgalunos.DataSource = tabela.Tables[0];
+            conexao.Close();
         }
 
         private void bteditar_Click_1(object sender, EventArgs e)
@@ -79,6 +99,8 @@ namespace projetofinal
                 bteditar.Text = "EDITANDO...";
                 btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
+
+                btbuscar.Enabled = false;
             }
             else
                 MessageBox.Show("Nenhum cadastro foi selecionado, tente novamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -111,6 +133,8 @@ namespace projetofinal
             btsalvar.Enabled = false;
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
+
+            btbuscar.Enabled = true;
         }
 
         private void btexcluir_Click(object sender, EventArgs e)
@@ -150,6 +174,8 @@ namespace projetofinal
                     btsalvar.Enabled = false;
                     btcancelar.Enabled = false;
                     tabControl1.SelectedTab = tabPage1;
+
+                    btbuscar.Enabled = true;
                 }
             }
             else
@@ -204,6 +230,8 @@ namespace projetofinal
                 btcancelar.Enabled = false;
                 tabControl1.SelectedTab = tabPage1;
                 btsalvar.Enabled = false;
+
+                btbuscar.Enabled = true;
             }
         }
 

@@ -55,6 +55,23 @@ namespace projetofinal
             tbsenha.Text = dgprofs.CurrentRow.Cells[7].Value.ToString();
         }
 
+        private void btbuscar_Click(object sender, EventArgs e)
+        {//btbuscar
+            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+            SqlConnection conexao = new SqlConnection(strConexao);
+            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha FROM professor WHERE nome LIKE @nome ORDER BY nome";
+            SqlCommand comando = new SqlCommand(sql, conexao);
+
+            comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
+
+            conexao.Open();
+            SqlDataAdapter da = new SqlDataAdapter(comando);
+            DataSet tabela = new DataSet();
+            da.Fill(tabela);
+            dgprofs.DataSource = tabela.Tables[0];
+            conexao.Close();
+        }
+
         private void bteditar_Click(object sender, EventArgs e)
         {//bteditar
             if (tbcracha.Text != "")

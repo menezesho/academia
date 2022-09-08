@@ -49,7 +49,7 @@ namespace projetofinal
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, senha=@senha, peso=@peso, altura=@altura WHERE matricula = @matricula";
+                string sql = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, senha=@senha, peso=@peso, altura=@altura WHERE matricula=@matricula";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
                 comando.Parameters.AddWithValue("@nome", alunos.nome);
@@ -114,6 +114,7 @@ namespace projetofinal
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         #endregion
 
         #region Professor

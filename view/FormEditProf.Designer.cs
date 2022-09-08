@@ -63,6 +63,9 @@ namespace projetofinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btbuscar = new System.Windows.Forms.Button();
+            this.lbbusca = new System.Windows.Forms.Label();
+            this.tbbusca = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -77,7 +80,7 @@ namespace projetofinal
             this.btexcluir.BackColor = System.Drawing.Color.Lavender;
             this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btexcluir.Location = new System.Drawing.Point(48, 352);
+            this.btexcluir.Location = new System.Drawing.Point(49, 403);
             this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btexcluir.Name = "btexcluir";
             this.btexcluir.Size = new System.Drawing.Size(220, 29);
@@ -101,7 +104,7 @@ namespace projetofinal
             this.bteditar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bteditar.Location = new System.Drawing.Point(48, 315);
+            this.bteditar.Location = new System.Drawing.Point(49, 366);
             this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditar.Name = "bteditar";
             this.bteditar.Size = new System.Drawing.Size(220, 29);
@@ -115,7 +118,7 @@ namespace projetofinal
             this.btcancelar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btcancelar.Location = new System.Drawing.Point(274, 315);
+            this.btcancelar.Location = new System.Drawing.Point(275, 366);
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
             this.btcancelar.Size = new System.Drawing.Size(220, 29);
@@ -129,7 +132,7 @@ namespace projetofinal
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(274, 352);
+            this.btsalvar.Location = new System.Drawing.Point(275, 403);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
             this.btsalvar.Size = new System.Drawing.Size(220, 29);
@@ -143,7 +146,7 @@ namespace projetofinal
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(44, 94);
+            this.tabControl1.Location = new System.Drawing.Point(45, 145);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -387,7 +390,7 @@ namespace projetofinal
             this.dgprofs.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgprofs.RowHeadersWidth = 51;
             this.dgprofs.RowTemplate.Height = 29;
-            this.dgprofs.Size = new System.Drawing.Size(590, 287);
+            this.dgprofs.Size = new System.Drawing.Size(590, 338);
             this.dgprofs.TabIndex = 25;
             this.dgprofs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgprofs_CellClick);
             // 
@@ -419,11 +422,46 @@ namespace projetofinal
             this.retornarToolStripMenuItem.Text = "Retornar";
             this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
             // 
+            // btbuscar
+            // 
+            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btbuscar.FlatAppearance.BorderSize = 0;
+            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbuscar.ForeColor = System.Drawing.Color.Transparent;
+            this.btbuscar.Image = global::projetofinal.Properties.Resources.icon_search;
+            this.btbuscar.Location = new System.Drawing.Point(464, 93);
+            this.btbuscar.Name = "btbuscar";
+            this.btbuscar.Size = new System.Drawing.Size(34, 28);
+            this.btbuscar.TabIndex = 37;
+            this.btbuscar.UseVisualStyleBackColor = true;
+            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
+            // 
+            // lbbusca
+            // 
+            this.lbbusca.AutoSize = true;
+            this.lbbusca.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbbusca.Location = new System.Drawing.Point(52, 95);
+            this.lbbusca.Name = "lbbusca";
+            this.lbbusca.Size = new System.Drawing.Size(57, 25);
+            this.lbbusca.TabIndex = 35;
+            this.lbbusca.Text = "Busca";
+            // 
+            // tbbusca
+            // 
+            this.tbbusca.Location = new System.Drawing.Point(112, 94);
+            this.tbbusca.Name = "tbbusca";
+            this.tbbusca.Size = new System.Drawing.Size(351, 27);
+            this.tbbusca.TabIndex = 36;
+            // 
             // FormEditProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 426);
+            this.ClientSize = new System.Drawing.Size(1164, 472);
+            this.Controls.Add(this.btbuscar);
+            this.Controls.Add(this.lbbusca);
+            this.Controls.Add(this.tbbusca);
             this.Controls.Add(this.btexcluir);
             this.Controls.Add(this.lbeditarcadastro);
             this.Controls.Add(this.bteditar);
@@ -490,5 +528,8 @@ namespace projetofinal
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
+        private System.Windows.Forms.Button btbuscar;
+        private System.Windows.Forms.Label lbbusca;
+        private System.Windows.Forms.TextBox tbbusca;
     }
 }
