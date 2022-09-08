@@ -41,6 +41,8 @@ namespace projetofinal
             bteditar.Text = "EDITAR";
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
+            btbuscar.Enabled = true;
+            tbbusca.Clear();
         }
 
         private void dgprofs_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -88,6 +90,7 @@ namespace projetofinal
                 bteditar.Text = "EDITANDO...";
                 btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
+                btbuscar.Enabled = false;
             }
             else
                 MessageBox.Show("Nenhum cadastro foi selecionado, tente novamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -116,6 +119,7 @@ namespace projetofinal
             btsalvar.Enabled = false;
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
+            btbuscar.Enabled = true;
         }
 
         private void btexcluir_Click(object sender, EventArgs e)
@@ -151,6 +155,7 @@ namespace projetofinal
                     btsalvar.Enabled = false;
                     btcancelar.Enabled = false;
                     tabControl1.SelectedTab = tabPage1;
+                    btbuscar.Enabled = true;
                 }
             }
             else
@@ -199,6 +204,7 @@ namespace projetofinal
                 btcancelar.Enabled = false;
                 tabControl1.SelectedTab = tabPage1;
                 btsalvar.Enabled = false;
+                btbuscar.Enabled = true;
             }
         }
 

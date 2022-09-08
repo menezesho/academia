@@ -45,7 +45,6 @@ namespace projetofinal
             bteditar.Text = "EDITAR";
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
-
             btbuscar.Enabled = true;
             tbbusca.Clear();
         }
@@ -99,7 +98,6 @@ namespace projetofinal
                 bteditar.Text = "EDITANDO...";
                 btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
-
                 btbuscar.Enabled = false;
             }
             else
@@ -133,7 +131,6 @@ namespace projetofinal
             btsalvar.Enabled = false;
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
-
             btbuscar.Enabled = true;
         }
 
@@ -174,7 +171,6 @@ namespace projetofinal
                     btsalvar.Enabled = false;
                     btcancelar.Enabled = false;
                     tabControl1.SelectedTab = tabPage1;
-
                     btbuscar.Enabled = true;
                 }
             }
@@ -230,7 +226,6 @@ namespace projetofinal
                 btcancelar.Enabled = false;
                 tabControl1.SelectedTab = tabPage1;
                 btsalvar.Enabled = false;
-
                 btbuscar.Enabled = true;
             }
         }
