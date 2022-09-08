@@ -32,7 +32,6 @@ namespace projetofinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.lbcracha = new System.Windows.Forms.Label();
             this.lbsenha = new System.Windows.Forms.Label();
-            this.tbcracha = new System.Windows.Forms.TextBox();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btlogin = new System.Windows.Forms.Button();
@@ -42,6 +41,8 @@ namespace projetofinal
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lbversao = new System.Windows.Forms.Label();
             this.btversenha = new System.Windows.Forms.Button();
+            this.cbnome = new System.Windows.Forms.ComboBox();
+            this.btreload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -50,7 +51,7 @@ namespace projetofinal
             // 
             this.lbcracha.AutoSize = true;
             this.lbcracha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbcracha.Location = new System.Drawing.Point(396, 76);
+            this.lbcracha.Location = new System.Drawing.Point(371, 78);
             this.lbcracha.Name = "lbcracha";
             this.lbcracha.Size = new System.Drawing.Size(63, 23);
             this.lbcracha.TabIndex = 0;
@@ -60,25 +61,18 @@ namespace projetofinal
             // 
             this.lbsenha.AutoSize = true;
             this.lbsenha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbsenha.Location = new System.Drawing.Point(396, 142);
+            this.lbsenha.Location = new System.Drawing.Point(371, 144);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(57, 23);
             this.lbsenha.TabIndex = 1;
             this.lbsenha.Text = "Senha";
             // 
-            // tbcracha
-            // 
-            this.tbcracha.Location = new System.Drawing.Point(396, 102);
-            this.tbcracha.Name = "tbcracha";
-            this.tbcracha.Size = new System.Drawing.Size(232, 27);
-            this.tbcracha.TabIndex = 0;
-            // 
             // tbsenha
             // 
-            this.tbsenha.Location = new System.Drawing.Point(396, 168);
+            this.tbsenha.Location = new System.Drawing.Point(371, 170);
             this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(192, 27);
-            this.tbsenha.TabIndex = 1;
+            this.tbsenha.Size = new System.Drawing.Size(232, 27);
+            this.tbsenha.TabIndex = 2;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // pictureBox1
@@ -86,7 +80,7 @@ namespace projetofinal
             this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
             this.pictureBox1.Location = new System.Drawing.Point(0, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(376, 325);
+            this.pictureBox1.Size = new System.Drawing.Size(360, 323);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -94,13 +88,14 @@ namespace projetofinal
             // btlogin
             // 
             this.btlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btlogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlogin.Location = new System.Drawing.Point(396, 228);
+            this.btlogin.Location = new System.Drawing.Point(371, 229);
             this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlogin.Name = "btlogin";
             this.btlogin.Size = new System.Drawing.Size(130, 35);
-            this.btlogin.TabIndex = 2;
+            this.btlogin.TabIndex = 4;
             this.btlogin.Text = "LOGIN";
             this.btlogin.UseVisualStyleBackColor = false;
             this.btlogin.Click += new System.EventHandler(this.btlogin_Click);
@@ -108,13 +103,14 @@ namespace projetofinal
             // btlimpar
             // 
             this.btlimpar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlimpar.Location = new System.Drawing.Point(532, 228);
+            this.btlimpar.Location = new System.Drawing.Point(507, 229);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
-            this.btlimpar.Size = new System.Drawing.Size(96, 35);
-            this.btlimpar.TabIndex = 3;
+            this.btlimpar.Size = new System.Drawing.Size(130, 35);
+            this.btlimpar.TabIndex = 5;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
             this.btlimpar.Click += new System.EventHandler(this.btlimpar_Click);
@@ -122,13 +118,14 @@ namespace projetofinal
             // btsair
             // 
             this.btsair.BackColor = System.Drawing.Color.GhostWhite;
+            this.btsair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsair.Location = new System.Drawing.Point(396, 271);
+            this.btsair.Location = new System.Drawing.Point(371, 272);
             this.btsair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsair.Name = "btsair";
-            this.btsair.Size = new System.Drawing.Size(232, 33);
-            this.btsair.TabIndex = 4;
+            this.btsair.Size = new System.Drawing.Size(266, 33);
+            this.btsair.TabIndex = 6;
             this.btsair.Text = "SAIR";
             this.btsair.UseVisualStyleBackColor = false;
             this.btsair.Click += new System.EventHandler(this.btsair_Click);
@@ -141,8 +138,8 @@ namespace projetofinal
             this.sairToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(669, 28);
-            this.menuStrip1.TabIndex = 16;
+            this.menuStrip1.Size = new System.Drawing.Size(672, 28);
+            this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // sairToolStripMenuItem
@@ -156,7 +153,7 @@ namespace projetofinal
             // 
             this.lbversao.AutoSize = true;
             this.lbversao.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbversao.Location = new System.Drawing.Point(12, 331);
+            this.lbversao.Location = new System.Drawing.Point(12, 328);
             this.lbversao.Name = "lbversao";
             this.lbversao.Size = new System.Drawing.Size(44, 16);
             this.lbversao.TabIndex = 17;
@@ -164,28 +161,58 @@ namespace projetofinal
             // 
             // btversenha
             // 
+            this.btversenha.BackColor = System.Drawing.Color.Transparent;
+            this.btversenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btversenha.FlatAppearance.BorderSize = 0;
+            this.btversenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btversenha.Image = global::projetofinal.Properties.Resources.icon_eye;
-            this.btversenha.Location = new System.Drawing.Point(594, 168);
+            this.btversenha.Location = new System.Drawing.Point(603, 170);
             this.btversenha.Name = "btversenha";
             this.btversenha.Size = new System.Drawing.Size(34, 29);
-            this.btversenha.TabIndex = 18;
-            this.btversenha.UseVisualStyleBackColor = true;
+            this.btversenha.TabIndex = 3;
+            this.btversenha.UseVisualStyleBackColor = false;
             this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
+            // 
+            // cbnome
+            // 
+            this.cbnome.FormattingEnabled = true;
+            this.cbnome.Items.AddRange(new object[] {
+            "Selecione"});
+            this.cbnome.Location = new System.Drawing.Point(371, 104);
+            this.cbnome.Name = "cbnome";
+            this.cbnome.Size = new System.Drawing.Size(232, 28);
+            this.cbnome.TabIndex = 0;
+            // 
+            // btreload
+            // 
+            this.btreload.BackColor = System.Drawing.Color.Transparent;
+            this.btreload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btreload.FlatAppearance.BorderSize = 0;
+            this.btreload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btreload.ForeColor = System.Drawing.Color.Transparent;
+            this.btreload.Image = global::projetofinal.Properties.Resources.icon_reload;
+            this.btreload.Location = new System.Drawing.Point(603, 104);
+            this.btreload.Name = "btreload";
+            this.btreload.Size = new System.Drawing.Size(34, 28);
+            this.btreload.TabIndex = 1;
+            this.btreload.UseVisualStyleBackColor = true;
+            this.btreload.Click += new System.EventHandler(this.btreload_Click);
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(669, 356);
+            this.ClientSize = new System.Drawing.Size(672, 353);
+            this.Controls.Add(this.tbsenha);
+            this.Controls.Add(this.cbnome);
+            this.Controls.Add(this.btreload);
             this.Controls.Add(this.btversenha);
             this.Controls.Add(this.lbversao);
             this.Controls.Add(this.btsair);
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btlogin);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.tbsenha);
-            this.Controls.Add(this.tbcracha);
             this.Controls.Add(this.lbsenha);
             this.Controls.Add(this.lbcracha);
             this.Controls.Add(this.menuStrip1);
@@ -197,7 +224,6 @@ namespace projetofinal
             this.Text = "Login";
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyDown);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.FormLogin_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -210,7 +236,6 @@ namespace projetofinal
 
         private System.Windows.Forms.Label lbcracha;
         private System.Windows.Forms.Label lbsenha;
-        private System.Windows.Forms.TextBox tbcracha;
         private System.Windows.Forms.TextBox tbsenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btlogin;
@@ -220,5 +245,7 @@ namespace projetofinal
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.Label lbversao;
         private System.Windows.Forms.Button btversenha;
+        private System.Windows.Forms.ComboBox cbnome;
+        private System.Windows.Forms.Button btreload;
     }
 }
