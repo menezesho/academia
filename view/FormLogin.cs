@@ -11,50 +11,40 @@ namespace projetofinal
 {
     public partial class FormLogin : Form
     {
-        FormPrincipal Fprincipal = new FormPrincipal();
-
-        //int u = 0;
-        bool cadastrar = false;
-
         public FormLogin()
         {
             InitializeComponent();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
-        {
-            tbcracha.Text = Settings.Default["usuario"].ToString();
-            tbsenha.Text = Settings.Default["senha"].ToString();
+        {//load
+            Funcoes funcoes = new Funcoes();
+            cbnome.DataSource = funcoes.listarProfs();
+            cbnome.DisplayMember = "nome";
+            cbnome.Text = "";
         }
 
-        private void FormLogin_KeyUp(object sender, KeyEventArgs e)
-        {//ENTER para logar
-            if (e.KeyValue.Equals(13))
-            {
-                string cracha, senha;
-
-                cracha = tbcracha.Text;
-                senha = tbsenha.Text;
-                Funcoes funcoes = new Funcoes();
-                funcoes.loginProf(cracha, senha);
-                tbcracha.Clear();
-                tbsenha.Clear();
-            }
+        private void btversenha_Click(object sender, EventArgs e)
+        {//btversenha
+            if (tbsenha.UseSystemPasswordChar.Equals(false))
+                tbsenha.UseSystemPasswordChar = true;
+            else
+                tbsenha.UseSystemPasswordChar = false;
         }
 
         private void btlogin_Click(object sender, EventArgs e)
         {//btlogin
-            string cracha, senha;
+            string nome, senha;
 
-            cracha = tbcracha.Text;
+            nome = cbnome.Text;
             senha = tbsenha.Text;
             Funcoes funcoes = new Funcoes();
-            funcoes.loginProf(cracha, senha);
+            funcoes.loginProf(nome, senha);
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            tbcracha.Clear();
+            cbnome.Text = "";
             tbsenha.Clear();
         }
 
@@ -62,6 +52,15 @@ namespace projetofinal
         {//btsair
             if (MessageBox.Show("Deseja mesmo finalizar o programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Application.Exit();
+        }
+
+        private void btreload_Click(object sender, EventArgs e)
+        {//btreload
+            Funcoes funcoes = new Funcoes();
+            cbnome.DataSource = funcoes.listarProfs();
+            cbnome.DisplayMember = "nome";
+            cbnome.Text = "";
+            tbsenha.Clear();
         }
 
         #region Sair
@@ -80,13 +79,5 @@ namespace projetofinal
         }
 
         #endregion
-
-        private void btversenha_Click(object sender, EventArgs e)
-        {//btversenha
-            if (tbsenha.UseSystemPasswordChar.Equals(false))
-                tbsenha.UseSystemPasswordChar = true;
-            else
-                tbsenha.UseSystemPasswordChar = false;
-        }
     }
 }

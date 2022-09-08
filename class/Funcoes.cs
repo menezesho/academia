@@ -222,16 +222,16 @@ namespace projetofinal
 
         #region Login
 
-        public void loginProf(string cracha, string senha)
+        public void loginProf(string nome, string senha)
         {
             try
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"SELECT * FROM professor WHERE cracha=@cracha AND senha=@senha";
+                string sql = @"SELECT * FROM professor WHERE nome=@nome AND senha=@senha";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@cracha", cracha);
+                comando.Parameters.AddWithValue("@nome", nome);
                 comando.Parameters.AddWithValue("@senha", senha);
 
                 conexao.Open();
