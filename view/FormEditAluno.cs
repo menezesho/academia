@@ -57,6 +57,20 @@ namespace projetofinal
             tbemail.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
             tbpeso.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
             tbaltura.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
+
+            tbmatricula.Enabled = false;
+            tbnome.Enabled = false;
+            mtbcpf.Enabled = false;
+            tbidade.Enabled = false;
+            tbendereco.Enabled = false;
+            mtbcelular.Enabled = false;
+            tbemail.Enabled = false;
+            tbpeso.Enabled = false;
+            tbaltura.Enabled = false;
+            bteditar.Enabled = true;
+            btcancelar.Enabled = false;
+            btsalvar.Enabled = false;
+            btbuscar.Enabled = true;
         }
 
         private void btbuscar_Click(object sender, EventArgs e)
@@ -80,7 +94,6 @@ namespace projetofinal
         {//bteditar
             if (tbmatricula.Text != "")
             {
-                tbmatricula.Enabled = true;
                 tbnome.Enabled = true;
                 mtbcpf.Enabled = true;
                 tbidade.Enabled = true;
@@ -100,15 +113,6 @@ namespace projetofinal
 
         private void btcancelar_Click_1(object sender, EventArgs e)
         {//btcancelar
-            tbmatricula.Clear();
-            tbnome.Clear();
-            mtbcpf.Clear();
-            tbidade.Clear();
-            tbendereco.Clear();
-            mtbcelular.Clear();
-            tbemail.Clear();
-            tbpeso.Clear();
-            tbaltura.Clear();
             tbmatricula.Enabled = false;
             tbnome.Enabled = false;
             mtbcpf.Enabled = false;

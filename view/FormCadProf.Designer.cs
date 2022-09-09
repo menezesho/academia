@@ -38,8 +38,6 @@ namespace projetofinal
             this.btsalvar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tbcracha = new System.Windows.Forms.TextBox();
-            this.lbcracha = new System.Windows.Forms.Label();
             this.mtbcpf = new System.Windows.Forms.MaskedTextBox();
             this.tbidade = new System.Windows.Forms.TextBox();
             this.tbnome = new System.Windows.Forms.TextBox();
@@ -149,8 +147,6 @@ namespace projetofinal
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.tabPage1.Controls.Add(this.tbcracha);
-            this.tabPage1.Controls.Add(this.lbcracha);
             this.tabPage1.Controls.Add(this.mtbcpf);
             this.tabPage1.Controls.Add(this.tbidade);
             this.tabPage1.Controls.Add(this.tbnome);
@@ -165,27 +161,9 @@ namespace projetofinal
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Pessoais";
             // 
-            // tbcracha
-            // 
-            this.tbcracha.Location = new System.Drawing.Point(240, 24);
-            this.tbcracha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbcracha.Name = "tbcracha";
-            this.tbcracha.Size = new System.Drawing.Size(63, 27);
-            this.tbcracha.TabIndex = 1;
-            this.tbcracha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // lbcracha
-            // 
-            this.lbcracha.AutoSize = true;
-            this.lbcracha.Location = new System.Drawing.Point(161, 27);
-            this.lbcracha.Name = "lbcracha";
-            this.lbcracha.Size = new System.Drawing.Size(75, 20);
-            this.lbcracha.TabIndex = 4;
-            this.lbcracha.Text = "N° Crachá";
-            // 
             // mtbcpf
             // 
-            this.mtbcpf.Location = new System.Drawing.Point(116, 95);
+            this.mtbcpf.Location = new System.Drawing.Point(116, 79);
             this.mtbcpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
@@ -195,7 +173,7 @@ namespace projetofinal
             // 
             // tbidade
             // 
-            this.tbidade.Location = new System.Drawing.Point(116, 130);
+            this.tbidade.Location = new System.Drawing.Point(116, 114);
             this.tbidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbidade.Name = "tbidade";
             this.tbidade.Size = new System.Drawing.Size(53, 27);
@@ -204,7 +182,7 @@ namespace projetofinal
             // 
             // tbnome
             // 
-            this.tbnome.Location = new System.Drawing.Point(116, 60);
+            this.tbnome.Location = new System.Drawing.Point(116, 44);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(269, 27);
@@ -213,7 +191,7 @@ namespace projetofinal
             // lbidade
             // 
             this.lbidade.AutoSize = true;
-            this.lbidade.Location = new System.Drawing.Point(62, 134);
+            this.lbidade.Location = new System.Drawing.Point(62, 118);
             this.lbidade.Name = "lbidade";
             this.lbidade.Size = new System.Drawing.Size(47, 20);
             this.lbidade.TabIndex = 2;
@@ -222,7 +200,7 @@ namespace projetofinal
             // lbcpf
             // 
             this.lbcpf.AutoSize = true;
-            this.lbcpf.Location = new System.Drawing.Point(62, 99);
+            this.lbcpf.Location = new System.Drawing.Point(62, 83);
             this.lbcpf.Name = "lbcpf";
             this.lbcpf.Size = new System.Drawing.Size(33, 20);
             this.lbcpf.TabIndex = 1;
@@ -231,7 +209,7 @@ namespace projetofinal
             // lbnome
             // 
             this.lbnome.AutoSize = true;
-            this.lbnome.Location = new System.Drawing.Point(62, 64);
+            this.lbnome.Location = new System.Drawing.Point(62, 48);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(50, 20);
             this.lbnome.TabIndex = 0;
@@ -402,8 +380,6 @@ namespace projetofinal
         private System.Windows.Forms.Button btsalvar;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox tbcracha;
-        private System.Windows.Forms.Label lbcracha;
         private System.Windows.Forms.MaskedTextBox mtbcpf;
         private System.Windows.Forms.TextBox tbidade;
         private System.Windows.Forms.TextBox tbnome;

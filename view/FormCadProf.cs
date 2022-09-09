@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
@@ -10,8 +11,6 @@ namespace projetofinal
 {
     public partial class FormCadProf : Form
     {
-        int p = 0;
-
         public FormCadProf()
         {
             InitializeComponent();
@@ -19,9 +18,6 @@ namespace projetofinal
 
         private void Form3_Load(object sender, EventArgs e)
         {//load
-            int ncracha = p + 1;
-            tbcracha.Text = ncracha.ToString();
-
             tbnome.Clear();
             tbnome.Enabled = true;
             mtbcpf.Clear();
@@ -59,7 +55,6 @@ namespace projetofinal
             mtbcelular.Clear();
             tbemail.Clear();
             tbsenha.Clear();
-            tbcracha.Text = (p + 1).ToString();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -71,7 +66,6 @@ namespace projetofinal
             {
                 Professor profs = new Professor();
 
-                profs.cracha = int.Parse(tbcracha.Text);
                 profs.nome = tbnome.Text;
                 profs.cpf = mtbcpf.Text;
                 profs.idade = int.Parse(tbidade.Text);
@@ -92,7 +86,6 @@ namespace projetofinal
                 tbemail.Clear();
                 tbusuario.Clear();
                 tbsenha.Clear();
-                tbcracha.Text = (p + 1).ToString();
                 tabControl1.SelectedTab = tabPage1;
             }
         }

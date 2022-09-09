@@ -47,7 +47,7 @@ namespace projetofinal
         }
 
         private void dgprofs_CellClick(object sender, DataGridViewCellEventArgs e)
-        {//cellclick datagrid
+        {//cellclick datagrid           
             tbcracha.Text = dgprofs.CurrentRow.Cells[0].Value.ToString();
             tbnome.Text = dgprofs.CurrentRow.Cells[1].Value.ToString();
             mtbcpf.Text = dgprofs.CurrentRow.Cells[2].Value.ToString();
@@ -57,6 +57,20 @@ namespace projetofinal
             tbemail.Text = dgprofs.CurrentRow.Cells[6].Value.ToString();
             tbusuario.Text = dgprofs.CurrentRow.Cells[7].Value.ToString();
             tbsenha.Text = dgprofs.CurrentRow.Cells[8].Value.ToString();
+
+            tbcracha.Enabled = false;
+            tbnome.Enabled = false;
+            mtbcpf.Enabled = false;
+            tbidade.Enabled = false;
+            tbendereco.Enabled = false;
+            mtbcelular.Enabled = false;
+            tbemail.Enabled = false;
+            tbusuario.Enabled = false;
+            tbsenha.Enabled = false;
+            bteditar.Enabled = true;
+            btcancelar.Enabled = false;
+            btsalvar.Enabled = false;
+            btbuscar.Enabled = true;
         }
 
         private void btbuscar_Click(object sender, EventArgs e)
@@ -80,7 +94,6 @@ namespace projetofinal
         {//bteditar
             if (tbcracha.Text != "")
             {
-                tbcracha.Enabled = true;
                 tbnome.Enabled = true;
                 mtbcpf.Enabled = true;
                 tbidade.Enabled = true;
@@ -100,15 +113,7 @@ namespace projetofinal
 
         private void btcancelar_Click(object sender, EventArgs e)
         {//btcancelar
-            tbcracha.Clear();
-            tbnome.Clear();
-            mtbcpf.Clear();
-            tbidade.Clear();
-            tbendereco.Clear();
-            mtbcelular.Clear();
-            tbemail.Clear();
-            tbusuario.Clear();
-            tbsenha.Clear();
+            
             tbcracha.Enabled = false;
             tbnome.Enabled = false;
             mtbcpf.Enabled = false;

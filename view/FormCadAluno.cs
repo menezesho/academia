@@ -7,8 +7,6 @@ namespace projetofinal
 {
     public partial class FormCadAluno : Form
     {
-        int a = 0;
-
         public FormCadAluno()
         {
             InitializeComponent();
@@ -16,9 +14,6 @@ namespace projetofinal
 
         private void Form1_Load(object sender, EventArgs e)
         {//load
-            int nmatricula = a + 1;
-            tbmatricula.Text = nmatricula.ToString();
-
             tbnome.Clear();
             tbnome.Enabled = true;
             mtbcpf.Clear();
@@ -57,7 +52,6 @@ namespace projetofinal
             tbemail.Clear();
             tbpeso.Clear();
             tbaltura.Clear();
-            tbmatricula.Text = (a + 1).ToString();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -69,7 +63,6 @@ namespace projetofinal
             {
                 Aluno alunos = new Aluno();
 
-                alunos.matricula = int.Parse(tbmatricula.Text);
                 alunos.nome = tbnome.Text;
                 alunos.cpf = mtbcpf.Text;
                 alunos.idade = int.Parse(tbidade.Text);
@@ -91,7 +84,6 @@ namespace projetofinal
                 tbpeso.Clear();
                 tbaltura.Clear();
                 tabControl1.SelectedTab = tabPage1;
-                tbmatricula.Text = (a + 1).ToString();
             }
         }
 
