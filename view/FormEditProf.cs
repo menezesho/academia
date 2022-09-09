@@ -38,7 +38,6 @@ namespace projetofinal
             tbemail.Enabled = false;
             tbsenha.Enabled = false;
             bteditar.Enabled = true;
-            bteditar.Text = "EDITAR";
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
             btbuscar.Enabled = true;
@@ -87,7 +86,6 @@ namespace projetofinal
                 tbemail.Enabled = true;
                 tbsenha.Enabled = true;
                 bteditar.Enabled = false;
-                bteditar.Text = "EDITANDO...";
                 btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
                 btbuscar.Enabled = false;
@@ -115,7 +113,6 @@ namespace projetofinal
             tbemail.Enabled = false;
             tbsenha.Enabled = false;
             bteditar.Enabled = true;
-            bteditar.Text = "EDITAR";
             btsalvar.Enabled = false;
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
@@ -151,7 +148,6 @@ namespace projetofinal
                     tbemail.Enabled = false;
                     tbsenha.Enabled = false;
                     bteditar.Enabled = true;
-                    bteditar.Text = "EDITAR";
                     btsalvar.Enabled = false;
                     btcancelar.Enabled = false;
                     tabControl1.SelectedTab = tabPage1;
@@ -200,7 +196,6 @@ namespace projetofinal
                 tbemail.Enabled = false;
                 tbsenha.Enabled = false;
                 bteditar.Enabled = true;
-                bteditar.Text = "EDITAR";
                 btcancelar.Enabled = false;
                 tabControl1.SelectedTab = tabPage1;
                 btsalvar.Enabled = false;

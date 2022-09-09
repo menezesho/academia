@@ -31,8 +31,6 @@ namespace projetofinal
             mtbcelular.Enabled = true;
             tbemail.Clear();
             tbemail.Enabled = true;
-            tbsenha.Clear();
-            tbsenha.Enabled = true;
             tbpeso.Clear();
             tbpeso.Enabled = true;
             tbaltura.Clear();
@@ -48,7 +46,6 @@ namespace projetofinal
             tbendereco.Enabled = true;
             mtbcelular.Enabled = true;
             tbemail.Enabled = true;
-            tbsenha.Enabled = true;
             tbpeso.Enabled = true;
             tbaltura.Enabled = true;
             btsalvar.Enabled = true;
@@ -58,55 +55,15 @@ namespace projetofinal
             tbendereco.Clear();
             mtbcelular.Clear();
             tbemail.Clear();
-            tbsenha.Clear();
             tbpeso.Clear();
             tbaltura.Clear();
             tbmatricula.Text = (a + 1).ToString();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btbuscar_Click(object sender, EventArgs e)
-        {//btbuscar
-            /*string cpf = mtbcpf.Text;
-            bool achou = false;
-            if (mtbcpf.Text == "   .   .   -")
-                MessageBox.Show("Nenhum CPF foi digitado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-            {
-                for (int i = 0; i < a; i++)
-                {
-                    if (alunos[i].cpf == cpf)
-                    {
-                        tbmatricula.Text = alunos[i].matricula.ToString();
-                        tbnome.Enabled = false;
-                        tbnome.Text = alunos[i].nome;
-                        mtbcpf.Enabled = false;
-                        mtbcpf.Text = alunos[i].cpf;
-                        tbidade.Enabled = false;
-                        tbidade.Text = alunos[i].idade.ToString();
-                        tbendereco.Enabled = false;
-                        tbendereco.Text = alunos[i].endereco;
-                        mtbcelular.Enabled = false;
-                        mtbcelular.Text = alunos[i].celular;
-                        tbemail.Enabled = false;
-                        tbemail.Text = alunos[i].email;
-                        tbpeso.Enabled = false;
-                        tbpeso.Text = alunos[i].peso.ToString();
-                        tbaltura.Enabled = false;
-                        tbaltura.Text = alunos[i].altura.ToString();
-                        btsalvar.Enabled = false;
-                        achou = true;
-                        MessageBox.Show("Aluno localizado!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                if (!achou)
-                    MessageBox.Show("Aluno não cadastrado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-        }
-
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbsenha.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -119,7 +76,6 @@ namespace projetofinal
                 alunos.endereco = tbendereco.Text;
                 alunos.celular = mtbcelular.Text;
                 alunos.email = tbemail.Text;
-                alunos.senha = tbsenha.Text;
                 alunos.peso = float.Parse(tbpeso.Text);
                 alunos.altura = float.Parse(tbaltura.Text);
 
@@ -132,7 +88,6 @@ namespace projetofinal
                 tbendereco.Clear();
                 mtbcelular.Clear();
                 tbemail.Clear();
-                tbsenha.Clear();
                 tbpeso.Clear();
                 tbaltura.Clear();
                 tabControl1.SelectedTab = tabPage1;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+
 namespace projetofinal
 {
     public class Pessoa
@@ -11,7 +12,6 @@ namespace projetofinal
         public string endereco { get; set; }
         public string celular { get; set; }
         public string email { get; set; }
-        public string senha { get; set; }
 
         /*public Pessoa(string nome, string cpf, string endereco, string celular, string email, string senha, int idade)
         {

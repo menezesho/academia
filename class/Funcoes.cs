@@ -17,7 +17,7 @@ namespace projetofinal
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"INSERT INTO aluno (matricula, nome, cpf, idade, endereco, celular, email, senha, peso, altura) VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @senha, @peso, @altura)";
+                string sql = @"INSERT INTO aluno (matricula, nome, cpf, idade, endereco, celular, email, peso, altura) VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @peso, @altura)";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
                 comando.Parameters.AddWithValue("@matricula", alunos.matricula);
@@ -27,7 +27,6 @@ namespace projetofinal
                 comando.Parameters.AddWithValue("@endereco", alunos.endereco);
                 comando.Parameters.AddWithValue("@celular", alunos.celular);
                 comando.Parameters.AddWithValue("@email", alunos.email);
-                comando.Parameters.AddWithValue("@senha", alunos.senha);
                 comando.Parameters.AddWithValue("@peso", alunos.peso.ToString());
                 comando.Parameters.AddWithValue("@altura", alunos.altura.ToString());
 
@@ -49,7 +48,7 @@ namespace projetofinal
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, senha=@senha, peso=@peso, altura=@altura WHERE matricula=@matricula";
+                string sql = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, peso=@peso, altura=@altura WHERE matricula=@matricula";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
                 comando.Parameters.AddWithValue("@nome", alunos.nome);
@@ -58,7 +57,6 @@ namespace projetofinal
                 comando.Parameters.AddWithValue("@endereco", alunos.endereco);
                 comando.Parameters.AddWithValue("@celular", alunos.celular);
                 comando.Parameters.AddWithValue("@email", alunos.email);
-                comando.Parameters.AddWithValue("@senha", alunos.senha);
                 comando.Parameters.AddWithValue("@peso", alunos.peso.ToString());
                 comando.Parameters.AddWithValue("@altura", alunos.altura.ToString());
                 comando.Parameters.AddWithValue("@matricula", alunos.matricula);
@@ -80,7 +78,7 @@ namespace projetofinal
         {
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha, peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
+            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();

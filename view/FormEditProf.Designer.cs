@@ -29,14 +29,12 @@ namespace projetofinal
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditProf));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditProf));
             this.btexcluir = new System.Windows.Forms.Button();
             this.lbeditarcadastro = new System.Windows.Forms.Label();
-            this.bteditar = new System.Windows.Forms.Button();
-            this.btcancelar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -63,9 +61,11 @@ namespace projetofinal
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btbuscar = new System.Windows.Forms.Button();
             this.lbbusca = new System.Windows.Forms.Label();
             this.tbbusca = new System.Windows.Forms.TextBox();
+            this.bteditar = new System.Windows.Forms.Button();
+            this.btcancelar = new System.Windows.Forms.Button();
+            this.btbuscar = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -78,14 +78,14 @@ namespace projetofinal
             // btexcluir
             // 
             this.btexcluir.BackColor = System.Drawing.Color.Lavender;
-            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btexcluir.Location = new System.Drawing.Point(49, 403);
+            this.btexcluir.Image = ((System.Drawing.Image)(resources.GetObject("btexcluir.Image")));
+            this.btexcluir.Location = new System.Drawing.Point(124, 374);
             this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btexcluir.Name = "btexcluir";
-            this.btexcluir.Size = new System.Drawing.Size(220, 29);
-            this.btexcluir.TabIndex = 11;
-            this.btexcluir.Text = "EXCLUIR";
+            this.btexcluir.Size = new System.Drawing.Size(69, 66);
+            this.btexcluir.TabIndex = 12;
             this.btexcluir.UseVisualStyleBackColor = false;
             this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
             // 
@@ -93,50 +93,22 @@ namespace projetofinal
             // 
             this.lbeditarcadastro.AutoSize = true;
             this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbeditarcadastro.Location = new System.Drawing.Point(164, 45);
+            this.lbeditarcadastro.Location = new System.Drawing.Point(165, 53);
             this.lbeditarcadastro.Name = "lbeditarcadastro";
             this.lbeditarcadastro.Size = new System.Drawing.Size(214, 31);
             this.lbeditarcadastro.TabIndex = 31;
             this.lbeditarcadastro.Text = "EDITAR CADASTRO";
-            // 
-            // bteditar
-            // 
-            this.bteditar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.bteditar.Location = new System.Drawing.Point(49, 366);
-            this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.bteditar.Name = "bteditar";
-            this.bteditar.Size = new System.Drawing.Size(220, 29);
-            this.bteditar.TabIndex = 9;
-            this.bteditar.Text = "EDITAR";
-            this.bteditar.UseVisualStyleBackColor = false;
-            this.bteditar.Click += new System.EventHandler(this.bteditar_Click);
-            // 
-            // btcancelar
-            // 
-            this.btcancelar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btcancelar.Location = new System.Drawing.Point(275, 366);
-            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btcancelar.Name = "btcancelar";
-            this.btcancelar.Size = new System.Drawing.Size(220, 29);
-            this.btcancelar.TabIndex = 10;
-            this.btcancelar.Text = "CANCELAR";
-            this.btcancelar.UseVisualStyleBackColor = false;
-            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
             // 
             // btsalvar
             // 
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(275, 403);
+            this.btsalvar.Location = new System.Drawing.Point(199, 411);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(220, 29);
-            this.btsalvar.TabIndex = 12;
+            this.btsalvar.Size = new System.Drawing.Size(296, 29);
+            this.btsalvar.TabIndex = 14;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -146,12 +118,12 @@ namespace projetofinal
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(45, 145);
+            this.tabControl1.Location = new System.Drawing.Point(45, 153);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(454, 213);
-            this.tabControl1.TabIndex = 0;
+            this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
             // 
@@ -178,7 +150,7 @@ namespace projetofinal
             this.tbcracha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcracha.Name = "tbcracha";
             this.tbcracha.Size = new System.Drawing.Size(63, 27);
-            this.tbcracha.TabIndex = 1;
+            this.tbcracha.TabIndex = 3;
             this.tbcracha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbcracha
@@ -197,7 +169,7 @@ namespace projetofinal
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
-            this.mtbcpf.TabIndex = 3;
+            this.mtbcpf.TabIndex = 5;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbidade
@@ -206,7 +178,7 @@ namespace projetofinal
             this.tbidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbidade.Name = "tbidade";
             this.tbidade.Size = new System.Drawing.Size(53, 27);
-            this.tbidade.TabIndex = 4;
+            this.tbidade.TabIndex = 6;
             this.tbidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbnome
@@ -215,7 +187,7 @@ namespace projetofinal
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
             this.tbnome.Size = new System.Drawing.Size(269, 27);
-            this.tbnome.TabIndex = 2;
+            this.tbnome.TabIndex = 4;
             // 
             // lbidade
             // 
@@ -263,12 +235,12 @@ namespace projetofinal
             // 
             // mtbcelular
             // 
-            this.mtbcelular.Location = new System.Drawing.Point(126, 77);
+            this.mtbcelular.Location = new System.Drawing.Point(126, 78);
             this.mtbcelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbcelular.Mask = "(99) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
             this.mtbcelular.Size = new System.Drawing.Size(127, 27);
-            this.mtbcelular.TabIndex = 6;
+            this.mtbcelular.TabIndex = 8;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbemail
@@ -277,7 +249,7 @@ namespace projetofinal
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
             this.tbemail.Size = new System.Drawing.Size(273, 27);
-            this.tbemail.TabIndex = 7;
+            this.tbemail.TabIndex = 9;
             // 
             // tbendereco
             // 
@@ -285,7 +257,7 @@ namespace projetofinal
             this.tbendereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbendereco.Name = "tbendereco";
             this.tbendereco.Size = new System.Drawing.Size(273, 27);
-            this.tbendereco.TabIndex = 5;
+            this.tbendereco.TabIndex = 7;
             // 
             // lbemail
             // 
@@ -332,7 +304,7 @@ namespace projetofinal
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(189, 27);
-            this.tbsenha.TabIndex = 8;
+            this.tbsenha.TabIndex = 10;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // lbsenha
@@ -348,7 +320,7 @@ namespace projetofinal
             // 
             this.lbalunoscadastrados.AutoSize = true;
             this.lbalunoscadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbalunoscadastrados.Location = new System.Drawing.Point(691, 45);
+            this.lbalunoscadastrados.Location = new System.Drawing.Point(691, 53);
             this.lbalunoscadastrados.Name = "lbalunoscadastrados";
             this.lbalunoscadastrados.Size = new System.Drawing.Size(333, 31);
             this.lbalunoscadastrados.TabIndex = 26;
@@ -377,7 +349,7 @@ namespace projetofinal
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgprofs.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgprofs.Location = new System.Drawing.Point(531, 94);
+            this.dgprofs.Location = new System.Drawing.Point(531, 102);
             this.dgprofs.Name = "dgprofs";
             this.dgprofs.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopCenter;
@@ -391,13 +363,13 @@ namespace projetofinal
             this.dgprofs.RowHeadersWidth = 51;
             this.dgprofs.RowTemplate.Height = 29;
             this.dgprofs.Size = new System.Drawing.Size(590, 338);
-            this.dgprofs.TabIndex = 25;
+            this.dgprofs.TabIndex = 14;
             this.dgprofs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgprofs_CellClick);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(624, 36);
+            this.pictureBox1.Location = new System.Drawing.Point(624, 44);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(71, 54);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -412,7 +384,7 @@ namespace projetofinal
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1164, 28);
-            this.menuStrip1.TabIndex = 34;
+            this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // retornarToolStripMenuItem
@@ -422,26 +394,11 @@ namespace projetofinal
             this.retornarToolStripMenuItem.Text = "Retornar";
             this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
             // 
-            // btbuscar
-            // 
-            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btbuscar.FlatAppearance.BorderSize = 0;
-            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.ForeColor = System.Drawing.Color.Transparent;
-            this.btbuscar.Image = global::projetofinal.Properties.Resources.icon_search;
-            this.btbuscar.Location = new System.Drawing.Point(464, 93);
-            this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(34, 28);
-            this.btbuscar.TabIndex = 37;
-            this.btbuscar.UseVisualStyleBackColor = true;
-            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
-            // 
             // lbbusca
             // 
             this.lbbusca.AutoSize = true;
             this.lbbusca.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbbusca.Location = new System.Drawing.Point(52, 95);
+            this.lbbusca.Location = new System.Drawing.Point(52, 103);
             this.lbbusca.Name = "lbbusca";
             this.lbbusca.Size = new System.Drawing.Size(57, 25);
             this.lbbusca.TabIndex = 35;
@@ -449,23 +406,65 @@ namespace projetofinal
             // 
             // tbbusca
             // 
-            this.tbbusca.Location = new System.Drawing.Point(112, 94);
+            this.tbbusca.Location = new System.Drawing.Point(112, 102);
             this.tbbusca.Name = "tbbusca";
             this.tbbusca.Size = new System.Drawing.Size(351, 27);
-            this.tbbusca.TabIndex = 36;
+            this.tbbusca.TabIndex = 0;
+            // 
+            // bteditar
+            // 
+            this.bteditar.BackColor = System.Drawing.Color.Lavender;
+            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bteditar.Image = ((System.Drawing.Image)(resources.GetObject("bteditar.Image")));
+            this.bteditar.Location = new System.Drawing.Point(49, 374);
+            this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.bteditar.Name = "bteditar";
+            this.bteditar.Size = new System.Drawing.Size(69, 66);
+            this.bteditar.TabIndex = 11;
+            this.bteditar.UseVisualStyleBackColor = false;
+            this.bteditar.Click += new System.EventHandler(this.bteditar_Click);
+            // 
+            // btcancelar
+            // 
+            this.btcancelar.BackColor = System.Drawing.Color.Lavender;
+            this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btcancelar.Location = new System.Drawing.Point(199, 374);
+            this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btcancelar.Name = "btcancelar";
+            this.btcancelar.Size = new System.Drawing.Size(296, 29);
+            this.btcancelar.TabIndex = 13;
+            this.btcancelar.Text = "CANCELAR";
+            this.btcancelar.UseVisualStyleBackColor = false;
+            this.btcancelar.Click += new System.EventHandler(this.btcancelar_Click);
+            // 
+            // btbuscar
+            // 
+            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btbuscar.FlatAppearance.BorderSize = 0;
+            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btbuscar.Image")));
+            this.btbuscar.Location = new System.Drawing.Point(458, 98);
+            this.btbuscar.Name = "btbuscar";
+            this.btbuscar.Size = new System.Drawing.Size(41, 36);
+            this.btbuscar.TabIndex = 1;
+            this.btbuscar.UseVisualStyleBackColor = true;
+            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
             // 
             // FormEditProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 472);
+            this.ClientSize = new System.Drawing.Size(1164, 480);
             this.Controls.Add(this.btbuscar);
+            this.Controls.Add(this.btcancelar);
+            this.Controls.Add(this.bteditar);
             this.Controls.Add(this.lbbusca);
             this.Controls.Add(this.tbbusca);
             this.Controls.Add(this.btexcluir);
             this.Controls.Add(this.lbeditarcadastro);
-            this.Controls.Add(this.bteditar);
-            this.Controls.Add(this.btcancelar);
             this.Controls.Add(this.btsalvar);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lbalunoscadastrados);
@@ -500,8 +499,6 @@ namespace projetofinal
 
         private System.Windows.Forms.Button btexcluir;
         private System.Windows.Forms.Label lbeditarcadastro;
-        private System.Windows.Forms.Button bteditar;
-        private System.Windows.Forms.Button btcancelar;
         private System.Windows.Forms.Button btsalvar;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -528,8 +525,10 @@ namespace projetofinal
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
-        private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.Label lbbusca;
         private System.Windows.Forms.TextBox tbbusca;
+        private System.Windows.Forms.Button bteditar;
+        private System.Windows.Forms.Button btcancelar;
+        private System.Windows.Forms.Button btbuscar;
     }
 }

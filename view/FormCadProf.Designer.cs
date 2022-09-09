@@ -34,7 +34,6 @@ namespace projetofinal
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btbuscar = new System.Windows.Forms.Button();
             this.btlimpar = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -69,7 +68,7 @@ namespace projetofinal
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(125, 51);
+            this.label2.Location = new System.Drawing.Point(127, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(298, 31);
             this.label2.TabIndex = 21;
@@ -84,7 +83,7 @@ namespace projetofinal
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 3, 0, 3);
-            this.menuStrip1.Size = new System.Drawing.Size(547, 31);
+            this.menuStrip1.Size = new System.Drawing.Size(546, 31);
             this.menuStrip1.TabIndex = 12;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -98,36 +97,22 @@ namespace projetofinal
             // pictureBox1
             // 
             this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(461, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(459, 33);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(86, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 23;
             this.pictureBox1.TabStop = false;
             // 
-            // btbuscar
-            // 
-            this.btbuscar.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btbuscar.Location = new System.Drawing.Point(278, 318);
-            this.btbuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(218, 29);
-            this.btbuscar.TabIndex = 10;
-            this.btbuscar.Text = "BUSCAR";
-            this.btbuscar.UseVisualStyleBackColor = false;
-            this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click_1);
-            // 
             // btlimpar
             // 
-            this.btlimpar.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.btlimpar.BackColor = System.Drawing.Color.Lavender;
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlimpar.Location = new System.Drawing.Point(50, 318);
+            this.btlimpar.Location = new System.Drawing.Point(51, 318);
             this.btlimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlimpar.Name = "btlimpar";
-            this.btlimpar.Size = new System.Drawing.Size(218, 29);
+            this.btlimpar.Size = new System.Drawing.Size(445, 29);
             this.btlimpar.TabIndex = 9;
             this.btlimpar.Text = "LIMPAR";
             this.btlimpar.UseVisualStyleBackColor = false;
@@ -138,11 +123,11 @@ namespace projetofinal
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(50, 355);
+            this.btsalvar.Location = new System.Drawing.Point(51, 355);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(446, 29);
-            this.btsalvar.TabIndex = 11;
+            this.btsalvar.Size = new System.Drawing.Size(445, 29);
+            this.btsalvar.TabIndex = 10;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
@@ -354,9 +339,8 @@ namespace projetofinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(547, 428);
+            this.ClientSize = new System.Drawing.Size(546, 428);
             this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.btbuscar);
             this.Controls.Add(this.btlimpar);
             this.Controls.Add(this.btsalvar);
             this.Controls.Add(this.pictureBox1);
@@ -390,7 +374,6 @@ namespace projetofinal
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.Button btlimpar;
         private System.Windows.Forms.Button btsalvar;
         private System.Windows.Forms.TabControl tabControl1;

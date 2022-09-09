@@ -28,7 +28,6 @@ namespace projetofinal
             tbendereco.Clear();
             mtbcelular.Clear();
             tbemail.Clear();
-            tbsenha.Clear();
             tbpeso.Clear();
             tbaltura.Clear();
             tbmatricula.Enabled = false;
@@ -38,11 +37,9 @@ namespace projetofinal
             tbendereco.Enabled = false;
             mtbcelular.Enabled = false;
             tbemail.Enabled = false;
-            tbsenha.Enabled = false;
             tbpeso.Enabled = false;
             tbaltura.Enabled = false;
             bteditar.Enabled = true;
-            bteditar.Text = "EDITAR";
             btcancelar.Enabled = false;
             btsalvar.Enabled = false;
             btbuscar.Enabled = true;
@@ -58,16 +55,15 @@ namespace projetofinal
             tbendereco.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
             mtbcelular.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
             tbemail.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
-            tbsenha.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
-            tbpeso.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
-            tbaltura.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
+            tbpeso.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
+            tbaltura.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void btbuscar_Click(object sender, EventArgs e)
         {//btbuscar
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha, peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno WHERE nome LIKE @nome ORDER BY nome";
+            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno WHERE nome LIKE @nome ORDER BY nome";
             SqlCommand comando = new SqlCommand(sql, conexao);
 
             comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
@@ -91,11 +87,9 @@ namespace projetofinal
                 tbendereco.Enabled = true;
                 mtbcelular.Enabled = true;
                 tbemail.Enabled = true;
-                tbsenha.Enabled = true;
                 tbpeso.Enabled = true;
                 tbaltura.Enabled = true;
                 bteditar.Enabled = false;
-                bteditar.Text = "EDITANDO...";
                 btcancelar.Enabled = true;
                 btsalvar.Enabled = true;
                 btbuscar.Enabled = false;
@@ -113,7 +107,6 @@ namespace projetofinal
             tbendereco.Clear();
             mtbcelular.Clear();
             tbemail.Clear();
-            tbsenha.Clear();
             tbpeso.Clear();
             tbaltura.Clear();
             tbmatricula.Enabled = false;
@@ -123,11 +116,9 @@ namespace projetofinal
             tbendereco.Enabled = false;
             mtbcelular.Enabled = false;
             tbemail.Enabled = false;
-            tbsenha.Enabled = false;
             tbpeso.Enabled = false;
             tbaltura.Enabled = false;
             bteditar.Enabled = true;
-            bteditar.Text = "EDITAR";
             btsalvar.Enabled = false;
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
@@ -153,7 +144,6 @@ namespace projetofinal
                     tbendereco.Clear();
                     mtbcelular.Clear();
                     tbemail.Clear();
-                    tbsenha.Clear();
                     tbpeso.Clear();
                     tbaltura.Clear();
                     tbmatricula.Enabled = false;
@@ -163,11 +153,9 @@ namespace projetofinal
                     tbendereco.Enabled = false;
                     mtbcelular.Enabled = false;
                     tbemail.Enabled = false;
-                    tbsenha.Enabled = false;
                     tbpeso.Enabled = false;
                     tbaltura.Enabled = false;
                     bteditar.Enabled = true;
-                    bteditar.Text = "EDITAR";
                     btsalvar.Enabled = false;
                     btcancelar.Enabled = false;
                     tabControl1.SelectedTab = tabPage1;
@@ -180,7 +168,7 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbsenha.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -193,7 +181,6 @@ namespace projetofinal
                 alunos.endereco = tbendereco.Text;
                 alunos.celular = mtbcelular.Text;
                 alunos.email = tbemail.Text;
-                alunos.senha = tbsenha.Text;
                 alunos.peso = float.Parse(tbpeso.Text);
                 alunos.altura = float.Parse(tbaltura.Text);
 
@@ -208,7 +195,6 @@ namespace projetofinal
                 tbendereco.Clear();
                 mtbcelular.Clear();
                 tbemail.Clear();
-                tbsenha.Clear();
                 tbpeso.Clear();
                 tbaltura.Clear();
                 tbmatricula.Enabled = false;
@@ -218,11 +204,9 @@ namespace projetofinal
                 tbendereco.Enabled = false;
                 mtbcelular.Enabled = false;
                 tbemail.Enabled = false;
-                tbsenha.Enabled = false;
                 tbpeso.Enabled = false;
                 tbaltura.Enabled = false;
                 bteditar.Enabled = true;
-                bteditar.Text = "EDITAR";
                 btcancelar.Enabled = false;
                 tabControl1.SelectedTab = tabPage1;
                 btsalvar.Enabled = false;
