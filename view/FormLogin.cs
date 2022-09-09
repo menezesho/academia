@@ -19,9 +19,9 @@ namespace projetofinal
         private void FormLogin_Load(object sender, EventArgs e)
         {//load
             Funcoes funcoes = new Funcoes();
-            cbnome.DataSource = funcoes.listarProfs();
-            cbnome.DisplayMember = "nome";
-            cbnome.Text = "";
+            cbusuario.DataSource = funcoes.listarProfs();
+            cbusuario.DisplayMember = "Usuário";
+            cbusuario.Text = "";
         }
 
         private void btversenha_Click(object sender, EventArgs e)
@@ -34,17 +34,17 @@ namespace projetofinal
 
         private void btlogin_Click(object sender, EventArgs e)
         {//btlogin
-            string nome, senha;
+            string usuario, senha;
 
-            nome = cbnome.Text;
+            usuario = cbusuario.Text;
             senha = tbsenha.Text;
             Funcoes funcoes = new Funcoes();
-            funcoes.loginProf(nome, senha);
+            funcoes.loginProf(usuario, senha);
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            cbnome.Text = "";
+            cbusuario.Text = "";
             tbsenha.Clear();
         }
 
@@ -57,9 +57,9 @@ namespace projetofinal
         private void btreload_Click(object sender, EventArgs e)
         {//btreload
             Funcoes funcoes = new Funcoes();
-            cbnome.DataSource = funcoes.listarProfs();
-            cbnome.DisplayMember = "nome";
-            cbnome.Text = "";
+            cbusuario.DataSource = funcoes.listarProfs();
+            cbusuario.DisplayMember = "Usuário";
+            cbusuario.Text = "";
             tbsenha.Clear();
         }
 

@@ -34,6 +34,8 @@ namespace projetofinal
             mtbcelular.Enabled = true;
             tbemail.Clear();
             tbemail.Enabled = true;
+            tbusuario.Clear();
+            tbusuario.Enabled = true;
             tbsenha.Clear();
             tbsenha.Enabled = true;
             tabControl1.SelectedTab = tabPage1;
@@ -47,6 +49,7 @@ namespace projetofinal
             tbendereco.Enabled = true;
             mtbcelular.Enabled = true;
             tbemail.Enabled = true;
+            tbusuario.Clear();
             tbsenha.Enabled = true;
             btsalvar.Enabled = true;
             tbnome.Clear();
@@ -60,44 +63,9 @@ namespace projetofinal
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btbuscar_Click_1(object sender, EventArgs e)
-        {//btbuscar
-            /*string cpf = mtbcpf.Text;
-            bool achou = false;
-            if (mtbcpf.Text == "   .   .   -") 
-                MessageBox.Show("Nenhum CPF foi digitado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else
-            {
-                for (int i = 0; i < p; i++)
-                {
-                    if (professores[i].cpf == cpf)
-                    {
-                        tbcracha.Text = professores[i].cracha.ToString();
-                        tbnome.Enabled = false;
-                        tbnome.Text = professores[i].nome;
-                        mtbcpf.Enabled = false;
-                        mtbcpf.Text = professores[i].cpf;
-                        tbidade.Enabled = false;
-                        tbidade.Text = professores[i].idade.ToString();
-                        tbendereco.Enabled = false;
-                        tbendereco.Text = professores[i].endereco;
-                        mtbcelular.Enabled = false;
-                        mtbcelular.Text = professores[i].celular;
-                        tbemail.Enabled = false;
-                        tbemail.Text = professores[i].email;
-                        btsalvar.Enabled = false;
-                        achou = true;
-                        MessageBox.Show("Professor localizado!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                if (!achou)
-                    MessageBox.Show("Professor não cadastrado!", "Busca", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-        }
-
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbsenha.Text == "" || tbsenha.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbsenha.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -110,6 +78,7 @@ namespace projetofinal
                 profs.endereco = tbendereco.Text;
                 profs.celular = mtbcelular.Text;
                 profs.email = tbemail.Text;
+                profs.usuario = tbusuario.Text;
                 profs.senha = tbsenha.Text;
 
                 Funcoes funcoes = new Funcoes();
@@ -121,6 +90,7 @@ namespace projetofinal
                 tbendereco.Clear();
                 mtbcelular.Clear();
                 tbemail.Clear();
+                tbusuario.Clear();
                 tbsenha.Clear();
                 tbcracha.Text = (p + 1).ToString();
                 tabControl1.SelectedTab = tabPage1;

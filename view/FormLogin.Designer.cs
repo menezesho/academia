@@ -30,7 +30,7 @@ namespace projetofinal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
-            this.lbcracha = new System.Windows.Forms.Label();
+            this.lbusuario = new System.Windows.Forms.Label();
             this.lbsenha = new System.Windows.Forms.Label();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -38,20 +38,20 @@ namespace projetofinal
             this.btsair = new System.Windows.Forms.Button();
             this.lbversao = new System.Windows.Forms.Label();
             this.btversenha = new System.Windows.Forms.Button();
-            this.cbnome = new System.Windows.Forms.ComboBox();
+            this.cbusuario = new System.Windows.Forms.ComboBox();
             this.btreload = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // lbcracha
+            // lbusuario
             // 
-            this.lbcracha.AutoSize = true;
-            this.lbcracha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbcracha.Location = new System.Drawing.Point(304, 32);
-            this.lbcracha.Name = "lbcracha";
-            this.lbcracha.Size = new System.Drawing.Size(63, 23);
-            this.lbcracha.TabIndex = 0;
-            this.lbcracha.Text = "Crachá";
+            this.lbusuario.AutoSize = true;
+            this.lbusuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lbusuario.Location = new System.Drawing.Point(304, 32);
+            this.lbusuario.Name = "lbusuario";
+            this.lbusuario.Size = new System.Drawing.Size(68, 23);
+            this.lbusuario.TabIndex = 0;
+            this.lbusuario.Text = "Usuário";
             // 
             // lbsenha
             // 
@@ -135,15 +135,15 @@ namespace projetofinal
             this.btversenha.UseVisualStyleBackColor = false;
             this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
             // 
-            // cbnome
+            // cbusuario
             // 
-            this.cbnome.FormattingEnabled = true;
-            this.cbnome.Items.AddRange(new object[] {
+            this.cbusuario.FormattingEnabled = true;
+            this.cbusuario.Items.AddRange(new object[] {
             "Selecione"});
-            this.cbnome.Location = new System.Drawing.Point(304, 58);
-            this.cbnome.Name = "cbnome";
-            this.cbnome.Size = new System.Drawing.Size(232, 28);
-            this.cbnome.TabIndex = 0;
+            this.cbusuario.Location = new System.Drawing.Point(304, 58);
+            this.cbusuario.Name = "cbusuario";
+            this.cbusuario.Size = new System.Drawing.Size(232, 28);
+            this.cbusuario.TabIndex = 0;
             // 
             // btreload
             // 
@@ -167,7 +167,7 @@ namespace projetofinal
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(594, 255);
             this.Controls.Add(this.tbsenha);
-            this.Controls.Add(this.cbnome);
+            this.Controls.Add(this.cbusuario);
             this.Controls.Add(this.btreload);
             this.Controls.Add(this.btversenha);
             this.Controls.Add(this.lbversao);
@@ -175,7 +175,7 @@ namespace projetofinal
             this.Controls.Add(this.btlogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbsenha);
-            this.Controls.Add(this.lbcracha);
+            this.Controls.Add(this.lbusuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormLogin";
@@ -191,7 +191,7 @@ namespace projetofinal
 
         #endregion
 
-        private System.Windows.Forms.Label lbcracha;
+        private System.Windows.Forms.Label lbusuario;
         private System.Windows.Forms.Label lbsenha;
         private System.Windows.Forms.TextBox tbsenha;
         private System.Windows.Forms.PictureBox pictureBox1;
@@ -199,8 +199,7 @@ namespace projetofinal
         private System.Windows.Forms.Button btsair;
         private System.Windows.Forms.Label lbversao;
         private System.Windows.Forms.Button btversenha;
-        private System.Windows.Forms.ComboBox cbnome;
+        private System.Windows.Forms.ComboBox cbusuario;
         private System.Windows.Forms.Button btreload;
-        private System.Windows.Forms.Button button1;
     }
 }

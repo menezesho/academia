@@ -28,6 +28,7 @@ namespace projetofinal
             tbendereco.Clear();
             mtbcelular.Clear();
             tbemail.Clear();
+            tbusuario.Clear();
             tbsenha.Clear();
             tbcracha.Enabled = false;
             tbnome.Enabled = false;
@@ -36,6 +37,7 @@ namespace projetofinal
             tbendereco.Enabled = false;
             mtbcelular.Enabled = false;
             tbemail.Enabled = false;
+            tbusuario.Enabled = false;
             tbsenha.Enabled = false;
             bteditar.Enabled = true;
             btcancelar.Enabled = false;
@@ -53,14 +55,15 @@ namespace projetofinal
             tbendereco.Text = dgprofs.CurrentRow.Cells[4].Value.ToString();
             mtbcelular.Text = dgprofs.CurrentRow.Cells[5].Value.ToString();
             tbemail.Text = dgprofs.CurrentRow.Cells[6].Value.ToString();
-            tbsenha.Text = dgprofs.CurrentRow.Cells[7].Value.ToString();
+            tbusuario.Text = dgprofs.CurrentRow.Cells[7].Value.ToString();
+            tbsenha.Text = dgprofs.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void btbuscar_Click(object sender, EventArgs e)
         {//btbuscar
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha FROM professor WHERE nome LIKE @nome ORDER BY nome";
+            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', usuario AS Usuário, senha AS Senha FROM professor WHERE nome LIKE @nome ORDER BY nome";
             SqlCommand comando = new SqlCommand(sql, conexao);
 
             comando.Parameters.AddWithValue("@nome", "%" + tbbusca.Text + "%");
@@ -84,6 +87,7 @@ namespace projetofinal
                 tbendereco.Enabled = true;
                 mtbcelular.Enabled = true;
                 tbemail.Enabled = true;
+                tbusuario.Enabled = true;
                 tbsenha.Enabled = true;
                 bteditar.Enabled = false;
                 btcancelar.Enabled = true;
@@ -103,6 +107,7 @@ namespace projetofinal
             tbendereco.Clear();
             mtbcelular.Clear();
             tbemail.Clear();
+            tbusuario.Clear();
             tbsenha.Clear();
             tbcracha.Enabled = false;
             tbnome.Enabled = false;
@@ -111,6 +116,7 @@ namespace projetofinal
             tbendereco.Enabled = false;
             mtbcelular.Enabled = false;
             tbemail.Enabled = false;
+            tbusuario.Enabled = false;
             tbsenha.Enabled = false;
             bteditar.Enabled = true;
             btsalvar.Enabled = false;
@@ -138,6 +144,7 @@ namespace projetofinal
                     tbendereco.Clear();
                     mtbcelular.Clear();
                     tbemail.Clear();
+                    tbusuario.Clear();
                     tbsenha.Clear();
                     tbcracha.Enabled = false;
                     tbnome.Enabled = false;
@@ -146,6 +153,7 @@ namespace projetofinal
                     tbendereco.Enabled = false;
                     mtbcelular.Enabled = false;
                     tbemail.Enabled = false;
+                    tbusuario.Enabled = false;
                     tbsenha.Enabled = false;
                     bteditar.Enabled = true;
                     btsalvar.Enabled = false;
@@ -160,7 +168,7 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbsenha.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
@@ -173,6 +181,7 @@ namespace projetofinal
                 profs.endereco = tbendereco.Text;
                 profs.celular = mtbcelular.Text;
                 profs.email = tbemail.Text;
+                profs.usuario = tbusuario.Text;
                 profs.senha = tbsenha.Text;
 
                 Funcoes funcoes = new Funcoes();
@@ -186,6 +195,7 @@ namespace projetofinal
                 tbendereco.Clear();
                 mtbcelular.Clear();
                 tbemail.Clear();
+                tbusuario.Clear();
                 tbsenha.Clear();
                 tbcracha.Enabled = false;
                 tbnome.Enabled = false;
@@ -194,6 +204,7 @@ namespace projetofinal
                 tbendereco.Enabled = false;
                 mtbcelular.Enabled = false;
                 tbemail.Enabled = false;
+                tbusuario.Enabled = false;
                 tbsenha.Enabled = false;
                 bteditar.Enabled = true;
                 btcancelar.Enabled = false;

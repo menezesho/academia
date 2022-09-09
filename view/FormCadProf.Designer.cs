@@ -54,6 +54,8 @@ namespace projetofinal
             this.lbcelular = new System.Windows.Forms.Label();
             this.lbendereco = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.tbusuario = new System.Windows.Forms.TextBox();
+            this.lbusuario = new System.Windows.Forms.Label();
             this.tbsenha = new System.Windows.Forms.TextBox();
             this.lbsenha = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
@@ -308,6 +310,8 @@ namespace projetofinal
             // tabPage3
             // 
             this.tabPage3.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.tabPage3.Controls.Add(this.tbusuario);
+            this.tabPage3.Controls.Add(this.lbusuario);
             this.tabPage3.Controls.Add(this.tbsenha);
             this.tabPage3.Controls.Add(this.lbsenha);
             this.tabPage3.Location = new System.Drawing.Point(4, 29);
@@ -315,24 +319,44 @@ namespace projetofinal
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(446, 180);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Informações";
+            this.tabPage3.Text = "Login";
+            // 
+            // tbusuario
+            // 
+            this.tbusuario.Location = new System.Drawing.Point(158, 60);
+            this.tbusuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbusuario.Name = "tbusuario";
+            this.tbusuario.Size = new System.Drawing.Size(189, 27);
+            this.tbusuario.TabIndex = 30;
+            this.tbusuario.UseSystemPasswordChar = true;
+            // 
+            // lbusuario
+            // 
+            this.lbusuario.AutoSize = true;
+            this.lbusuario.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbusuario.Location = new System.Drawing.Point(95, 63);
+            this.lbusuario.Name = "lbusuario";
+            this.lbusuario.Size = new System.Drawing.Size(59, 20);
+            this.lbusuario.TabIndex = 31;
+            this.lbusuario.Text = "Usuário";
             // 
             // tbsenha
             // 
-            this.tbsenha.Location = new System.Drawing.Point(154, 78);
+            this.tbsenha.Location = new System.Drawing.Point(158, 95);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
             this.tbsenha.Size = new System.Drawing.Size(189, 27);
-            this.tbsenha.TabIndex = 8;
+            this.tbsenha.TabIndex = 28;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // lbsenha
             // 
             this.lbsenha.AutoSize = true;
-            this.lbsenha.Location = new System.Drawing.Point(101, 82);
+            this.lbsenha.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.lbsenha.Location = new System.Drawing.Point(95, 98);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(49, 20);
-            this.lbsenha.TabIndex = 21;
+            this.lbsenha.TabIndex = 29;
             this.lbsenha.Text = "Senha";
             // 
             // FormCadProf
@@ -394,6 +418,8 @@ namespace projetofinal
         private System.Windows.Forms.Label lbcelular;
         private System.Windows.Forms.Label lbendereco;
         private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TextBox tbusuario;
+        private System.Windows.Forms.Label lbusuario;
         private System.Windows.Forms.TextBox tbsenha;
         private System.Windows.Forms.Label lbsenha;
     }

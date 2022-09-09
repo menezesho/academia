@@ -123,7 +123,7 @@ namespace projetofinal
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"INSERT INTO professor (cracha, nome, cpf, idade, endereco, celular, email, senha) VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @senha)";
+                string sql = @"INSERT INTO professor (cracha, nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES (@matricula, @nome, @cpf, @idade, @endereco, @celular, @email, @usuario, @senha)";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
                 comando.Parameters.AddWithValue("@matricula", profs.cracha);
@@ -133,6 +133,7 @@ namespace projetofinal
                 comando.Parameters.AddWithValue("@endereco", profs.endereco);
                 comando.Parameters.AddWithValue("@celular", profs.celular);
                 comando.Parameters.AddWithValue("@email", profs.email);
+                comando.Parameters.AddWithValue("@usuario", profs.usuario);
                 comando.Parameters.AddWithValue("@senha", profs.senha);
 
                 conexao.Open();
@@ -153,7 +154,7 @@ namespace projetofinal
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"UPDATE professor SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, senha=@senha WHERE cracha = @cracha";
+                string sql = @"UPDATE professor SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, usuario=@usuario, senha=@senha WHERE cracha = @cracha";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
                 comando.Parameters.AddWithValue("@nome", profs.nome);
@@ -162,6 +163,7 @@ namespace projetofinal
                 comando.Parameters.AddWithValue("@endereco", profs.endereco);
                 comando.Parameters.AddWithValue("@celular", profs.celular);
                 comando.Parameters.AddWithValue("@email", profs.email);
+                comando.Parameters.AddWithValue("@usuario", profs.usuario);
                 comando.Parameters.AddWithValue("@senha", profs.senha);
                 comando.Parameters.AddWithValue("@cracha", profs.cracha);
 
@@ -182,7 +184,7 @@ namespace projetofinal
         {
             string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', senha AS Senha FROM professor";
+            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', usuario AS Usuário, senha AS Senha FROM professor";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
@@ -221,16 +223,16 @@ namespace projetofinal
 
         #region Login
 
-        public void loginProf(string nome, string senha)
+        public void loginProf(string usuario, string senha)
         {
             try
             {
                 string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
                 SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"SELECT * FROM professor WHERE nome=@nome AND senha=@senha";
+                string sql = @"SELECT * FROM professor WHERE usuario=@usuario AND senha=@senha";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@nome", nome);
+                comando.Parameters.AddWithValue("@usuario", usuario);
                 comando.Parameters.AddWithValue("@senha", senha);
 
                 conexao.Open();
