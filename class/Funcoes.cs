@@ -10,6 +10,8 @@ namespace projetofinal
 {
     public class Funcoes
     {
+        bool achouCpf = false;
+
         #region Aluno
         public void cadastrarAluno(Aluno alunos)
         {
@@ -34,6 +36,36 @@ namespace projetofinal
                 comando.ExecuteNonQuery();
                 conexao.Close();
                 MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void verificarCpfAluno(string cpf, Aluno alunos)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM aluno WHERE cpf=@cpf";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexao.Close();
+                }
+                else
+                {
+                    cadastrarAluno(alunos);
+                    conexao.Close();
+                }
             }
             catch (Exception erro)
             {
@@ -140,6 +172,70 @@ namespace projetofinal
                 comando.ExecuteNonQuery();
                 conexao.Close();
                 MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void verificarCpfProfessor(string cpf, string usuario, Professor profs)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM professor WHERE cpf=@cpf";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    achouCpf = true;
+                    conexao.Close();
+                }
+                else
+                {
+                    verificarUserProfessor(usuario, profs);
+                    conexao.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void verificarUserProfessor(string usuario, Professor profs)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM professor WHERE usuario=@usuario";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@usuario", usuario);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("Usuário já existente, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexao.Close();
+                }
+                else
+                {
+                    if (!achouCpf)
+                    {
+                        cadastrarProf(profs);
+                        conexao.Close();
+                    }
+                }
             }
             catch (Exception erro)
             {

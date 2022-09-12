@@ -73,16 +73,9 @@ namespace projetofinal
                 alunos.altura = float.Parse(tbaltura.Text);
 
                 Funcoes funcoes = new Funcoes();
-                funcoes.cadastrarAluno(alunos);
 
-                tbnome.Clear();
-                mtbcpf.Clear();
-                tbidade.Clear();
-                tbendereco.Clear();
-                mtbcelular.Clear();
-                tbemail.Clear();
-                tbpeso.Clear();
-                tbaltura.Clear();
+                string cpf = mtbcpf.Text;
+                funcoes.verificarCpfAluno(cpf, alunos);
                 tabControl1.SelectedTab = tabPage1;
             }
         }

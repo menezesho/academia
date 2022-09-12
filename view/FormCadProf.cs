@@ -75,17 +75,11 @@ namespace projetofinal
                 profs.usuario = tbusuario.Text;
                 profs.senha = tbsenha.Text;
 
-                Funcoes funcoes = new Funcoes();
-                funcoes.cadastrarProf(profs);
+                string cpf = mtbcpf.Text;
+                string usuario = tbusuario.Text;
 
-                tbnome.Clear();
-                mtbcpf.Clear();
-                tbidade.Clear();
-                tbendereco.Clear();
-                mtbcelular.Clear();
-                tbemail.Clear();
-                tbusuario.Clear();
-                tbsenha.Clear();
+                Funcoes funcoes = new Funcoes();
+                funcoes.verificarCpfProfessor(cpf, usuario, profs);
                 tabControl1.SelectedTab = tabPage1;
             }
         }
