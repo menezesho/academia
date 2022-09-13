@@ -80,7 +80,8 @@ namespace projetofinal
             // btexcluir
             // 
             this.btexcluir.BackColor = System.Drawing.Color.Lavender;
-            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btexcluir.Image = ((System.Drawing.Image)(resources.GetObject("btexcluir.Image")));
             this.btexcluir.Location = new System.Drawing.Point(124, 374);
@@ -104,6 +105,7 @@ namespace projetofinal
             // btsalvar
             // 
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.Location = new System.Drawing.Point(199, 411);
@@ -173,6 +175,7 @@ namespace projetofinal
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
             this.mtbcpf.TabIndex = 5;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbidade
             // 
@@ -239,11 +242,12 @@ namespace projetofinal
             // 
             this.mtbcelular.Location = new System.Drawing.Point(126, 78);
             this.mtbcelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mtbcelular.Mask = "(99) 00000-0000";
+            this.mtbcelular.Mask = "(00) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
             this.mtbcelular.Size = new System.Drawing.Size(127, 27);
             this.mtbcelular.TabIndex = 8;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbcelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbemail
             // 
@@ -309,7 +313,6 @@ namespace projetofinal
             this.tbusuario.Name = "tbusuario";
             this.tbusuario.Size = new System.Drawing.Size(189, 27);
             this.tbusuario.TabIndex = 22;
-            this.tbusuario.UseSystemPasswordChar = true;
             // 
             // lbusuario
             // 
@@ -439,7 +442,8 @@ namespace projetofinal
             // bteditar
             // 
             this.bteditar.BackColor = System.Drawing.Color.Lavender;
-            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bteditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditar.Image = ((System.Drawing.Image)(resources.GetObject("bteditar.Image")));
             this.bteditar.Location = new System.Drawing.Point(49, 374);
@@ -453,6 +457,7 @@ namespace projetofinal
             // btcancelar
             // 
             this.btcancelar.BackColor = System.Drawing.Color.Lavender;
+            this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcancelar.Location = new System.Drawing.Point(199, 374);

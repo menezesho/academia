@@ -57,26 +57,40 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
-                MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (tbnome.Text == "" || mtbcpf.Text == "___________" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "___________" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+                MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                Aluno alunos = new Aluno();
+                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                if (cpfValido)
+                {
+                    if (celularValido)
+                    {
+                        Aluno alunos = new Aluno();
 
-                alunos.nome = tbnome.Text;
-                alunos.cpf = mtbcpf.Text;
-                alunos.idade = int.Parse(tbidade.Text);
-                alunos.endereco = tbendereco.Text;
-                alunos.celular = mtbcelular.Text;
-                alunos.email = tbemail.Text;
-                alunos.peso = float.Parse(tbpeso.Text);
-                alunos.altura = float.Parse(tbaltura.Text);
+                        alunos.nome = tbnome.Text;
+                        alunos.cpf = mtbcpf.Text;
+                        alunos.idade = int.Parse(tbidade.Text);
+                        alunos.endereco = tbendereco.Text;
+                        alunos.celular = mtbcelular.Text;
+                        alunos.email = tbemail.Text;
+                        alunos.peso = float.Parse(tbpeso.Text);
+                        alunos.altura = float.Parse(tbaltura.Text);
 
-                Funcoes funcoes = new Funcoes();
+                        Funcoes funcoes = new Funcoes();
 
-                string cpf = mtbcpf.Text;
-                funcoes.verificarCpfAluno(cpf, alunos);
-                tabControl1.SelectedTab = tabPage1;
+                        string cpf = mtbcpf.Text;
+                        funcoes.verificarCpfAluno(cpf, alunos);
+                        tabControl1.SelectedTab = tabPage1;
+                    }
+                    else
+                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                }
+
+                else
+                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

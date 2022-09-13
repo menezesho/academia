@@ -111,9 +111,8 @@ namespace projetofinal
                 MessageBox.Show("Nenhum cadastro foi selecionado, tente novamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
         }
 
-        private void btcancelar_Click(object sender, EventArgs e)
+        public void btcancelar_Click(object sender, EventArgs e)
         {//btcancelar
-            
             tbcracha.Enabled = false;
             tbnome.Enabled = false;
             mtbcpf.Enabled = false;
@@ -128,6 +127,16 @@ namespace projetofinal
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
             btbuscar.Enabled = true;
+
+            tbcracha.Text = dgprofs.CurrentRow.Cells[0].Value.ToString();
+            tbnome.Text = dgprofs.CurrentRow.Cells[1].Value.ToString();
+            mtbcpf.Text = dgprofs.CurrentRow.Cells[2].Value.ToString();
+            tbidade.Text = dgprofs.CurrentRow.Cells[3].Value.ToString();
+            tbendereco.Text = dgprofs.CurrentRow.Cells[4].Value.ToString();
+            mtbcelular.Text = dgprofs.CurrentRow.Cells[5].Value.ToString();
+            tbemail.Text = dgprofs.CurrentRow.Cells[6].Value.ToString();
+            tbusuario.Text = dgprofs.CurrentRow.Cells[7].Value.ToString();
+            tbsenha.Text = dgprofs.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void btexcluir_Click(object sender, EventArgs e)
@@ -173,44 +182,64 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "___________" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "___________" || tbemail.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                Professor profs = new Professor();
+                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                if (cpfValido)
+                {
+                    if (celularValido)
+                    {
+                        Professor profs = new Professor();
 
-                profs.cracha = int.Parse(tbcracha.Text);
-                profs.nome = tbnome.Text;
-                profs.cpf = mtbcpf.Text;
-                profs.idade = int.Parse(tbidade.Text);
-                profs.endereco = tbendereco.Text;
-                profs.celular = mtbcelular.Text;
-                profs.email = tbemail.Text;
-                profs.usuario = tbusuario.Text;
-                profs.senha = tbsenha.Text;
+                        profs.cracha = int.Parse(tbcracha.Text);
+                        profs.nome = tbnome.Text;
+                        profs.cpf = mtbcpf.Text;
+                        profs.idade = int.Parse(tbidade.Text);
+                        profs.endereco = tbendereco.Text;
+                        profs.celular = mtbcelular.Text;
+                        profs.email = tbemail.Text;
+                        profs.usuario = tbusuario.Text;
+                        profs.senha = tbsenha.Text;
 
-                Funcoes funcoes = new Funcoes();
+                        Funcoes funcoes = new Funcoes();
 
-                string cpf = mtbcpf.Text;
-                string usuario = tbusuario.Text;
-                funcoes.verificarCpfEditProf(cpf, usuario, profs);
+                        string cpf = mtbcpf.Text;
+                        funcoes.verificarCpfEditProf(cpf, profs);
 
-                dgprofs.DataSource = funcoes.listarProfs();
+                        dgprofs.DataSource = funcoes.listarProfs();
 
-                tbcracha.Enabled = false;
-                tbnome.Enabled = false;
-                mtbcpf.Enabled = false;
-                tbidade.Enabled = false;
-                tbendereco.Enabled = false;
-                mtbcelular.Enabled = false;
-                tbemail.Enabled = false;
-                tbusuario.Enabled = false;
-                tbsenha.Enabled = false;
-                bteditar.Enabled = true;
-                btcancelar.Enabled = false;
-                tabControl1.SelectedTab = tabPage1;
-                btsalvar.Enabled = false;
-                btbuscar.Enabled = true;
+                        tbcracha.Clear();
+                        tbnome.Clear();
+                        mtbcpf.Clear();
+                        tbidade.Clear();
+                        tbendereco.Clear();
+                        mtbcelular.Clear();
+                        tbemail.Clear();
+                        tbusuario.Clear();
+                        tbsenha.Clear();
+                        tbcracha.Enabled = false;
+                        tbnome.Enabled = false;
+                        mtbcpf.Enabled = false;
+                        tbidade.Enabled = false;
+                        tbendereco.Enabled = false;
+                        mtbcelular.Enabled = false;
+                        tbemail.Enabled = false;
+                        tbusuario.Enabled = false;
+                        tbsenha.Enabled = false;
+                        bteditar.Enabled = true;
+                        btcancelar.Enabled = false;
+                        tabControl1.SelectedTab = tabPage1;
+                        btsalvar.Enabled = false;
+                        btbuscar.Enabled = true;
+                    }
+                    else
+                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

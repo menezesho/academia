@@ -100,7 +100,7 @@ namespace projetofinal
             // 
             this.btsair.BackColor = System.Drawing.Color.GhostWhite;
             this.btsair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsair.Image = ((System.Drawing.Image)(resources.GetObject("btsair.Image")));
             this.btsair.Location = new System.Drawing.Point(529, 183);

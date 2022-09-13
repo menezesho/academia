@@ -4,7 +4,7 @@ using System.Text;
 using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
-
+using System.Text.RegularExpressions;
 
 namespace projetofinal
 {
@@ -55,12 +55,12 @@ namespace projetofinal
 
                 comando.Parameters.AddWithValue("@nome", alunos.nome);
                 comando.Parameters.AddWithValue("@cpf", alunos.cpf);
-                comando.Parameters.AddWithValue("@idade", alunos.idade.ToString());
+                comando.Parameters.AddWithValue("@idade", alunos.idade);
                 comando.Parameters.AddWithValue("@endereco", alunos.endereco);
                 comando.Parameters.AddWithValue("@celular", alunos.celular);
                 comando.Parameters.AddWithValue("@email", alunos.email);
-                comando.Parameters.AddWithValue("@peso", alunos.peso.ToString());
-                comando.Parameters.AddWithValue("@altura", alunos.altura.ToString());
+                comando.Parameters.AddWithValue("@peso", alunos.peso);
+                comando.Parameters.AddWithValue("@altura", alunos.altura);
 
                 conexao.Open();
                 comando.CommandText = sql;
@@ -181,7 +181,7 @@ namespace projetofinal
         
         #region Professor
 
-        public void verificarCpfProfessor(string cpf, string usuario, Professor profs)
+        public void verificarCpfProfessor(string cpf, Professor profs)
         {
             try
             {
@@ -202,41 +202,8 @@ namespace projetofinal
                 }
                 else
                 {
-                    verificarUserProfessor(usuario, profs);
+                    cadastrarProf(profs);
                     conexao.Close();
-                }
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void verificarUserProfessor(string usuario, Professor profs)
-        {
-            try
-            {
-                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-                SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"SELECT * FROM professor WHERE usuario=@usuario";
-                SqlCommand comando = new SqlCommand(sql, conexao);
-
-                comando.Parameters.AddWithValue("@usuario", usuario);
-
-                conexao.Open();
-                SqlDataReader dados = comando.ExecuteReader();
-                if (dados.Read())
-                {
-                    MessageBox.Show("Usuário já existente, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    conexao.Close();
-                }
-                else
-                {
-                    if (!achouCpf)
-                    {
-                        cadastrarProf(profs);
-                        conexao.Close();
-                    }
                 }
             }
             catch (Exception erro)
@@ -308,7 +275,7 @@ namespace projetofinal
             }
         }
 
-        public void verificarCpfEditProf(string cpf, string usuario, Professor profs)
+        public void verificarCpfEditProf(string cpf, Professor profs)
         {
             try
             {
@@ -329,41 +296,8 @@ namespace projetofinal
                 }
                 else
                 {
-                    verificarCpfUserEditProf(usuario, profs);
+                    editarProf(profs);
                     conexao.Close();
-                }
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        public void verificarCpfUserEditProf(string usuario, Professor profs)
-        {
-            try
-            {
-                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-                SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"SELECT * FROM professor WHERE usuario=@usuario";
-                SqlCommand comando = new SqlCommand(sql, conexao);
-
-                comando.Parameters.AddWithValue("@usuario", usuario);
-
-                conexao.Open();
-                SqlDataReader dados = comando.ExecuteReader();
-                if (dados.Read())
-                {
-                    MessageBox.Show("Usuário já existente, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    conexao.Close();
-                }
-                else
-                {
-                    if (!achouCpf)
-                    {
-                        editarProf(profs);
-                        conexao.Close();
-                    }
                 }
             }
             catch (Exception erro)
@@ -409,6 +343,22 @@ namespace projetofinal
             {
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        #endregion
+
+        #region Validação de CPF e Telefone
+
+        public static bool validarCpf(string cpf)
+        {
+            var regExp = new Regex(@"^\d{11}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
+            return regExp.IsMatch(cpf);
+        }
+
+        public static bool validarCelular(string celular)
+        {
+            var regExp = new Regex(@"^\d{11}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
+            return regExp.IsMatch(celular);
         }
 
         #endregion

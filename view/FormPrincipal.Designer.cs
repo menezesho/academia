@@ -75,9 +75,9 @@ namespace projetofinal
             // retornarToolStripMenuItem
             // 
             this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
-            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
-            this.retornarToolStripMenuItem.Text = "Retornar";
-            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click_1);
+            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
+            this.retornarToolStripMenuItem.Text = "Sair";
+            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click_1);
             // 
             // alunosToolStripMenuItem
             // 

@@ -83,7 +83,7 @@ namespace projetofinal
                     Close();
         }
 
-        private void retornarToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
         {//strip >> retornar
             if (MessageBox.Show("Deseja mesmo sair para a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();

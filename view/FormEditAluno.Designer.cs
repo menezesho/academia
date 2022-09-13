@@ -57,9 +57,7 @@ namespace projetofinal
             this.lbcelular = new System.Windows.Forms.Label();
             this.lbendereco = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.lbcm = new System.Windows.Forms.Label();
             this.lbkg = new System.Windows.Forms.Label();
-            this.tbaltura = new System.Windows.Forms.TextBox();
             this.tbpeso = new System.Windows.Forms.TextBox();
             this.lbaltura = new System.Windows.Forms.Label();
             this.lbpeso = new System.Windows.Forms.Label();
@@ -70,6 +68,8 @@ namespace projetofinal
             this.bteditar = new System.Windows.Forms.Button();
             this.btexcluir = new System.Windows.Forms.Button();
             this.btsalvar = new System.Windows.Forms.Button();
+            this.lbcm = new System.Windows.Forms.Label();
+            this.tbaltura = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgalunos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -228,6 +228,7 @@ namespace projetofinal
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
             this.mtbcpf.TabIndex = 5;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbidade
             // 
@@ -294,11 +295,12 @@ namespace projetofinal
             // 
             this.mtbcelular.Location = new System.Drawing.Point(126, 77);
             this.mtbcelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mtbcelular.Mask = "(99) 00000-0000";
+            this.mtbcelular.Mask = "(00) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
             this.mtbcelular.Size = new System.Drawing.Size(127, 27);
             this.mtbcelular.TabIndex = 8;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbcelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbemail
             // 
@@ -359,15 +361,6 @@ namespace projetofinal
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Informações";
             // 
-            // lbcm
-            // 
-            this.lbcm.AutoSize = true;
-            this.lbcm.Location = new System.Drawing.Point(260, 99);
-            this.lbcm.Name = "lbcm";
-            this.lbcm.Size = new System.Drawing.Size(29, 20);
-            this.lbcm.TabIndex = 19;
-            this.lbcm.Text = "cm";
-            // 
             // lbkg
             // 
             this.lbkg.AutoSize = true;
@@ -376,14 +369,6 @@ namespace projetofinal
             this.lbkg.Size = new System.Drawing.Size(25, 20);
             this.lbkg.TabIndex = 18;
             this.lbkg.Text = "kg";
-            // 
-            // tbaltura
-            // 
-            this.tbaltura.Location = new System.Drawing.Point(196, 95);
-            this.tbaltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbaltura.Name = "tbaltura";
-            this.tbaltura.Size = new System.Drawing.Size(61, 27);
-            this.tbaltura.TabIndex = 11;
             // 
             // tbpeso
             // 
@@ -445,6 +430,7 @@ namespace projetofinal
             // btcancelar
             // 
             this.btcancelar.BackColor = System.Drawing.Color.Lavender;
+            this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btcancelar.Location = new System.Drawing.Point(200, 372);
@@ -459,7 +445,8 @@ namespace projetofinal
             // bteditar
             // 
             this.bteditar.BackColor = System.Drawing.Color.Lavender;
-            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.bteditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditar.Image = ((System.Drawing.Image)(resources.GetObject("bteditar.Image")));
             this.bteditar.Location = new System.Drawing.Point(50, 372);
@@ -473,7 +460,8 @@ namespace projetofinal
             // btexcluir
             // 
             this.btexcluir.BackColor = System.Drawing.Color.Lavender;
-            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btexcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btexcluir.Image = ((System.Drawing.Image)(resources.GetObject("btexcluir.Image")));
             this.btexcluir.Location = new System.Drawing.Point(125, 372);
@@ -487,6 +475,7 @@ namespace projetofinal
             // btsalvar
             // 
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.Location = new System.Drawing.Point(200, 409);
@@ -497,6 +486,23 @@ namespace projetofinal
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
             this.btsalvar.Click += new System.EventHandler(this.btsalvar_Click);
+            // 
+            // lbcm
+            // 
+            this.lbcm.AutoSize = true;
+            this.lbcm.Location = new System.Drawing.Point(260, 99);
+            this.lbcm.Name = "lbcm";
+            this.lbcm.Size = new System.Drawing.Size(29, 20);
+            this.lbcm.TabIndex = 19;
+            this.lbcm.Text = "cm";
+            // 
+            // tbaltura
+            // 
+            this.tbaltura.Location = new System.Drawing.Point(196, 95);
+            this.tbaltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.tbaltura.Name = "tbaltura";
+            this.tbaltura.Size = new System.Drawing.Size(61, 27);
+            this.tbaltura.TabIndex = 11;
             // 
             // FormEditAluno
             // 
@@ -566,9 +572,7 @@ namespace projetofinal
         private System.Windows.Forms.Label lbcelular;
         private System.Windows.Forms.Label lbendereco;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label lbcm;
         private System.Windows.Forms.Label lbkg;
-        private System.Windows.Forms.TextBox tbaltura;
         private System.Windows.Forms.TextBox tbpeso;
         private System.Windows.Forms.Label lbaltura;
         private System.Windows.Forms.Label lbpeso;
@@ -579,5 +583,7 @@ namespace projetofinal
         private System.Windows.Forms.Button bteditar;
         private System.Windows.Forms.Button btexcluir;
         private System.Windows.Forms.Button btsalvar;
+        private System.Windows.Forms.Label lbcm;
+        private System.Windows.Forms.TextBox tbaltura;
     }
 }

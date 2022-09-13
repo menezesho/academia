@@ -127,6 +127,16 @@ namespace projetofinal
             btcancelar.Enabled = false;
             tabControl1.SelectedTab = tabPage1;
             btbuscar.Enabled = true;
+
+            tbmatricula.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
+            tbnome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
+            mtbcpf.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
+            tbidade.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
+            tbendereco.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
+            mtbcelular.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
+            tbemail.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
+            tbpeso.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
+            tbaltura.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
         }
 
         private void btexcluir_Click(object sender, EventArgs e)
@@ -172,43 +182,64 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "___________" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "___________" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                Aluno alunos = new Aluno();
+                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                if (cpfValido)
+                {
+                    if (celularValido)
+                    {
+                        Aluno alunos = new Aluno();
 
-                alunos.matricula = int.Parse(tbmatricula.Text);
-                alunos.nome = tbnome.Text;
-                alunos.cpf = mtbcpf.Text;
-                alunos.idade = int.Parse(tbidade.Text);
-                alunos.endereco = tbendereco.Text;
-                alunos.celular = mtbcelular.Text;
-                alunos.email = tbemail.Text;
-                alunos.peso = float.Parse(tbpeso.Text);
-                alunos.altura = float.Parse(tbaltura.Text);
+                        alunos.matricula = int.Parse(tbmatricula.Text);
+                        alunos.nome = tbnome.Text;
+                        alunos.cpf = mtbcpf.Text;
+                        alunos.idade = int.Parse(tbidade.Text);
+                        alunos.endereco = tbendereco.Text;
+                        alunos.celular = mtbcelular.Text;
+                        alunos.email = tbemail.Text;
+                        alunos.peso = float.Parse(tbpeso.Text);
+                        alunos.altura = float.Parse(tbaltura.Text);
 
-                Funcoes funcoes = new Funcoes();
+                        Funcoes funcoes = new Funcoes();
 
-                string cpf = mtbcpf.Text;
-                funcoes.verificarCpfEditAluno(cpf, alunos);
+                        string cpf = mtbcpf.Text;
+                        funcoes.verificarCpfEditAluno(cpf, alunos);
 
-                dgalunos.DataSource = funcoes.listarAlunos();
+                        dgalunos.DataSource = funcoes.listarAlunos();
 
-                tbmatricula.Enabled = false;
-                tbnome.Enabled = false;
-                mtbcpf.Enabled = false;
-                tbidade.Enabled = false;
-                tbendereco.Enabled = false;
-                mtbcelular.Enabled = false;
-                tbemail.Enabled = false;
-                tbpeso.Enabled = false;
-                tbaltura.Enabled = false;
-                bteditar.Enabled = true;
-                btcancelar.Enabled = false;
-                tabControl1.SelectedTab = tabPage1;
-                btsalvar.Enabled = false;
-                btbuscar.Enabled = true;
+                        tbmatricula.Clear();
+                        tbnome.Clear();
+                        mtbcpf.Clear();
+                        tbidade.Clear();
+                        tbendereco.Clear();
+                        mtbcelular.Clear();
+                        tbemail.Clear();
+                        tbpeso.Clear();
+                        tbaltura.Clear();
+                        tbmatricula.Enabled = false;
+                        tbnome.Enabled = false;
+                        mtbcpf.Enabled = false;
+                        tbidade.Enabled = false;
+                        tbendereco.Enabled = false;
+                        mtbcelular.Enabled = false;
+                        tbemail.Enabled = false;
+                        tbpeso.Enabled = false;
+                        tbaltura.Enabled = false;
+                        bteditar.Enabled = true;
+                        btcancelar.Enabled = false;
+                        tabControl1.SelectedTab = tabPage1;
+                        btsalvar.Enabled = false;
+                        btbuscar.Enabled = true;
+                    }
+                    else
+                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

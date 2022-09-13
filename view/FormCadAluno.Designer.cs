@@ -69,6 +69,7 @@ namespace projetofinal
             // btlimpar
             // 
             this.btlimpar.BackColor = System.Drawing.Color.Lavender;
+            this.btlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlimpar.Location = new System.Drawing.Point(51, 318);
@@ -83,6 +84,7 @@ namespace projetofinal
             // btsalvar
             // 
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btsalvar.Location = new System.Drawing.Point(51, 355);
@@ -172,6 +174,7 @@ namespace projetofinal
             this.mtbcpf.Size = new System.Drawing.Size(129, 27);
             this.mtbcpf.TabIndex = 3;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbidade
             // 
@@ -238,11 +241,12 @@ namespace projetofinal
             // 
             this.mtbcelular.Location = new System.Drawing.Point(126, 77);
             this.mtbcelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.mtbcelular.Mask = "(99) 00000-0000";
+            this.mtbcelular.Mask = "(00) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
             this.mtbcelular.Size = new System.Drawing.Size(127, 27);
             this.mtbcelular.TabIndex = 6;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.mtbcelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbemail
             // 
@@ -413,12 +417,12 @@ namespace projetofinal
         private System.Windows.Forms.Label lbcelular;
         private System.Windows.Forms.Label lbendereco;
         private System.Windows.Forms.TabPage tabPage3;
-        private System.Windows.Forms.Label lbcm;
         private System.Windows.Forms.Label lbkg;
-        private System.Windows.Forms.TextBox tbaltura;
         private System.Windows.Forms.TextBox tbpeso;
         private System.Windows.Forms.Label lbaltura;
         private System.Windows.Forms.Label lbpeso;
+        private System.Windows.Forms.Label lbcm;
+        private System.Windows.Forms.TextBox tbaltura;
     }
 }
 

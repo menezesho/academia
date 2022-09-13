@@ -60,27 +60,39 @@ namespace projetofinal
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "   .   .   -" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "(  )      -" || tbsenha.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
+            if (tbnome.Text == "" || mtbcpf.Text == "___________" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "___________" || tbsenha.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                Professor profs = new Professor();
+                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                if (cpfValido)
+                {
+                    if (celularValido)
+                    {
+                        Professor profs = new Professor();
 
-                profs.nome = tbnome.Text;
-                profs.cpf = mtbcpf.Text;
-                profs.idade = int.Parse(tbidade.Text);
-                profs.endereco = tbendereco.Text;
-                profs.celular = mtbcelular.Text;
-                profs.email = tbemail.Text;
-                profs.usuario = tbusuario.Text;
-                profs.senha = tbsenha.Text;
+                        profs.nome = tbnome.Text;
+                        profs.cpf = mtbcpf.Text;
+                        profs.idade = int.Parse(tbidade.Text);
+                        profs.endereco = tbendereco.Text;
+                        profs.celular = mtbcelular.Text;
+                        profs.email = tbemail.Text;
+                        profs.usuario = tbusuario.Text;
+                        profs.senha = tbsenha.Text;
 
-                string cpf = mtbcpf.Text;
-                string usuario = tbusuario.Text;
+                        string cpf = mtbcpf.Text;
+                        Funcoes funcoes = new Funcoes();
+                        funcoes.verificarCpfProfessor(cpf, profs);
+                        tabControl1.SelectedTab = tabPage1;
+                    }
+                    else
+                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
 
-                Funcoes funcoes = new Funcoes();
-                funcoes.verificarCpfProfessor(cpf, usuario, profs);
-                tabControl1.SelectedTab = tabPage1;
+                }
+
+                else
+                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
