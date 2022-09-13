@@ -13,6 +13,37 @@ namespace projetofinal
         bool achouCpf = false;
 
         #region Aluno
+
+        public void verificarCpfAluno(string cpf, Aluno alunos)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM aluno WHERE cpf=@cpf";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexao.Close();
+                }
+                else
+                {
+                    cadastrarAluno(alunos);
+                    conexao.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void cadastrarAluno(Aluno alunos)
         {
             try
@@ -43,7 +74,7 @@ namespace projetofinal
             }
         }
 
-        public void verificarCpfAluno(string cpf, Aluno alunos)
+        public void verificarCpfEditAluno(string cpf, Aluno alunos)
         {
             try
             {
@@ -63,7 +94,7 @@ namespace projetofinal
                 }
                 else
                 {
-                    cadastrarAluno(alunos);
+                    editarAluno(alunos);
                     conexao.Close();
                 }
             }
@@ -147,37 +178,8 @@ namespace projetofinal
 
         #endregion
 
+        
         #region Professor
-
-        public void cadastrarProf(Professor profs)
-        {
-            try
-            {
-                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-                SqlConnection conexao = new SqlConnection(strConexao);
-                string sql = @"INSERT INTO professor (nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES (@nome, @cpf, @idade, @endereco, @celular, @email, @usuario, @senha)";
-                SqlCommand comando = new SqlCommand(sql, conexao);
-
-                comando.Parameters.AddWithValue("@nome", profs.nome);
-                comando.Parameters.AddWithValue("@cpf", profs.cpf);
-                comando.Parameters.AddWithValue("@idade", profs.idade.ToString());
-                comando.Parameters.AddWithValue("@endereco", profs.endereco);
-                comando.Parameters.AddWithValue("@celular", profs.celular);
-                comando.Parameters.AddWithValue("@email", profs.email);
-                comando.Parameters.AddWithValue("@usuario", profs.usuario);
-                comando.Parameters.AddWithValue("@senha", profs.senha);
-
-                conexao.Open();
-                comando.CommandText = sql;
-                comando.ExecuteNonQuery();
-                conexao.Close();
-                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            catch (Exception erro)
-            {
-                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
 
         public void verificarCpfProfessor(string cpf, string usuario, Professor profs)
         {
@@ -243,6 +245,36 @@ namespace projetofinal
             }
         }
 
+        public void cadastrarProf(Professor profs)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"INSERT INTO professor (nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES (@nome, @cpf, @idade, @endereco, @celular, @email, @usuario, @senha)";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@nome", profs.nome);
+                comando.Parameters.AddWithValue("@cpf", profs.cpf);
+                comando.Parameters.AddWithValue("@idade", profs.idade.ToString());
+                comando.Parameters.AddWithValue("@endereco", profs.endereco);
+                comando.Parameters.AddWithValue("@celular", profs.celular);
+                comando.Parameters.AddWithValue("@email", profs.email);
+                comando.Parameters.AddWithValue("@usuario", profs.usuario);
+                comando.Parameters.AddWithValue("@senha", profs.senha);
+
+                conexao.Open();
+                comando.CommandText = sql;
+                comando.ExecuteNonQuery();
+                conexao.Close();
+                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
         public void editarProf(Professor profs)
         {
             try
@@ -269,6 +301,70 @@ namespace projetofinal
                 conexao.Close();
 
                 MessageBox.Show("Cadastro alterado com sucesso!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void verificarCpfEditProf(string cpf, string usuario, Professor profs)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM professor WHERE cpf=@cpf";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@cpf", cpf);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    achouCpf = true;
+                    conexao.Close();
+                }
+                else
+                {
+                    verificarCpfUserEditProf(usuario, profs);
+                    conexao.Close();
+                }
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        public void verificarCpfUserEditProf(string usuario, Professor profs)
+        {
+            try
+            {
+                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+                SqlConnection conexao = new SqlConnection(strConexao);
+                string sql = @"SELECT * FROM professor WHERE usuario=@usuario";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@usuario", usuario);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    MessageBox.Show("Usuário já existente, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    conexao.Close();
+                }
+                else
+                {
+                    if (!achouCpf)
+                    {
+                        editarProf(profs);
+                        conexao.Close();
+                    }
+                }
             }
             catch (Exception erro)
             {

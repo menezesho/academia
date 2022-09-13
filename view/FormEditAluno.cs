@@ -189,18 +189,12 @@ namespace projetofinal
                 alunos.altura = float.Parse(tbaltura.Text);
 
                 Funcoes funcoes = new Funcoes();
-                funcoes.editarAluno(alunos);
+
+                string cpf = mtbcpf.Text;
+                funcoes.verificarCpfEditAluno(cpf, alunos);
+
                 dgalunos.DataSource = funcoes.listarAlunos();
 
-                tbmatricula.Clear();
-                tbnome.Clear();
-                mtbcpf.Clear();
-                tbidade.Clear();
-                tbendereco.Clear();
-                mtbcelular.Clear();
-                tbemail.Clear();
-                tbpeso.Clear();
-                tbaltura.Clear();
                 tbmatricula.Enabled = false;
                 tbnome.Enabled = false;
                 mtbcpf.Enabled = false;

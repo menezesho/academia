@@ -190,18 +190,13 @@ namespace projetofinal
                 profs.senha = tbsenha.Text;
 
                 Funcoes funcoes = new Funcoes();
-                funcoes.editarProf(profs);
+
+                string cpf = mtbcpf.Text;
+                string usuario = tbusuario.Text;
+                funcoes.verificarCpfEditProf(cpf, usuario, profs);
+
                 dgprofs.DataSource = funcoes.listarProfs();
 
-                tbcracha.Clear();
-                tbnome.Clear();
-                mtbcpf.Clear();
-                tbidade.Clear();
-                tbendereco.Clear();
-                mtbcelular.Clear();
-                tbemail.Clear();
-                tbusuario.Clear();
-                tbsenha.Clear();
                 tbcracha.Enabled = false;
                 tbnome.Enabled = false;
                 mtbcpf.Enabled = false;
