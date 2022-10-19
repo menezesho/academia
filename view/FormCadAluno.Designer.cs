@@ -55,6 +55,7 @@ namespace projetofinal
             // 
             // btlimpar
             // 
+            this.btlimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btlimpar.BackColor = System.Drawing.Color.Lavender;
             this.btlimpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -71,6 +72,7 @@ namespace projetofinal
             // 
             // btsalvar
             // 
+            this.btsalvar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btsalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -87,6 +89,7 @@ namespace projetofinal
             // 
             // lvNovoCadastro
             // 
+            this.lvNovoCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lvNovoCadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lvNovoCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.lvNovoCadastro.Location = new System.Drawing.Point(57, 31);
@@ -98,6 +101,7 @@ namespace projetofinal
             // 
             // mtbCpf
             // 
+            this.mtbCpf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbCpf.BackColor = System.Drawing.Color.White;
             this.mtbCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -112,6 +116,7 @@ namespace projetofinal
             // 
             // tbIdade
             // 
+            this.tbIdade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbIdade.BackColor = System.Drawing.Color.White;
             this.tbIdade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbIdade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -125,6 +130,7 @@ namespace projetofinal
             // 
             // tbNome
             // 
+            this.tbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbNome.BackColor = System.Drawing.Color.White;
             this.tbNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -137,6 +143,7 @@ namespace projetofinal
             // 
             // lbidade
             // 
+            this.lbidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbidade.AutoSize = true;
             this.lbidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbidade.Location = new System.Drawing.Point(410, 150);
@@ -147,6 +154,7 @@ namespace projetofinal
             // 
             // lbcpf
             // 
+            this.lbcpf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcpf.AutoSize = true;
             this.lbcpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbcpf.Location = new System.Drawing.Point(57, 150);
@@ -157,6 +165,7 @@ namespace projetofinal
             // 
             // lbnome
             // 
+            this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
             this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbnome.Location = new System.Drawing.Point(57, 92);
@@ -167,6 +176,7 @@ namespace projetofinal
             // 
             // mtbCelular
             // 
+            this.mtbCelular.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbCelular.BackColor = System.Drawing.Color.White;
             this.mtbCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -181,6 +191,7 @@ namespace projetofinal
             // 
             // tbEmail
             // 
+            this.tbEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbEmail.BackColor = System.Drawing.Color.White;
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -193,6 +204,7 @@ namespace projetofinal
             // 
             // tbEndereco
             // 
+            this.tbEndereco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbEndereco.BackColor = System.Drawing.Color.White;
             this.tbEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -205,6 +217,7 @@ namespace projetofinal
             // 
             // lbemail
             // 
+            this.lbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbemail.AutoSize = true;
             this.lbemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbemail.Location = new System.Drawing.Point(410, 92);
@@ -215,6 +228,7 @@ namespace projetofinal
             // 
             // lbcelular
             // 
+            this.lbcelular.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcelular.AutoSize = true;
             this.lbcelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbcelular.Location = new System.Drawing.Point(225, 150);
@@ -225,6 +239,7 @@ namespace projetofinal
             // 
             // lbendereco
             // 
+            this.lbendereco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbendereco.AutoSize = true;
             this.lbendereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbendereco.Location = new System.Drawing.Point(57, 208);
@@ -235,6 +250,7 @@ namespace projetofinal
             // 
             // lbcm
             // 
+            this.lbcm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcm.AutoSize = true;
             this.lbcm.Location = new System.Drawing.Point(689, 179);
             this.lbcm.Name = "lbcm";
@@ -244,6 +260,7 @@ namespace projetofinal
             // 
             // lbkg
             // 
+            this.lbkg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbkg.AutoSize = true;
             this.lbkg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbkg.Location = new System.Drawing.Point(573, 177);
@@ -254,6 +271,7 @@ namespace projetofinal
             // 
             // tbAltura
             // 
+            this.tbAltura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbAltura.BackColor = System.Drawing.Color.White;
             this.tbAltura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAltura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -267,6 +285,7 @@ namespace projetofinal
             // 
             // tbPeso
             // 
+            this.tbPeso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbPeso.BackColor = System.Drawing.Color.White;
             this.tbPeso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPeso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -280,6 +299,7 @@ namespace projetofinal
             // 
             // lbaltura
             // 
+            this.lbaltura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbaltura.AutoSize = true;
             this.lbaltura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbaltura.Location = new System.Drawing.Point(617, 150);
@@ -290,6 +310,7 @@ namespace projetofinal
             // 
             // lbpeso
             // 
+            this.lbpeso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbpeso.AutoSize = true;
             this.lbpeso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.lbpeso.Location = new System.Drawing.Point(501, 150);
@@ -328,6 +349,7 @@ namespace projetofinal
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MinimumSize = new System.Drawing.Size(791, 404);
             this.Name = "FormCadAluno";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inserir";
