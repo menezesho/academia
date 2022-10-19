@@ -34,24 +34,17 @@ namespace projetofinal
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            tbNome.Enabled = true;
-            mtbCpf.Enabled = true;
-            tbIdade.Enabled = true;
-            tbEndereco.Enabled = true;
-            mtbCelular.Enabled = true;
-            tbEmail.Enabled = true;
-            tbPeso.Enabled = true;
-            tbAltura.Enabled = true;
-            btsalvar.Enabled = true;
-            tbNome.Clear();
-            mtbCpf.Clear();
-            tbIdade.Clear();
-            tbEndereco.Clear();
-            mtbCelular.Clear();
-            tbEmail.Clear();
-            tbPeso.Clear();
-            tbAltura.Clear();
-            MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                tbNome.Clear();
+                mtbCpf.Clear();
+                tbIdade.Clear();
+                tbEndereco.Clear();
+                mtbCelular.Clear();
+                tbEmail.Clear();
+                tbPeso.Clear();
+                tbAltura.Clear();
+            }
         }
 
         private void btsalvar_Click(object sender, EventArgs e)
@@ -96,7 +89,7 @@ namespace projetofinal
 
         private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
         {//strip >> retornar
-            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
 
         }
@@ -104,7 +97,7 @@ namespace projetofinal
         private void Form1_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
             if (e.KeyValue.Equals(27))
-                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
         }
 
