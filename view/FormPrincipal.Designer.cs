@@ -63,10 +63,10 @@ namespace projetofinal
             this.btInserirAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btInserirAluno.Image = ((System.Drawing.Image)(resources.GetObject("btInserirAluno.Image")));
             this.btInserirAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInserirAluno.Location = new System.Drawing.Point(410, 110);
+            this.btInserirAluno.Location = new System.Drawing.Point(406, 115);
             this.btInserirAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserirAluno.Name = "btInserirAluno";
-            this.btInserirAluno.Size = new System.Drawing.Size(134, 48);
+            this.btInserirAluno.Size = new System.Drawing.Size(134, 40);
             this.btInserirAluno.TabIndex = 15;
             this.btInserirAluno.Text = "INSERIR";
             this.btInserirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,10 +83,10 @@ namespace projetofinal
             this.btEditarAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btEditarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btEditarAluno.Image")));
             this.btEditarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditarAluno.Location = new System.Drawing.Point(410, 166);
+            this.btEditarAluno.Location = new System.Drawing.Point(406, 163);
             this.btEditarAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditarAluno.Name = "btEditarAluno";
-            this.btEditarAluno.Size = new System.Drawing.Size(134, 48);
+            this.btEditarAluno.Size = new System.Drawing.Size(134, 40);
             this.btEditarAluno.TabIndex = 16;
             this.btEditarAluno.Text = "EDITAR ";
             this.btEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -117,9 +117,9 @@ namespace projetofinal
             this.lbeditarcadastro.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbeditarcadastro.ForeColor = System.Drawing.Color.GhostWhite;
-            this.lbeditarcadastro.Location = new System.Drawing.Point(397, 68);
+            this.lbeditarcadastro.Location = new System.Drawing.Point(393, 73);
             this.lbeditarcadastro.Name = "lbeditarcadastro";
-            this.lbeditarcadastro.Size = new System.Drawing.Size(160, 160);
+            this.lbeditarcadastro.Size = new System.Drawing.Size(160, 147);
             this.lbeditarcadastro.TabIndex = 32;
             this.lbeditarcadastro.Text = "ALUNO";
             this.lbeditarcadastro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -131,9 +131,9 @@ namespace projetofinal
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label2.Location = new System.Drawing.Point(563, 68);
+            this.label2.Location = new System.Drawing.Point(559, 73);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 160);
+            this.label2.Size = new System.Drawing.Size(160, 147);
             this.label2.TabIndex = 34;
             this.label2.Text = "PROFESSOR";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -148,13 +148,13 @@ namespace projetofinal
             this.btEditarProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btEditarProf.Image = ((System.Drawing.Image)(resources.GetObject("btEditarProf.Image")));
             this.btEditarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditarProf.Location = new System.Drawing.Point(575, 166);
+            this.btEditarProf.Location = new System.Drawing.Point(571, 163);
             this.btEditarProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditarProf.Name = "btEditarProf";
-            this.btEditarProf.Size = new System.Drawing.Size(134, 48);
+            this.btEditarProf.Size = new System.Drawing.Size(134, 40);
             this.btEditarProf.TabIndex = 36;
             this.btEditarProf.Text = "EDITAR ";
-            this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.btEditarProf.UseVisualStyleBackColor = false;
             this.btEditarProf.Click += new System.EventHandler(this.btEditarProf_Click);
             // 
@@ -168,10 +168,10 @@ namespace projetofinal
             this.btInserirProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btInserirProf.Image = ((System.Drawing.Image)(resources.GetObject("btInserirProf.Image")));
             this.btInserirProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInserirProf.Location = new System.Drawing.Point(575, 110);
+            this.btInserirProf.Location = new System.Drawing.Point(571, 115);
             this.btInserirProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserirProf.Name = "btInserirProf";
-            this.btInserirProf.Size = new System.Drawing.Size(134, 48);
+            this.btInserirProf.Size = new System.Drawing.Size(134, 40);
             this.btInserirProf.TabIndex = 35;
             this.btInserirProf.Text = "INSERIR";
             this.btInserirProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -195,6 +195,7 @@ namespace projetofinal
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
+            this.MinimumSize = new System.Drawing.Size(778, 336);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
