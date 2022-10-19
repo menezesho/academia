@@ -10,10 +10,7 @@ namespace projetofinal
 {
     public partial class FormPrincipal : Form
     {
-        public static FormCadAluno Fca = new FormCadAluno();
-        public static FormEditAluno Fea = new FormEditAluno();
-        public static FormCadProf Fcp = new FormCadProf();
-        public static FormEditProf Fep = new FormEditProf();
+
 
         public FormPrincipal()
         {
@@ -21,60 +18,39 @@ namespace projetofinal
         }
 
         private void FormPrincipal_Load(object sender, EventArgs e)
-        {//load
+        {
             MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        #region Aluno
+        #region Menu
 
-        private void cadastrarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> alunos >> cadastrar
-            Fca.ShowDialog();
+        private void btInserirAluno_Click(object sender, EventArgs e)
+        {//btInserirAluno
+            FormCadAluno Fca = new FormCadAluno();
+            Fca.Show();
         }
 
-        private void listarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> alunos >> listar
-            Fea.ShowDialog();
+        private void btEditarAluno_Click(object sender, EventArgs e)
+        {//btEditarAluno
+            FormEditAluno Fea = new FormEditAluno();
+            Fea.Show();
         }
 
-        private void editarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> alunos >> editar
-            Fea.ShowDialog();
+        private void btInserirProf_Click(object sender, EventArgs e)
+        {//btInserirProf
+            FormCadProf Fcp = new FormCadProf();
+            Fcp.Show();
         }
 
-        private void excluirToolStripMenuItem2_Click(object sender, EventArgs e)
-        {//strip >> alunos >> excluir
-            Fea.ShowDialog();
-        }
-
-        #endregion
-
-        #region Professor
-
-        private void cadastrarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {//strip >> professores >> cadastrar
-            Fcp.ShowDialog();
-        }
-
-
-        private void listarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {//strip >> professores >> listar
-            Fep.ShowDialog();
-        }
-
-        private void editarToolStripMenuItem1_Click(object sender, EventArgs e)
-        {//strip >> professores >> editar
-            Fep.ShowDialog();
-        }
-
-        private void excluirToolStripMenuItem1_Click(object sender, EventArgs e)
-        {//strip >> professores >> excluir
-            Fep.ShowDialog();
+        private void btEditarProf_Click(object sender, EventArgs e)
+        {//btEditarProf
+            FormEditProf Fep = new FormEditProf();
+            Fep.Show();
         }
 
         #endregion
 
-        #region Retornar
+        #region Sair
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
@@ -83,8 +59,8 @@ namespace projetofinal
                     Close();
         }
 
-        private void sairToolStripMenuItem_Click_1(object sender, EventArgs e)
-        {//strip >> retornar
+        private void btSair_Click(object sender, EventArgs e)
+        {//btSair
             if (MessageBox.Show("Deseja mesmo sair para a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 Close();
         }

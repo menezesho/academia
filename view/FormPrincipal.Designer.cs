@@ -30,170 +30,189 @@ namespace projetofinal
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.retornarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alunosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
-            this.professoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.cadastrarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.listarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editarToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.excluirToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            this.pbLogo = new System.Windows.Forms.PictureBox();
+            this.btInserirAluno = new System.Windows.Forms.Button();
+            this.btEditarAluno = new System.Windows.Forms.Button();
+            this.btSair = new System.Windows.Forms.Button();
+            this.lbeditarcadastro = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btEditarProf = new System.Windows.Forms.Button();
+            this.btInserirProf = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pbLogo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Lavender;
-            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 31);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(611, 293);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pbLogo.BackColor = System.Drawing.Color.Lavender;
+            this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
+            this.pbLogo.Location = new System.Drawing.Point(-28, -40);
+            this.pbLogo.Name = "pbLogo";
+            this.pbLogo.Size = new System.Drawing.Size(442, 338);
+            this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbLogo.TabIndex = 3;
+            this.pbLogo.TabStop = false;
             // 
-            // menuStrip1
+            // btInserirAluno
             // 
-            this.menuStrip1.BackColor = System.Drawing.Color.White;
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.retornarToolStripMenuItem,
-            this.alunosToolStripMenuItem,
-            this.professoresToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(611, 28);
-            this.menuStrip1.TabIndex = 4;
-            this.menuStrip1.Text = "menuStrip1";
+            this.btInserirAluno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btInserirAluno.BackColor = System.Drawing.Color.GhostWhite;
+            this.btInserirAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInserirAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInserirAluno.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btInserirAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btInserirAluno.Image = ((System.Drawing.Image)(resources.GetObject("btInserirAluno.Image")));
+            this.btInserirAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInserirAluno.Location = new System.Drawing.Point(410, 110);
+            this.btInserirAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btInserirAluno.Name = "btInserirAluno";
+            this.btInserirAluno.Size = new System.Drawing.Size(134, 48);
+            this.btInserirAluno.TabIndex = 15;
+            this.btInserirAluno.Text = "INSERIR";
+            this.btInserirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btInserirAluno.UseVisualStyleBackColor = false;
+            this.btInserirAluno.Click += new System.EventHandler(this.btInserirAluno_Click);
             // 
-            // retornarToolStripMenuItem
+            // btEditarAluno
             // 
-            this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
-            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(48, 24);
-            this.retornarToolStripMenuItem.Text = "Sair";
-            this.retornarToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click_1);
+            this.btEditarAluno.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btEditarAluno.BackColor = System.Drawing.Color.GhostWhite;
+            this.btEditarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEditarAluno.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btEditarAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btEditarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btEditarAluno.Image")));
+            this.btEditarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEditarAluno.Location = new System.Drawing.Point(410, 166);
+            this.btEditarAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btEditarAluno.Name = "btEditarAluno";
+            this.btEditarAluno.Size = new System.Drawing.Size(134, 48);
+            this.btEditarAluno.TabIndex = 16;
+            this.btEditarAluno.Text = "EDITAR ";
+            this.btEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btEditarAluno.UseVisualStyleBackColor = false;
+            this.btEditarAluno.Click += new System.EventHandler(this.btEditarAluno_Click);
             // 
-            // alunosToolStripMenuItem
+            // btSair
             // 
-            this.alunosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem,
-            this.listarToolStripMenuItem,
-            this.editarToolStripMenuItem,
-            this.excluirToolStripMenuItem2});
-            this.alunosToolStripMenuItem.Name = "alunosToolStripMenuItem";
-            this.alunosToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
-            this.alunosToolStripMenuItem.Text = "Alunos";
+            this.btSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btSair.BackColor = System.Drawing.Color.GhostWhite;
+            this.btSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSair.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btSair.Location = new System.Drawing.Point(156, 227);
+            this.btSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btSair.Name = "btSair";
+            this.btSair.Size = new System.Drawing.Size(79, 35);
+            this.btSair.TabIndex = 20;
+            this.btSair.Text = "SAIR";
+            this.btSair.UseVisualStyleBackColor = false;
+            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
-            // cadastrarToolStripMenuItem
+            // lbeditarcadastro
             // 
-            this.cadastrarToolStripMenuItem.Name = "cadastrarToolStripMenuItem";
-            this.cadastrarToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
-            this.cadastrarToolStripMenuItem.Text = "Cadastrar";
-            this.cadastrarToolStripMenuItem.Click += new System.EventHandler(this.cadastrarToolStripMenuItem_Click);
+            this.lbeditarcadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbeditarcadastro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbeditarcadastro.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbeditarcadastro.ForeColor = System.Drawing.Color.GhostWhite;
+            this.lbeditarcadastro.Location = new System.Drawing.Point(397, 68);
+            this.lbeditarcadastro.Name = "lbeditarcadastro";
+            this.lbeditarcadastro.Size = new System.Drawing.Size(160, 160);
+            this.lbeditarcadastro.TabIndex = 32;
+            this.lbeditarcadastro.Text = "ALUNO";
+            this.lbeditarcadastro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // listarToolStripMenuItem
+            // label2
             // 
-            this.listarToolStripMenuItem.Name = "listarToolStripMenuItem";
-            this.listarToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
-            this.listarToolStripMenuItem.Text = "Listar";
-            this.listarToolStripMenuItem.Click += new System.EventHandler(this.listarToolStripMenuItem_Click);
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.GhostWhite;
+            this.label2.Location = new System.Drawing.Point(563, 68);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(160, 160);
+            this.label2.TabIndex = 34;
+            this.label2.Text = "PROFESSOR";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // editarToolStripMenuItem
+            // btEditarProf
             // 
-            this.editarToolStripMenuItem.Name = "editarToolStripMenuItem";
-            this.editarToolStripMenuItem.Size = new System.Drawing.Size(155, 26);
-            this.editarToolStripMenuItem.Text = "Editar";
-            this.editarToolStripMenuItem.Click += new System.EventHandler(this.editarToolStripMenuItem_Click);
+            this.btEditarProf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btEditarProf.BackColor = System.Drawing.Color.GhostWhite;
+            this.btEditarProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditarProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btEditarProf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btEditarProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btEditarProf.Image = ((System.Drawing.Image)(resources.GetObject("btEditarProf.Image")));
+            this.btEditarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btEditarProf.Location = new System.Drawing.Point(575, 166);
+            this.btEditarProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btEditarProf.Name = "btEditarProf";
+            this.btEditarProf.Size = new System.Drawing.Size(134, 48);
+            this.btEditarProf.TabIndex = 36;
+            this.btEditarProf.Text = "EDITAR ";
+            this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btEditarProf.UseVisualStyleBackColor = false;
+            this.btEditarProf.Click += new System.EventHandler(this.btEditarProf_Click);
             // 
-            // excluirToolStripMenuItem2
+            // btInserirProf
             // 
-            this.excluirToolStripMenuItem2.Name = "excluirToolStripMenuItem2";
-            this.excluirToolStripMenuItem2.Size = new System.Drawing.Size(155, 26);
-            this.excluirToolStripMenuItem2.Text = "Excluir";
-            this.excluirToolStripMenuItem2.Click += new System.EventHandler(this.excluirToolStripMenuItem2_Click);
-            // 
-            // professoresToolStripMenuItem
-            // 
-            this.professoresToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.cadastrarToolStripMenuItem1,
-            this.listarToolStripMenuItem1,
-            this.editarToolStripMenuItem1,
-            this.excluirToolStripMenuItem1});
-            this.professoresToolStripMenuItem.Name = "professoresToolStripMenuItem";
-            this.professoresToolStripMenuItem.Size = new System.Drawing.Size(98, 24);
-            this.professoresToolStripMenuItem.Text = "Professores";
-            // 
-            // cadastrarToolStripMenuItem1
-            // 
-            this.cadastrarToolStripMenuItem1.Name = "cadastrarToolStripMenuItem1";
-            this.cadastrarToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
-            this.cadastrarToolStripMenuItem1.Text = "Cadastrar";
-            this.cadastrarToolStripMenuItem1.Click += new System.EventHandler(this.cadastrarToolStripMenuItem1_Click);
-            // 
-            // listarToolStripMenuItem1
-            // 
-            this.listarToolStripMenuItem1.Name = "listarToolStripMenuItem1";
-            this.listarToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
-            this.listarToolStripMenuItem1.Text = "Listar";
-            this.listarToolStripMenuItem1.Click += new System.EventHandler(this.listarToolStripMenuItem1_Click);
-            // 
-            // editarToolStripMenuItem1
-            // 
-            this.editarToolStripMenuItem1.Name = "editarToolStripMenuItem1";
-            this.editarToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
-            this.editarToolStripMenuItem1.Text = "Editar";
-            this.editarToolStripMenuItem1.Click += new System.EventHandler(this.editarToolStripMenuItem1_Click);
-            // 
-            // excluirToolStripMenuItem1
-            // 
-            this.excluirToolStripMenuItem1.Name = "excluirToolStripMenuItem1";
-            this.excluirToolStripMenuItem1.Size = new System.Drawing.Size(155, 26);
-            this.excluirToolStripMenuItem1.Text = "Excluir";
-            this.excluirToolStripMenuItem1.Click += new System.EventHandler(this.excluirToolStripMenuItem1_Click);
+            this.btInserirProf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btInserirProf.BackColor = System.Drawing.Color.GhostWhite;
+            this.btInserirProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInserirProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInserirProf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btInserirProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btInserirProf.Image = ((System.Drawing.Image)(resources.GetObject("btInserirProf.Image")));
+            this.btInserirProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInserirProf.Location = new System.Drawing.Point(575, 110);
+            this.btInserirProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btInserirProf.Name = "btInserirProf";
+            this.btInserirProf.Size = new System.Drawing.Size(134, 48);
+            this.btInserirProf.TabIndex = 35;
+            this.btInserirProf.Text = "INSERIR";
+            this.btInserirProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btInserirProf.UseVisualStyleBackColor = false;
+            this.btInserirProf.Click += new System.EventHandler(this.btInserirProf_Click);
             // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(611, 324);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuStrip1);
+            this.BackColor = System.Drawing.Color.Lavender;
+            this.ClientSize = new System.Drawing.Size(760, 289);
+            this.Controls.Add(this.btEditarProf);
+            this.Controls.Add(this.btInserirProf);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btSair);
+            this.Controls.Add(this.btEditarAluno);
+            this.Controls.Add(this.btInserirAluno);
+            this.Controls.Add(this.lbeditarcadastro);
+            this.Controls.Add(this.pbLogo);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Menu Principal";
+            this.Text = "Menu";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormPrincipal_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem retornarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem alunosToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem professoresToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cadastrarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem listarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem editarToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem excluirToolStripMenuItem2;
+        private System.Windows.Forms.PictureBox pbLogo;
+        private System.Windows.Forms.Button btInserirAluno;
+        private System.Windows.Forms.Button btEditarAluno;
+        private System.Windows.Forms.Button btSair;
+        private System.Windows.Forms.Label lbeditarcadastro;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btEditarProf;
+        private System.Windows.Forms.Button btInserirProf;
     }
 }

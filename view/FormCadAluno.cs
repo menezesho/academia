@@ -14,75 +14,73 @@ namespace projetofinal
 
         private void Form1_Load(object sender, EventArgs e)
         {//load
-            tbnome.Clear();
-            tbnome.Enabled = true;
-            mtbcpf.Clear();
-            mtbcpf.Enabled = true;
-            tbidade.Clear();
-            tbidade.Enabled = true;
-            tbendereco.Clear();
-            tbendereco.Enabled = true;
-            mtbcelular.Clear();
-            mtbcelular.Enabled = true;
-            tbemail.Clear();
-            tbemail.Enabled = true;
-            tbpeso.Clear();
-            tbpeso.Enabled = true;
-            tbaltura.Clear();
-            tbaltura.Enabled = true;
-            tabControl1.SelectedTab = tabPage1;
+            tbNome.Clear();
+            tbNome.Enabled = true;
+            mtbCpf.Clear();
+            mtbCpf.Enabled = true;
+            tbIdade.Clear();
+            tbIdade.Enabled = true;
+            tbEndereco.Clear();
+            tbEndereco.Enabled = true;
+            mtbCelular.Clear();
+            mtbCelular.Enabled = true;
+            tbEmail.Clear();
+            tbEmail.Enabled = true;
+            tbPeso.Clear();
+            tbPeso.Enabled = true;
+            tbAltura.Clear();
+            tbAltura.Enabled = true;
         }
 
         private void btlimpar_Click(object sender, EventArgs e)
         {//btlimpar
-            tbnome.Enabled = true;
-            mtbcpf.Enabled = true;
-            tbidade.Enabled = true;
-            tbendereco.Enabled = true;
-            mtbcelular.Enabled = true;
-            tbemail.Enabled = true;
-            tbpeso.Enabled = true;
-            tbaltura.Enabled = true;
+            tbNome.Enabled = true;
+            mtbCpf.Enabled = true;
+            tbIdade.Enabled = true;
+            tbEndereco.Enabled = true;
+            mtbCelular.Enabled = true;
+            tbEmail.Enabled = true;
+            tbPeso.Enabled = true;
+            tbAltura.Enabled = true;
             btsalvar.Enabled = true;
-            tbnome.Clear();
-            mtbcpf.Clear();
-            tbidade.Clear();
-            tbendereco.Clear();
-            mtbcelular.Clear();
-            tbemail.Clear();
-            tbpeso.Clear();
-            tbaltura.Clear();
+            tbNome.Clear();
+            mtbCpf.Clear();
+            tbIdade.Clear();
+            tbEndereco.Clear();
+            mtbCelular.Clear();
+            tbEmail.Clear();
+            tbPeso.Clear();
+            tbAltura.Clear();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btsalvar_Click(object sender, EventArgs e)
         {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "___________" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "___________" || tbemail.Text == "" || tbpeso.Text == "" || tbaltura.Text == "")
+            if (tbNome.Text == "" || mtbCpf.Text == "___________" || tbIdade.Text == "" || tbEndereco.Text == "" || mtbCelular.Text == "___________" || tbEmail.Text == "" || tbPeso.Text == "" || tbAltura.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
-                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                var cpfValido = Funcoes.validarCpf(mtbCpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbCelular.Text);
                 if (cpfValido)
                 {
                     if (celularValido)
                     {
                         Aluno alunos = new Aluno();
 
-                        alunos.nome = tbnome.Text;
-                        alunos.cpf = mtbcpf.Text;
-                        alunos.idade = int.Parse(tbidade.Text);
-                        alunos.endereco = tbendereco.Text;
-                        alunos.celular = mtbcelular.Text;
-                        alunos.email = tbemail.Text;
-                        alunos.peso = float.Parse(tbpeso.Text);
-                        alunos.altura = float.Parse(tbaltura.Text);
+                        alunos.nome = tbNome.Text;
+                        alunos.cpf = mtbCpf.Text;
+                        alunos.idade = int.Parse(tbIdade.Text);
+                        alunos.endereco = tbEndereco.Text;
+                        alunos.celular = mtbCelular.Text;
+                        alunos.email = tbEmail.Text;
+                        alunos.peso = float.Parse(tbPeso.Text);
+                        alunos.altura = float.Parse(tbAltura.Text);
 
                         Funcoes funcoes = new Funcoes();
 
-                        string cpf = mtbcpf.Text;
+                        string cpf = mtbCpf.Text;
                         funcoes.verificarCpfAluno(cpf, alunos);
-                        tabControl1.SelectedTab = tabPage1;
                     }
                     else
                         MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);

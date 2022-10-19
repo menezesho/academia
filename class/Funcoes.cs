@@ -139,7 +139,7 @@ namespace projetofinal
 
         public DataTable listarAlunos()
         {
-            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
+            string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
             string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
             SqlCommand comando = new SqlCommand(sql, conexao);
