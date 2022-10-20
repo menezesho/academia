@@ -84,10 +84,10 @@ namespace projetofinal
             this.btexcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btexcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btexcluir.Image = ((System.Drawing.Image)(resources.GetObject("btexcluir.Image")));
-            this.btexcluir.Location = new System.Drawing.Point(124, 374);
+            this.btexcluir.Location = new System.Drawing.Point(140, 393);
             this.btexcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btexcluir.Name = "btexcluir";
-            this.btexcluir.Size = new System.Drawing.Size(69, 66);
+            this.btexcluir.Size = new System.Drawing.Size(78, 69);
             this.btexcluir.TabIndex = 12;
             this.btexcluir.UseVisualStyleBackColor = false;
             this.btexcluir.Click += new System.EventHandler(this.btexcluir_Click);
@@ -96,7 +96,7 @@ namespace projetofinal
             // 
             this.lbeditarcadastro.AutoSize = true;
             this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbeditarcadastro.Location = new System.Drawing.Point(165, 53);
+            this.lbeditarcadastro.Location = new System.Drawing.Point(186, 56);
             this.lbeditarcadastro.Name = "lbeditarcadastro";
             this.lbeditarcadastro.Size = new System.Drawing.Size(214, 31);
             this.lbeditarcadastro.TabIndex = 31;
@@ -108,10 +108,10 @@ namespace projetofinal
             this.btsalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btsalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btsalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsalvar.Location = new System.Drawing.Point(199, 411);
+            this.btsalvar.Location = new System.Drawing.Point(224, 432);
             this.btsalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btsalvar.Name = "btsalvar";
-            this.btsalvar.Size = new System.Drawing.Size(296, 29);
+            this.btsalvar.Size = new System.Drawing.Size(333, 30);
             this.btsalvar.TabIndex = 14;
             this.btsalvar.Text = "SALVAR";
             this.btsalvar.UseVisualStyleBackColor = false;
@@ -122,11 +122,11 @@ namespace projetofinal
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage3);
-            this.tabControl1.Location = new System.Drawing.Point(45, 153);
+            this.tabControl1.Location = new System.Drawing.Point(51, 161);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(454, 213);
+            this.tabControl1.Size = new System.Drawing.Size(511, 224);
             this.tabControl1.TabIndex = 2;
             // 
             // tabPage1
@@ -140,84 +140,84 @@ namespace projetofinal
             this.tabPage1.Controls.Add(this.lbidade);
             this.tabPage1.Controls.Add(this.lbcpf);
             this.tabPage1.Controls.Add(this.lbnome);
-            this.tabPage1.Location = new System.Drawing.Point(4, 29);
+            this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage1.Size = new System.Drawing.Size(446, 180);
+            this.tabPage1.Size = new System.Drawing.Size(503, 190);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Dados Pessoais";
             // 
             // tbcracha
             // 
-            this.tbcracha.Location = new System.Drawing.Point(240, 24);
+            this.tbcracha.Location = new System.Drawing.Point(270, 25);
             this.tbcracha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbcracha.Name = "tbcracha";
-            this.tbcracha.Size = new System.Drawing.Size(63, 27);
+            this.tbcracha.Size = new System.Drawing.Size(70, 29);
             this.tbcracha.TabIndex = 3;
             this.tbcracha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbcracha
             // 
             this.lbcracha.AutoSize = true;
-            this.lbcracha.Location = new System.Drawing.Point(161, 27);
+            this.lbcracha.Location = new System.Drawing.Point(181, 28);
             this.lbcracha.Name = "lbcracha";
-            this.lbcracha.Size = new System.Drawing.Size(75, 20);
+            this.lbcracha.Size = new System.Drawing.Size(80, 21);
             this.lbcracha.TabIndex = 4;
             this.lbcracha.Text = "N° Crachá";
             // 
             // mtbcpf
             // 
-            this.mtbcpf.Location = new System.Drawing.Point(116, 95);
+            this.mtbcpf.Location = new System.Drawing.Point(130, 100);
             this.mtbcpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbcpf.Mask = "000,000,000-00";
             this.mtbcpf.Name = "mtbcpf";
-            this.mtbcpf.Size = new System.Drawing.Size(129, 27);
+            this.mtbcpf.Size = new System.Drawing.Size(145, 29);
             this.mtbcpf.TabIndex = 5;
             this.mtbcpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbcpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbidade
             // 
-            this.tbidade.Location = new System.Drawing.Point(116, 130);
+            this.tbidade.Location = new System.Drawing.Point(130, 136);
             this.tbidade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbidade.Name = "tbidade";
-            this.tbidade.Size = new System.Drawing.Size(53, 27);
+            this.tbidade.Size = new System.Drawing.Size(59, 29);
             this.tbidade.TabIndex = 6;
             this.tbidade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbnome
             // 
-            this.tbnome.Location = new System.Drawing.Point(116, 60);
+            this.tbnome.Location = new System.Drawing.Point(130, 63);
             this.tbnome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbnome.Name = "tbnome";
-            this.tbnome.Size = new System.Drawing.Size(269, 27);
+            this.tbnome.Size = new System.Drawing.Size(302, 29);
             this.tbnome.TabIndex = 4;
             // 
             // lbidade
             // 
             this.lbidade.AutoSize = true;
-            this.lbidade.Location = new System.Drawing.Point(63, 133);
+            this.lbidade.Location = new System.Drawing.Point(71, 140);
             this.lbidade.Name = "lbidade";
-            this.lbidade.Size = new System.Drawing.Size(47, 20);
+            this.lbidade.Size = new System.Drawing.Size(48, 21);
             this.lbidade.TabIndex = 2;
             this.lbidade.Text = "Idade";
             // 
             // lbcpf
             // 
             this.lbcpf.AutoSize = true;
-            this.lbcpf.Location = new System.Drawing.Point(63, 98);
+            this.lbcpf.Location = new System.Drawing.Point(71, 103);
             this.lbcpf.Name = "lbcpf";
-            this.lbcpf.Size = new System.Drawing.Size(33, 20);
+            this.lbcpf.Size = new System.Drawing.Size(37, 21);
             this.lbcpf.TabIndex = 1;
             this.lbcpf.Text = "CPF";
             // 
             // lbnome
             // 
             this.lbnome.AutoSize = true;
-            this.lbnome.Location = new System.Drawing.Point(63, 63);
+            this.lbnome.Location = new System.Drawing.Point(71, 66);
             this.lbnome.Name = "lbnome";
-            this.lbnome.Size = new System.Drawing.Size(50, 20);
+            this.lbnome.Size = new System.Drawing.Size(53, 21);
             this.lbnome.TabIndex = 0;
             this.lbnome.Text = "Nome";
             // 
@@ -230,65 +230,65 @@ namespace projetofinal
             this.tabPage2.Controls.Add(this.lbemail);
             this.tabPage2.Controls.Add(this.lbcelular);
             this.tabPage2.Controls.Add(this.lbendereco);
-            this.tabPage2.Location = new System.Drawing.Point(4, 29);
+            this.tabPage2.Location = new System.Drawing.Point(4, 30);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage2.Size = new System.Drawing.Size(446, 180);
+            this.tabPage2.Size = new System.Drawing.Size(503, 190);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Contato";
             // 
             // mtbcelular
             // 
-            this.mtbcelular.Location = new System.Drawing.Point(126, 78);
+            this.mtbcelular.Location = new System.Drawing.Point(142, 82);
             this.mtbcelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbcelular.Mask = "(00) 00000-0000";
             this.mtbcelular.Name = "mtbcelular";
-            this.mtbcelular.Size = new System.Drawing.Size(127, 27);
+            this.mtbcelular.Size = new System.Drawing.Size(142, 29);
             this.mtbcelular.TabIndex = 8;
             this.mtbcelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbcelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbemail
             // 
-            this.tbemail.Location = new System.Drawing.Point(126, 113);
+            this.tbemail.Location = new System.Drawing.Point(142, 119);
             this.tbemail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbemail.Name = "tbemail";
-            this.tbemail.Size = new System.Drawing.Size(273, 27);
+            this.tbemail.Size = new System.Drawing.Size(307, 29);
             this.tbemail.TabIndex = 9;
             // 
             // tbendereco
             // 
-            this.tbendereco.Location = new System.Drawing.Point(126, 43);
+            this.tbendereco.Location = new System.Drawing.Point(142, 45);
             this.tbendereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbendereco.Name = "tbendereco";
-            this.tbendereco.Size = new System.Drawing.Size(273, 27);
+            this.tbendereco.Size = new System.Drawing.Size(307, 29);
             this.tbendereco.TabIndex = 7;
             // 
             // lbemail
             // 
             this.lbemail.AutoSize = true;
-            this.lbemail.Location = new System.Drawing.Point(52, 116);
+            this.lbemail.Location = new System.Drawing.Point(58, 122);
             this.lbemail.Name = "lbemail";
-            this.lbemail.Size = new System.Drawing.Size(52, 20);
+            this.lbemail.Size = new System.Drawing.Size(54, 21);
             this.lbemail.TabIndex = 9;
             this.lbemail.Text = "E-mail";
             // 
             // lbcelular
             // 
             this.lbcelular.AutoSize = true;
-            this.lbcelular.Location = new System.Drawing.Point(52, 80);
+            this.lbcelular.Location = new System.Drawing.Point(58, 84);
             this.lbcelular.Name = "lbcelular";
-            this.lbcelular.Size = new System.Drawing.Size(55, 20);
+            this.lbcelular.Size = new System.Drawing.Size(59, 21);
             this.lbcelular.TabIndex = 8;
             this.lbcelular.Text = "Celular";
             // 
             // lbendereco
             // 
             this.lbendereco.AutoSize = true;
-            this.lbendereco.Location = new System.Drawing.Point(52, 46);
+            this.lbendereco.Location = new System.Drawing.Point(58, 48);
             this.lbendereco.Name = "lbendereco";
-            this.lbendereco.Size = new System.Drawing.Size(71, 20);
+            this.lbendereco.Size = new System.Drawing.Size(74, 21);
             this.lbendereco.TabIndex = 7;
             this.lbendereco.Text = "Endereço";
             // 
@@ -299,45 +299,45 @@ namespace projetofinal
             this.tabPage3.Controls.Add(this.lbusuario);
             this.tabPage3.Controls.Add(this.tbsenha);
             this.tabPage3.Controls.Add(this.lbsenha);
-            this.tabPage3.Location = new System.Drawing.Point(4, 29);
+            this.tabPage3.Location = new System.Drawing.Point(4, 30);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(446, 180);
+            this.tabPage3.Size = new System.Drawing.Size(503, 190);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Login";
             // 
             // tbusuario
             // 
-            this.tbusuario.Location = new System.Drawing.Point(158, 61);
+            this.tbusuario.Location = new System.Drawing.Point(178, 64);
             this.tbusuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbusuario.Name = "tbusuario";
-            this.tbusuario.Size = new System.Drawing.Size(189, 27);
+            this.tbusuario.Size = new System.Drawing.Size(212, 29);
             this.tbusuario.TabIndex = 22;
             // 
             // lbusuario
             // 
             this.lbusuario.AutoSize = true;
-            this.lbusuario.Location = new System.Drawing.Point(95, 64);
+            this.lbusuario.Location = new System.Drawing.Point(107, 67);
             this.lbusuario.Name = "lbusuario";
-            this.lbusuario.Size = new System.Drawing.Size(59, 20);
+            this.lbusuario.Size = new System.Drawing.Size(64, 21);
             this.lbusuario.TabIndex = 23;
             this.lbusuario.Text = "Usuário";
             // 
             // tbsenha
             // 
-            this.tbsenha.Location = new System.Drawing.Point(158, 96);
+            this.tbsenha.Location = new System.Drawing.Point(178, 101);
             this.tbsenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(189, 27);
+            this.tbsenha.Size = new System.Drawing.Size(212, 29);
             this.tbsenha.TabIndex = 10;
             this.tbsenha.UseSystemPasswordChar = true;
             // 
             // lbsenha
             // 
             this.lbsenha.AutoSize = true;
-            this.lbsenha.Location = new System.Drawing.Point(95, 99);
+            this.lbsenha.Location = new System.Drawing.Point(107, 104);
             this.lbsenha.Name = "lbsenha";
-            this.lbsenha.Size = new System.Drawing.Size(49, 20);
+            this.lbsenha.Size = new System.Drawing.Size(53, 21);
             this.lbsenha.TabIndex = 21;
             this.lbsenha.Text = "Senha";
             // 
@@ -345,7 +345,7 @@ namespace projetofinal
             // 
             this.lbalunoscadastrados.AutoSize = true;
             this.lbalunoscadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbalunoscadastrados.Location = new System.Drawing.Point(691, 53);
+            this.lbalunoscadastrados.Location = new System.Drawing.Point(777, 56);
             this.lbalunoscadastrados.Name = "lbalunoscadastrados";
             this.lbalunoscadastrados.Size = new System.Drawing.Size(333, 31);
             this.lbalunoscadastrados.TabIndex = 26;
@@ -374,7 +374,7 @@ namespace projetofinal
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgprofs.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgprofs.Location = new System.Drawing.Point(531, 102);
+            this.dgprofs.Location = new System.Drawing.Point(597, 107);
             this.dgprofs.MultiSelect = false;
             this.dgprofs.Name = "dgprofs";
             this.dgprofs.ReadOnly = true;
@@ -390,16 +390,16 @@ namespace projetofinal
             this.dgprofs.RowHeadersWidth = 51;
             this.dgprofs.RowTemplate.Height = 29;
             this.dgprofs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgprofs.Size = new System.Drawing.Size(590, 338);
+            this.dgprofs.Size = new System.Drawing.Size(664, 355);
             this.dgprofs.TabIndex = 14;
             this.dgprofs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgprofs_CellClick);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(624, 44);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(702, 46);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(71, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(80, 57);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 33;
             this.pictureBox1.TabStop = false;
@@ -411,14 +411,15 @@ namespace projetofinal
             this.retornarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1164, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1310, 29);
             this.menuStrip1.TabIndex = 15;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // retornarToolStripMenuItem
             // 
             this.retornarToolStripMenuItem.Name = "retornarToolStripMenuItem";
-            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.retornarToolStripMenuItem.Size = new System.Drawing.Size(85, 25);
             this.retornarToolStripMenuItem.Text = "Retornar";
             this.retornarToolStripMenuItem.Click += new System.EventHandler(this.retornarToolStripMenuItem_Click);
             // 
@@ -426,7 +427,7 @@ namespace projetofinal
             // 
             this.lbbusca.AutoSize = true;
             this.lbbusca.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbbusca.Location = new System.Drawing.Point(52, 103);
+            this.lbbusca.Location = new System.Drawing.Point(58, 108);
             this.lbbusca.Name = "lbbusca";
             this.lbbusca.Size = new System.Drawing.Size(57, 25);
             this.lbbusca.TabIndex = 35;
@@ -434,9 +435,9 @@ namespace projetofinal
             // 
             // tbbusca
             // 
-            this.tbbusca.Location = new System.Drawing.Point(112, 102);
+            this.tbbusca.Location = new System.Drawing.Point(126, 107);
             this.tbbusca.Name = "tbbusca";
-            this.tbbusca.Size = new System.Drawing.Size(351, 27);
+            this.tbbusca.Size = new System.Drawing.Size(394, 29);
             this.tbbusca.TabIndex = 0;
             // 
             // bteditar
@@ -446,10 +447,10 @@ namespace projetofinal
             this.bteditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bteditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.bteditar.Image = ((System.Drawing.Image)(resources.GetObject("bteditar.Image")));
-            this.bteditar.Location = new System.Drawing.Point(49, 374);
+            this.bteditar.Location = new System.Drawing.Point(55, 393);
             this.bteditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bteditar.Name = "bteditar";
-            this.bteditar.Size = new System.Drawing.Size(69, 66);
+            this.bteditar.Size = new System.Drawing.Size(78, 69);
             this.bteditar.TabIndex = 11;
             this.bteditar.UseVisualStyleBackColor = false;
             this.bteditar.Click += new System.EventHandler(this.bteditar_Click);
@@ -460,10 +461,10 @@ namespace projetofinal
             this.btcancelar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btcancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btcancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btcancelar.Location = new System.Drawing.Point(199, 374);
+            this.btcancelar.Location = new System.Drawing.Point(224, 393);
             this.btcancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btcancelar.Name = "btcancelar";
-            this.btcancelar.Size = new System.Drawing.Size(296, 29);
+            this.btcancelar.Size = new System.Drawing.Size(333, 30);
             this.btcancelar.TabIndex = 13;
             this.btcancelar.Text = "CANCELAR";
             this.btcancelar.UseVisualStyleBackColor = false;
@@ -476,18 +477,18 @@ namespace projetofinal
             this.btbuscar.FlatAppearance.BorderSize = 0;
             this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btbuscar.Image")));
-            this.btbuscar.Location = new System.Drawing.Point(458, 98);
+            this.btbuscar.Location = new System.Drawing.Point(515, 103);
             this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(41, 36);
+            this.btbuscar.Size = new System.Drawing.Size(46, 38);
             this.btbuscar.TabIndex = 1;
             this.btbuscar.UseVisualStyleBackColor = true;
             this.btbuscar.Click += new System.EventHandler(this.btbuscar_Click);
             // 
             // FormEditProf
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1164, 480);
+            this.ClientSize = new System.Drawing.Size(1310, 504);
             this.Controls.Add(this.btbuscar);
             this.Controls.Add(this.btcancelar);
             this.Controls.Add(this.bteditar);
@@ -505,6 +506,7 @@ namespace projetofinal
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormEditProf";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Professores cadastrados";
             this.Load += new System.EventHandler(this.FormEditProf_Load);

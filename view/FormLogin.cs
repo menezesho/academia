@@ -2,82 +2,99 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using academia;
 using academia.Properties;
 
 namespace projetofinal
 {
     public partial class FormLogin : Form
     {
+        ConexaoDAO conec = new ConexaoDAO();
         public FormLogin()
         {
             InitializeComponent();
         }
 
         private void FormLogin_Load(object sender, EventArgs e)
-        {//load
+        {
             Funcoes funcoes = new Funcoes();
-            cbusuario.DataSource = funcoes.listarProfs();
-            cbusuario.DisplayMember = "Usuário";
-            cbusuario.Text = "";
+            cbUsuario.DataSource = funcoes.listarProfs();
+            cbUsuario.DisplayMember = "Usuário";
+            cbUsuario.Text = "";
         }
 
-        private void btversenha_Click(object sender, EventArgs e)
-        {//btversenha
-            if (tbsenha.UseSystemPasswordChar.Equals(false))
-                tbsenha.UseSystemPasswordChar = true;
+        private void btLogin_Click(object sender, EventArgs e)
+        {//btLogin
+            try
+            {
+                SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                string sql = @"SELECT * FROM professor WHERE usuario=@usuario AND senha=@senha";
+                SqlCommand comando = new SqlCommand(sql, conexao);
+
+                comando.Parameters.AddWithValue("@usuario", cbUsuario.Text);
+                comando.Parameters.AddWithValue("@senha", tbSenha.Text);
+
+                conexao.Open();
+                SqlDataReader dados = comando.ExecuteReader();
+                if (dados.Read())
+                {
+                    FormPrincipal Fp = new FormPrincipal();
+                    MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    cbUsuario.Text = "";
+                    tbSenha.Clear();
+                    Fp.Show();
+                }
+                else
+                    MessageBox.Show("Usuário ou senha incorretos, tente novamente!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                conexao.Close();
+            }
+            catch (Exception erro)
+            {
+                MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btLimpar_Click(object sender, EventArgs e)
+        {//btLimpar
+            cbUsuario.Text = "";
+            tbSenha.Clear();
+        }
+
+        private void lbReload_Click(object sender, EventArgs e)
+        {//lbReload
+            Funcoes funcoes = new Funcoes();
+            cbUsuario.DataSource = funcoes.listarProfs();
+            cbUsuario.DisplayMember = "Usuário";
+            cbUsuario.Text = "";
+            tbSenha.Clear();
+        }
+
+        private void lbVerSenha_Click(object sender, EventArgs e)
+        {//lbVerSenha
+            if (tbSenha.UseSystemPasswordChar.Equals(false))
+                tbSenha.UseSystemPasswordChar = true;
             else
-                tbsenha.UseSystemPasswordChar = false;
-        }
-
-        private void btlogin_Click(object sender, EventArgs e)
-        {//btlogin
-            string usuario, senha;
-
-            usuario = cbusuario.Text;
-            senha = tbsenha.Text;
-            Funcoes funcoes = new Funcoes();
-            funcoes.loginProf(usuario, senha);
-        }
-
-        private void btlimpar_Click(object sender, EventArgs e)
-        {//btlimpar
-            cbusuario.Text = "";
-            tbsenha.Clear();
-        }
-
-        private void btsair_Click(object sender, EventArgs e)
-        {//btsair
-            if (MessageBox.Show("Deseja mesmo finalizar o programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Application.Exit();
-        }
-
-        private void btreload_Click(object sender, EventArgs e)
-        {//btreload
-            Funcoes funcoes = new Funcoes();
-            cbusuario.DataSource = funcoes.listarProfs();
-            cbusuario.DisplayMember = "Usuário";
-            cbusuario.Text = "";
-            tbsenha.Clear();
+                tbSenha.UseSystemPasswordChar = false;
         }
 
         #region Sair
 
-        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> sair
-            if (MessageBox.Show("Deseja mesmo finalizar o programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Application.Exit();
-        }
-
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
             if (e.KeyValue.Equals(27))
-                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Application.Exit();
+                Application.Exit();
+        }
+
+        private void lbSair_Click(object sender, EventArgs e)
+        {//lbSair
+            Application.Exit();
         }
 
         #endregion
+
     }
 }

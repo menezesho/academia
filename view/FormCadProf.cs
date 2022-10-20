@@ -16,75 +16,73 @@ namespace projetofinal
             InitializeComponent();
         }
 
-        private void Form3_Load(object sender, EventArgs e)
-        {//load
-            tbnome.Clear();
-            tbnome.Enabled = true;
-            mtbcpf.Clear();
-            mtbcpf.Enabled = true;
-            tbidade.Clear();
-            tbidade.Enabled = true;
-            tbendereco.Clear();
-            tbendereco.Enabled = true;
-            mtbcelular.Clear();
-            mtbcelular.Enabled = true;
-            tbemail.Clear();
-            tbemail.Enabled = true;
-            tbusuario.Clear();
-            tbusuario.Enabled = true;
-            tbsenha.Clear();
-            tbsenha.Enabled = true;
-            tabControl1.SelectedTab = tabPage1;
+        private void FormCadProf_Load(object sender, EventArgs e)
+        {
+            tbNome.Clear();
+            tbNome.Enabled = true;
+            mtbCpf.Clear();
+            mtbCpf.Enabled = true;
+            tbIdade.Clear();
+            tbIdade.Enabled = true;
+            tbEndereco.Clear();
+            tbEndereco.Enabled = true;
+            mtbCelular.Clear();
+            mtbCelular.Enabled = true;
+            tbEmail.Clear();
+            tbEmail.Enabled = true;
+            tbUsuario.Clear();
+            tbUsuario.Enabled = true;
+            tbSenha.Clear();
+            tbSenha.Enabled = true;
         }
 
-        private void btlimpar_Click_1(object sender, EventArgs e)
-        {//btlimpar
-            tbnome.Enabled = true;
-            mtbcpf.Enabled = true;
-            tbidade.Enabled = true;
-            tbendereco.Enabled = true;
-            mtbcelular.Enabled = true;
-            tbemail.Enabled = true;
-            tbusuario.Clear();
-            tbsenha.Enabled = true;
-            btsalvar.Enabled = true;
-            tbnome.Clear();
-            mtbcpf.Clear();
-            tbidade.Clear();
-            tbendereco.Clear();
-            mtbcelular.Clear();
-            tbemail.Clear();
-            tbsenha.Clear();
+        private void btLimpar_Click(object sender, EventArgs e)
+        {//btLimpar
+            tbNome.Enabled = true;
+            mtbCpf.Enabled = true;
+            tbIdade.Enabled = true;
+            tbEndereco.Enabled = true;
+            mtbCelular.Enabled = true;
+            tbEmail.Enabled = true;
+            tbUsuario.Clear();
+            tbSenha.Enabled = true;
+            btCadastrar.Enabled = true;
+            tbNome.Clear();
+            mtbCpf.Clear();
+            tbIdade.Clear();
+            tbEndereco.Clear();
+            mtbCelular.Clear();
+            tbEmail.Clear();
+            tbSenha.Clear();
             MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void btsalvar_Click(object sender, EventArgs e)
-        {//btsalvar
-            if (tbnome.Text == "" || mtbcpf.Text == "___________" || tbidade.Text == "" || tbendereco.Text == "" || mtbcelular.Text == "___________" || tbsenha.Text == "" || tbusuario.Text == "" || tbsenha.Text == "")
+        private void btCadastrar_Click(object sender, EventArgs e)
+        {//btCadastrar
+            if (tbNome.Text == "" || mtbCpf.Text == "___________" || tbIdade.Text == "" || tbEndereco.Text == "" || mtbCelular.Text == "___________" || tbSenha.Text == "" || tbUsuario.Text == "" || tbSenha.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfValido = Funcoes.validarCpf(mtbcpf.Text);
-                var celularValido = Funcoes.validarCelular(mtbcelular.Text);
+                var cpfValido = Funcoes.validarCpf(mtbCpf.Text);
+                var celularValido = Funcoes.validarCelular(mtbCelular.Text);
                 if (cpfValido)
                 {
                     if (celularValido)
                     {
                         Professor profs = new Professor();
 
-                        profs.nome = tbnome.Text;
-                        profs.cpf = mtbcpf.Text;
-                        profs.idade = int.Parse(tbidade.Text);
-                        profs.endereco = tbendereco.Text;
-                        profs.celular = mtbcelular.Text;
-                        profs.email = tbemail.Text;
-                        profs.usuario = tbusuario.Text;
-                        profs.senha = tbsenha.Text;
+                        profs.nome = tbNome.Text;
+                        profs.cpf = mtbCpf.Text;
+                        profs.idade = int.Parse(tbIdade.Text);
+                        profs.endereco = tbEndereco.Text;
+                        profs.celular = mtbCelular.Text;
+                        profs.email = tbEmail.Text;
+                        profs.usuario = tbUsuario.Text;
+                        profs.senha = tbSenha.Text;
 
-                        string cpf = mtbcpf.Text;
+                        string cpf = mtbCpf.Text;
                         Funcoes funcoes = new Funcoes();
                         funcoes.verificarCpfProfessor(cpf, profs);
-                        tabControl1.SelectedTab = tabPage1;
                     }
                     else
                         MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -98,19 +96,20 @@ namespace projetofinal
 
         #region Retornar
 
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> retornar
-            if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
-        }
-
-        private void Form3_KeyDown(object sender, KeyEventArgs e)
+        private void FormCadProf_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
             if (e.KeyValue.Equals(27))
                 if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
         }
 
+        private void btCancelar_Click(object sender, EventArgs e)
+        {//btCancelar
+            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
+        }
+
         #endregion
+
     }
 }

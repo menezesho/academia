@@ -5,11 +5,13 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
+using academia;
 
 namespace projetofinal
 {
     public class Funcoes
     {
+        ConexaoDAO conec = new ConexaoDAO();
         bool achouCpf = false;
 
         #region Aluno
@@ -18,8 +20,7 @@ namespace projetofinal
         {
             try
             {
-                string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-                SqlConnection conexao = new SqlConnection(strConexao);
+                SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
                 string sql = @"SELECT * FROM aluno WHERE cpf=@cpf";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
@@ -382,7 +383,7 @@ namespace projetofinal
                 if (dados.Read())
                 {
                     FormPrincipal Fp = new FormPrincipal();
-                    Fp.ShowDialog();
+                    Fp.Show();
                     conexao.Close();
                 }
                 else

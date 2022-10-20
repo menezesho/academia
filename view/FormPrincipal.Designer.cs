@@ -33,11 +33,11 @@ namespace projetofinal
             this.pbLogo = new System.Windows.Forms.PictureBox();
             this.btInserirAluno = new System.Windows.Forms.Button();
             this.btEditarAluno = new System.Windows.Forms.Button();
-            this.btSair = new System.Windows.Forms.Button();
             this.lbeditarcadastro = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btEditarProf = new System.Windows.Forms.Button();
             this.btInserirProf = new System.Windows.Forms.Button();
+            this.lbSair = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,7 +46,7 @@ namespace projetofinal
             this.pbLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbLogo.BackColor = System.Drawing.Color.Lavender;
             this.pbLogo.Image = ((System.Drawing.Image)(resources.GetObject("pbLogo.Image")));
-            this.pbLogo.Location = new System.Drawing.Point(-28, -40);
+            this.pbLogo.Location = new System.Drawing.Point(77, 60);
             this.pbLogo.Name = "pbLogo";
             this.pbLogo.Size = new System.Drawing.Size(442, 338);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -63,10 +63,10 @@ namespace projetofinal
             this.btInserirAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btInserirAluno.Image = ((System.Drawing.Image)(resources.GetObject("btInserirAluno.Image")));
             this.btInserirAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInserirAluno.Location = new System.Drawing.Point(406, 115);
+            this.btInserirAluno.Location = new System.Drawing.Point(511, 179);
             this.btInserirAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserirAluno.Name = "btInserirAluno";
-            this.btInserirAluno.Size = new System.Drawing.Size(134, 40);
+            this.btInserirAluno.Size = new System.Drawing.Size(134, 55);
             this.btInserirAluno.TabIndex = 15;
             this.btInserirAluno.Text = "INSERIR";
             this.btInserirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -83,32 +83,15 @@ namespace projetofinal
             this.btEditarAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btEditarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btEditarAluno.Image")));
             this.btEditarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditarAluno.Location = new System.Drawing.Point(406, 163);
+            this.btEditarAluno.Location = new System.Drawing.Point(511, 248);
             this.btEditarAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditarAluno.Name = "btEditarAluno";
-            this.btEditarAluno.Size = new System.Drawing.Size(134, 40);
+            this.btEditarAluno.Size = new System.Drawing.Size(134, 55);
             this.btEditarAluno.TabIndex = 16;
             this.btEditarAluno.Text = "EDITAR ";
             this.btEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditarAluno.UseVisualStyleBackColor = false;
             this.btEditarAluno.Click += new System.EventHandler(this.btEditarAluno_Click);
-            // 
-            // btSair
-            // 
-            this.btSair.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btSair.BackColor = System.Drawing.Color.GhostWhite;
-            this.btSair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSair.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btSair.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.btSair.Location = new System.Drawing.Point(156, 227);
-            this.btSair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btSair.Name = "btSair";
-            this.btSair.Size = new System.Drawing.Size(79, 35);
-            this.btSair.TabIndex = 20;
-            this.btSair.Text = "SAIR";
-            this.btSair.UseVisualStyleBackColor = false;
-            this.btSair.Click += new System.EventHandler(this.btSair_Click);
             // 
             // lbeditarcadastro
             // 
@@ -117,9 +100,9 @@ namespace projetofinal
             this.lbeditarcadastro.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.lbeditarcadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbeditarcadastro.ForeColor = System.Drawing.Color.GhostWhite;
-            this.lbeditarcadastro.Location = new System.Drawing.Point(393, 73);
+            this.lbeditarcadastro.Location = new System.Drawing.Point(498, 130);
             this.lbeditarcadastro.Name = "lbeditarcadastro";
-            this.lbeditarcadastro.Size = new System.Drawing.Size(160, 147);
+            this.lbeditarcadastro.Size = new System.Drawing.Size(160, 200);
             this.lbeditarcadastro.TabIndex = 32;
             this.lbeditarcadastro.Text = "ALUNO";
             this.lbeditarcadastro.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -131,9 +114,9 @@ namespace projetofinal
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.GhostWhite;
-            this.label2.Location = new System.Drawing.Point(559, 73);
+            this.label2.Location = new System.Drawing.Point(664, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 147);
+            this.label2.Size = new System.Drawing.Size(160, 200);
             this.label2.TabIndex = 34;
             this.label2.Text = "PROFESSOR";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -148,13 +131,13 @@ namespace projetofinal
             this.btEditarProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btEditarProf.Image = ((System.Drawing.Image)(resources.GetObject("btEditarProf.Image")));
             this.btEditarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditarProf.Location = new System.Drawing.Point(571, 163);
+            this.btEditarProf.Location = new System.Drawing.Point(676, 248);
             this.btEditarProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditarProf.Name = "btEditarProf";
-            this.btEditarProf.Size = new System.Drawing.Size(134, 40);
+            this.btEditarProf.Size = new System.Drawing.Size(134, 55);
             this.btEditarProf.TabIndex = 36;
             this.btEditarProf.Text = "EDITAR ";
-            this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditarProf.UseVisualStyleBackColor = false;
             this.btEditarProf.Click += new System.EventHandler(this.btEditarProf_Click);
             // 
@@ -168,26 +151,37 @@ namespace projetofinal
             this.btInserirProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btInserirProf.Image = ((System.Drawing.Image)(resources.GetObject("btInserirProf.Image")));
             this.btInserirProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInserirProf.Location = new System.Drawing.Point(571, 115);
+            this.btInserirProf.Location = new System.Drawing.Point(676, 179);
             this.btInserirProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserirProf.Name = "btInserirProf";
-            this.btInserirProf.Size = new System.Drawing.Size(134, 40);
+            this.btInserirProf.Size = new System.Drawing.Size(134, 55);
             this.btInserirProf.TabIndex = 35;
             this.btInserirProf.Text = "INSERIR";
             this.btInserirProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btInserirProf.UseVisualStyleBackColor = false;
             this.btInserirProf.Click += new System.EventHandler(this.btInserirProf_Click);
             // 
+            // lbSair
+            // 
+            this.lbSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbSair.Image = ((System.Drawing.Image)(resources.GetObject("lbSair.Image")));
+            this.lbSair.Location = new System.Drawing.Point(279, 327);
+            this.lbSair.Name = "lbSair";
+            this.lbSair.Size = new System.Drawing.Size(40, 37);
+            this.lbSair.TabIndex = 37;
+            this.lbSair.Click += new System.EventHandler(this.lbSair_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(760, 289);
+            this.ClientSize = new System.Drawing.Size(970, 489);
+            this.Controls.Add(this.lbSair);
             this.Controls.Add(this.btEditarProf);
             this.Controls.Add(this.btInserirProf);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btSair);
             this.Controls.Add(this.btEditarAluno);
             this.Controls.Add(this.btInserirAluno);
             this.Controls.Add(this.lbeditarcadastro);
@@ -195,7 +189,7 @@ namespace projetofinal
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.86792F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(778, 336);
+            this.MinimumSize = new System.Drawing.Size(988, 536);
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -210,10 +204,10 @@ namespace projetofinal
         private System.Windows.Forms.PictureBox pbLogo;
         private System.Windows.Forms.Button btInserirAluno;
         private System.Windows.Forms.Button btEditarAluno;
-        private System.Windows.Forms.Button btSair;
         private System.Windows.Forms.Label lbeditarcadastro;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btEditarProf;
         private System.Windows.Forms.Button btInserirProf;
+        private System.Windows.Forms.Label lbSair;
     }
 }

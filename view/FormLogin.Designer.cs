@@ -32,22 +32,23 @@ namespace projetofinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.lbusuario = new System.Windows.Forms.Label();
             this.lbsenha = new System.Windows.Forms.Label();
-            this.tbsenha = new System.Windows.Forms.TextBox();
+            this.tbSenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btlogin = new System.Windows.Forms.Button();
-            this.btsair = new System.Windows.Forms.Button();
-            this.lbversao = new System.Windows.Forms.Label();
-            this.btversenha = new System.Windows.Forms.Button();
-            this.cbusuario = new System.Windows.Forms.ComboBox();
-            this.btreload = new System.Windows.Forms.Button();
+            this.cbUsuario = new System.Windows.Forms.ComboBox();
+            this.lbSair = new System.Windows.Forms.Label();
+            this.lbVerSenha = new System.Windows.Forms.Label();
+            this.lbReload = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbusuario
             // 
+            this.lbusuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbusuario.AutoSize = true;
             this.lbusuario.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbusuario.Location = new System.Drawing.Point(304, 32);
+            this.lbusuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbusuario.Location = new System.Drawing.Point(116, 217);
             this.lbusuario.Name = "lbusuario";
             this.lbusuario.Size = new System.Drawing.Size(68, 23);
             this.lbusuario.TabIndex = 0;
@@ -55,123 +56,111 @@ namespace projetofinal
             // 
             // lbsenha
             // 
+            this.lbsenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbsenha.AutoSize = true;
             this.lbsenha.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbsenha.Location = new System.Drawing.Point(304, 98);
+            this.lbsenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.lbsenha.Location = new System.Drawing.Point(116, 286);
             this.lbsenha.Name = "lbsenha";
             this.lbsenha.Size = new System.Drawing.Size(57, 23);
             this.lbsenha.TabIndex = 1;
             this.lbsenha.Text = "Senha";
             // 
-            // tbsenha
+            // tbSenha
             // 
-            this.tbsenha.Location = new System.Drawing.Point(304, 124);
-            this.tbsenha.Name = "tbsenha";
-            this.tbsenha.Size = new System.Drawing.Size(232, 27);
-            this.tbsenha.TabIndex = 2;
-            this.tbsenha.UseSystemPasswordChar = true;
+            this.tbSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbSenha.Location = new System.Drawing.Point(116, 313);
+            this.tbSenha.Name = "tbSenha";
+            this.tbSenha.Size = new System.Drawing.Size(260, 29);
+            this.tbSenha.TabIndex = 1;
+            this.tbSenha.UseSystemPasswordChar = true;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::projetofinal.Properties.Resources.logo_academia_t;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 2);
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(116, 31);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(280, 252);
+            this.pictureBox1.Size = new System.Drawing.Size(260, 170);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
             // btlogin
             // 
+            this.btlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btlogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlogin.Location = new System.Drawing.Point(304, 183);
+            this.btlogin.ForeColor = System.Drawing.Color.White;
+            this.btlogin.Location = new System.Drawing.Point(116, 375);
             this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlogin.Name = "btlogin";
-            this.btlogin.Size = new System.Drawing.Size(219, 35);
-            this.btlogin.TabIndex = 4;
-            this.btlogin.Text = "LOGIN";
+            this.btlogin.Size = new System.Drawing.Size(260, 37);
+            this.btlogin.TabIndex = 2;
+            this.btlogin.Text = "Login";
             this.btlogin.UseVisualStyleBackColor = false;
-            this.btlogin.Click += new System.EventHandler(this.btlogin_Click);
+            this.btlogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
-            // btsair
+            // cbUsuario
             // 
-            this.btsair.BackColor = System.Drawing.Color.GhostWhite;
-            this.btsair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btsair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btsair.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btsair.Image = ((System.Drawing.Image)(resources.GetObject("btsair.Image")));
-            this.btsair.Location = new System.Drawing.Point(529, 183);
-            this.btsair.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btsair.Name = "btsair";
-            this.btsair.Size = new System.Drawing.Size(41, 35);
-            this.btsair.TabIndex = 6;
-            this.btsair.UseVisualStyleBackColor = false;
-            this.btsair.Click += new System.EventHandler(this.btsair_Click);
-            // 
-            // lbversao
-            // 
-            this.lbversao.AutoSize = true;
-            this.lbversao.Font = new System.Drawing.Font("Microsoft Sans Serif", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbversao.Location = new System.Drawing.Point(12, 233);
-            this.lbversao.Name = "lbversao";
-            this.lbversao.Size = new System.Drawing.Size(40, 13);
-            this.lbversao.TabIndex = 17;
-            this.lbversao.Text = "v.1.1.1";
-            // 
-            // btversenha
-            // 
-            this.btversenha.BackColor = System.Drawing.Color.Transparent;
-            this.btversenha.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btversenha.FlatAppearance.BorderSize = 0;
-            this.btversenha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btversenha.Image = ((System.Drawing.Image)(resources.GetObject("btversenha.Image")));
-            this.btversenha.Location = new System.Drawing.Point(536, 122);
-            this.btversenha.Name = "btversenha";
-            this.btversenha.Size = new System.Drawing.Size(34, 29);
-            this.btversenha.TabIndex = 3;
-            this.btversenha.UseVisualStyleBackColor = false;
-            this.btversenha.Click += new System.EventHandler(this.btversenha_Click);
-            // 
-            // cbusuario
-            // 
-            this.cbusuario.FormattingEnabled = true;
-            this.cbusuario.Items.AddRange(new object[] {
+            this.cbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbUsuario.FormattingEnabled = true;
+            this.cbUsuario.Items.AddRange(new object[] {
             "Selecione"});
-            this.cbusuario.Location = new System.Drawing.Point(304, 58);
-            this.cbusuario.Name = "cbusuario";
-            this.cbusuario.Size = new System.Drawing.Size(232, 28);
-            this.cbusuario.TabIndex = 0;
+            this.cbUsuario.Location = new System.Drawing.Point(116, 244);
+            this.cbUsuario.Name = "cbUsuario";
+            this.cbUsuario.Size = new System.Drawing.Size(260, 29);
+            this.cbUsuario.TabIndex = 0;
             // 
-            // btreload
+            // lbSair
             // 
-            this.btreload.BackColor = System.Drawing.Color.Transparent;
-            this.btreload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btreload.FlatAppearance.BorderSize = 0;
-            this.btreload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btreload.ForeColor = System.Drawing.Color.Transparent;
-            this.btreload.Image = ((System.Drawing.Image)(resources.GetObject("btreload.Image")));
-            this.btreload.Location = new System.Drawing.Point(536, 57);
-            this.btreload.Name = "btreload";
-            this.btreload.Size = new System.Drawing.Size(34, 28);
-            this.btreload.TabIndex = 1;
-            this.btreload.UseVisualStyleBackColor = true;
-            this.btreload.Click += new System.EventHandler(this.btreload_Click);
+            this.lbSair.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbSair.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbSair.Image = ((System.Drawing.Image)(resources.GetObject("lbSair.Image")));
+            this.lbSair.Location = new System.Drawing.Point(377, 375);
+            this.lbSair.Name = "lbSair";
+            this.lbSair.Size = new System.Drawing.Size(40, 37);
+            this.lbSair.TabIndex = 3;
+            this.lbSair.Click += new System.EventHandler(this.lbSair_Click);
+            // 
+            // lbVerSenha
+            // 
+            this.lbVerSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbVerSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbVerSenha.Image = ((System.Drawing.Image)(resources.GetObject("lbVerSenha.Image")));
+            this.lbVerSenha.Location = new System.Drawing.Point(78, 313);
+            this.lbVerSenha.Name = "lbVerSenha";
+            this.lbVerSenha.Size = new System.Drawing.Size(33, 29);
+            this.lbVerSenha.TabIndex = 8;
+            this.lbVerSenha.MouseCaptureChanged += new System.EventHandler(this.lbVerSenha_Click);
+            // 
+            // lbReload
+            // 
+            this.lbReload.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbReload.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbReload.Image = ((System.Drawing.Image)(resources.GetObject("lbReload.Image")));
+            this.lbReload.Location = new System.Drawing.Point(78, 244);
+            this.lbReload.Name = "lbReload";
+            this.lbReload.Size = new System.Drawing.Size(33, 29);
+            this.lbReload.TabIndex = 9;
+            this.lbReload.MouseCaptureChanged += new System.EventHandler(this.lbReload_Click);
             // 
             // FormLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(594, 255);
-            this.Controls.Add(this.tbsenha);
-            this.Controls.Add(this.cbusuario);
-            this.Controls.Add(this.btreload);
-            this.Controls.Add(this.btversenha);
-            this.Controls.Add(this.lbversao);
-            this.Controls.Add(this.btsair);
+            this.ClientSize = new System.Drawing.Size(494, 489);
+            this.Controls.Add(this.lbReload);
+            this.Controls.Add(this.lbVerSenha);
+            this.Controls.Add(this.lbSair);
+            this.Controls.Add(this.tbSenha);
+            this.Controls.Add(this.cbUsuario);
             this.Controls.Add(this.btlogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbsenha);
@@ -193,13 +182,12 @@ namespace projetofinal
 
         private System.Windows.Forms.Label lbusuario;
         private System.Windows.Forms.Label lbsenha;
-        private System.Windows.Forms.TextBox tbsenha;
+        private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btlogin;
-        private System.Windows.Forms.Button btsair;
-        private System.Windows.Forms.Label lbversao;
-        private System.Windows.Forms.Button btversenha;
-        private System.Windows.Forms.ComboBox cbusuario;
-        private System.Windows.Forms.Button btreload;
+        private System.Windows.Forms.ComboBox cbUsuario;
+        private System.Windows.Forms.Label lbSair;
+        private System.Windows.Forms.Label lbVerSenha;
+        private System.Windows.Forms.Label lbReload;
     }
 }
