@@ -63,11 +63,11 @@ namespace projetofinal
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfValido = Funcoes.validarCpf(mtbCpf.Text);
-                var celularValido = Funcoes.validarCelular(mtbCelular.Text);
-                if (cpfValido)
+                var cpfVerificado = Funcoes.verificarCpf(mtbCpf.Text);
+                var celularVerificado = Funcoes.verificarCelular(mtbCelular.Text);
+                if (cpfVerificado)
                 {
-                    if (celularValido)
+                    if (celularVerificado)
                     {
                         Professor profs = new Professor();
 

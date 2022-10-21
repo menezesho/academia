@@ -19,7 +19,7 @@ namespace projetofinal
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
         }
 
         #region Menu
@@ -27,25 +27,25 @@ namespace projetofinal
         private void btInserirAluno_Click(object sender, EventArgs e)
         {//btInserirAluno
             FormCadAluno Fca = new FormCadAluno();
-            Fca.Show();
+            Fca.ShowDialog();
         }
 
         private void btEditarAluno_Click(object sender, EventArgs e)
         {//btEditarAluno
             FormEditAluno Fea = new FormEditAluno();
-            Fea.Show();
+            Fea.ShowDialog();
         }
 
         private void btInserirProf_Click(object sender, EventArgs e)
         {//btInserirProf
             FormCadProf Fcp = new FormCadProf();
-            Fcp.Show();
+            Fcp.ShowDialog();
         }
 
         private void btEditarProf_Click(object sender, EventArgs e)
         {//btEditarProf
             FormEditProf Fep = new FormEditProf();
-            Fep.Show();
+            Fep.ShowDialog();
         }
 
         #endregion
@@ -53,18 +53,19 @@ namespace projetofinal
         #region Sair
 
         private void FormPrincipal_KeyDown(object sender, KeyEventArgs e)
-        {//ESC para retornar
+        {//ESC para sair
             if (e.KeyValue.Equals(27))
-                if (MessageBox.Show("Deseja mesmo sair para a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
         }
 
-        private void btSair_Click(object sender, EventArgs e)
+        private void lbSair_Click(object sender, EventArgs e)
         {//btSair
-            if (MessageBox.Show("Deseja mesmo sair para a tela de login?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
+            if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+               Close();
         }
 
         #endregion
+
     }
 }

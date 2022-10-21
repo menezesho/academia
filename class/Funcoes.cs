@@ -142,7 +142,7 @@ namespace projetofinal
         {
             string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
             SqlConnection conexao = new SqlConnection(strConexao);
-            string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
+            string sql = @"SELECT matricula AS 'Matri.', nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
@@ -350,13 +350,13 @@ namespace projetofinal
 
         #region Validação de CPF e Telefone
 
-        public static bool validarCpf(string cpf)
+        public static bool verificarCpf(string cpf)
         {
             var regExp = new Regex(@"^\d{11}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
             return regExp.IsMatch(cpf);
         }
 
-        public static bool validarCelular(string celular)
+        public static bool verificarCelular(string celular)
         {
             var regExp = new Regex(@"^\d{11}"); //@"^\d{3}.\d{3}.\d{3}-\d{2}"
             return regExp.IsMatch(celular);

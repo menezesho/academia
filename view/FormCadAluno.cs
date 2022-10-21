@@ -12,8 +12,8 @@ namespace projetofinal
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {//load
+        private void FormCadAluno_Load(object sender, EventArgs e)
+        {
             tbNome.Clear();
             tbNome.Enabled = true;
             mtbCpf.Clear();
@@ -32,8 +32,8 @@ namespace projetofinal
             tbAltura.Enabled = true;
         }
 
-        private void btlimpar_Click(object sender, EventArgs e)
-        {//btlimpar
+        private void btLimpar_Click(object sender, EventArgs e)
+        {//btLimpar
             if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 tbNome.Clear();
@@ -47,17 +47,17 @@ namespace projetofinal
             }
         }
 
-        private void btsalvar_Click(object sender, EventArgs e)
-        {//btsalvar
+        private void btCadastrar_Click(object sender, EventArgs e)
+        {//btCadastrar
             if (tbNome.Text == "" || mtbCpf.Text == "___________" || tbIdade.Text == "" || tbEndereco.Text == "" || mtbCelular.Text == "___________" || tbEmail.Text == "" || tbPeso.Text == "" || tbAltura.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfValido = Funcoes.validarCpf(mtbCpf.Text);
-                var celularValido = Funcoes.validarCelular(mtbCelular.Text);
-                if (cpfValido)
+                var cpfVerificado = Funcoes.verificarCpf(mtbCpf.Text);
+                var celularVerificado = Funcoes.verificarCelular(mtbCelular.Text);
+                if (cpfVerificado)
                 {
-                    if (celularValido)
+                    if (celularVerificado)
                     {
                         Aluno alunos = new Aluno();
 
@@ -87,20 +87,20 @@ namespace projetofinal
 
         #region Retornar
 
-        private void retornarToolStripMenuItem_Click(object sender, EventArgs e)
-        {//strip >> retornar
-            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                Close();
-
-        }
-
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        private void FormCadAluno_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
             if (e.KeyValue.Equals(27))
                 if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
         }
 
+        private void btCancelar_Click(object sender, EventArgs e)
+        {//btCancelar
+            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
+        }
+
         #endregion
+
     }
 }
