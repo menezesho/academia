@@ -45,7 +45,6 @@ namespace projetofinal
             tbAltura.Clear();
             tbMatricula.Enabled = false;
             tbNome.Enabled = false;
-            mtbCpf.Enabled = false;
             tbIdade.Enabled = false;
             tbEndereco.Enabled = false;
             mtbCelular.Enabled = false;
@@ -72,7 +71,6 @@ namespace projetofinal
 
             tbMatricula.Enabled = false;
             tbNome.Enabled = false;
-            mtbCpf.Enabled = false;
             tbIdade.Enabled = false;
             tbEndereco.Enabled = false;
             mtbCelular.Enabled = false;
@@ -113,7 +111,6 @@ namespace projetofinal
             if (tbMatricula.Text != "")
             {
                 tbNome.Enabled = true;
-                mtbCpf.Enabled = true;
                 tbIdade.Enabled = true;
                 tbEndereco.Enabled = true;
                 mtbCelular.Enabled = true;
@@ -132,7 +129,6 @@ namespace projetofinal
         {//btCancelar
             tbMatricula.Enabled = false;
             tbNome.Enabled = false;
-            mtbCpf.Enabled = false;
             tbIdade.Enabled = false;
             tbEndereco.Enabled = false;
             mtbCelular.Enabled = false;
@@ -177,7 +173,6 @@ namespace projetofinal
                     tbAltura.Clear();
                     tbMatricula.Enabled = false;
                     tbNome.Enabled = false;
-                    mtbCpf.Enabled = false;
                     tbIdade.Enabled = false;
                     tbEndereco.Enabled = false;
                     mtbCelular.Enabled = false;
@@ -235,7 +230,6 @@ namespace projetofinal
                         tbAltura.Clear();
                         tbMatricula.Enabled = false;
                         tbNome.Enabled = false;
-                        mtbCpf.Enabled = false;
                         tbIdade.Enabled = false;
                         tbEndereco.Enabled = false;
                         mtbCelular.Enabled = false;

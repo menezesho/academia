@@ -252,6 +252,7 @@ namespace projetofinal
             this.mtbCpf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.mtbCpf.BackColor = System.Drawing.Color.White;
             this.mtbCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mtbCpf.Enabled = false;
             this.mtbCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.mtbCpf.Location = new System.Drawing.Point(80, 201);
             this.mtbCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -461,6 +462,7 @@ namespace projetofinal
             this.tbMatricula.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbMatricula.BackColor = System.Drawing.Color.White;
             this.tbMatricula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbMatricula.Enabled = false;
             this.tbMatricula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbMatricula.Location = new System.Drawing.Point(194, 85);
             this.tbMatricula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
