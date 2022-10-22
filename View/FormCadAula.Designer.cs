@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCadAula));
             this.btCancelar = new System.Windows.Forms.Button();
             this.btLimpar = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
@@ -200,8 +201,10 @@
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.lbData);
             this.Controls.Add(this.lbnome);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(501, 397);
             this.Name = "FormCadAula";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inserir";
             this.Load += new System.EventHandler(this.FormCadAula_Load);
             this.ResumeLayout(false);
