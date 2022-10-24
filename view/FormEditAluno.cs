@@ -1,4 +1,5 @@
 ﻿using academia;
+using academia.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,8 +22,8 @@ namespace projetofinal
 
         private void FormEditAluno_Load(object sender, EventArgs e)
         {
-            Funcoes funcoes = new Funcoes();
-            dgalunos.DataSource = funcoes.listarAlunos();
+            AlunoDAO alunoDAO = new AlunoDAO();
+            dgalunos.DataSource = alunoDAO.listarAlunos();
 
             dgalunos.Columns["Matri."].Width = 50;
             dgalunos.Columns["Nome"].Width = 180;
@@ -156,11 +157,28 @@ namespace projetofinal
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    Aluno alunos = new Aluno();
-                    alunos.matricula = int.Parse(tbMatricula.Text);
-                    Funcoes funcoes = new Funcoes();
-                    funcoes.excluirAluno(alunos);
-                    dgalunos.DataSource = funcoes.listarAlunos();
+                    try
+                    {
+                        SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                        string sqlDelete = @"DELETE FROM aluno WHERE matricula=@matricula";
+                        SqlCommand comandoDelete = new SqlCommand(sqlDelete, conexao);
+
+                        comandoDelete.Parameters.AddWithValue("@matricula", tbMatricula.Text);
+
+                        conexao.Open();
+                        comandoDelete.CommandText = sqlDelete;
+                        comandoDelete.ExecuteNonQuery();
+                        conexao.Close();
+
+                        MessageBox.Show("Cadastro excluido com sucesso!", "Excluir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception erro)
+                    {
+                        MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+
+                    AlunoDAO alunoDAO = new AlunoDAO();
+                    dgalunos.DataSource = alunoDAO.listarAlunos();
 
                     tbMatricula.Clear();
                     tbNome.Clear();
@@ -194,30 +212,43 @@ namespace projetofinal
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfVerificado = Funcoes.verificarCpf(mtbCpf.Text);
-                var celularVerificado = Funcoes.verificarCelular(mtbCelular.Text);
+                var cpfVerificado = VerificacaoDAO.verificarCpf(mtbCpf.Text);
+                var celularVerificado = VerificacaoDAO.verificarCelular(mtbCelular.Text);
                 if (cpfVerificado)
                 {
                     if (celularVerificado)
                     {
-                        Aluno alunos = new Aluno();
+                        try
+                        {
+                            SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                            string sqlUpdate = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, peso=@peso, altura=@altura WHERE matricula=@matricula";
+                            SqlCommand comandoUpdate = new SqlCommand(sqlUpdate, conexao);
 
-                        alunos.matricula = int.Parse(tbMatricula.Text);
-                        alunos.nome = tbNome.Text;
-                        alunos.cpf = mtbCpf.Text;
-                        alunos.idade = int.Parse(tbIdade.Text);
-                        alunos.endereco = tbEndereco.Text;
-                        alunos.celular = mtbCelular.Text;
-                        alunos.email = tbEmail.Text;
-                        alunos.peso = float.Parse(tbPeso.Text);
-                        alunos.altura = float.Parse(tbAltura.Text);
+                            comandoUpdate.Parameters.AddWithValue("@matricula", tbMatricula.Text);
 
-                        Funcoes funcoes = new Funcoes();
+                            comandoUpdate.Parameters.AddWithValue("@nome", tbNome.Text);
+                            comandoUpdate.Parameters.AddWithValue("@cpf", mtbCpf.Text);
+                            comandoUpdate.Parameters.AddWithValue("@idade", int.Parse(tbIdade.Text));
+                            comandoUpdate.Parameters.AddWithValue("@endereco", tbEndereco.Text);
+                            comandoUpdate.Parameters.AddWithValue("@celular", mtbCelular.Text);
+                            comandoUpdate.Parameters.AddWithValue("@email", tbEmail.Text);
+                            comandoUpdate.Parameters.AddWithValue("@peso", tbPeso.Text);
+                            comandoUpdate.Parameters.AddWithValue("@altura", tbAltura.Text);
 
-                        string cpf = mtbCpf.Text;
-                        funcoes.verificarCpfEditAluno(cpf, alunos);
+                            conexao.Open();
+                            comandoUpdate.CommandText = sqlUpdate;
+                            comandoUpdate.ExecuteNonQuery();
+                            conexao.Close();
+                            MessageBox.Show("Dados alterados com sucesso!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        dgalunos.DataSource = funcoes.listarAlunos();
+                        }
+                        catch (Exception erro)
+                        {
+                            MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+
+                        AlunoDAO alunoDAO = new AlunoDAO();
+                        dgalunos.DataSource = alunoDAO.listarAlunos();
 
                         tbMatricula.Clear();
                         tbNome.Clear();
@@ -241,10 +272,10 @@ namespace projetofinal
                         btSalvar.Enabled = false;
                     }
                     else
-                        MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Insira o número de celular corretamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
-                    MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Insira o CPF corretamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

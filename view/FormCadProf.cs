@@ -1,9 +1,12 @@
-﻿using System;
+﻿using academia;
+using academia.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
 
@@ -11,6 +14,8 @@ namespace projetofinal
 {
     public partial class FormCadProf : Form
     {
+        ConexaoDAO conec = new ConexaoDAO();
+
         public FormCadProf()
         {
             InitializeComponent();
@@ -38,15 +43,8 @@ namespace projetofinal
 
         private void btLimpar_Click(object sender, EventArgs e)
         {//btLimpar
-            tbNome.Enabled = true;
-            mtbCpf.Enabled = true;
-            tbIdade.Enabled = true;
-            tbEndereco.Enabled = true;
-            mtbCelular.Enabled = true;
-            tbEmail.Enabled = true;
+            
             tbUsuario.Clear();
-            tbSenha.Enabled = true;
-            btCadastrar.Enabled = true;
             tbNome.Clear();
             mtbCpf.Clear();
             tbIdade.Clear();
@@ -63,32 +61,58 @@ namespace projetofinal
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfVerificado = Funcoes.verificarCpf(mtbCpf.Text);
-                var celularVerificado = Funcoes.verificarCelular(mtbCelular.Text);
+                var cpfVerificado = VerificacaoDAO.verificarCpf(mtbCpf.Text);
+                var celularVerificado = VerificacaoDAO.verificarCelular(mtbCelular.Text);
                 if (cpfVerificado)
                 {
                     if (celularVerificado)
                     {
-                        Professor profs = new Professor();
+                        try
+                        {
+                            SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                            string sqlSelect = @"SELECT * FROM professor WHERE cpf=@cpf";
+                            SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
 
-                        profs.nome = tbNome.Text;
-                        profs.cpf = mtbCpf.Text;
-                        profs.idade = int.Parse(tbIdade.Text);
-                        profs.endereco = tbEndereco.Text;
-                        profs.celular = mtbCelular.Text;
-                        profs.email = tbEmail.Text;
-                        profs.usuario = tbUsuario.Text;
-                        profs.senha = tbSenha.Text;
+                            comandoSelect.Parameters.AddWithValue("@cpf", mtbCpf.Text);
 
-                        string cpf = mtbCpf.Text;
-                        Funcoes funcoes = new Funcoes();
-                        funcoes.verificarCpfProfessor(cpf, profs);
+                            conexao.Open();
+                            SqlDataReader dados = comandoSelect.ExecuteReader();
+                            if (dados.Read())
+                            {
+                                MessageBox.Show("CPF já cadastrado, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                conexao.Close();
+                            }
+                            else
+                            {
+                                conexao.Close();
+                                SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
+                                string sqlInsert = @"INSERT INTO professor (nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES (@nome, @cpf, @idade, @endereco, @celular, @email, @usuario, @senha)";
+                                SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
+
+                                comandoInsert.Parameters.AddWithValue("@nome", tbNome.Text);
+                                comandoInsert.Parameters.AddWithValue("@cpf", mtbCpf.Text);
+                                comandoInsert.Parameters.AddWithValue("@idade", int.Parse(tbIdade.Text));
+                                comandoInsert.Parameters.AddWithValue("@endereco", tbEndereco.Text);
+                                comandoInsert.Parameters.AddWithValue("@celular", mtbCelular.Text);
+                                comandoInsert.Parameters.AddWithValue("@email", tbEmail.Text);
+                                comandoInsert.Parameters.AddWithValue("@usuario", tbUsuario.Text);
+                                comandoInsert.Parameters.AddWithValue("@senha", tbSenha.Text);
+
+                                conexao2.Open();
+                                comandoInsert.CommandText = sqlInsert;
+                                comandoInsert.ExecuteNonQuery();
+                                conexao2.Close();
+                                MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        catch (Exception erro)
+                        {
+                            MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
                     }
                     else
                         MessageBox.Show("Insira o número de celular corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
                 }
-
                 else
                     MessageBox.Show("Insira o CPF corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -111,5 +135,12 @@ namespace projetofinal
 
         #endregion
 
+        private void lbVerSenha_Click(object sender, EventArgs e)
+        {//lbVerSenha
+            if (tbSenha.UseSystemPasswordChar.Equals(false))
+                tbSenha.UseSystemPasswordChar = true;
+            else
+                tbSenha.UseSystemPasswordChar = false;
+        }
     }
 }

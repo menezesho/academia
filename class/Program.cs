@@ -18,7 +18,7 @@ namespace projetofinal
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormCadAula());
+            Application.Run(new FormPrincipal());
         }
     }
 }

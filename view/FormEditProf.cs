@@ -1,4 +1,5 @@
-﻿using System;
+﻿using academia.DAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,8 +19,8 @@ namespace projetofinal
 
         private void FormEditProf_Load(object sender, EventArgs e)
         {//load
-            Funcoes funcoes = new Funcoes();
-            dgprofs.DataSource = funcoes.listarProfs();
+            ProfessorDAO professorDAO = new ProfessorDAO();
+            dgprofs.DataSource = professorDAO.listarProfs();
 
             tbcracha.Clear();
             tbnome.Clear();
@@ -145,11 +146,7 @@ namespace projetofinal
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
-                    Professor profs = new Professor();
-                    profs.cracha = int.Parse(tbcracha.Text);
-                    Funcoes funcoes = new Funcoes();
-                    funcoes.excluirProf(profs);
-                    dgprofs.DataSource = funcoes.listarProfs();
+                    //dgprofs.DataSource = funcoes.listarProfs();
 
                     tbcracha.Clear();
                     tbnome.Clear();
@@ -186,30 +183,14 @@ namespace projetofinal
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfVerificado = Funcoes.verificarCpf(mtbcpf.Text);
-                var celularVerificado = Funcoes.verificarCelular(mtbcelular.Text);
+                var cpfVerificado = VerificacaoDAO.verificarCpf(mtbcpf.Text);
+                var celularVerificado = VerificacaoDAO.verificarCelular(mtbcelular.Text);
                 if (cpfVerificado)
                 {
                     if (celularVerificado)
                     {
-                        Professor profs = new Professor();
-
-                        profs.cracha = int.Parse(tbcracha.Text);
-                        profs.nome = tbnome.Text;
-                        profs.cpf = mtbcpf.Text;
-                        profs.idade = int.Parse(tbidade.Text);
-                        profs.endereco = tbendereco.Text;
-                        profs.celular = mtbcelular.Text;
-                        profs.email = tbemail.Text;
-                        profs.usuario = tbusuario.Text;
-                        profs.senha = tbsenha.Text;
-
-                        Funcoes funcoes = new Funcoes();
-
-                        string cpf = mtbcpf.Text;
-                        funcoes.verificarCpfEditProf(cpf, profs);
-
-                        dgprofs.DataSource = funcoes.listarProfs();
+                        ProfessorDAO professorDAO = new ProfessorDAO();
+                        dgprofs.DataSource = professorDAO.listarProfs();
 
                         tbcracha.Clear();
                         tbnome.Clear();

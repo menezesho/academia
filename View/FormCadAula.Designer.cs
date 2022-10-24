@@ -56,6 +56,7 @@
             this.btCancelar.TabIndex = 47;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = false;
+            this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
             // 
             // btLimpar
             // 
@@ -202,11 +203,13 @@
             this.Controls.Add(this.lbData);
             this.Controls.Add(this.lbnome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(501, 397);
             this.Name = "FormCadAula";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Inserir";
             this.Load += new System.EventHandler(this.FormCadAula_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadAula_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 

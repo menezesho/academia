@@ -45,7 +45,7 @@ namespace academia
                 MessageBox.Show("Preencha os campos obrigatórios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var dataVerificada = AulaDAO.verificarData(mtbData.Text);
+                var dataVerificada = VerificacaoDAO.verificarData(mtbData.Text);
                 if (dataVerificada)
                 {
                     try
@@ -80,7 +80,6 @@ namespace academia
                             comandoInsert.ExecuteNonQuery();
                             conexao2.Close();
                             MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            conexao2.Close();
                         }
                     }
                     catch (Exception erro)
@@ -92,5 +91,22 @@ namespace academia
                     MessageBox.Show("Insira a data corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        #region Retornar
+
+        private void FormCadAula_KeyDown(object sender, KeyEventArgs e)
+        {//ESC para retornar
+            if (e.KeyValue.Equals(27))
+                if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                    Close();
+        }
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {//btCancelar
+            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
+        }
+
+        #endregion
     }
 }

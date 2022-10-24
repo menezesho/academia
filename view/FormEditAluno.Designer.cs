@@ -512,7 +512,7 @@ namespace projetofinal
             this.Name = "FormEditAluno";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastros";
+            this.Text = "Ajustes";
             this.Load += new System.EventHandler(this.FormEditAluno_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormListAluno_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgalunos)).EndInit();

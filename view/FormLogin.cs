@@ -43,7 +43,6 @@ namespace projetofinal
                 if (dados.Read())
                 {
                     FormPrincipal Fp = new FormPrincipal();
-                    MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     cbUsuario.Text = "";
                     tbSenha.Clear();
                     Fp.Show();

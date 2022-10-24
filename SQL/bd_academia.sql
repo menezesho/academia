@@ -50,6 +50,11 @@ SELECT * FROM aluno
 SELECT * FROM aula
 SELECT * FROM participante
 
+--drop table participante
+--drop table aula
+--drop table aluno
+--drop table professor
+
 
 --INSERT INTO aluno (nome, cpf, idade, endereco, celular, email, peso, altura) VALUES ('Henrique Menezes', '11111111111', 19, 'Rua X', '33333333333', 'henrique.menezes@gmail.com', 65, 178)
 --INSERT INTO professor (nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES ('Henrique Menezes', '11111111111', 19, 'Rua X', '33333333333', 'henrique.menezes@gmail.com', 'henrique-mo', '321654')

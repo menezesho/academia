@@ -508,7 +508,7 @@ namespace projetofinal
             this.Name = "FormEditProf";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Professores cadastrados";
+            this.Text = "Ajustes";
             this.Load += new System.EventHandler(this.FormEditProf_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormEditProf_KeyDown);
             this.tabControl1.ResumeLayout(false);

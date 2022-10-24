@@ -50,6 +50,7 @@ namespace projetofinal
             this.btCancelar = new System.Windows.Forms.Button();
             this.btLimpar = new System.Windows.Forms.Button();
             this.btCadastrar = new System.Windows.Forms.Button();
+            this.lbVerSenha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // mtbCelular
@@ -90,11 +91,11 @@ namespace projetofinal
             this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbSenha.Location = new System.Drawing.Point(547, 251);
             this.tbSenha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbSenha.MaxLength = 3;
+            this.tbSenha.MaxLength = 30;
             this.tbSenha.Name = "tbSenha";
-            this.tbSenha.Size = new System.Drawing.Size(219, 29);
+            this.tbSenha.Size = new System.Drawing.Size(187, 29);
             this.tbSenha.TabIndex = 7;
-            this.tbSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbSenha.UseSystemPasswordChar = true;
             // 
             // tbEmail
             // 
@@ -117,11 +118,10 @@ namespace projetofinal
             this.tbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbUsuario.Location = new System.Drawing.Point(547, 193);
             this.tbUsuario.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tbUsuario.MaxLength = 3;
+            this.tbUsuario.MaxLength = 20;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(219, 29);
             this.tbUsuario.TabIndex = 5;
-            this.tbUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbSenha
             // 
@@ -314,6 +314,17 @@ namespace projetofinal
             this.btCadastrar.UseVisualStyleBackColor = false;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
             // 
+            // lbVerSenha
+            // 
+            this.lbVerSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbVerSenha.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbVerSenha.Image = ((System.Drawing.Image)(resources.GetObject("lbVerSenha.Image")));
+            this.lbVerSenha.Location = new System.Drawing.Point(738, 251);
+            this.lbVerSenha.Name = "lbVerSenha";
+            this.lbVerSenha.Size = new System.Drawing.Size(33, 29);
+            this.lbVerSenha.TabIndex = 39;
+            this.lbVerSenha.MouseCaptureChanged += new System.EventHandler(this.lbVerSenha_Click);
+            // 
             // FormCadProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -340,6 +351,7 @@ namespace projetofinal
             this.Controls.Add(this.lbidade);
             this.Controls.Add(this.lbcpf);
             this.Controls.Add(this.lbnome);
+            this.Controls.Add(this.lbVerSenha);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MinimumSize = new System.Drawing.Size(887, 450);
@@ -375,5 +387,6 @@ namespace projetofinal
         private System.Windows.Forms.Button btCancelar;
         private System.Windows.Forms.Button btLimpar;
         private System.Windows.Forms.Button btCadastrar;
+        private System.Windows.Forms.Label lbVerSenha;
     }
 }
