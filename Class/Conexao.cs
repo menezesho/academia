@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace academia
+namespace academia.Class
 {
-    public class ConexaoDAO
+    public class Conexao
     {
         public string ConexaoBD()
         {

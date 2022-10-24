@@ -1,4 +1,4 @@
-﻿using academia.DAO;
+﻿using academia.Class;
 using projetofinal;
 using System;
 using System.Collections.Generic;
@@ -14,7 +14,7 @@ namespace academia
 {
     public partial class FormCadAula : Form
     {
-        ConexaoDAO conec = new ConexaoDAO();
+        Conexao conec = new Conexao();
 
         public FormCadAula()
         {
@@ -45,7 +45,7 @@ namespace academia
                 MessageBox.Show("Preencha os campos obrigatórios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var dataVerificada = VerificacaoDAO.verificarData(mtbData.Text);
+                var dataVerificada = Verificacao.verificarData(mtbData.Text);
                 if (dataVerificada)
                 {
                     try

@@ -1,5 +1,4 @@
-﻿using academia;
-using academia.DAO;
+﻿using academia.Class;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +13,7 @@ namespace projetofinal
 {
     public partial class FormCadProf : Form
     {
-        ConexaoDAO conec = new ConexaoDAO();
+        Conexao conec = new Conexao();
 
         public FormCadProf()
         {
@@ -61,8 +60,8 @@ namespace projetofinal
                 MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfVerificado = VerificacaoDAO.verificarCpf(mtbCpf.Text);
-                var celularVerificado = VerificacaoDAO.verificarCelular(mtbCelular.Text);
+                var cpfVerificado = Verificacao.verificarCpf(mtbCpf.Text);
+                var celularVerificado = Verificacao.verificarCelular(mtbCelular.Text);
                 if (cpfVerificado)
                 {
                     if (celularVerificado)

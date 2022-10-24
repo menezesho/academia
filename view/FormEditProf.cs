@@ -1,4 +1,5 @@
-﻿using academia.DAO;
+﻿using academia.Class;
+using academia.DAO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -183,8 +184,8 @@ namespace projetofinal
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var cpfVerificado = VerificacaoDAO.verificarCpf(mtbcpf.Text);
-                var celularVerificado = VerificacaoDAO.verificarCelular(mtbcelular.Text);
+                var cpfVerificado = Verificacao.verificarCpf(mtbcpf.Text);
+                var celularVerificado = Verificacao.verificarCelular(mtbcelular.Text);
                 if (cpfVerificado)
                 {
                     if (celularVerificado)

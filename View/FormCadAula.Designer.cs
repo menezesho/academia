@@ -53,7 +53,7 @@
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(99, 30);
-            this.btCancelar.TabIndex = 47;
+            this.btCancelar.TabIndex = 3;
             this.btCancelar.Text = "Cancelar";
             this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -70,7 +70,7 @@
             this.btLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(99, 30);
-            this.btLimpar.TabIndex = 48;
+            this.btLimpar.TabIndex = 4;
             this.btLimpar.Text = "Limpar";
             this.btLimpar.UseVisualStyleBackColor = false;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
@@ -87,7 +87,7 @@
             this.btCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(99, 30);
-            this.btCadastrar.TabIndex = 49;
+            this.btCadastrar.TabIndex = 5;
             this.btCadastrar.Text = "Cadastrar";
             this.btCadastrar.UseVisualStyleBackColor = false;
             this.btCadastrar.Click += new System.EventHandler(this.btCadastrar_Click);
@@ -103,7 +103,7 @@
             this.mtbData.Mask = "00-00-0000";
             this.mtbData.Name = "mtbData";
             this.mtbData.Size = new System.Drawing.Size(135, 29);
-            this.mtbData.TabIndex = 41;
+            this.mtbData.TabIndex = 1;
             this.mtbData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbHorario
@@ -140,7 +140,7 @@
             this.tbNome.MaxLength = 100;
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(310, 29);
-            this.tbNome.TabIndex = 39;
+            this.tbNome.TabIndex = 0;
             // 
             // lbData
             // 
@@ -184,7 +184,7 @@
             this.cbHora.Location = new System.Drawing.Point(260, 191);
             this.cbHora.Name = "cbHora";
             this.cbHora.Size = new System.Drawing.Size(137, 29);
-            this.cbHora.TabIndex = 59;
+            this.cbHora.TabIndex = 2;
             // 
             // FormCadAula
             // 

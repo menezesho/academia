@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace academia.DAO
+namespace academia.Class
 {
-    public class VerificacaoDAO
+    public class Verificacao
     {
         public static bool verificarCpf(string cpf)
         {

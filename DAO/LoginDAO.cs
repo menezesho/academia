@@ -1,4 +1,5 @@
-﻿using projetofinal;
+﻿using academia.Class;
+using projetofinal;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -9,7 +10,7 @@ namespace academia.DAO
 {
     public class LoginDAO
     {
-        ConexaoDAO conec = new ConexaoDAO();
+        Conexao conec = new Conexao();
 
         public void realizarLogin(string usuario, string senha)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using academia;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,6 +47,12 @@ namespace projetofinal
         {//btEditarProf
             FormEditProf Fep = new FormEditProf();
             Fep.ShowDialog();
+        }
+
+        private void lbInserirAula_Click(object sender, EventArgs e)
+        {//btInserirAula
+            FormCadAula Fcaula = new FormCadAula();
+            Fcaula.ShowDialog();
         }
 
         #endregion

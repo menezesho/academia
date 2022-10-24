@@ -6,14 +6,15 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
-using academia;
+using academia.Class;
+using academia.DAO;
 using academia.Properties;
 
 namespace projetofinal
 {
     public partial class FormLogin : Form
     {
-        ConexaoDAO conec = new ConexaoDAO();
+        Conexao conec = new Conexao();
         public FormLogin()
         {
             InitializeComponent();
@@ -21,8 +22,8 @@ namespace projetofinal
 
         private void FormLogin_Load(object sender, EventArgs e)
         {
-            Funcoes funcoes = new Funcoes();
-            cbUsuario.DataSource = funcoes.listarProfs();
+            ProfessorDAO professorDAO = new ProfessorDAO();
+            cbUsuario.DataSource = professorDAO.listarProfs();
             cbUsuario.DisplayMember = "Usuário";
             cbUsuario.Text = "";
         }
@@ -65,8 +66,8 @@ namespace projetofinal
 
         private void lbReload_Click(object sender, EventArgs e)
         {//lbReload
-            Funcoes funcoes = new Funcoes();
-            cbUsuario.DataSource = funcoes.listarProfs();
+            ProfessorDAO professorDAO = new ProfessorDAO();
+            cbUsuario.DataSource = professorDAO.listarProfs();
             cbUsuario.DisplayMember = "Usuário";
             cbUsuario.Text = "";
             tbSenha.Clear();
