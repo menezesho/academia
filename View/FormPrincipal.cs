@@ -20,7 +20,7 @@ namespace projetofinal
 
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
-            
+            MessageBox.Show("Login realizado com sucesso!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         #region Menu
