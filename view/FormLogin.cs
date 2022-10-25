@@ -46,7 +46,7 @@ namespace projetofinal
                     FormPrincipal Fp = new FormPrincipal();
                     cbUsuario.Text = "";
                     tbSenha.Clear();
-                    Fp.Show();
+                    Fp.ShowDialog();
                 }
                 else
                     MessageBox.Show("Usuário ou senha incorretos, tente novamente!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
