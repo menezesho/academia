@@ -29,9 +29,9 @@ namespace projetofinal
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAluno));
             this.dgalunos = new System.Windows.Forms.DataGridView();
             this.tbBusca = new System.Windows.Forms.TextBox();
@@ -72,41 +72,41 @@ namespace projetofinal
             this.dgalunos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dgalunos.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgalunos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgalunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgalunos.Location = new System.Drawing.Point(446, 143);
             this.dgalunos.MultiSelect = false;
             this.dgalunos.Name = "dgalunos";
             this.dgalunos.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgalunos.RowHeadersVisible = false;
             this.dgalunos.RowHeadersWidth = 51;
             this.dgalunos.RowTemplate.Height = 29;
             this.dgalunos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgalunos.Size = new System.Drawing.Size(664, 363);
-            this.dgalunos.TabIndex = 16;
+            this.dgalunos.TabIndex = 13;
             this.dgalunos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgalunos_CellClick);
             // 
             // tbBusca
@@ -116,7 +116,7 @@ namespace projetofinal
             this.tbBusca.Location = new System.Drawing.Point(514, 59);
             this.tbBusca.Name = "tbBusca";
             this.tbBusca.Size = new System.Drawing.Size(552, 29);
-            this.tbBusca.TabIndex = 0;
+            this.tbBusca.TabIndex = 12;
             this.tbBusca.TextChanged += new System.EventHandler(this.tbBusca_TextChanged);
             // 
             // lbbusca
@@ -143,7 +143,7 @@ namespace projetofinal
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(141, 30);
-            this.btCancelar.TabIndex = 14;
+            this.btCancelar.TabIndex = 10;
             this.btCancelar.Text = "CANCELAR";
             this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -161,7 +161,7 @@ namespace projetofinal
             this.btEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(78, 69);
-            this.btEditar.TabIndex = 12;
+            this.btEditar.TabIndex = 8;
             this.btEditar.UseVisualStyleBackColor = false;
             this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
@@ -178,7 +178,7 @@ namespace projetofinal
             this.btExcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(78, 69);
-            this.btExcluir.TabIndex = 13;
+            this.btExcluir.TabIndex = 9;
             this.btExcluir.UseVisualStyleBackColor = false;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
@@ -194,7 +194,7 @@ namespace projetofinal
             this.btSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(141, 30);
-            this.btSalvar.TabIndex = 15;
+            this.btSalvar.TabIndex = 11;
             this.btSalvar.Text = "SALVAR";
             this.btSalvar.UseVisualStyleBackColor = false;
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
@@ -232,7 +232,7 @@ namespace projetofinal
             this.mtbCelular.Mask = "(00) 00000-0000";
             this.mtbCelular.Name = "mtbCelular";
             this.mtbCelular.Size = new System.Drawing.Size(142, 29);
-            this.mtbCelular.TabIndex = 32;
+            this.mtbCelular.TabIndex = 2;
             this.mtbCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
@@ -259,7 +259,7 @@ namespace projetofinal
             this.mtbCpf.Mask = "000,000,000-00";
             this.mtbCpf.Name = "mtbCpf";
             this.mtbCpf.Size = new System.Drawing.Size(135, 29);
-            this.mtbCpf.TabIndex = 31;
+            this.mtbCpf.TabIndex = 1;
             this.mtbCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -274,7 +274,7 @@ namespace projetofinal
             this.tbAltura.MaxLength = 3;
             this.tbAltura.Name = "tbAltura";
             this.tbAltura.Size = new System.Drawing.Size(68, 29);
-            this.tbAltura.TabIndex = 35;
+            this.tbAltura.TabIndex = 6;
             this.tbAltura.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // tbEmail
@@ -288,7 +288,7 @@ namespace projetofinal
             this.tbEmail.MaxLength = 100;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(310, 29);
-            this.tbEmail.TabIndex = 28;
+            this.tbEmail.TabIndex = 3;
             // 
             // tbPeso
             // 
@@ -301,7 +301,7 @@ namespace projetofinal
             this.tbPeso.MaxLength = 3;
             this.tbPeso.Name = "tbPeso";
             this.tbPeso.Size = new System.Drawing.Size(68, 29);
-            this.tbPeso.TabIndex = 34;
+            this.tbPeso.TabIndex = 5;
             this.tbPeso.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbaltura
@@ -326,7 +326,7 @@ namespace projetofinal
             this.tbEndereco.MaxLength = 100;
             this.tbEndereco.Name = "tbEndereco";
             this.tbEndereco.Size = new System.Drawing.Size(310, 29);
-            this.tbEndereco.TabIndex = 37;
+            this.tbEndereco.TabIndex = 7;
             // 
             // lbpeso
             // 
@@ -361,7 +361,7 @@ namespace projetofinal
             this.tbIdade.MaxLength = 3;
             this.tbIdade.Name = "tbIdade";
             this.tbIdade.Size = new System.Drawing.Size(48, 29);
-            this.tbIdade.TabIndex = 33;
+            this.tbIdade.TabIndex = 4;
             this.tbIdade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbcelular
@@ -397,7 +397,7 @@ namespace projetofinal
             this.tbNome.MaxLength = 100;
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(310, 29);
-            this.tbNome.TabIndex = 27;
+            this.tbNome.TabIndex = 0;
             // 
             // lbidade
             // 

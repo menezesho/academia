@@ -100,7 +100,7 @@ namespace projetofinal
             this.mtbCelular.Mask = "(00) 00000-0000";
             this.mtbCelular.Name = "mtbCelular";
             this.mtbCelular.Size = new System.Drawing.Size(142, 29);
-            this.mtbCelular.TabIndex = 61;
+            this.mtbCelular.TabIndex = 2;
             this.mtbCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
@@ -116,7 +116,7 @@ namespace projetofinal
             this.mtbCpf.Mask = "000,000,000-00";
             this.mtbCpf.Name = "mtbCpf";
             this.mtbCpf.Size = new System.Drawing.Size(135, 29);
-            this.mtbCpf.TabIndex = 60;
+            this.mtbCpf.TabIndex = 1;
             this.mtbCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
@@ -131,7 +131,7 @@ namespace projetofinal
             this.tbSenha.MaxLength = 30;
             this.tbSenha.Name = "tbSenha";
             this.tbSenha.Size = new System.Drawing.Size(141, 29);
-            this.tbSenha.TabIndex = 64;
+            this.tbSenha.TabIndex = 7;
             this.tbSenha.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbSenha.UseSystemPasswordChar = true;
             // 
@@ -146,7 +146,7 @@ namespace projetofinal
             this.tbEmail.MaxLength = 100;
             this.tbEmail.Name = "tbEmail";
             this.tbEmail.Size = new System.Drawing.Size(310, 29);
-            this.tbEmail.TabIndex = 57;
+            this.tbEmail.TabIndex = 3;
             // 
             // tbUsuario
             // 
@@ -159,7 +159,7 @@ namespace projetofinal
             this.tbUsuario.MaxLength = 20;
             this.tbUsuario.Name = "tbUsuario";
             this.tbUsuario.Size = new System.Drawing.Size(141, 29);
-            this.tbUsuario.TabIndex = 63;
+            this.tbUsuario.TabIndex = 6;
             this.tbUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbSenha
@@ -184,7 +184,7 @@ namespace projetofinal
             this.tbEndereco.MaxLength = 100;
             this.tbEndereco.Name = "tbEndereco";
             this.tbEndereco.Size = new System.Drawing.Size(228, 29);
-            this.tbEndereco.TabIndex = 66;
+            this.tbEndereco.TabIndex = 5;
             // 
             // lbUsuario
             // 
@@ -219,7 +219,7 @@ namespace projetofinal
             this.tbIdade.MaxLength = 3;
             this.tbIdade.Name = "tbIdade";
             this.tbIdade.Size = new System.Drawing.Size(48, 29);
-            this.tbIdade.TabIndex = 62;
+            this.tbIdade.TabIndex = 4;
             this.tbIdade.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lbcelular
@@ -255,7 +255,7 @@ namespace projetofinal
             this.tbNome.MaxLength = 100;
             this.tbNome.Name = "tbNome";
             this.tbNome.Size = new System.Drawing.Size(310, 29);
-            this.tbNome.TabIndex = 56;
+            this.tbNome.TabIndex = 0;
             // 
             // lbidade
             // 
@@ -314,7 +314,7 @@ namespace projetofinal
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(141, 30);
-            this.btCancelar.TabIndex = 51;
+            this.btCancelar.TabIndex = 10;
             this.btCancelar.Text = "CANCELAR";
             this.btCancelar.UseVisualStyleBackColor = false;
             this.btCancelar.Click += new System.EventHandler(this.btCancelar_Click);
@@ -332,7 +332,7 @@ namespace projetofinal
             this.btEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditar.Name = "btEditar";
             this.btEditar.Size = new System.Drawing.Size(78, 69);
-            this.btEditar.TabIndex = 49;
+            this.btEditar.TabIndex = 8;
             this.btEditar.UseVisualStyleBackColor = false;
             this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
@@ -349,7 +349,7 @@ namespace projetofinal
             this.btExcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btExcluir.Name = "btExcluir";
             this.btExcluir.Size = new System.Drawing.Size(78, 69);
-            this.btExcluir.TabIndex = 50;
+            this.btExcluir.TabIndex = 9;
             this.btExcluir.UseVisualStyleBackColor = false;
             this.btExcluir.Click += new System.EventHandler(this.btExcluir_Click);
             // 
@@ -365,7 +365,7 @@ namespace projetofinal
             this.btSalvar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btSalvar.Name = "btSalvar";
             this.btSalvar.Size = new System.Drawing.Size(141, 30);
-            this.btSalvar.TabIndex = 52;
+            this.btSalvar.TabIndex = 11;
             this.btSalvar.Text = "SALVAR";
             this.btSalvar.UseVisualStyleBackColor = false;
             this.btSalvar.Click += new System.EventHandler(this.btSalvar_Click);
@@ -402,9 +402,10 @@ namespace projetofinal
             this.tbBusca.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.tbBusca.Location = new System.Drawing.Point(514, 59);
+            this.tbBusca.MaxLength = 100;
             this.tbBusca.Name = "tbBusca";
             this.tbBusca.Size = new System.Drawing.Size(552, 29);
-            this.tbBusca.TabIndex = 46;
+            this.tbBusca.TabIndex = 12;
             this.tbBusca.TextChanged += new System.EventHandler(this.tbBusca_TextChanged);
             // 
             // dgprofs
@@ -448,7 +449,7 @@ namespace projetofinal
             this.dgprofs.RowTemplate.Height = 29;
             this.dgprofs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgprofs.Size = new System.Drawing.Size(664, 363);
-            this.dgprofs.TabIndex = 53;
+            this.dgprofs.TabIndex = 13;
             this.dgprofs.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgprofs_CellClick_1);
             // 
             // FormEditProf

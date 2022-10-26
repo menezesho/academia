@@ -193,6 +193,7 @@ namespace projetofinal
             this.lbEditarAula.Text = "Editar ";
             this.lbEditarAula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbEditarAula.UseVisualStyleBackColor = false;
+            this.lbEditarAula.Click += new System.EventHandler(this.lbEditarAula_Click);
             // 
             // lbInserirAula
             // 

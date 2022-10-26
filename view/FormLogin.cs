@@ -25,7 +25,8 @@ namespace projetofinal
             ProfessorDAO professorDAO = new ProfessorDAO();
             cbUsuario.DataSource = professorDAO.listarProfs();
             cbUsuario.DisplayMember = "Usuário";
-            cbUsuario.Text = "";
+            cbUsuario.Text = "henrique-mo";
+            tbSenha.Text = "321654";
         }
 
         private void btLogin_Click(object sender, EventArgs e)
