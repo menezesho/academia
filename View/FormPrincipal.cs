@@ -74,5 +74,10 @@ namespace projetofinal
 
         #endregion
 
+        private void lbEditarAula_Click(object sender, EventArgs e)
+        {//btEditarAula
+            FormEditAula Feaula = new FormEditAula();
+            Feaula.ShowDialog();
+        }
     }
 }
