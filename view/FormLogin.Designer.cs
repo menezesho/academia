@@ -148,13 +148,13 @@ namespace projetofinal
             // 
             this.lbAlunosCadastrados.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbAlunosCadastrados.BackColor = System.Drawing.Color.Lavender;
-            this.lbAlunosCadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 21F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lbAlunosCadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lbAlunosCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.lbAlunosCadastrados.Location = new System.Drawing.Point(0, 165);
+            this.lbAlunosCadastrados.Location = new System.Drawing.Point(0, 182);
             this.lbAlunosCadastrados.Name = "lbAlunosCadastrados";
-            this.lbAlunosCadastrados.Size = new System.Drawing.Size(503, 45);
+            this.lbAlunosCadastrados.Size = new System.Drawing.Size(503, 73);
             this.lbAlunosCadastrados.TabIndex = 52;
-            this.lbAlunosCadastrados.Text = "Seja bem vindo(a) de volta!";
+            this.lbAlunosCadastrados.Text = "Seja bem vindo(a)!";
             this.lbAlunosCadastrados.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
@@ -174,7 +174,7 @@ namespace projetofinal
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.BackColor = System.Drawing.Color.Lavender;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 270);
             this.label2.Name = "label2";
