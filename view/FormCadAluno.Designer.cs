@@ -59,7 +59,7 @@ namespace projetofinal
             this.lbNovoCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNovoCadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbNovoCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.lbNovoCadastro.Location = new System.Drawing.Point(103, 49);
+            this.lbNovoCadastro.Location = new System.Drawing.Point(103, 119);
             this.lbNovoCadastro.Name = "lbNovoCadastro";
             this.lbNovoCadastro.Size = new System.Drawing.Size(663, 45);
             this.lbNovoCadastro.TabIndex = 15;
@@ -72,7 +72,7 @@ namespace projetofinal
             this.mtbCpf.BackColor = System.Drawing.Color.White;
             this.mtbCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtbCpf.Location = new System.Drawing.Point(103, 193);
+            this.mtbCpf.Location = new System.Drawing.Point(103, 263);
             this.mtbCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbCpf.Mask = "000,000,000-00";
             this.mtbCpf.Name = "mtbCpf";
@@ -87,7 +87,7 @@ namespace projetofinal
             this.tbIdade.BackColor = System.Drawing.Color.White;
             this.tbIdade.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbIdade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbIdade.Location = new System.Drawing.Point(456, 193);
+            this.tbIdade.Location = new System.Drawing.Point(456, 263);
             this.tbIdade.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbIdade.MaxLength = 3;
             this.tbIdade.Name = "tbIdade";
@@ -101,7 +101,7 @@ namespace projetofinal
             this.tbNome.BackColor = System.Drawing.Color.White;
             this.tbNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbNome.Location = new System.Drawing.Point(103, 135);
+            this.tbNome.Location = new System.Drawing.Point(103, 205);
             this.tbNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNome.MaxLength = 100;
             this.tbNome.Name = "tbNome";
@@ -113,7 +113,7 @@ namespace projetofinal
             this.lbidade.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbidade.AutoSize = true;
             this.lbidade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbidade.Location = new System.Drawing.Point(456, 168);
+            this.lbidade.Location = new System.Drawing.Point(456, 238);
             this.lbidade.Name = "lbidade";
             this.lbidade.Size = new System.Drawing.Size(48, 21);
             this.lbidade.TabIndex = 2;
@@ -124,7 +124,7 @@ namespace projetofinal
             this.lbcpf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcpf.AutoSize = true;
             this.lbcpf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbcpf.Location = new System.Drawing.Point(103, 168);
+            this.lbcpf.Location = new System.Drawing.Point(103, 238);
             this.lbcpf.Name = "lbcpf";
             this.lbcpf.Size = new System.Drawing.Size(37, 21);
             this.lbcpf.TabIndex = 1;
@@ -135,7 +135,7 @@ namespace projetofinal
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
             this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbnome.Location = new System.Drawing.Point(103, 110);
+            this.lbnome.Location = new System.Drawing.Point(103, 180);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
             this.lbnome.TabIndex = 0;
@@ -147,7 +147,7 @@ namespace projetofinal
             this.mtbCelular.BackColor = System.Drawing.Color.White;
             this.mtbCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtbCelular.Location = new System.Drawing.Point(271, 193);
+            this.mtbCelular.Location = new System.Drawing.Point(271, 263);
             this.mtbCelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbCelular.Mask = "(00) 00000-0000";
             this.mtbCelular.Name = "mtbCelular";
@@ -162,7 +162,7 @@ namespace projetofinal
             this.tbEmail.BackColor = System.Drawing.Color.White;
             this.tbEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEmail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbEmail.Location = new System.Drawing.Point(456, 135);
+            this.tbEmail.Location = new System.Drawing.Point(456, 205);
             this.tbEmail.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEmail.MaxLength = 100;
             this.tbEmail.Name = "tbEmail";
@@ -175,7 +175,7 @@ namespace projetofinal
             this.tbEndereco.BackColor = System.Drawing.Color.White;
             this.tbEndereco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbEndereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbEndereco.Location = new System.Drawing.Point(103, 251);
+            this.tbEndereco.Location = new System.Drawing.Point(103, 321);
             this.tbEndereco.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbEndereco.MaxLength = 100;
             this.tbEndereco.Name = "tbEndereco";
@@ -187,7 +187,7 @@ namespace projetofinal
             this.lbemail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbemail.AutoSize = true;
             this.lbemail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbemail.Location = new System.Drawing.Point(456, 110);
+            this.lbemail.Location = new System.Drawing.Point(456, 180);
             this.lbemail.Name = "lbemail";
             this.lbemail.Size = new System.Drawing.Size(54, 21);
             this.lbemail.TabIndex = 9;
@@ -198,7 +198,7 @@ namespace projetofinal
             this.lbcelular.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcelular.AutoSize = true;
             this.lbcelular.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbcelular.Location = new System.Drawing.Point(271, 168);
+            this.lbcelular.Location = new System.Drawing.Point(271, 238);
             this.lbcelular.Name = "lbcelular";
             this.lbcelular.Size = new System.Drawing.Size(59, 21);
             this.lbcelular.TabIndex = 8;
@@ -209,7 +209,7 @@ namespace projetofinal
             this.lbendereco.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbendereco.AutoSize = true;
             this.lbendereco.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbendereco.Location = new System.Drawing.Point(103, 226);
+            this.lbendereco.Location = new System.Drawing.Point(103, 296);
             this.lbendereco.Name = "lbendereco";
             this.lbendereco.Size = new System.Drawing.Size(74, 21);
             this.lbendereco.TabIndex = 7;
@@ -221,7 +221,7 @@ namespace projetofinal
             this.tbAltura.BackColor = System.Drawing.Color.White;
             this.tbAltura.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbAltura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbAltura.Location = new System.Drawing.Point(663, 193);
+            this.tbAltura.Location = new System.Drawing.Point(663, 263);
             this.tbAltura.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbAltura.MaxLength = 3;
             this.tbAltura.Name = "tbAltura";
@@ -235,7 +235,7 @@ namespace projetofinal
             this.tbPeso.BackColor = System.Drawing.Color.White;
             this.tbPeso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbPeso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbPeso.Location = new System.Drawing.Point(547, 193);
+            this.tbPeso.Location = new System.Drawing.Point(547, 263);
             this.tbPeso.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbPeso.MaxLength = 3;
             this.tbPeso.Name = "tbPeso";
@@ -248,7 +248,7 @@ namespace projetofinal
             this.lbaltura.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbaltura.AutoSize = true;
             this.lbaltura.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbaltura.Location = new System.Drawing.Point(663, 168);
+            this.lbaltura.Location = new System.Drawing.Point(663, 238);
             this.lbaltura.Name = "lbaltura";
             this.lbaltura.Size = new System.Drawing.Size(52, 21);
             this.lbaltura.TabIndex = 13;
@@ -259,7 +259,7 @@ namespace projetofinal
             this.lbpeso.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbpeso.AutoSize = true;
             this.lbpeso.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbpeso.Location = new System.Drawing.Point(547, 168);
+            this.lbpeso.Location = new System.Drawing.Point(547, 238);
             this.lbpeso.Name = "lbpeso";
             this.lbpeso.Size = new System.Drawing.Size(42, 21);
             this.lbpeso.TabIndex = 12;
@@ -270,7 +270,7 @@ namespace projetofinal
             this.lbkg.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbkg.AutoSize = true;
             this.lbkg.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbkg.Location = new System.Drawing.Point(619, 195);
+            this.lbkg.Location = new System.Drawing.Point(619, 265);
             this.lbkg.Name = "lbkg";
             this.lbkg.Size = new System.Drawing.Size(27, 21);
             this.lbkg.TabIndex = 18;
@@ -280,7 +280,7 @@ namespace projetofinal
             // 
             this.lbcm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbcm.AutoSize = true;
-            this.lbcm.Location = new System.Drawing.Point(735, 197);
+            this.lbcm.Location = new System.Drawing.Point(735, 267);
             this.lbcm.Name = "lbcm";
             this.lbcm.Size = new System.Drawing.Size(31, 21);
             this.lbcm.TabIndex = 19;
@@ -294,7 +294,7 @@ namespace projetofinal
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.btCancelar.Location = new System.Drawing.Point(103, 313);
+            this.btCancelar.Location = new System.Drawing.Point(103, 383);
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(217, 30);
@@ -311,7 +311,7 @@ namespace projetofinal
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.button2.Location = new System.Drawing.Point(327, 313);
+            this.button2.Location = new System.Drawing.Point(327, 383);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(217, 30);
@@ -328,7 +328,7 @@ namespace projetofinal
             this.btCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCadastrar.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btCadastrar.Location = new System.Drawing.Point(549, 313);
+            this.btCadastrar.Location = new System.Drawing.Point(549, 383);
             this.btCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(217, 30);
@@ -342,7 +342,7 @@ namespace projetofinal
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(869, 403);
+            this.ClientSize = new System.Drawing.Size(869, 542);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btCadastrar);
@@ -368,7 +368,7 @@ namespace projetofinal
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MinimumSize = new System.Drawing.Size(887, 450);
+            this.MinimumSize = new System.Drawing.Size(887, 589);
             this.Name = "FormCadAluno";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

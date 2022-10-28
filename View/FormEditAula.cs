@@ -22,8 +22,8 @@ namespace academia
             dgaulas.DataSource = aulaDAO.listarAulas();
 
             dgaulas.Columns["ID"].Width = 50;
-            dgaulas.Columns["Nome"].Width = 200;
-            dgaulas.Columns["Data"].Width = 100;
+            dgaulas.Columns["Nome"].Width = 420;
+            dgaulas.Columns["Data"].Width = 120;
             dgaulas.Columns["Horário"].Width = 80;
 
             tbId.Clear();

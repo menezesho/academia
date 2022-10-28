@@ -54,7 +54,7 @@ namespace academia
                         string sqlSelect = @"SELECT * FROM aula WHERE dia=@data AND hora=@hora";
                         SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
 
-                        comandoSelect.Parameters.AddWithValue("@data", mtbData.Text);
+                        comandoSelect.Parameters.AddWithValue("@data", Convert.ToDateTime(mtbData.Text));
                         comandoSelect.Parameters.AddWithValue("@hora", cbHora.Text);
 
                         conexao.Open();
