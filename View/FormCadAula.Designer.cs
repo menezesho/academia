@@ -49,7 +49,7 @@
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.btCancelar.Location = new System.Drawing.Point(134, 350);
+            this.btCancelar.Location = new System.Drawing.Point(64, 271);
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(99, 30);
@@ -66,7 +66,7 @@
             this.btLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btLimpar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.btLimpar.Location = new System.Drawing.Point(240, 350);
+            this.btLimpar.Location = new System.Drawing.Point(170, 271);
             this.btLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(99, 30);
@@ -83,7 +83,7 @@
             this.btCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCadastrar.ForeColor = System.Drawing.Color.GhostWhite;
-            this.btCadastrar.Location = new System.Drawing.Point(345, 350);
+            this.btCadastrar.Location = new System.Drawing.Point(275, 271);
             this.btCadastrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCadastrar.Name = "btCadastrar";
             this.btCadastrar.Size = new System.Drawing.Size(99, 30);
@@ -98,7 +98,7 @@
             this.mtbData.BackColor = System.Drawing.Color.White;
             this.mtbData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.mtbData.Location = new System.Drawing.Point(134, 288);
+            this.mtbData.Location = new System.Drawing.Point(64, 209);
             this.mtbData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbData.Mask = "00/00/0000";
             this.mtbData.Name = "mtbData";
@@ -111,7 +111,7 @@
             this.lbHorario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbHorario.AutoSize = true;
             this.lbHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbHorario.Location = new System.Drawing.Point(307, 263);
+            this.lbHorario.Location = new System.Drawing.Point(237, 184);
             this.lbHorario.Name = "lbHorario";
             this.lbHorario.Size = new System.Drawing.Size(63, 21);
             this.lbHorario.TabIndex = 54;
@@ -122,7 +122,7 @@
             this.lbNovoCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbNovoCadastro.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbNovoCadastro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.lbNovoCadastro.Location = new System.Drawing.Point(134, 144);
+            this.lbNovoCadastro.Location = new System.Drawing.Point(64, 65);
             this.lbNovoCadastro.Name = "lbNovoCadastro";
             this.lbNovoCadastro.Size = new System.Drawing.Size(310, 45);
             this.lbNovoCadastro.TabIndex = 58;
@@ -135,7 +135,7 @@
             this.tbNome.BackColor = System.Drawing.Color.White;
             this.tbNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbNome.Location = new System.Drawing.Point(134, 230);
+            this.tbNome.Location = new System.Drawing.Point(64, 151);
             this.tbNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNome.MaxLength = 100;
             this.tbNome.Name = "tbNome";
@@ -147,7 +147,7 @@
             this.lbData.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbData.AutoSize = true;
             this.lbData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbData.Location = new System.Drawing.Point(134, 263);
+            this.lbData.Location = new System.Drawing.Point(64, 184);
             this.lbData.Name = "lbData";
             this.lbData.Size = new System.Drawing.Size(42, 21);
             this.lbData.TabIndex = 51;
@@ -158,7 +158,7 @@
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbnome.AutoSize = true;
             this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.lbnome.Location = new System.Drawing.Point(134, 205);
+            this.lbnome.Location = new System.Drawing.Point(64, 126);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(53, 21);
             this.lbnome.TabIndex = 50;
@@ -181,7 +181,7 @@
             "15h",
             "16h",
             "17h"});
-            this.cbHora.Location = new System.Drawing.Point(307, 287);
+            this.cbHora.Location = new System.Drawing.Point(237, 208);
             this.cbHora.Name = "cbHora";
             this.cbHora.Size = new System.Drawing.Size(137, 29);
             this.cbHora.TabIndex = 2;
@@ -191,7 +191,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
-            this.ClientSize = new System.Drawing.Size(576, 542);
+            this.ClientSize = new System.Drawing.Size(437, 385);
             this.Controls.Add(this.cbHora);
             this.Controls.Add(this.btCancelar);
             this.Controls.Add(this.btLimpar);
@@ -204,10 +204,11 @@
             this.Controls.Add(this.lbnome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
-            this.MinimumSize = new System.Drawing.Size(594, 589);
+            this.MinimumSize = new System.Drawing.Size(455, 432);
             this.Name = "FormCadAula";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "\'";
+            this.Text = "Cadastrar";
             this.Load += new System.EventHandler(this.FormCadAula_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadAula_KeyDown);
             this.ResumeLayout(false);
