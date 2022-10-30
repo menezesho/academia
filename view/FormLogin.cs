@@ -47,7 +47,8 @@ namespace projetofinal
                     FormPrincipal Fp = new FormPrincipal();
                     cbUsuario.Text = "";
                     tbSenha.Clear();
-                    Fp.ShowDialog();
+                    Fp.Show();
+                    this.Hide();
                 }
                 else
                     MessageBox.Show("Usuário ou senha incorretos, tente novamente!", "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -96,6 +97,6 @@ namespace projetofinal
         }
 
         #endregion
-
+        
     }
 }

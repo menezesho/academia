@@ -55,6 +55,12 @@ namespace projetofinal
             Fcaula.ShowDialog();
         }
 
+        private void lbEditarAula_Click(object sender, EventArgs e)
+        {//btEditarAula
+            FormEditAula Feaula = new FormEditAula();
+            Feaula.ShowDialog();
+        }
+
         #endregion
 
         #region Sair
@@ -63,21 +69,21 @@ namespace projetofinal
         {//ESC para sair
             if (e.KeyValue.Equals(27))
                 if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-                    Close();
+                    Application.Exit();
         }
 
         private void lbSair_Click(object sender, EventArgs e)
         {//btSair
             if (MessageBox.Show("Deseja mesmo sair do programa?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
-               Close();
+                Application.Exit();
+        }
+
+        private void FormPrincipal_FormClosed(object sender, FormClosedEventArgs e)
+        {//fechando o formulário normalmente
+            Application.Exit();
         }
 
         #endregion
 
-        private void lbEditarAula_Click(object sender, EventArgs e)
-        {//btEditarAula
-            FormEditAula Feaula = new FormEditAula();
-            Feaula.ShowDialog();
-        }
     }
 }
