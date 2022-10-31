@@ -85,5 +85,10 @@ namespace projetofinal
 
         #endregion
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormInserirNaAula Fina = new FormInserirNaAula();
+            Fina.ShowDialog();
+        }
     }
 }

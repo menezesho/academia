@@ -24,7 +24,7 @@ namespace academia
         private void FormCadAula_Load(object sender, EventArgs e)
         {
             tbNome.Clear();
-            mtbData.Clear();
+            dtpData.Text = "";
             cbHora.SelectedIndex = 0;
         }
 
@@ -33,19 +33,18 @@ namespace academia
             if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 tbNome.Clear();
-                mtbData.Clear();
-                mtbData.Clear();
+                dtpData.Text = "";
                 cbHora.SelectedIndex = 0;
             }
         }
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {//btCadastrar
-            if (tbNome.Text == "" || mtbData.Text == "________" || cbHora.Text == "Selecione")
-                MessageBox.Show("Preencha os campos obrigatórios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (tbNome.Text == "" || dtpData.Text == "________" || cbHora.Text == "Selecione")
+                MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var dataVerificada = Verificacao.verificarData(mtbData.Text);
+                var dataVerificada = Verificacao.verificarData(dtpData.Text);
                 if (dataVerificada)
                 {
                     try
@@ -54,7 +53,7 @@ namespace academia
                         string sqlSelect = @"SELECT * FROM aula WHERE dia=@data AND hora=@hora";
                         SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
 
-                        comandoSelect.Parameters.AddWithValue("@data", Convert.ToDateTime(mtbData.Text));
+                        comandoSelect.Parameters.AddWithValue("@data", Convert.ToDateTime(dtpData.Text));
                         comandoSelect.Parameters.AddWithValue("@hora", cbHora.Text);
 
                         conexao.Open();
@@ -72,7 +71,7 @@ namespace academia
                             SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
 
                             comandoInsert.Parameters.AddWithValue("@nome", tbNome.Text);
-                            comandoInsert.Parameters.AddWithValue("@data", mtbData.Text);
+                            comandoInsert.Parameters.AddWithValue("@data", Convert.ToDateTime(dtpData.Text));
                             comandoInsert.Parameters.AddWithValue("@hora", cbHora.Text);
 
                             conexao2.Open();

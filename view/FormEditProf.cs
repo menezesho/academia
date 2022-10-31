@@ -34,7 +34,7 @@ namespace projetofinal
             dgprofs.Columns["Celular"].Width = 110;
             dgprofs.Columns["E-mail"].Width = 220;
             dgprofs.Columns["Usuário"].Width = 180;
-            dgprofs.Columns["Senha"].Width = 0;
+            dgprofs.Columns["Senha"].Visible = false;
 
             tbCracha.Clear();
             tbNome.Clear();
@@ -287,6 +287,12 @@ namespace projetofinal
             if (e.KeyValue.Equals(27))
                 if (MessageBox.Show("Todos os dados não salvos serão perdidos\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
+        }
+
+        private void lbSair_Click(object sender, EventArgs e)
+        {//lbSair
+            if (MessageBox.Show("Os dados não salvos serão perdidos\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                Close();
         }
 
         #endregion

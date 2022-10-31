@@ -14,5 +14,10 @@ namespace academia
         {
             InitializeComponent();
         }
+
+        private void FormInserirNaAula_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

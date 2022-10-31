@@ -117,12 +117,20 @@ namespace projetofinal
             }
         }
 
+        private void lbVerSenha_Click(object sender, EventArgs e)
+        {//lbVerSenha
+            if (tbSenha.UseSystemPasswordChar.Equals(false))
+                tbSenha.UseSystemPasswordChar = true;
+            else
+                tbSenha.UseSystemPasswordChar = false;
+        }
+
         #region Retornar
 
         private void FormCadProf_KeyDown(object sender, KeyEventArgs e)
         {//ESC para retornar
             if (e.KeyValue.Equals(27))
-                if (MessageBox.Show("Deseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo retornar?", "Retornar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                     Close();
         }
 
@@ -134,12 +142,5 @@ namespace projetofinal
 
         #endregion
 
-        private void lbVerSenha_Click(object sender, EventArgs e)
-        {//lbVerSenha
-            if (tbSenha.UseSystemPasswordChar.Equals(false))
-                tbSenha.UseSystemPasswordChar = true;
-            else
-                tbSenha.UseSystemPasswordChar = false;
-        }
     }
 }

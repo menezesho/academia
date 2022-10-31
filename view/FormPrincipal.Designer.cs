@@ -59,7 +59,7 @@ namespace projetofinal
             this.btInserirAluno.Name = "btInserirAluno";
             this.btInserirAluno.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btInserirAluno.Size = new System.Drawing.Size(170, 55);
-            this.btInserirAluno.TabIndex = 15;
+            this.btInserirAluno.TabIndex = 4;
             this.btInserirAluno.Text = "Aluno     ";
             this.btInserirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btInserirAluno.UseVisualStyleBackColor = false;
@@ -80,7 +80,7 @@ namespace projetofinal
             this.btEditarAluno.Name = "btEditarAluno";
             this.btEditarAluno.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btEditarAluno.Size = new System.Drawing.Size(169, 55);
-            this.btEditarAluno.TabIndex = 16;
+            this.btEditarAluno.TabIndex = 5;
             this.btEditarAluno.Text = "Aluno     ";
             this.btEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditarAluno.UseVisualStyleBackColor = false;
@@ -101,7 +101,7 @@ namespace projetofinal
             this.btEditarProf.Name = "btEditarProf";
             this.btEditarProf.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btEditarProf.Size = new System.Drawing.Size(169, 55);
-            this.btEditarProf.TabIndex = 36;
+            this.btEditarProf.TabIndex = 3;
             this.btEditarProf.Text = "Professor  ";
             this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditarProf.UseVisualStyleBackColor = false;
@@ -122,7 +122,7 @@ namespace projetofinal
             this.btInserirProf.Name = "btInserirProf";
             this.btInserirProf.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btInserirProf.Size = new System.Drawing.Size(170, 55);
-            this.btInserirProf.TabIndex = 35;
+            this.btInserirProf.TabIndex = 2;
             this.btInserirProf.Text = "Professor  ";
             this.btInserirProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btInserirProf.UseVisualStyleBackColor = false;
@@ -133,7 +133,7 @@ namespace projetofinal
             this.lbSair.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbSair.Image = ((System.Drawing.Image)(resources.GetObject("lbSair.Image")));
-            this.lbSair.Location = new System.Drawing.Point(1087, 524);
+            this.lbSair.Location = new System.Drawing.Point(1112, 553);
             this.lbSair.Name = "lbSair";
             this.lbSair.Size = new System.Drawing.Size(40, 37);
             this.lbSair.TabIndex = 37;
@@ -154,7 +154,7 @@ namespace projetofinal
             this.lbEditarAula.Name = "lbEditarAula";
             this.lbEditarAula.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.lbEditarAula.Size = new System.Drawing.Size(169, 55);
-            this.lbEditarAula.TabIndex = 39;
+            this.lbEditarAula.TabIndex = 1;
             this.lbEditarAula.Text = "Aula      ";
             this.lbEditarAula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbEditarAula.UseVisualStyleBackColor = false;
@@ -175,7 +175,7 @@ namespace projetofinal
             this.lbInserirAula.Name = "lbInserirAula";
             this.lbInserirAula.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.lbInserirAula.Size = new System.Drawing.Size(170, 55);
-            this.lbInserirAula.TabIndex = 38;
+            this.lbInserirAula.TabIndex = 0;
             this.lbInserirAula.Text = "Aula      ";
             this.lbInserirAula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbInserirAula.UseVisualStyleBackColor = false;
@@ -210,7 +210,7 @@ namespace projetofinal
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(270, 55);
-            this.button1.TabIndex = 41;
+            this.button1.TabIndex = 7;
             this.button1.Text = "Aluno            ";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.UseVisualStyleBackColor = false;
@@ -230,10 +230,11 @@ namespace projetofinal
             this.button2.Name = "button2";
             this.button2.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
             this.button2.Size = new System.Drawing.Size(270, 55);
-            this.button2.TabIndex = 42;
+            this.button2.TabIndex = 6;
             this.button2.Text = "Professor         ";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
