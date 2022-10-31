@@ -66,23 +66,6 @@ namespace projetofinal
             tbSenha.Clear();
         }
 
-        private void lbReload_Click(object sender, EventArgs e)
-        {//lbReload
-            ProfessorDAO professorDAO = new ProfessorDAO();
-            cbUsuario.DataSource = professorDAO.listarProfs();
-            cbUsuario.DisplayMember = "Usuário";
-            cbUsuario.Text = "";
-            tbSenha.Clear();
-        }
-
-        private void lbVerSenha_Click(object sender, EventArgs e)
-        {//lbVerSenha
-            if (tbSenha.UseSystemPasswordChar.Equals(false))
-                tbSenha.UseSystemPasswordChar = true;
-            else
-                tbSenha.UseSystemPasswordChar = false;
-        }
-
         #region Sair
 
         private void FormLogin_KeyDown(object sender, KeyEventArgs e)

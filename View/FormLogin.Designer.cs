@@ -52,11 +52,12 @@ namespace projetofinal
             this.tbSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbSenha.BackColor = System.Drawing.Color.Lavender;
             this.tbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.tbSenha.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbSenha.Location = new System.Drawing.Point(685, 369);
+            this.tbSenha.Location = new System.Drawing.Point(680, 362);
             this.tbSenha.MaxLength = 30;
             this.tbSenha.Name = "tbSenha";
-            this.tbSenha.Size = new System.Drawing.Size(328, 29);
+            this.tbSenha.Size = new System.Drawing.Size(414, 43);
             this.tbSenha.TabIndex = 2;
             this.tbSenha.UseSystemPasswordChar = true;
             // 
@@ -64,9 +65,9 @@ namespace projetofinal
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(685, 19);
+            this.pictureBox1.Location = new System.Drawing.Point(680, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(328, 287);
+            this.pictureBox1.Size = new System.Drawing.Size(414, 270);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -79,10 +80,10 @@ namespace projetofinal
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlogin.ForeColor = System.Drawing.Color.White;
-            this.btlogin.Location = new System.Drawing.Point(751, 445);
+            this.btlogin.Location = new System.Drawing.Point(760, 448);
             this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btlogin.Name = "btlogin";
-            this.btlogin.Size = new System.Drawing.Size(209, 59);
+            this.btlogin.Size = new System.Drawing.Size(256, 59);
             this.btlogin.TabIndex = 0;
             this.btlogin.Text = "Login";
             this.btlogin.UseVisualStyleBackColor = false;
@@ -92,13 +93,14 @@ namespace projetofinal
             // 
             this.cbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbUsuario.BackColor = System.Drawing.Color.Lavender;
+            this.cbUsuario.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbUsuario.FormattingEnabled = true;
             this.cbUsuario.Items.AddRange(new object[] {
             "Selecione"});
-            this.cbUsuario.Location = new System.Drawing.Point(685, 312);
+            this.cbUsuario.Location = new System.Drawing.Point(680, 297);
             this.cbUsuario.Name = "cbUsuario";
-            this.cbUsuario.Size = new System.Drawing.Size(328, 29);
+            this.cbUsuario.Size = new System.Drawing.Size(414, 45);
             this.cbUsuario.TabIndex = 1;
             // 
             // lbSair
@@ -106,7 +108,7 @@ namespace projetofinal
             this.lbSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbSair.Image = ((System.Drawing.Image)(resources.GetObject("lbSair.Image")));
-            this.lbSair.Location = new System.Drawing.Point(1112, 553);
+            this.lbSair.Location = new System.Drawing.Point(1157, 553);
             this.lbSair.Name = "lbSair";
             this.lbSair.Size = new System.Drawing.Size(40, 37);
             this.lbSair.TabIndex = 3;
@@ -128,9 +130,9 @@ namespace projetofinal
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(639, 310);
+            this.pictureBox3.Location = new System.Drawing.Point(634, 297);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 45);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 50;
             this.pictureBox3.TabStop = false;
@@ -139,9 +141,9 @@ namespace projetofinal
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(639, 366);
+            this.pictureBox4.Location = new System.Drawing.Point(634, 362);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 34);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 45);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 51;
             this.pictureBox4.TabStop = false;
@@ -190,7 +192,7 @@ namespace projetofinal
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1164, 599);
+            this.ClientSize = new System.Drawing.Size(1209, 599);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbAlunosCadastrados);
