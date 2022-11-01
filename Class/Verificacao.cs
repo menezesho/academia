@@ -19,10 +19,10 @@ namespace academia.Class
             return regExp.IsMatch(celular);
         }
 
-        public static bool verificarData(string data)
+        /*public static bool verificarData(string data)
         {
             var regExp = new Regex(@"^\d{2}.\d{2}.\d{4}");
             return regExp.IsMatch(data);
-        }
+        }*/
     }
 }

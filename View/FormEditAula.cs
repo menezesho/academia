@@ -29,11 +29,11 @@ namespace academia
             tbId.Clear();
             tbNome.Clear();
             tbId.Clear();
-            mtbData.Clear();
+            dtpData.Text = "";
             cbHora.SelectedIndex = 0;
             tbId.Enabled = false;
             tbNome.Enabled = false;
-            mtbData.Enabled = false;
+            dtpData.Enabled = false;
             cbHora.Enabled = false;
             btEditar.Enabled = true;
             btCancelar.Enabled = false;

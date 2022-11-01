@@ -4,15 +4,17 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Text;
 using System.Text.RegularExpressions;
+using academia.Class;
 
 namespace academia.DAO
 {
     public class AulaDAO
     {
+        Conexao conec = new Conexao();
+
         public DataTable listarAulas()
         {
-            string strConexao = @"Data Source=lenovo-l340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-            SqlConnection conexao = new SqlConnection(strConexao);
+            SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
             string sql = @"SELECT id AS ID, nome AS Nome, dia AS Data, hora AS Horário FROM aula";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();

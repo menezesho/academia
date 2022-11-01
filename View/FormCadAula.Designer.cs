@@ -38,7 +38,6 @@
             this.lbData = new System.Windows.Forms.Label();
             this.lbnome = new System.Windows.Forms.Label();
             this.cbHora = new System.Windows.Forms.ComboBox();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
@@ -242,7 +241,6 @@
         private System.Windows.Forms.Label lbData;
         private System.Windows.Forms.Label lbnome;
         private System.Windows.Forms.ComboBox cbHora;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.DateTimePicker dtpData;
     }
 }

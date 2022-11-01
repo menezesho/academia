@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Data;
 using System.Text;
+using System.Security.Policy;
 
 namespace academia.DAO
 {
@@ -10,8 +11,7 @@ namespace academia.DAO
     {
         public DataTable listarProfs()
         {
-            string strConexao = @"Data Source=Lenovo-L340\sqlexpress;Initial Catalog=BD_ACADEMIA;Integrated Security=True";
-            SqlConnection conexao = new SqlConnection(strConexao);
+            SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
             string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', usuario AS Usuário, senha AS Senha FROM professor";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();

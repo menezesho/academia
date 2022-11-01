@@ -37,9 +37,7 @@ namespace projetofinal
             this.lbSair = new System.Windows.Forms.Label();
             this.lbEditarAula = new System.Windows.Forms.Button();
             this.lbInserirAula = new System.Windows.Forms.Button();
-            this.lbAula = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btInserir = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -54,13 +52,13 @@ namespace projetofinal
             this.btInserirAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btInserirAluno.Image = ((System.Drawing.Image)(resources.GetObject("btInserirAluno.Image")));
             this.btInserirAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInserirAluno.Location = new System.Drawing.Point(137, 233);
+            this.btInserirAluno.Location = new System.Drawing.Point(131, 312);
             this.btInserirAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserirAluno.Name = "btInserirAluno";
-            this.btInserirAluno.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btInserirAluno.Size = new System.Drawing.Size(170, 55);
+            this.btInserirAluno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btInserirAluno.Size = new System.Drawing.Size(193, 76);
             this.btInserirAluno.TabIndex = 4;
-            this.btInserirAluno.Text = "Aluno     ";
+            this.btInserirAluno.Text = "Aluno       ";
             this.btInserirAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btInserirAluno.UseVisualStyleBackColor = false;
             this.btInserirAluno.Click += new System.EventHandler(this.btInserirAluno_Click);
@@ -75,13 +73,13 @@ namespace projetofinal
             this.btEditarAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btEditarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btEditarAluno.Image")));
             this.btEditarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditarAluno.Location = new System.Drawing.Point(318, 233);
+            this.btEditarAluno.Location = new System.Drawing.Point(340, 312);
             this.btEditarAluno.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditarAluno.Name = "btEditarAluno";
-            this.btEditarAluno.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btEditarAluno.Size = new System.Drawing.Size(169, 55);
+            this.btEditarAluno.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
+            this.btEditarAluno.Size = new System.Drawing.Size(193, 76);
             this.btEditarAluno.TabIndex = 5;
-            this.btEditarAluno.Text = "Aluno     ";
+            this.btEditarAluno.Text = "Aluno       ";
             this.btEditarAluno.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditarAluno.UseVisualStyleBackColor = false;
             this.btEditarAluno.Click += new System.EventHandler(this.btEditarAluno_Click);
@@ -96,13 +94,13 @@ namespace projetofinal
             this.btEditarProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btEditarProf.Image = ((System.Drawing.Image)(resources.GetObject("btEditarProf.Image")));
             this.btEditarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btEditarProf.Location = new System.Drawing.Point(318, 170);
+            this.btEditarProf.Location = new System.Drawing.Point(340, 208);
             this.btEditarProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btEditarProf.Name = "btEditarProf";
-            this.btEditarProf.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btEditarProf.Size = new System.Drawing.Size(169, 55);
+            this.btEditarProf.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btEditarProf.Size = new System.Drawing.Size(193, 76);
             this.btEditarProf.TabIndex = 3;
-            this.btEditarProf.Text = "Professor  ";
+            this.btEditarProf.Text = "Professor    ";
             this.btEditarProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btEditarProf.UseVisualStyleBackColor = false;
             this.btEditarProf.Click += new System.EventHandler(this.btEditarProf_Click);
@@ -117,13 +115,13 @@ namespace projetofinal
             this.btInserirProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.btInserirProf.Image = ((System.Drawing.Image)(resources.GetObject("btInserirProf.Image")));
             this.btInserirProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btInserirProf.Location = new System.Drawing.Point(137, 170);
+            this.btInserirProf.Location = new System.Drawing.Point(131, 208);
             this.btInserirProf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserirProf.Name = "btInserirProf";
-            this.btInserirProf.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            this.btInserirProf.Size = new System.Drawing.Size(170, 55);
+            this.btInserirProf.Padding = new System.Windows.Forms.Padding(27, 0, 0, 0);
+            this.btInserirProf.Size = new System.Drawing.Size(193, 76);
             this.btInserirProf.TabIndex = 2;
-            this.btInserirProf.Text = "Professor  ";
+            this.btInserirProf.Text = "Professor    ";
             this.btInserirProf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btInserirProf.UseVisualStyleBackColor = false;
             this.btInserirProf.Click += new System.EventHandler(this.btInserirProf_Click);
@@ -149,13 +147,13 @@ namespace projetofinal
             this.lbEditarAula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.lbEditarAula.Image = ((System.Drawing.Image)(resources.GetObject("lbEditarAula.Image")));
             this.lbEditarAula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbEditarAula.Location = new System.Drawing.Point(318, 107);
+            this.lbEditarAula.Location = new System.Drawing.Point(340, 104);
             this.lbEditarAula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbEditarAula.Name = "lbEditarAula";
-            this.lbEditarAula.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lbEditarAula.Size = new System.Drawing.Size(169, 55);
+            this.lbEditarAula.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.lbEditarAula.Size = new System.Drawing.Size(193, 76);
             this.lbEditarAula.TabIndex = 1;
-            this.lbEditarAula.Text = "Aula      ";
+            this.lbEditarAula.Text = "Aula        ";
             this.lbEditarAula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbEditarAula.UseVisualStyleBackColor = false;
             this.lbEditarAula.Click += new System.EventHandler(this.lbEditarAula_Click);
@@ -170,79 +168,45 @@ namespace projetofinal
             this.lbInserirAula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
             this.lbInserirAula.Image = ((System.Drawing.Image)(resources.GetObject("lbInserirAula.Image")));
             this.lbInserirAula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.lbInserirAula.Location = new System.Drawing.Point(137, 107);
+            this.lbInserirAula.Location = new System.Drawing.Point(131, 104);
             this.lbInserirAula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lbInserirAula.Name = "lbInserirAula";
-            this.lbInserirAula.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.lbInserirAula.Size = new System.Drawing.Size(170, 55);
+            this.lbInserirAula.Padding = new System.Windows.Forms.Padding(47, 0, 0, 0);
+            this.lbInserirAula.Size = new System.Drawing.Size(193, 76);
             this.lbInserirAula.TabIndex = 0;
-            this.lbInserirAula.Text = "Aula      ";
+            this.lbInserirAula.Text = "Aula        ";
             this.lbInserirAula.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbInserirAula.UseVisualStyleBackColor = false;
             this.lbInserirAula.Click += new System.EventHandler(this.lbInserirAula_Click);
             // 
-            // lbAula
+            // btInserir
             // 
-            this.lbAula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbAula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.lbAula.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.lbAula.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbAula.ForeColor = System.Drawing.Color.GhostWhite;
-            this.lbAula.Location = new System.Drawing.Point(137, 308);
-            this.lbAula.Name = "lbAula";
-            this.lbAula.Size = new System.Drawing.Size(350, 193);
-            this.lbAula.TabIndex = 40;
-            this.lbAula.Text = "Aula";
-            this.lbAula.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.BackColor = System.Drawing.Color.GhostWhite;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(178, 416);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(80, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(270, 55);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Aluno            ";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.BackColor = System.Drawing.Color.GhostWhite;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
-            this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
-            this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(178, 353);
-            this.button2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(67, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(270, 55);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Professor         ";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btInserir.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btInserir.BackColor = System.Drawing.Color.GhostWhite;
+            this.btInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btInserir.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btInserir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btInserir.Image = ((System.Drawing.Image)(resources.GetObject("btInserir.Image")));
+            this.btInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btInserir.Location = new System.Drawing.Point(131, 416);
+            this.btInserir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btInserir.Name = "btInserir";
+            this.btInserir.Padding = new System.Windows.Forms.Padding(110, 0, 0, 0);
+            this.btInserir.Size = new System.Drawing.Size(402, 76);
+            this.btInserir.TabIndex = 6;
+            this.btInserir.Text = "Inserir na Aula                 ";
+            this.btInserir.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btInserir.UseVisualStyleBackColor = false;
+            this.btInserir.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(586, 107);
+            this.pictureBox1.Location = new System.Drawing.Point(598, 104);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(490, 394);
+            this.pictureBox1.Size = new System.Drawing.Size(490, 388);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 43;
             this.pictureBox1.TabStop = false;
@@ -254,11 +218,9 @@ namespace projetofinal
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(1164, 599);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btInserir);
             this.Controls.Add(this.lbEditarAula);
             this.Controls.Add(this.lbInserirAula);
-            this.Controls.Add(this.lbAula);
             this.Controls.Add(this.lbSair);
             this.Controls.Add(this.btEditarProf);
             this.Controls.Add(this.btInserirProf);
@@ -288,9 +250,7 @@ namespace projetofinal
         private System.Windows.Forms.Label lbSair;
         private System.Windows.Forms.Button lbEditarAula;
         private System.Windows.Forms.Button lbInserirAula;
-        private System.Windows.Forms.Label lbAula;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btInserir;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

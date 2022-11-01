@@ -40,54 +40,48 @@ namespace academia
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {//btCadastrar
-            if (tbNome.Text == "" || dtpData.Text == "________" || cbHora.Text == "Selecione")
+            if (tbNome.Text == "" || cbHora.Text == "Selecione")
                 MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                var dataVerificada = Verificacao.verificarData(dtpData.Text);
-                if (dataVerificada)
+                try
                 {
-                    try
+                    SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                    string sqlSelect = @"SELECT * FROM aula WHERE dia=@data AND hora=@hora";
+                    SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
+
+                    comandoSelect.Parameters.AddWithValue("@data", Convert.ToDateTime(dtpData.Text));
+                    comandoSelect.Parameters.AddWithValue("@hora", cbHora.Text);
+
+                    conexao.Open();
+                    SqlDataReader dados = comandoSelect.ExecuteReader();
+                    if (dados.Read())
                     {
-                        SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                        string sqlSelect = @"SELECT * FROM aula WHERE dia=@data AND hora=@hora";
-                        SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
-
-                        comandoSelect.Parameters.AddWithValue("@data", Convert.ToDateTime(dtpData.Text));
-                        comandoSelect.Parameters.AddWithValue("@hora", cbHora.Text);
-
-                        conexao.Open();
-                        SqlDataReader dados = comandoSelect.ExecuteReader();
-                        if (dados.Read())
-                        {
-                            MessageBox.Show("Conflito de data e hora, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            conexao.Close();
-                        }
-                        else
-                        {
-                            conexao.Close();
-                            SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
-                            string sqlInsert = @"INSERT INTO aula (nome, dia, hora) VALUES (@nome, @data, @hora)";
-                            SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
-
-                            comandoInsert.Parameters.AddWithValue("@nome", tbNome.Text);
-                            comandoInsert.Parameters.AddWithValue("@data", Convert.ToDateTime(dtpData.Text));
-                            comandoInsert.Parameters.AddWithValue("@hora", cbHora.Text);
-
-                            conexao2.Open();
-                            comandoInsert.CommandText = sqlInsert;
-                            comandoInsert.ExecuteNonQuery();
-                            conexao2.Close();
-                            MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        }
+                        MessageBox.Show("Conflito de data e hora, tente novamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conexao.Close();
                     }
-                    catch (Exception erro)
+                    else
                     {
-                        MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        conexao.Close();
+                        SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
+                        string sqlInsert = @"INSERT INTO aula (nome, dia, hora) VALUES (@nome, @data, @hora)";
+                        SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
+
+                        comandoInsert.Parameters.AddWithValue("@nome", tbNome.Text);
+                        comandoInsert.Parameters.AddWithValue("@data", Convert.ToDateTime(dtpData.Text));
+                        comandoInsert.Parameters.AddWithValue("@hora", cbHora.Text);
+
+                        conexao2.Open();
+                        comandoInsert.CommandText = sqlInsert;
+                        comandoInsert.ExecuteNonQuery();
+                        conexao2.Close();
+                        MessageBox.Show("Cadastro efetuado com sucesso!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                 }
-                else
-                    MessageBox.Show("Insira a data corretamente!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
 
