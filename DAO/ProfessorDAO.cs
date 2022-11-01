@@ -4,11 +4,14 @@ using System.Data.SqlClient;
 using System.Data;
 using System.Text;
 using System.Security.Policy;
+using academia.Class;
 
 namespace academia.DAO
 {
     public class ProfessorDAO
     {
+        Conexao conec = new Conexao();
+
         public DataTable listarProfs()
         {
             SqlConnection conexao = new SqlConnection(conec.ConexaoBD());

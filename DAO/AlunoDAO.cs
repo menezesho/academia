@@ -6,11 +6,14 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Text.RegularExpressions;
 using System.Security.Policy;
+using academia.Class;
 
 namespace academia.DAO
 {
     public class AlunoDAO
     {
+        Conexao conec = new Conexao();
+
         public DataTable listarAlunos()
         {
             SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
