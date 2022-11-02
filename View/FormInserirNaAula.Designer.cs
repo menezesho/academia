@@ -47,6 +47,7 @@
             this.lbData = new System.Windows.Forms.Label();
             this.tbHora = new System.Windows.Forms.TextBox();
             this.gpCadastro = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.gpCadastro.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,8 +58,6 @@
             this.cbNome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbNome.FormattingEnabled = true;
-            this.cbNome.Items.AddRange(new object[] {
-            "Selecione"});
             this.cbNome.Location = new System.Drawing.Point(116, 245);
             this.cbNome.Name = "cbNome";
             this.cbNome.Size = new System.Drawing.Size(364, 36);
@@ -205,7 +204,7 @@
             this.mtbCpf.Size = new System.Drawing.Size(179, 29);
             this.mtbCpf.TabIndex = 93;
             this.mtbCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // lbcpf
             // 
@@ -232,7 +231,7 @@
             this.mtbCelular.Size = new System.Drawing.Size(179, 29);
             this.mtbCelular.TabIndex = 94;
             this.mtbCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // lbcelular
             // 
@@ -259,7 +258,7 @@
             this.mtbData.Size = new System.Drawing.Size(153, 29);
             this.mtbData.TabIndex = 96;
             this.mtbData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbData.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbData.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // lbHorario
             // 
@@ -313,12 +312,23 @@
             this.gpCadastro.TabStop = false;
             this.gpCadastro.Text = "Cadastro";
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(316, 201);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(94, 29);
+            this.button1.TabIndex = 102;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.cbNome_SelectedIndexChanged);
+            // 
             // FormInserirNaAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(904, 528);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.tbHora);
             this.Controls.Add(this.mtbData);
             this.Controls.Add(this.lbHorario);
@@ -368,5 +378,6 @@
         private System.Windows.Forms.Label lbData;
         private System.Windows.Forms.TextBox tbHora;
         private System.Windows.Forms.GroupBox gpCadastro;
+        private System.Windows.Forms.Button button1;
     }
 }

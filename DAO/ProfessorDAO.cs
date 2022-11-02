@@ -15,7 +15,7 @@ namespace academia.DAO
         public DataTable listarProfs()
         {
             SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-            string sql = @"SELECT cracha AS Crachá, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', usuario AS Usuário, senha AS Senha FROM professor";
+            string sql = @"SELECT cracha AS 'Crachá', nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', usuario AS Usuário, senha AS Senha FROM professor";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();

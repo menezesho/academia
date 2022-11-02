@@ -15,7 +15,7 @@ namespace academia.DAO
         public DataTable listarAulas()
         {
             SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-            string sql = @"SELECT id AS ID, nome AS Nome, dia AS Data, hora AS Horário FROM aula";
+            string sql = @"SELECT id AS 'ID', nome AS Nome, dia AS Data, hora AS Horário FROM aula";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();

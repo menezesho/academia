@@ -149,7 +149,7 @@ namespace projetofinal
             this.mtbCpf.Size = new System.Drawing.Size(179, 34);
             this.mtbCpf.TabIndex = 1;
             this.mtbCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
+            this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
             // 
             // tbEmail
             // 

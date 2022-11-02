@@ -26,26 +26,10 @@ namespace academia
             rbAluno.Checked = true;
 
             AulaDAO aulaDAO = new AulaDAO();
+            cbAula.Items.Clear();
             cbAula.DataSource = aulaDAO.listarAulas();
             cbAula.DisplayMember = "Nome";
-            cbAula.ValueMember = "id";
-
-            if (rbAluno.Checked)
-            {
-                AlunoDAO alunoDAO = new AlunoDAO();
-                cbNome.DataSource = alunoDAO.listarAlunos();
-                cbNome.ValueMember = "matricula";
-                //cbNome.DisplayMember = "Nome";
-                
-            }
-            else
-            {
-                ProfessorDAO professorDAO = new ProfessorDAO();
-                cbNome.DataSource = professorDAO.listarProfs();
-                cbNome.ValueMember = "cracha";
-                //cbNome.DisplayMember = "Nome";
-                
-            }
+            cbAula.ValueMember = "ID";
 
             cbNome.Text = "Selecione";
             mtbCpf.Clear();
@@ -57,22 +41,29 @@ namespace academia
 
         private void rbProfessor_CheckedChanged(object sender, EventArgs e)
         {//Professor check
+            ProfessorDAO professorDAO = new ProfessorDAO();
+            cbNome.DataSource = professorDAO.listarProfs();
+            cbNome.DisplayMember = "Nome";
+            cbNome.ValueMember = "Crachá";
 
+            cbNome.Text = "Selecione";
+            mtbCpf.Clear();
+            mtbCelular.Clear();
         }
 
         private void rbAluno_CheckedChanged(object sender, EventArgs e)
         {//Aluno check
-
+            s
         }
 
         private void btLimpar_Click(object sender, EventArgs e)
         {//btLimpar
             if (MessageBox.Show("Os dados não salvos serão perdidos.\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                cbNome.SelectedIndex = 0;
+                cbNome.Text = "Selecione";
                 mtbCpf.Clear();
                 mtbCelular.Clear();
-                cbAula.SelectedIndex = 0;
+                cbAula.Text = "Selecione";
                 mtbData.Clear();
                 tbHora.Clear();
             }
@@ -86,12 +77,84 @@ namespace academia
 
         private void btInserir_Click(object sender, EventArgs e)
         {//brInserir
-            if (cbNome.Text == "Selecione" || cbAula.Text == "Selecione")
+            if (mtbCpf.Text == "___________" || tbHora.Text == "")
                 MessageBox.Show("Preencha os campos vazios!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
-                
-                
+                try
+                {
+                    if (rbAluno.Checked)
+                    {
+                        SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                        string sqlSelect = @"SELECT * FROM participante WHERE fkaula=@idaula AND fkaluno=@idaluno";
+                        SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
+
+                        comandoSelect.Parameters.AddWithValue("@idaula", cbAula.SelectedValue);
+                        comandoSelect.Parameters.AddWithValue("@idaluno", cbNome.SelectedValue);
+
+                        conexao.Open();
+                        SqlDataReader dados = comandoSelect.ExecuteReader();
+                        if (dados.Read())
+                        {
+                            MessageBox.Show("Este aluno já está incluso nesta aula!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            conexao.Close();
+                        }
+                        else
+                        {
+                            conexao.Close();
+                            SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
+                            string sqlInsert = @"INSERT INTO participante (fkaula, fkaluno) VALUES (@idaula, @idaluno)";
+                            SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
+
+                            comandoInsert.Parameters.AddWithValue("@idaula", cbAula.SelectedValue);
+                            comandoInsert.Parameters.AddWithValue("@idaluno", cbNome.SelectedValue);
+
+                            conexao2.Open();
+                            comandoInsert.CommandText = sqlInsert;
+                            comandoInsert.ExecuteNonQuery();
+                            conexao2.Close();
+                            MessageBox.Show("Concluído com sucesso\nO aluno '" + cbNome.Text + "' foi inserido na aula '" + cbAula.Text + "'!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                    else
+                    {
+                        SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
+                        string sqlSelect = @"SELECT * FROM participante WHERE fkaula=@idaula AND fkprof=@idprof";
+                        SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
+
+                        comandoSelect.Parameters.AddWithValue("@idaula", cbAula.SelectedValue);
+                        comandoSelect.Parameters.AddWithValue("@idprof", cbNome.SelectedValue);
+
+                        conexao.Open();
+                        SqlDataReader dados = comandoSelect.ExecuteReader();
+                        if (dados.Read())
+                        {
+                            MessageBox.Show("Este professor já está ministrando esta aula!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            conexao.Close();
+                        }
+                        else
+                        {
+                            conexao.Close();
+                            SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
+                            string sqlInsert = @"INSERT INTO participante (fkaula, fkprof) VALUES (@idaula, @idprof)";
+                            SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
+
+                            comandoInsert.Parameters.AddWithValue("@idaula", cbAula.SelectedValue);
+                            comandoInsert.Parameters.AddWithValue("@idprof", cbNome.SelectedValue);
+
+                            conexao2.Open();
+                            comandoInsert.CommandText = sqlInsert;
+                            comandoInsert.ExecuteNonQuery();
+                            conexao2.Close();
+                            MessageBox.Show("Concluído com sucesso\nO professor '" + cbNome.Text + "' foi inserido na aula '" + cbAula.Text + "'!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                    }
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
             }
         }
 
@@ -107,7 +170,7 @@ namespace academia
                     sql = @"SELECT * FROM professor WHERE cracha=@id";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@id", cbNome.ValueMember);
+                comando.Parameters.AddWithValue("@id", cbNome.SelectedValue);
 
                 conexao.Open();
                 comando.CommandText = sql;
@@ -124,7 +187,6 @@ namespace academia
             {
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
         }
 
         private void cbAula_SelectedIndexChanged(object sender, EventArgs e)
@@ -132,10 +194,10 @@ namespace academia
             try
             {
                 SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                string sql = @"SELECT * FROM aula WHERE nome=@nome";
+                string sql = @"SELECT * FROM aula WHERE id=@id";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@nome", cbAula.Text);
+                comando.Parameters.AddWithValue("@id", cbAula.SelectedValue);
 
                 conexao.Open();
                 comando.CommandText = sql;
@@ -152,6 +214,7 @@ namespace academia
             {
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

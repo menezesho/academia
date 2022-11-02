@@ -17,7 +17,7 @@ namespace academia.DAO
         public DataTable listarAlunos()
         {
             SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-            string sql = @"SELECT matricula AS 'Matri.', nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
+            string sql = @"SELECT matricula AS 'Matri', nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)' FROM aluno";
             SqlCommand comando = new SqlCommand(sql, conexao);
             conexao.Open();
             comando.ExecuteNonQuery();
