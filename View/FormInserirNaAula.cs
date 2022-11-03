@@ -53,7 +53,14 @@ namespace academia
 
         private void rbAluno_CheckedChanged(object sender, EventArgs e)
         {//Aluno check
-            s
+            AlunoDAO alunoDAO = new AlunoDAO();
+            cbNome.DataSource = alunoDAO.listarAlunos();
+            cbNome.DisplayMember = "Nome";
+            cbNome.ValueMember = "Matri";
+
+            cbNome.Text = "Selecione";
+            mtbCpf.Clear();
+            mtbCelular.Clear();
         }
 
         private void btLimpar_Click(object sender, EventArgs e)
