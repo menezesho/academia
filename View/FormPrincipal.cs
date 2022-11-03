@@ -25,7 +25,7 @@ namespace projetofinal
 
         #region Menu
 
-        private void btInserirAluno_Click(object sender, EventArgs e)
+        private void btCadAluno_Click(object sender, EventArgs e)
         {//btInserirAluno
             FormCadAluno Fca = new FormCadAluno();
             Fca.ShowDialog();
@@ -37,7 +37,7 @@ namespace projetofinal
             Fea.ShowDialog();
         }
 
-        private void btInserirProf_Click(object sender, EventArgs e)
+        private void btCadProf_Click(object sender, EventArgs e)
         {//btInserirProf
             FormCadProf Fcp = new FormCadProf();
             Fcp.ShowDialog();
@@ -49,7 +49,7 @@ namespace projetofinal
             Fep.ShowDialog();
         }
 
-        private void lbInserirAula_Click(object sender, EventArgs e)
+        private void lbCadAula_Click(object sender, EventArgs e)
         {//btInserirAula
             FormCadAula Fcaula = new FormCadAula();
             Fcaula.ShowDialog();
@@ -59,6 +59,18 @@ namespace projetofinal
         {//btEditarAula
             FormEditAula Feaula = new FormEditAula();
             Feaula.ShowDialog();
+        }
+
+        private void btInserirAluno_Click(object sender, EventArgs e)
+        {//btInserirAluno
+            FormInserirAluno Fia = new FormInserirAluno();
+            Fia.ShowDialog();
+        }
+
+        private void btInserirProf_Click(object sender, EventArgs e)
+        {//btInserirProf
+            FormInserirProf Fip = new FormInserirProf();
+            Fip.ShowDialog();
         }
 
         #endregion
@@ -85,10 +97,5 @@ namespace projetofinal
 
         #endregion
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            FormInserirNaAula Fina = new FormInserirNaAula();
-            Fina.ShowDialog();
-        }
     }
 }

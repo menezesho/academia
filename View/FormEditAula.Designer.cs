@@ -167,6 +167,9 @@
             // 
             this.cbHora.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cbHora.BackColor = System.Drawing.Color.White;
+            this.cbHora.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbHora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbHora.FormattingEnabled = true;
             this.cbHora.Items.AddRange(new object[] {

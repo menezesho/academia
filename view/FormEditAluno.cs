@@ -25,7 +25,7 @@ namespace projetofinal
             AlunoDAO alunoDAO = new AlunoDAO();
             dgalunos.DataSource = alunoDAO.listarAlunos();
 
-            dgalunos.Columns["Matri."].Width = 50;
+            dgalunos.Columns["Matri"].Width = 50;
             dgalunos.Columns["Nome"].Width = 180;
             dgalunos.Columns["CPF"].Width = 110;
             dgalunos.Columns["Idade"].Width = 50;
