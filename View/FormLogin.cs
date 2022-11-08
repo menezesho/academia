@@ -23,9 +23,11 @@ namespace projetofinal
         private void FormLogin_Load(object sender, EventArgs e)
         {
             ProfessorDAO professorDAO = new ProfessorDAO();
-            cbUsuario.DataSource = professorDAO.listarProfs();
-            cbUsuario.DisplayMember = "Usuário";
-            cbUsuario.Text = "henrique-mo";
+            cbNome.DataSource = professorDAO.listarProfs();
+            cbNome.DisplayMember = "Nome";
+            cbNome.ValueMember = "ID";
+            cbNome.Text = "Selecione";
+            cbNome.Text = "João da Silva";
             tbSenha.Text = "321654";
         }
 
@@ -34,10 +36,10 @@ namespace projetofinal
             try
             {
                 SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                string sql = @"SELECT * FROM professor WHERE usuario=@usuario AND senha=@senha";
+                string sql = @"SELECT * FROM professor WHERE idprofessor=@idprofessor AND senha=@senha";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
-                comando.Parameters.AddWithValue("@usuario", cbUsuario.Text);
+                comando.Parameters.AddWithValue("@idprofessor", int.Parse(cbNome.SelectedValue.ToString()));
                 comando.Parameters.AddWithValue("@senha", tbSenha.Text);
 
                 conexao.Open();
@@ -45,7 +47,7 @@ namespace projetofinal
                 if (dados.Read())
                 {
                     FormPrincipal Fp = new FormPrincipal();
-                    cbUsuario.Text = "";
+                    cbNome.Text = "";
                     tbSenha.Clear();
                     Fp.Show();
                     this.Hide();
@@ -62,7 +64,7 @@ namespace projetofinal
 
         private void btLimpar_Click(object sender, EventArgs e)
         {//btLimpar
-            cbUsuario.Text = "";
+            cbNome.Text = "Selecione";
             tbSenha.Clear();
         }
 
