@@ -1,59 +1,117 @@
-CREATE DATABASE BD_ACADEMIA
+CREATE DATABASE BD_ACADEMIA;
 
-USE BD_ACADEMIA
+USE BD_ACADEMIA;
 
-CREATE TABLE professor(
-	cracha INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50) NOT NULL,
-	cpf CHAR(11) NOT NULL,
-	idade INT,
-	endereco VARCHAR(50),
-	celular CHAR(11),
-	email VARCHAR(50),
-	usuario VARCHAR(20) NOT NULL,
-	senha VARCHAR(30) NOT NULL
-)
+CREATE TABLE PROFESSOR(
+	IDPROFESSOR		INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	NOME			VARCHAR(50) NOT NULL,
+	CPF				CHAR(11) NOT NULL, --UNIQUE
+	IDADE			INT NOT NULL,
+	CELULAR			CHAR(11) NOT NULL,
+	EMAIL			VARCHAR(50) NOT NULL,
+	SENHA			VARCHAR(30) NOT NULL,
 
-CREATE TABLE aluno(
-	matricula INT NOT NULL PRIMARY KEY IDENTITY(1,1),
-	nome VARCHAR(50) NOT NULL,
-	cpf CHAR(11) NOT NULL,
-	idade INT,
-	endereco VARCHAR(50),
-	celular CHAR(11),
-	email VARCHAR(50),
-	peso FLOAT,
-	altura FLOAT
-)
+	RUA				VARCHAR(100),
+	NUMERO			INT,
+	APTO			VARCHAR(5),
+	BAIRRO			VARCHAR(50),
+	CIDADE			VARCHAR(50),
+	ESTADO			CHAR(2),
+);
 
-CREATE TABLE aula(
-	id			INT PRIMARY KEY IDENTITY(1,1),
-	nome		VARCHAR(50) NOT NULL,
-	dia			DATE NOT NULL,
-	hora		CHAR(3) NOT NULL
-)
+--CREATE TABLE professor(
+--	cracha INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+--	nome VARCHAR(50) NOT NULL,
+--	cpf CHAR(11) NOT NULL,
+--	idade INT,
+--	endereco VARCHAR(50),
+--	celular CHAR(11),
+--	email VARCHAR(50),
+--	usuario VARCHAR(20) NOT NULL,
+--	senha VARCHAR(30) NOT NULL
+--)
 
-CREATE TABLE participante(
-	id			INT PRIMARY KEY IDENTITY(1,1),
-	fkaula		INT,
-	fkaluno		INT,
-	fkprof		INT,
+CREATE TABLE ALUNO(
+	IDALUNO		INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	NOME			VARCHAR(50) NOT NULL,
+	CPF				CHAR(11) NOT NULL, --UNIQUE
+	IDADE			INT NOT NULL,
+	CELULAR			CHAR(11) NOT NULL,
+	EMAIL			VARCHAR(50) NOT NULL,
+	PESO			INT,
+	ALTURA			INT,
 
-	FOREIGN KEY (fkaula) REFERENCES aula(id),
-	FOREIGN KEY (fkaluno) REFERENCES aluno(matricula),
-	FOREIGN KEY (fkprof) REFERENCES professor(cracha)
-)
+	RUA				VARCHAR(100),
+	NUMERO			INT,
+	APTO			VARCHAR(5),
+	BAIRRO			VARCHAR(50),
+	CIDADE			VARCHAR(50),
+	ESTADO			CHAR(2)
+);
 
-SELECT * FROM professor
-SELECT * FROM aluno
-SELECT * FROM aula
-SELECT * FROM participante
+
+--CREATE TABLE aluno(
+--	matricula INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+--	nome VARCHAR(50) NOT NULL,
+--	cpf CHAR(11) NOT NULL,
+--	idade INT,
+--	endereco VARCHAR(50),
+--	celular CHAR(11),
+--	email VARCHAR(50),
+--	peso FLOAT,
+--	altura FLOAT
+--)
+
+CREATE TABLE AULA(
+	IDAULA			INT NOT NULL PRIMARY KEY IDENTITY(1,1),
+	NOME			VARCHAR(50) NOT NULL,
+	DIA				DATE NOT NULL,
+	HORA			CHAR(3) NOT NULL
+);
+
+--CREATE TABLE aula(
+--	id			INT PRIMARY KEY IDENTITY(1,1),
+--	nome		VARCHAR(50) NOT NULL,
+--	dia			DATE NOT NULL,
+--	hora		CHAR(3) NOT NULL
+--)
+
+CREATE TABLE PARTICIPANTE(
+	IDPARTICIPANTE	INT PRIMARY KEY IDENTITY(1,1),
+	ID_AULA			INT,
+	ID_ALUNO		INT,
+	ID_PROFESSOR	INT,
+
+	FOREIGN KEY (ID_AULA) REFERENCES AULA(id),
+	FOREIGN KEY (ID_ALUNO) REFERENCES ALUNO(IDALUNO),
+	FOREIGN KEY (ID_PROFESSOR) REFERENCES PROFESSOR(IDPROFESSOR)
+);
+
+--CREATE TABLE participante(
+--	id			INT PRIMARY KEY IDENTITY(1,1),
+--	fkaula		INT,
+--	fkaluno		INT,
+--	fkprof		INT,
+
+--	FOREIGN KEY (fkaula) REFERENCES aula(id),
+--	FOREIGN KEY (fkaluno) REFERENCES aluno(matricula),
+--	FOREIGN KEY (fkprof) REFERENCES professor(cracha)
+--)
+
+SELECT * FROM PROFESSOR;
+SELECT * FROM ALUNO;
+SELECT * FROM AULA;
+SELECT * FROM PARTICIPANTE;
 
 --drop table participante
 --drop table aula
 --drop table aluno
 --drop table professor
 
+/*
+INSERT INTO ALUNO (NOME, CPF, IDADE, CELULAR, EMAIL, PESO, ALTURA, RUA, NUMERO, BAIRRO, CIDADE, ESTADO)
+VALUES ('Henrique Menezes', '12345678912', 19, '11222223333', 'henrique@gmail.com', 65, 178, 'Avenida da Moda', 123, 'Centro', 'Passos', 'MG');
 
---INSERT INTO aluno (nome, cpf, idade, endereco, celular, email, peso, altura) VALUES ('Henrique Menezes', '11111111111', 19, 'Rua X', '33333333333', 'henrique.menezes@gmail.com', 65, 178)
---INSERT INTO professor (nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES ('Henrique Menezes', '11111111111', 19, 'Rua X', '33333333333', 'henrique.menezes@gmail.com', 'henrique-mo', '321654')
+INSERT INTO PROFESSOR (NOME, CPF, IDADE, CELULAR, EMAIL, SENHA, RUA, NUMERO, BAIRRO, CIDADE, ESTADO)
+VALUES ('João da Silva', '32165498732', 23, '12123451234', 'joao@gmail.com', '321654', 'Antônio Carlos', 321, 'Centro', 'Passos', 'MG');
+*/

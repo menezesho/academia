@@ -33,7 +33,7 @@ namespace projetofinal
             this.tbSenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btlogin = new System.Windows.Forms.Button();
-            this.cbUsuario = new System.Windows.Forms.ComboBox();
+            this.cbNome = new System.Windows.Forms.ComboBox();
             this.lbSair = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -89,19 +89,19 @@ namespace projetofinal
             this.btlogin.UseVisualStyleBackColor = false;
             this.btlogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
-            // cbUsuario
+            // cbNome
             // 
-            this.cbUsuario.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbUsuario.BackColor = System.Drawing.Color.Lavender;
-            this.cbUsuario.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cbUsuario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.cbUsuario.FormattingEnabled = true;
-            this.cbUsuario.Items.AddRange(new object[] {
+            this.cbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.cbNome.BackColor = System.Drawing.Color.Lavender;
+            this.cbNome.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.cbNome.FormattingEnabled = true;
+            this.cbNome.Items.AddRange(new object[] {
             "Selecione"});
-            this.cbUsuario.Location = new System.Drawing.Point(680, 297);
-            this.cbUsuario.Name = "cbUsuario";
-            this.cbUsuario.Size = new System.Drawing.Size(414, 45);
-            this.cbUsuario.TabIndex = 1;
+            this.cbNome.Location = new System.Drawing.Point(680, 297);
+            this.cbNome.Name = "cbNome";
+            this.cbNome.Size = new System.Drawing.Size(414, 45);
+            this.cbNome.TabIndex = 1;
             // 
             // lbSair
             // 
@@ -200,7 +200,7 @@ namespace projetofinal
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.lbSair);
             this.Controls.Add(this.tbSenha);
-            this.Controls.Add(this.cbUsuario);
+            this.Controls.Add(this.cbNome);
             this.Controls.Add(this.btlogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
@@ -225,7 +225,7 @@ namespace projetofinal
         private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btlogin;
-        private System.Windows.Forms.ComboBox cbUsuario;
+        private System.Windows.Forms.ComboBox cbNome;
         private System.Windows.Forms.Label lbSair;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;

@@ -25,15 +25,20 @@ namespace projetofinal
             AlunoDAO alunoDAO = new AlunoDAO();
             dgalunos.DataSource = alunoDAO.listarAlunos();
 
-            dgalunos.Columns["Matri"].Width = 50;
+            dgalunos.Columns["ID"].Width = 50;
             dgalunos.Columns["Nome"].Width = 180;
             dgalunos.Columns["CPF"].Width = 110;
             dgalunos.Columns["Idade"].Width = 50;
-            dgalunos.Columns["Endereço"].Width = 180;
             dgalunos.Columns["Celular"].Width = 110;
             dgalunos.Columns["E-mail"].Width = 220;
             dgalunos.Columns["Peso(kg)"].Width = 70;
             dgalunos.Columns["Altura(cm)"].Width = 80;
+            dgalunos.Columns["Rua"].Width = 110;
+            dgalunos.Columns["Num."].Width = 60;
+            dgalunos.Columns["Apto."].Width = 60;
+            dgalunos.Columns["Bairro"].Width = 110;
+            dgalunos.Columns["Cidade"].Width = 110;
+            dgalunos.Columns["Estado"].Width = 60;
 
             tbMatricula.Clear();
             tbNome.Clear();
@@ -60,20 +65,25 @@ namespace projetofinal
 
         public void dgalunos_CellClick(object sender, DataGridViewCellEventArgs e)
         {//cellclick datagrid
-            tbMatricula.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
+            tbId.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
             tbNome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
             mtbCpf.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
             tbIdade.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
-            tbEndereco.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
-            mtbCelular.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
-            tbEmail.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
-            tbPeso.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
+            mtbCelular.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
+            tbEmail.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
+            tbPeso.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
             tbAltura.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[10].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[11].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[12].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[13].Value.ToString();
 
-            tbMatricula.Enabled = false;
+
+            tbId.Enabled = false;
             tbNome.Enabled = false;
             tbIdade.Enabled = false;
-            tbEndereco.Enabled = false;
             mtbCelular.Enabled = false;
             tbEmail.Enabled = false;
             tbPeso.Enabled = false;

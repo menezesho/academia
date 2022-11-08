@@ -23,41 +23,48 @@ namespace projetofinal
         private void FormCadProf_Load(object sender, EventArgs e)
         {
             tbNome.Clear();
-            tbNome.Enabled = true;
             mtbCpf.Clear();
-            mtbCpf.Enabled = true;
             tbIdade.Clear();
-            tbIdade.Enabled = true;
-            tbEndereco.Clear();
-            tbEndereco.Enabled = true;
             mtbCelular.Clear();
-            mtbCelular.Enabled = true;
             tbEmail.Clear();
-            tbEmail.Enabled = true;
-            tbUsuario.Clear();
-            tbUsuario.Enabled = true;
             tbSenha.Clear();
-            tbSenha.Enabled = true;
+            tbRua.Clear();
+            tbNumero.Clear();
+            tbApto.Clear();
+            tbBairro.Clear();
+            tbCidade.Clear();
+            cbEstado.SelectedIndex = 0;
+
+            checkApto.Checked = false;
+            tbApto.Enabled = false;
         }
 
         private void btLimpar_Click(object sender, EventArgs e)
         {//btLimpar
-            
-            tbUsuario.Clear();
-            tbNome.Clear();
-            mtbCpf.Clear();
-            tbIdade.Clear();
-            tbEndereco.Clear();
-            mtbCelular.Clear();
-            tbEmail.Clear();
-            tbSenha.Clear();
-            MessageBox.Show("Todos os campos foram limpos!", "Limpar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (MessageBox.Show("Os dados não salvos serão perdidos!\nDeseja mesmo limpar todos os campos?", "Limpar", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                tbNome.Clear();
+                mtbCpf.Clear();
+                tbIdade.Clear();
+                mtbCelular.Clear();
+                tbEmail.Clear();
+                tbSenha.Clear();
+                tbRua.Clear();
+                tbNumero.Clear();
+                tbApto.Clear();
+                tbBairro.Clear();
+                tbCidade.Clear();
+                cbEstado.SelectedIndex = 0;
+
+                checkApto.Checked = false;
+                tbApto.Enabled = false;
+            }
         }
 
         private void btCadastrar_Click(object sender, EventArgs e)
         {//btCadastrar
-            if (tbNome.Text == "" || mtbCpf.Text == "___________" || tbIdade.Text == "" || tbEndereco.Text == "" || mtbCelular.Text == "___________" || tbSenha.Text == "" || tbUsuario.Text == "" || tbSenha.Text == "")
-                MessageBox.Show("Preencha os campos vazios!", "Cadastro", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (tbNome.Text == "" || mtbCpf.Text == "" || tbIdade.Text == "" || mtbCelular.Text == "" || tbEmail.Text == "" || tbSenha.Text == ""|| tbRua.Text == "" || tbNumero.Text == "" || tbBairro.Text == "" || tbCidade.Text == "" || cbEstado.SelectedIndex == 0)
+                MessageBox.Show("Preencha todos os campos obrigatórios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 var cpfVerificado = Verificacao.verificarCpf(mtbCpf.Text);
@@ -85,17 +92,34 @@ namespace projetofinal
                             {
                                 conexao.Close();
                                 SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
-                                string sqlInsert = @"INSERT INTO professor (nome, cpf, idade, endereco, celular, email, usuario, senha) VALUES (@nome, @cpf, @idade, @endereco, @celular, @email, @usuario, @senha)";
+
+                                //preparado para a string de insert muito louca?
+
+                                string sqlInsert = @"INSERT INTO professor (nome, cpf, idade, celular, email, senha, rua, numero, bairro, cidade, estado";
+                                
+                                if (tbApto.Text != "")
+                                    sqlInsert = sqlInsert + ", apto";
+
+                                sqlInsert = sqlInsert + ") VALUES (@nome, @cpf, @idade, @celular, @email, @senha, @rua, @numero, @bairro, @cidade, @estado";
+
+                                if (tbApto.Text != "")
+                                    sqlInsert = sqlInsert + ", '" + int.Parse(tbApto.Text) + "'";
+
+                                sqlInsert = sqlInsert + ")";
+
                                 SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
 
                                 comandoInsert.Parameters.AddWithValue("@nome", tbNome.Text);
                                 comandoInsert.Parameters.AddWithValue("@cpf", mtbCpf.Text);
                                 comandoInsert.Parameters.AddWithValue("@idade", int.Parse(tbIdade.Text));
-                                comandoInsert.Parameters.AddWithValue("@endereco", tbEndereco.Text);
                                 comandoInsert.Parameters.AddWithValue("@celular", mtbCelular.Text);
                                 comandoInsert.Parameters.AddWithValue("@email", tbEmail.Text);
-                                comandoInsert.Parameters.AddWithValue("@usuario", tbUsuario.Text);
                                 comandoInsert.Parameters.AddWithValue("@senha", tbSenha.Text);
+                                comandoInsert.Parameters.AddWithValue("@rua", tbRua.Text);
+                                comandoInsert.Parameters.AddWithValue("@numero", tbNumero.Text);
+                                comandoInsert.Parameters.AddWithValue("@bairro", tbBairro.Text);
+                                comandoInsert.Parameters.AddWithValue("@cidade", tbCidade.Text);
+                                comandoInsert.Parameters.AddWithValue("@estado", cbEstado.Text);
 
                                 conexao2.Open();
                                 comandoInsert.CommandText = sqlInsert;
@@ -123,6 +147,20 @@ namespace projetofinal
                 tbSenha.UseSystemPasswordChar = true;
             else
                 tbSenha.UseSystemPasswordChar = false;
+        }
+
+        private void checkApto_CheckedChanged(object sender, EventArgs e)
+        {//change checkbox
+            if (checkApto.Checked == true)
+            {
+                tbApto.Enabled = true;
+                tbApto.Clear();
+            }
+            else
+            {
+                tbApto.Enabled = false;
+                tbApto.Clear();
+            }
         }
 
         #region Retornar
