@@ -26,37 +26,51 @@ namespace projetofinal
             dgalunos.DataSource = alunoDAO.listarAlunos();
 
             dgalunos.Columns["ID"].Width = 50;
-            dgalunos.Columns["Nome"].Width = 180;
+            dgalunos.Columns["Nome"].Width = 220;
             dgalunos.Columns["CPF"].Width = 110;
             dgalunos.Columns["Idade"].Width = 50;
             dgalunos.Columns["Celular"].Width = 110;
             dgalunos.Columns["E-mail"].Width = 220;
             dgalunos.Columns["Peso(kg)"].Width = 70;
             dgalunos.Columns["Altura(cm)"].Width = 80;
-            dgalunos.Columns["Rua"].Width = 110;
+            dgalunos.Columns["Rua"].Width = 180;
             dgalunos.Columns["Num."].Width = 60;
             dgalunos.Columns["Apto."].Width = 60;
-            dgalunos.Columns["Bairro"].Width = 110;
-            dgalunos.Columns["Cidade"].Width = 110;
+            dgalunos.Columns["Bairro"].Width = 180;
+            dgalunos.Columns["Cidade"].Width = 180;
             dgalunos.Columns["Estado"].Width = 60;
 
-            tbMatricula.Clear();
+            tbId.Clear();
             tbNome.Clear();
             mtbCpf.Clear();
             tbIdade.Clear();
-            tbEndereco.Clear();
             mtbCelular.Clear();
             tbEmail.Clear();
             tbPeso.Clear();
             tbAltura.Clear();
-            tbMatricula.Enabled = false;
+            tbRua.Clear();
+            tbNumero.Clear();
+            tbApto.Clear();
+            tbBairro.Clear();
+            tbCidade.Clear();
+            cbEstado.SelectedIndex = 0;
+
             tbNome.Enabled = false;
             tbIdade.Enabled = false;
-            tbEndereco.Enabled = false;
             mtbCelular.Enabled = false;
             tbEmail.Enabled = false;
             tbPeso.Enabled = false;
             tbAltura.Enabled = false;
+            tbRua.Enabled = false;
+            tbNumero.Enabled = false;
+            tbApto.Enabled = false;
+            tbBairro.Enabled = false;
+            tbCidade.Enabled = false;
+            cbEstado.Enabled = false;
+
+            checkApto.Enabled = false;
+            checkApto.Checked = false;
+
             btEditar.Enabled = true;
             btCancelar.Enabled = false;
             btSalvar.Enabled = false;
@@ -73,21 +87,29 @@ namespace projetofinal
             tbEmail.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
             tbPeso.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
             tbAltura.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[10].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[11].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[12].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[13].Value.ToString();
+            tbRua.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
+            tbNumero.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
+            tbApto.Text = dgalunos.CurrentRow.Cells[10].Value.ToString();
+            tbBairro.Text = dgalunos.CurrentRow.Cells[11].Value.ToString();
+            tbCidade.Text = dgalunos.CurrentRow.Cells[12].Value.ToString();
+            cbEstado.Text = dgalunos.CurrentRow.Cells[13].Value.ToString();
 
-
-            tbId.Enabled = false;
             tbNome.Enabled = false;
             tbIdade.Enabled = false;
             mtbCelular.Enabled = false;
             tbEmail.Enabled = false;
             tbPeso.Enabled = false;
             tbAltura.Enabled = false;
+            tbRua.Enabled = false;
+            tbNumero.Enabled = false;
+            tbApto.Enabled = false;
+            tbBairro.Enabled = false;
+            tbCidade.Enabled = false;
+            cbEstado.Enabled = false;
+
+            checkApto.Enabled = false;
+            checkApto.Checked = false;
+
             btEditar.Enabled = true;
             btCancelar.Enabled = false;
             btSalvar.Enabled = false;
@@ -98,7 +120,7 @@ namespace projetofinal
             try
             {
                 SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                string sql = @"SELECT matricula AS Matrícula, nome AS Nome, cpf AS CPF, idade AS Idade, endereco AS Endereço, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)'
+                string sql = @"SELECT idaluno AS ID, nome AS Nome, cpf AS CPF, idade AS Idade, celular AS Celular, email AS 'E-mail', peso AS 'Peso(kg)', altura AS 'Altura(cm)', rua AS Rua, numero AS 'Núm.', apto AS 'Apto.', bairro AS Bairro, cidade AS Cidade, estado AS Estado
                     FROM aluno WHERE nome LIKE @nome ORDER BY nome";
                 SqlCommand comando = new SqlCommand(sql, conexao);
 
@@ -119,15 +141,31 @@ namespace projetofinal
 
         private void btEditar_Click(object sender, EventArgs e)
         {//btEditar
-            if (tbMatricula.Text != "")
+            if (tbId.Text != "")
             {
                 tbNome.Enabled = true;
                 tbIdade.Enabled = true;
-                tbEndereco.Enabled = true;
                 mtbCelular.Enabled = true;
                 tbEmail.Enabled = true;
                 tbPeso.Enabled = true;
                 tbAltura.Enabled = true;
+                tbRua.Enabled = true;
+                tbNumero.Enabled = true;
+                tbBairro.Enabled = true;
+                tbCidade.Enabled = true;
+                cbEstado.Enabled = true;
+
+                if (tbApto.Text != "")
+                {
+                    checkApto.Checked = true;
+                    checkApto.Enabled = true;
+                }
+                else
+                {
+                    checkApto.Checked = false;
+                    checkApto.Enabled = true;
+                }
+
                 btEditar.Enabled = false;
                 btCancelar.Enabled = true;
                 btSalvar.Enabled = true;
@@ -138,42 +176,55 @@ namespace projetofinal
 
         private void btCancelar_Click(object sender, EventArgs e)
         {//btCancelar
-            tbMatricula.Enabled = false;
+
             tbNome.Enabled = false;
             tbIdade.Enabled = false;
-            tbEndereco.Enabled = false;
             mtbCelular.Enabled = false;
             tbEmail.Enabled = false;
             tbPeso.Enabled = false;
             tbAltura.Enabled = false;
+            tbRua.Enabled = false;
+            tbNumero.Enabled = false;
+            tbBairro.Enabled = false;
+            tbCidade.Enabled = false;
+            cbEstado.Enabled = false;
+
+            checkApto.Enabled = false;
+            checkApto.Checked = false;
+
             btEditar.Enabled = true;
             btSalvar.Enabled = false;
             btCancelar.Enabled = false;
 
-            tbMatricula.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
+            tbId.Text = dgalunos.CurrentRow.Cells[0].Value.ToString();
             tbNome.Text = dgalunos.CurrentRow.Cells[1].Value.ToString();
             mtbCpf.Text = dgalunos.CurrentRow.Cells[2].Value.ToString();
             tbIdade.Text = dgalunos.CurrentRow.Cells[3].Value.ToString();
-            tbEndereco.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
-            mtbCelular.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
-            tbEmail.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
-            tbPeso.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
-            tbAltura.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
+            mtbCelular.Text = dgalunos.CurrentRow.Cells[4].Value.ToString();
+            tbEmail.Text = dgalunos.CurrentRow.Cells[5].Value.ToString();
+            tbPeso.Text = dgalunos.CurrentRow.Cells[6].Value.ToString();
+            tbAltura.Text = dgalunos.CurrentRow.Cells[7].Value.ToString();
+            tbRua.Text = dgalunos.CurrentRow.Cells[8].Value.ToString();
+            tbNumero.Text = dgalunos.CurrentRow.Cells[9].Value.ToString();
+            tbApto.Text = dgalunos.CurrentRow.Cells[10].Value.ToString();
+            tbBairro.Text = dgalunos.CurrentRow.Cells[11].Value.ToString();
+            tbCidade.Text = dgalunos.CurrentRow.Cells[12].Value.ToString();
+            cbEstado.Text = dgalunos.CurrentRow.Cells[13].Value.ToString();
         }
 
         private void btExcluir_Click(object sender, EventArgs e)
         {//btExcluir
-            if (tbMatricula.Text != "")
+            if (tbId.Text != "")
             {
                 if (MessageBox.Show("Deseja mesmo excluir este cadastro?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     try
                     {
                         SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                        string sqlDelete = @"DELETE FROM aluno WHERE matricula=@matricula";
+                        string sqlDelete = @"DELETE FROM aluno WHERE idaluno=@idaluno";
                         SqlCommand comandoDelete = new SqlCommand(sqlDelete, conexao);
 
-                        comandoDelete.Parameters.AddWithValue("@matricula", tbMatricula.Text);
+                        comandoDelete.Parameters.AddWithValue("@idaluno", tbId.Text);
 
                         conexao.Open();
                         comandoDelete.CommandText = sqlDelete;
@@ -190,23 +241,37 @@ namespace projetofinal
                     AlunoDAO alunoDAO = new AlunoDAO();
                     dgalunos.DataSource = alunoDAO.listarAlunos();
 
-                    tbMatricula.Clear();
+                    tbId.Clear();
                     tbNome.Clear();
                     mtbCpf.Clear();
                     tbIdade.Clear();
-                    tbEndereco.Clear();
                     mtbCelular.Clear();
                     tbEmail.Clear();
                     tbPeso.Clear();
                     tbAltura.Clear();
-                    tbMatricula.Enabled = false;
+                    tbRua.Clear();
+                    tbNumero.Clear();
+                    tbApto.Clear();
+                    tbBairro.Clear();
+                    tbCidade.Clear();
+                    cbEstado.SelectedIndex = 0;
+
                     tbNome.Enabled = false;
                     tbIdade.Enabled = false;
-                    tbEndereco.Enabled = false;
                     mtbCelular.Enabled = false;
                     tbEmail.Enabled = false;
                     tbPeso.Enabled = false;
                     tbAltura.Enabled = false;
+                    tbRua.Enabled = false;
+                    tbNumero.Enabled = false;
+                    tbApto.Enabled = false;
+                    tbBairro.Enabled = false;
+                    tbCidade.Enabled = false;
+                    cbEstado.Enabled = false;
+
+                    checkApto.Enabled = false;
+                    checkApto.Checked = false;
+
                     btEditar.Enabled = true;
                     btSalvar.Enabled = false;
                     btCancelar.Enabled = false;
@@ -218,8 +283,8 @@ namespace projetofinal
 
         private void btSalvar_Click(object sender, EventArgs e)
         {//btSalvar
-            if (tbNome.Text == "" || mtbCpf.Text == "___________" || tbIdade.Text == "" || tbEndereco.Text == "" || mtbCelular.Text == "___________" || tbEmail.Text == "" || tbPeso.Text == "" || tbAltura.Text == "")
-                MessageBox.Show("Preencha os campos vazios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (tbNome.Text == "" || mtbCpf.Text == "" || tbIdade.Text == "" || mtbCelular.Text == "" || tbEmail.Text == "" || tbRua.Text == "" || tbNumero.Text == "" || tbBairro.Text == "" || tbCidade.Text == "" || cbEstado.SelectedIndex == 0)
+                MessageBox.Show("Preencha todos os campos obrigatórios!", "Cadastrar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 var cpfVerificado = Verificacao.verificarCpf(mtbCpf.Text);
@@ -231,19 +296,35 @@ namespace projetofinal
                         try
                         {
                             SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                            string sqlUpdate = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, endereco=@endereco, celular=@celular, email=@email, peso=@peso, altura=@altura WHERE matricula=@matricula";
+
+                            //preparado para a string de insert muito louca?
+
+                            string sqlUpdate = @"UPDATE aluno SET nome=@nome, cpf=@cpf, idade=@idade, celular=@celular, email=@email, rua=@rua, numero=@numero, bairro=@bairro, cidade=@cidade, estado=@estado";
+
+                            if (tbPeso.Text != "")
+                                sqlUpdate = sqlUpdate + ", peso='" + int.Parse(tbPeso.Text) + "'";
+                            if (tbAltura.Text != "")
+                                sqlUpdate = sqlUpdate + ", altura='" + int.Parse(tbAltura.Text) + "'";
+                            if (checkApto.Checked == true)
+                                sqlUpdate = sqlUpdate + ", apto='" + int.Parse(tbApto.Text) + "'";
+                            if (checkApto.Checked == false)
+                                sqlUpdate = sqlUpdate + ", apto=NULL";
+
+                            sqlUpdate = sqlUpdate + " WHERE idaluno=@idaluno";
+
                             SqlCommand comandoUpdate = new SqlCommand(sqlUpdate, conexao);
 
-                            comandoUpdate.Parameters.AddWithValue("@matricula", tbMatricula.Text);
-
+                            comandoUpdate.Parameters.AddWithValue("@idaluno", tbId.Text);
                             comandoUpdate.Parameters.AddWithValue("@nome", tbNome.Text);
                             comandoUpdate.Parameters.AddWithValue("@cpf", mtbCpf.Text);
                             comandoUpdate.Parameters.AddWithValue("@idade", int.Parse(tbIdade.Text));
-                            comandoUpdate.Parameters.AddWithValue("@endereco", tbEndereco.Text);
                             comandoUpdate.Parameters.AddWithValue("@celular", mtbCelular.Text);
                             comandoUpdate.Parameters.AddWithValue("@email", tbEmail.Text);
-                            comandoUpdate.Parameters.AddWithValue("@peso", tbPeso.Text);
-                            comandoUpdate.Parameters.AddWithValue("@altura", tbAltura.Text);
+                            comandoUpdate.Parameters.AddWithValue("@rua", tbRua.Text);
+                            comandoUpdate.Parameters.AddWithValue("@numero", tbNumero.Text);
+                            comandoUpdate.Parameters.AddWithValue("@bairro", tbBairro.Text);
+                            comandoUpdate.Parameters.AddWithValue("@cidade", tbCidade.Text);
+                            comandoUpdate.Parameters.AddWithValue("@estado", cbEstado.Text);
 
                             conexao.Open();
                             comandoUpdate.CommandText = sqlUpdate;
@@ -260,23 +341,37 @@ namespace projetofinal
                         AlunoDAO alunoDAO = new AlunoDAO();
                         dgalunos.DataSource = alunoDAO.listarAlunos();
 
-                        tbMatricula.Clear();
+                        tbId.Clear();
                         tbNome.Clear();
                         mtbCpf.Clear();
                         tbIdade.Clear();
-                        tbEndereco.Clear();
                         mtbCelular.Clear();
                         tbEmail.Clear();
                         tbPeso.Clear();
                         tbAltura.Clear();
-                        tbMatricula.Enabled = false;
+                        tbRua.Clear();
+                        tbNumero.Clear();
+                        tbApto.Clear();
+                        tbBairro.Clear();
+                        tbCidade.Clear();
+                        cbEstado.SelectedIndex = 0;
+
                         tbNome.Enabled = false;
                         tbIdade.Enabled = false;
-                        tbEndereco.Enabled = false;
                         mtbCelular.Enabled = false;
                         tbEmail.Enabled = false;
                         tbPeso.Enabled = false;
                         tbAltura.Enabled = false;
+                        tbRua.Enabled = false;
+                        tbNumero.Enabled = false;
+                        tbApto.Enabled = false;
+                        tbBairro.Enabled = false;
+                        tbCidade.Enabled = false;
+                        cbEstado.Enabled = false;
+
+                        checkApto.Enabled = false;
+                        checkApto.Checked = false;
+
                         btEditar.Enabled = true;
                         btCancelar.Enabled = false;
                         btSalvar.Enabled = false;
@@ -287,6 +382,14 @@ namespace projetofinal
                 else
                     MessageBox.Show("Insira o CPF corretamente!", "Editar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void checkApto_CheckedChanged(object sender, EventArgs e)
+        {//change checkbox
+            if (checkApto.Checked == true)
+                tbApto.Enabled = true;
+            else
+                tbApto.Enabled = false;
         }
 
         #region Retornar

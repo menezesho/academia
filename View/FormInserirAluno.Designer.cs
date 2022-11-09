@@ -62,7 +62,7 @@
             this.mtbCelular.Size = new System.Drawing.Size(179, 34);
             this.mtbCelular.TabIndex = 135;
             this.mtbCelular.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            this.mtbCelular.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // mtbCpf
             // 
@@ -79,7 +79,7 @@
             this.mtbCpf.Size = new System.Drawing.Size(179, 34);
             this.mtbCpf.TabIndex = 134;
             this.mtbCpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            this.mtbCpf.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbcelular
             // 
@@ -148,7 +148,7 @@
             this.mtbData.Size = new System.Drawing.Size(153, 34);
             this.mtbData.TabIndex = 129;
             this.mtbData.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.mtbData.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePrompt;
+            this.mtbData.TextMaskFormat = System.Windows.Forms.MaskFormat.ExcludePromptAndLiterals;
             // 
             // lbHorario
             // 

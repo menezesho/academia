@@ -33,7 +33,7 @@ namespace academia
             AlunoDAO alunoDAO = new AlunoDAO();
             cbNome.DataSource = alunoDAO.listarAlunos();
             cbNome.DisplayMember = "Nome";
-            cbNome.ValueMember = "Matri";
+            cbNome.ValueMember = "ID";
 
             cbNome.Text = "Selecione";
             mtbCpf.Clear();
@@ -66,14 +66,14 @@ namespace academia
 
         private void btInserir_Click(object sender, EventArgs e)
         {//btInserir
-            if (mtbCpf.Text == "___________" || tbHora.Text == "")
-                MessageBox.Show("Preencha os campos vazios!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            if (mtbCpf.Text == "" || tbHora.Text == "")
+                MessageBox.Show("Preencha todos os campos!", "Inserir", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             else
             {
                 try
                 {
                     SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                    string sqlSelect = @"SELECT * FROM participante WHERE fkaula=@idaula AND fkaluno=@idaluno";
+                    string sqlSelect = @"SELECT * FROM participante WHERE id_aula=@idaula AND id_aluno=@idaluno";
                     SqlCommand comandoSelect = new SqlCommand(sqlSelect, conexao);
 
                     comandoSelect.Parameters.AddWithValue("@idaula", int.Parse(cbAula.SelectedValue.ToString()));
@@ -90,7 +90,7 @@ namespace academia
                     {
                         conexao.Close();
                         SqlConnection conexao2 = new SqlConnection(conec.ConexaoBD());
-                        string sqlInsert = @"INSERT INTO participante (fkaula, fkaluno) VALUES (@idaula, @idaluno)";
+                        string sqlInsert = @"INSERT INTO participante (id_aula, id_aluno) VALUES (@idaula, @idaluno)";
                         SqlCommand comandoInsert = new SqlCommand(sqlInsert, conexao2);
 
                         comandoInsert.Parameters.AddWithValue("@idaula", int.Parse(cbAula.SelectedValue.ToString()));
@@ -117,10 +117,10 @@ namespace academia
                 try
                 {
                     SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                    string sql = @"SELECT * FROM aluno WHERE matricula=@matricula";
+                    string sql = @"SELECT * FROM aluno WHERE idaluno=@idaluno";
                     SqlCommand comando = new SqlCommand(sql, conexao);
 
-                    comando.Parameters.AddWithValue("@matricula", int.Parse(cbNome.SelectedValue.ToString()));
+                    comando.Parameters.AddWithValue("@idaluno", int.Parse(cbNome.SelectedValue.ToString()));
 
                     conexao.Open();
                     comando.CommandText = sql;
@@ -147,10 +147,10 @@ namespace academia
                 try
                 {
                     SqlConnection conexao = new SqlConnection(conec.ConexaoBD());
-                    string sql = @"SELECT * FROM aula WHERE id=@id";
+                    string sql = @"SELECT * FROM aula WHERE idaula=@idaula";
                     SqlCommand comando = new SqlCommand(sql, conexao);
 
-                    comando.Parameters.AddWithValue("@id", int.Parse(cbAula.SelectedValue.ToString()));
+                    comando.Parameters.AddWithValue("@idaula", int.Parse(cbAula.SelectedValue.ToString()));
 
                     conexao.Open();
                     comando.CommandText = sql;
