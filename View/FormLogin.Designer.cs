@@ -50,7 +50,6 @@ namespace projetofinal
             // tbSenha
             // 
             this.tbSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tbSenha.BackColor = System.Drawing.Color.Lavender;
             this.tbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbSenha.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -67,7 +66,7 @@ namespace projetofinal
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(680, 21);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(414, 270);
+            this.pictureBox1.Size = new System.Drawing.Size(414, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
@@ -75,8 +74,9 @@ namespace projetofinal
             // btlogin
             // 
             this.btlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btlogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btlogin.BackColor = System.Drawing.Color.DimGray;
             this.btlogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btlogin.FlatAppearance.BorderSize = 2;
             this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btlogin.ForeColor = System.Drawing.Color.White;
@@ -92,7 +92,6 @@ namespace projetofinal
             // cbNome
             // 
             this.cbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbNome.BackColor = System.Drawing.Color.Lavender;
             this.cbNome.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbNome.FormattingEnabled = true;
@@ -116,7 +115,7 @@ namespace projetofinal
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Lavender;
+            this.pictureBox2.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox2.Location = new System.Drawing.Point(0, -1);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(503, 602);
@@ -127,7 +126,7 @@ namespace projetofinal
             // pictureBox3
             // 
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox3.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox3.BackColor = System.Drawing.Color.OldLace;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(634, 297);
             this.pictureBox3.Name = "pictureBox3";
@@ -139,7 +138,7 @@ namespace projetofinal
             // pictureBox4
             // 
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.Window;
+            this.pictureBox4.BackColor = System.Drawing.Color.OldLace;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
             this.pictureBox4.Location = new System.Drawing.Point(634, 362);
             this.pictureBox4.Name = "pictureBox4";
@@ -151,9 +150,9 @@ namespace projetofinal
             // lbAlunosCadastrados
             // 
             this.lbAlunosCadastrados.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.lbAlunosCadastrados.BackColor = System.Drawing.Color.Lavender;
+            this.lbAlunosCadastrados.BackColor = System.Drawing.Color.DimGray;
             this.lbAlunosCadastrados.Font = new System.Drawing.Font("Segoe UI Semibold", 25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbAlunosCadastrados.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbAlunosCadastrados.ForeColor = System.Drawing.Color.OldLace;
             this.lbAlunosCadastrados.Location = new System.Drawing.Point(0, 196);
             this.lbAlunosCadastrados.Name = "lbAlunosCadastrados";
             this.lbAlunosCadastrados.Size = new System.Drawing.Size(503, 73);
@@ -164,9 +163,9 @@ namespace projetofinal
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label1.BackColor = System.Drawing.Color.Lavender;
+            this.label1.BackColor = System.Drawing.Color.DimGray;
             this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.label1.ForeColor = System.Drawing.Color.OldLace;
             this.label1.Location = new System.Drawing.Point(0, 332);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(503, 63);
@@ -177,7 +176,7 @@ namespace projetofinal
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label2.BackColor = System.Drawing.Color.Lavender;
+            this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(0, 284);
@@ -191,7 +190,7 @@ namespace projetofinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1209, 599);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);

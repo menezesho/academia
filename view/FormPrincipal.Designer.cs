@@ -47,11 +47,12 @@ namespace projetofinal
             // btCadAluno
             // 
             this.btCadAluno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btCadAluno.BackColor = System.Drawing.Color.GhostWhite;
+            this.btCadAluno.BackColor = System.Drawing.Color.White;
             this.btCadAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCadAluno.FlatAppearance.BorderSize = 2;
             this.btCadAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCadAluno.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btCadAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btCadAluno.ForeColor = System.Drawing.Color.DimGray;
             this.btCadAluno.Image = ((System.Drawing.Image)(resources.GetObject("btCadAluno.Image")));
             this.btCadAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCadAluno.Location = new System.Drawing.Point(140, 264);
@@ -68,11 +69,12 @@ namespace projetofinal
             // btEditarAluno
             // 
             this.btEditarAluno.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEditarAluno.BackColor = System.Drawing.Color.GhostWhite;
+            this.btEditarAluno.BackColor = System.Drawing.Color.White;
             this.btEditarAluno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditarAluno.FlatAppearance.BorderSize = 2;
             this.btEditarAluno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditarAluno.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditarAluno.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btEditarAluno.ForeColor = System.Drawing.Color.DimGray;
             this.btEditarAluno.Image = ((System.Drawing.Image)(resources.GetObject("btEditarAluno.Image")));
             this.btEditarAluno.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEditarAluno.Location = new System.Drawing.Point(349, 264);
@@ -89,11 +91,12 @@ namespace projetofinal
             // btEditarProf
             // 
             this.btEditarProf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btEditarProf.BackColor = System.Drawing.Color.GhostWhite;
+            this.btEditarProf.BackColor = System.Drawing.Color.White;
             this.btEditarProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditarProf.FlatAppearance.BorderSize = 2;
             this.btEditarProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditarProf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditarProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btEditarProf.ForeColor = System.Drawing.Color.DimGray;
             this.btEditarProf.Image = ((System.Drawing.Image)(resources.GetObject("btEditarProf.Image")));
             this.btEditarProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btEditarProf.Location = new System.Drawing.Point(349, 170);
@@ -110,11 +113,12 @@ namespace projetofinal
             // btCadProf
             // 
             this.btCadProf.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btCadProf.BackColor = System.Drawing.Color.GhostWhite;
+            this.btCadProf.BackColor = System.Drawing.Color.White;
             this.btCadProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCadProf.FlatAppearance.BorderSize = 2;
             this.btCadProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCadProf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btCadProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btCadProf.ForeColor = System.Drawing.Color.DimGray;
             this.btCadProf.Image = ((System.Drawing.Image)(resources.GetObject("btCadProf.Image")));
             this.btCadProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btCadProf.Location = new System.Drawing.Point(140, 170);
@@ -133,7 +137,7 @@ namespace projetofinal
             this.lbSair.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbSair.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbSair.Image = ((System.Drawing.Image)(resources.GetObject("lbSair.Image")));
-            this.lbSair.Location = new System.Drawing.Point(1112, 567);
+            this.lbSair.Location = new System.Drawing.Point(1112, 581);
             this.lbSair.Name = "lbSair";
             this.lbSair.Size = new System.Drawing.Size(40, 37);
             this.lbSair.TabIndex = 37;
@@ -142,11 +146,12 @@ namespace projetofinal
             // lbEditarAula
             // 
             this.lbEditarAula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbEditarAula.BackColor = System.Drawing.Color.GhostWhite;
+            this.lbEditarAula.BackColor = System.Drawing.Color.White;
             this.lbEditarAula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbEditarAula.FlatAppearance.BorderSize = 2;
             this.lbEditarAula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbEditarAula.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbEditarAula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbEditarAula.ForeColor = System.Drawing.Color.DimGray;
             this.lbEditarAula.Image = ((System.Drawing.Image)(resources.GetObject("lbEditarAula.Image")));
             this.lbEditarAula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbEditarAula.Location = new System.Drawing.Point(349, 76);
@@ -163,11 +168,12 @@ namespace projetofinal
             // lbInserirAula
             // 
             this.lbInserirAula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbInserirAula.BackColor = System.Drawing.Color.GhostWhite;
+            this.lbInserirAula.BackColor = System.Drawing.Color.White;
             this.lbInserirAula.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbInserirAula.FlatAppearance.BorderSize = 2;
             this.lbInserirAula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbInserirAula.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbInserirAula.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbInserirAula.ForeColor = System.Drawing.Color.DimGray;
             this.lbInserirAula.Image = ((System.Drawing.Image)(resources.GetObject("lbInserirAula.Image")));
             this.lbInserirAula.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.lbInserirAula.Location = new System.Drawing.Point(140, 76);
@@ -186,9 +192,10 @@ namespace projetofinal
             this.btInserir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btInserir.BackColor = System.Drawing.Color.GhostWhite;
             this.btInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInserir.FlatAppearance.BorderSize = 2;
             this.btInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInserir.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btInserir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btInserir.ForeColor = System.Drawing.Color.DimGray;
             this.btInserir.Image = ((System.Drawing.Image)(resources.GetObject("btInserir.Image")));
             this.btInserir.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btInserir.Location = new System.Drawing.Point(172, 401);
@@ -218,9 +225,10 @@ namespace projetofinal
             this.btInserirProf.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btInserirProf.BackColor = System.Drawing.Color.GhostWhite;
             this.btInserirProf.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInserirProf.FlatAppearance.BorderSize = 2;
             this.btInserirProf.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInserirProf.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btInserirProf.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btInserirProf.ForeColor = System.Drawing.Color.DimGray;
             this.btInserirProf.Image = ((System.Drawing.Image)(resources.GetObject("btInserirProf.Image")));
             this.btInserirProf.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btInserirProf.Location = new System.Drawing.Point(172, 478);
@@ -237,9 +245,11 @@ namespace projetofinal
             // lbAula
             // 
             this.lbAula.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbAula.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbAula.BackColor = System.Drawing.Color.DimGray;
+            this.lbAula.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbAula.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbAula.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbAula.ForeColor = System.Drawing.Color.Lavender;
+            this.lbAula.ForeColor = System.Drawing.Color.White;
             this.lbAula.Location = new System.Drawing.Point(140, 357);
             this.lbAula.Name = "lbAula";
             this.lbAula.Size = new System.Drawing.Size(402, 208);
@@ -251,7 +261,7 @@ namespace projetofinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1164, 627);
             this.Controls.Add(this.btInserirProf);
             this.Controls.Add(this.pictureBox1);
