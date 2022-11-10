@@ -40,7 +40,6 @@ namespace projetofinal
             this.btExcluir = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
             this.btEditar = new System.Windows.Forms.Button();
-            this.btbuscar = new System.Windows.Forms.Button();
             this.lbbusca = new System.Windows.Forms.Label();
             this.tbBusca = new System.Windows.Forms.TextBox();
             this.tbId = new System.Windows.Forms.TextBox();
@@ -70,6 +69,7 @@ namespace projetofinal
             this.lbnome = new System.Windows.Forms.Label();
             this.lbSenha = new System.Windows.Forms.Label();
             this.tbSenha = new System.Windows.Forms.TextBox();
+            this.btbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgprofs)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,13 +92,13 @@ namespace projetofinal
             this.dgprofs.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgprofs.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgprofs.BackgroundColor = System.Drawing.Color.OldLace;
             this.dgprofs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgprofs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -107,7 +107,7 @@ namespace projetofinal
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgprofs.DefaultCellStyle = dataGridViewCellStyle2;
@@ -119,7 +119,7 @@ namespace projetofinal
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightGray;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgprofs.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -216,21 +216,6 @@ namespace projetofinal
             this.btEditar.UseVisualStyleBackColor = false;
             this.btEditar.Click += new System.EventHandler(this.btEditar_Click);
             // 
-            // btbuscar
-            // 
-            this.btbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btbuscar.FlatAppearance.BorderSize = 0;
-            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btbuscar.Image")));
-            this.btbuscar.Location = new System.Drawing.Point(1336, 77);
-            this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(46, 38);
-            this.btbuscar.TabIndex = 87;
-            this.btbuscar.UseVisualStyleBackColor = true;
-            this.btbuscar.TextChanged += new System.EventHandler(this.tbBusca_TextChanged);
-            // 
             // lbbusca
             // 
             this.lbbusca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -255,7 +240,7 @@ namespace projetofinal
             this.tbBusca.ForeColor = System.Drawing.Color.DimGray;
             this.tbBusca.Location = new System.Drawing.Point(612, 82);
             this.tbBusca.Name = "tbBusca";
-            this.tbBusca.Size = new System.Drawing.Size(724, 34);
+            this.tbBusca.Size = new System.Drawing.Size(729, 34);
             this.tbBusca.TabIndex = 12;
             this.tbBusca.TextChanged += new System.EventHandler(this.tbBusca_TextChanged);
             // 
@@ -639,12 +624,29 @@ namespace projetofinal
             this.tbSenha.TabIndex = 161;
             this.tbSenha.UseSystemPasswordChar = true;
             // 
+            // btbuscar
+            // 
+            this.btbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btbuscar.BackgroundImage")));
+            this.btbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btbuscar.FlatAppearance.BorderSize = 0;
+            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbuscar.Location = new System.Drawing.Point(1347, 82);
+            this.btbuscar.Name = "btbuscar";
+            this.btbuscar.Size = new System.Drawing.Size(35, 34);
+            this.btbuscar.TabIndex = 164;
+            this.btbuscar.UseVisualStyleBackColor = true;
+            this.btbuscar.Click += new System.EventHandler(this.tbBusca_TextChanged);
+            // 
             // FormEditProf
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1492, 878);
+            this.Controls.Add(this.btbuscar);
             this.Controls.Add(this.lbSenha);
             this.Controls.Add(this.tbSenha);
             this.Controls.Add(this.tbId);
@@ -672,7 +674,6 @@ namespace projetofinal
             this.Controls.Add(this.lbidade);
             this.Controls.Add(this.lbcpf);
             this.Controls.Add(this.lbnome);
-            this.Controls.Add(this.btbuscar);
             this.Controls.Add(this.lbbusca);
             this.Controls.Add(this.tbBusca);
             this.Controls.Add(this.btCancelar);
@@ -688,7 +689,7 @@ namespace projetofinal
             this.Name = "FormEditProf";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ajustes";
+            this.Text = "Ajustes de Professor";
             this.Load += new System.EventHandler(this.FormEditProf_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormEditProf_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgprofs)).EndInit();
@@ -705,7 +706,6 @@ namespace projetofinal
         private System.Windows.Forms.Button btExcluir;
         private System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.Button btEditar;
-        private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.Label lbbusca;
         private System.Windows.Forms.TextBox tbBusca;
         private System.Windows.Forms.TextBox tbId;
@@ -735,5 +735,6 @@ namespace projetofinal
         private System.Windows.Forms.Label lbnome;
         private System.Windows.Forms.Label lbSenha;
         private System.Windows.Forms.TextBox tbSenha;
+        private System.Windows.Forms.Button btbuscar;
     }
 }

@@ -46,10 +46,10 @@
             this.btExcluir = new System.Windows.Forms.Button();
             this.btSalvar = new System.Windows.Forms.Button();
             this.btEditar = new System.Windows.Forms.Button();
-            this.btbuscar = new System.Windows.Forms.Button();
             this.lbbusca = new System.Windows.Forms.Label();
             this.tbBusca = new System.Windows.Forms.TextBox();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
+            this.btbuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgaulas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +59,7 @@
             this.tbId.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbId.Enabled = false;
             this.tbId.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbId.ForeColor = System.Drawing.Color.DimGray;
             this.tbId.Location = new System.Drawing.Point(262, 176);
             this.tbId.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbId.MaxLength = 3;
@@ -73,7 +73,7 @@
             this.lbId.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbId.AutoSize = true;
             this.lbId.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbId.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbId.ForeColor = System.Drawing.Color.DimGray;
             this.lbId.Location = new System.Drawing.Point(279, 141);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(38, 31);
@@ -83,10 +83,9 @@
             // tbNome
             // 
             this.tbNome.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.tbNome.BackColor = System.Drawing.Color.White;
             this.tbNome.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbNome.ForeColor = System.Drawing.Color.DimGray;
             this.tbNome.Location = new System.Drawing.Point(110, 269);
             this.tbNome.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbNome.MaxLength = 100;
@@ -99,7 +98,7 @@
             this.lbnome.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbnome.AutoSize = true;
             this.lbnome.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbnome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbnome.ForeColor = System.Drawing.Color.DimGray;
             this.lbnome.Location = new System.Drawing.Point(110, 234);
             this.lbnome.Name = "lbnome";
             this.lbnome.Size = new System.Drawing.Size(77, 31);
@@ -110,7 +109,7 @@
             // 
             this.lbAulasAgendadas.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbAulasAgendadas.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbAulasAgendadas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbAulasAgendadas.ForeColor = System.Drawing.Color.DimGray;
             this.lbAulasAgendadas.Location = new System.Drawing.Point(578, 151);
             this.lbAulasAgendadas.Name = "lbAulasAgendadas";
             this.lbAulasAgendadas.Size = new System.Drawing.Size(654, 45);
@@ -125,13 +124,13 @@
             this.dgaulas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgaulas.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgaulas.BackgroundColor = System.Drawing.Color.OldLace;
             this.dgaulas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgaulas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -140,7 +139,7 @@
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgaulas.DefaultCellStyle = dataGridViewCellStyle2;
@@ -152,7 +151,7 @@
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgaulas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
@@ -166,11 +165,11 @@
             // cbHora
             // 
             this.cbHora.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.cbHora.BackColor = System.Drawing.Color.White;
             this.cbHora.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbHora.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbHora.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cbHora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbHora.ForeColor = System.Drawing.Color.DimGray;
             this.cbHora.FormattingEnabled = true;
             this.cbHora.Items.AddRange(new object[] {
             "Selecione",
@@ -195,7 +194,7 @@
             this.lbHorario.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbHorario.AutoSize = true;
             this.lbHorario.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbHorario.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbHorario.ForeColor = System.Drawing.Color.DimGray;
             this.lbHorario.Location = new System.Drawing.Point(332, 326);
             this.lbHorario.Name = "lbHorario";
             this.lbHorario.Size = new System.Drawing.Size(95, 31);
@@ -207,7 +206,7 @@
             this.lbData.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lbData.AutoSize = true;
             this.lbData.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbData.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbData.ForeColor = System.Drawing.Color.DimGray;
             this.lbData.Location = new System.Drawing.Point(110, 326);
             this.lbData.Name = "lbData";
             this.lbData.Size = new System.Drawing.Size(65, 31);
@@ -228,11 +227,12 @@
             // btCancelar
             // 
             this.btCancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btCancelar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btCancelar.BackColor = System.Drawing.Color.White;
             this.btCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCancelar.FlatAppearance.BorderSize = 2;
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btCancelar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btCancelar.ForeColor = System.Drawing.Color.DimGray;
             this.btCancelar.Location = new System.Drawing.Point(280, 444);
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
@@ -245,11 +245,12 @@
             // btExcluir
             // 
             this.btExcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btExcluir.BackColor = System.Drawing.Color.GhostWhite;
+            this.btExcluir.BackColor = System.Drawing.Color.White;
             this.btExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btExcluir.FlatAppearance.BorderSize = 2;
             this.btExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btExcluir.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btExcluir.ForeColor = System.Drawing.Color.DimGray;
             this.btExcluir.Image = ((System.Drawing.Image)(resources.GetObject("btExcluir.Image")));
             this.btExcluir.Location = new System.Drawing.Point(193, 444);
             this.btExcluir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -261,8 +262,9 @@
             // btSalvar
             // 
             this.btSalvar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btSalvar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btSalvar.BackColor = System.Drawing.Color.DimGray;
             this.btSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSalvar.FlatAppearance.BorderSize = 2;
             this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btSalvar.ForeColor = System.Drawing.Color.White;
@@ -278,11 +280,12 @@
             // btEditar
             // 
             this.btEditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.btEditar.BackColor = System.Drawing.Color.GhostWhite;
+            this.btEditar.BackColor = System.Drawing.Color.White;
             this.btEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditar.FlatAppearance.BorderSize = 2;
             this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btEditar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.btEditar.ForeColor = System.Drawing.Color.DimGray;
             this.btEditar.Image = ((System.Drawing.Image)(resources.GetObject("btEditar.Image")));
             this.btEditar.Location = new System.Drawing.Point(110, 444);
             this.btEditar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -291,20 +294,6 @@
             this.btEditar.TabIndex = 87;
             this.btEditar.UseVisualStyleBackColor = false;
             // 
-            // btbuscar
-            // 
-            this.btbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
-            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btbuscar.FlatAppearance.BorderSize = 0;
-            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btbuscar.Image")));
-            this.btbuscar.Location = new System.Drawing.Point(1186, 91);
-            this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(46, 38);
-            this.btbuscar.TabIndex = 91;
-            this.btbuscar.UseVisualStyleBackColor = true;
-            // 
             // lbbusca
             // 
             this.lbbusca.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -312,7 +301,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lbbusca.AutoSize = true;
             this.lbbusca.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lbbusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(138)))), ((int)(((byte)(196)))));
+            this.lbbusca.ForeColor = System.Drawing.Color.DimGray;
             this.lbbusca.Location = new System.Drawing.Point(561, 57);
             this.lbbusca.Name = "lbbusca";
             this.lbbusca.Size = new System.Drawing.Size(74, 31);
@@ -326,10 +315,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tbBusca.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbBusca.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tbBusca.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tbBusca.ForeColor = System.Drawing.Color.DimGray;
             this.tbBusca.Location = new System.Drawing.Point(561, 94);
             this.tbBusca.Name = "tbBusca";
-            this.tbBusca.Size = new System.Drawing.Size(625, 34);
+            this.tbBusca.Size = new System.Drawing.Size(630, 34);
             this.tbBusca.TabIndex = 93;
             // 
             // dtpData
@@ -347,14 +336,29 @@
             this.dtpData.TabIndex = 94;
             this.dtpData.Value = new System.DateTime(2022, 10, 31, 0, 0, 0, 0);
             // 
+            // btbuscar
+            // 
+            this.btbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btbuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btbuscar.BackgroundImage")));
+            this.btbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btbuscar.FlatAppearance.BorderSize = 0;
+            this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btbuscar.Location = new System.Drawing.Point(1197, 94);
+            this.btbuscar.Name = "btbuscar";
+            this.btbuscar.Size = new System.Drawing.Size(35, 34);
+            this.btbuscar.TabIndex = 95;
+            this.btbuscar.UseVisualStyleBackColor = true;
+            // 
             // FormEditAula
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Lavender;
+            this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1346, 766);
-            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.btbuscar);
+            this.Controls.Add(this.dtpData);
             this.Controls.Add(this.lbbusca);
             this.Controls.Add(this.tbBusca);
             this.Controls.Add(this.btCancelar);
@@ -377,7 +381,7 @@
             this.Name = "FormEditAula";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ajustes";
+            this.Text = "Ajustes de Aula";
             this.Load += new System.EventHandler(this.FormEditAula_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormEditAula_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgaulas)).EndInit();
@@ -402,9 +406,9 @@
         private System.Windows.Forms.Button btExcluir;
         private System.Windows.Forms.Button btSalvar;
         private System.Windows.Forms.Button btEditar;
-        private System.Windows.Forms.Button btbuscar;
         private System.Windows.Forms.Label lbbusca;
         private System.Windows.Forms.TextBox tbBusca;
         private System.Windows.Forms.DateTimePicker dtpData;
+        private System.Windows.Forms.Button btbuscar;
     }
 }

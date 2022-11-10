@@ -227,7 +227,7 @@
             this.Name = "FormCadAula";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar";
+            this.Text = "Cadastrar Aula";
             this.Load += new System.EventHandler(this.FormCadAula_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadAula_KeyDown);
             this.ResumeLayout(false);

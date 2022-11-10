@@ -579,7 +579,7 @@ namespace projetofinal
             this.Name = "FormCadAluno";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cadastrar";
+            this.Text = "Cadastrar Aluno";
             this.Load += new System.EventHandler(this.FormCadAluno_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormCadAluno_KeyDown);
             this.ResumeLayout(false);

@@ -50,11 +50,12 @@
             // mtbCelular
             // 
             this.mtbCelular.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbCelular.BackColor = System.Drawing.Color.White;
             this.mtbCelular.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCelular.Enabled = false;
             this.mtbCelular.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mtbCelular.ForeColor = System.Drawing.Color.DimGray;
-            this.mtbCelular.Location = new System.Drawing.Point(300, 282);
+            this.mtbCelular.Location = new System.Drawing.Point(352, 312);
             this.mtbCelular.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbCelular.Mask = "(00) 00000-0000";
             this.mtbCelular.Name = "mtbCelular";
@@ -66,11 +67,12 @@
             // mtbCpf
             // 
             this.mtbCpf.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbCpf.BackColor = System.Drawing.Color.White;
             this.mtbCpf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCpf.Enabled = false;
             this.mtbCpf.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mtbCpf.ForeColor = System.Drawing.Color.DimGray;
-            this.mtbCpf.Location = new System.Drawing.Point(102, 282);
+            this.mtbCpf.Location = new System.Drawing.Point(154, 312);
             this.mtbCpf.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbCpf.Mask = "000,000,000-00";
             this.mtbCpf.Name = "mtbCpf";
@@ -85,7 +87,7 @@
             this.lbcelular.AutoSize = true;
             this.lbcelular.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lbcelular.ForeColor = System.Drawing.Color.DimGray;
-            this.lbcelular.Location = new System.Drawing.Point(300, 247);
+            this.lbcelular.Location = new System.Drawing.Point(352, 277);
             this.lbcelular.Name = "lbcelular";
             this.lbcelular.Size = new System.Drawing.Size(90, 31);
             this.lbcelular.TabIndex = 121;
@@ -97,7 +99,7 @@
             this.lbcpf.AutoSize = true;
             this.lbcpf.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lbcpf.ForeColor = System.Drawing.Color.DimGray;
-            this.lbcpf.Location = new System.Drawing.Point(102, 247);
+            this.lbcpf.Location = new System.Drawing.Point(154, 277);
             this.lbcpf.Name = "lbcpf";
             this.lbcpf.Size = new System.Drawing.Size(55, 31);
             this.lbcpf.TabIndex = 120;
@@ -108,7 +110,7 @@
             this.lbInserirProfessor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lbInserirProfessor.Font = new System.Drawing.Font("Segoe UI Semibold", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.lbInserirProfessor.ForeColor = System.Drawing.Color.DimGray;
-            this.lbInserirProfessor.Location = new System.Drawing.Point(102, 69);
+            this.lbInserirProfessor.Location = new System.Drawing.Point(154, 99);
             this.lbInserirProfessor.Name = "lbInserirProfessor";
             this.lbInserirProfessor.Size = new System.Drawing.Size(697, 45);
             this.lbInserirProfessor.TabIndex = 117;
@@ -118,11 +120,12 @@
             // tbHora
             // 
             this.tbHora.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.tbHora.BackColor = System.Drawing.Color.White;
             this.tbHora.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.tbHora.Enabled = false;
             this.tbHora.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbHora.ForeColor = System.Drawing.Color.DimGray;
-            this.tbHora.Location = new System.Drawing.Point(704, 282);
+            this.tbHora.Location = new System.Drawing.Point(756, 312);
             this.tbHora.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbHora.MaxLength = 100;
             this.tbHora.Name = "tbHora";
@@ -133,11 +136,12 @@
             // mtbData
             // 
             this.mtbData.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.mtbData.BackColor = System.Drawing.Color.White;
             this.mtbData.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbData.Enabled = false;
             this.mtbData.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.mtbData.ForeColor = System.Drawing.Color.DimGray;
-            this.mtbData.Location = new System.Drawing.Point(525, 282);
+            this.mtbData.Location = new System.Drawing.Point(577, 312);
             this.mtbData.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.mtbData.Mask = "00/00/0000";
             this.mtbData.Name = "mtbData";
@@ -152,7 +156,7 @@
             this.lbHorario.AutoSize = true;
             this.lbHorario.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lbHorario.ForeColor = System.Drawing.Color.DimGray;
-            this.lbHorario.Location = new System.Drawing.Point(704, 247);
+            this.lbHorario.Location = new System.Drawing.Point(756, 277);
             this.lbHorario.Name = "lbHorario";
             this.lbHorario.Size = new System.Drawing.Size(95, 31);
             this.lbHorario.TabIndex = 115;
@@ -164,7 +168,7 @@
             this.lbData.AutoSize = true;
             this.lbData.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lbData.ForeColor = System.Drawing.Color.DimGray;
-            this.lbData.Location = new System.Drawing.Point(525, 247);
+            this.lbData.Location = new System.Drawing.Point(577, 277);
             this.lbData.Name = "lbData";
             this.lbData.Size = new System.Drawing.Size(65, 31);
             this.lbData.TabIndex = 114;
@@ -175,10 +179,11 @@
             this.btCancelar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btCancelar.BackColor = System.Drawing.Color.White;
             this.btCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCancelar.FlatAppearance.BorderSize = 2;
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCancelar.ForeColor = System.Drawing.Color.DimGray;
-            this.btCancelar.Location = new System.Drawing.Point(102, 364);
+            this.btCancelar.Location = new System.Drawing.Point(154, 394);
             this.btCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btCancelar.Name = "btCancelar";
             this.btCancelar.Size = new System.Drawing.Size(228, 45);
@@ -193,10 +198,11 @@
             this.btLimpar.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btLimpar.BackColor = System.Drawing.Color.White;
             this.btLimpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btLimpar.FlatAppearance.BorderSize = 2;
             this.btLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btLimpar.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btLimpar.ForeColor = System.Drawing.Color.DimGray;
-            this.btLimpar.Location = new System.Drawing.Point(337, 364);
+            this.btLimpar.Location = new System.Drawing.Point(389, 394);
             this.btLimpar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btLimpar.Name = "btLimpar";
             this.btLimpar.Size = new System.Drawing.Size(228, 45);
@@ -211,10 +217,11 @@
             this.btInserir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btInserir.BackColor = System.Drawing.Color.DimGray;
             this.btInserir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btInserir.FlatAppearance.BorderSize = 2;
             this.btInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btInserir.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btInserir.ForeColor = System.Drawing.Color.White;
-            this.btInserir.Location = new System.Drawing.Point(571, 364);
+            this.btInserir.Location = new System.Drawing.Point(623, 394);
             this.btInserir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btInserir.Name = "btInserir";
             this.btInserir.Size = new System.Drawing.Size(228, 45);
@@ -230,7 +237,7 @@
             this.lb2.AutoSize = true;
             this.lb2.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lb2.ForeColor = System.Drawing.Color.DimGray;
-            this.lb2.Location = new System.Drawing.Point(525, 154);
+            this.lb2.Location = new System.Drawing.Point(577, 184);
             this.lb2.Name = "lb2";
             this.lb2.Size = new System.Drawing.Size(62, 31);
             this.lb2.TabIndex = 109;
@@ -247,7 +254,7 @@
             this.cbAula.FormattingEnabled = true;
             this.cbAula.Items.AddRange(new object[] {
             "Selecione"});
-            this.cbAula.Location = new System.Drawing.Point(525, 188);
+            this.cbAula.Location = new System.Drawing.Point(577, 218);
             this.cbAula.Name = "cbAula";
             this.cbAula.Size = new System.Drawing.Size(274, 36);
             this.cbAula.TabIndex = 108;
@@ -259,7 +266,7 @@
             this.lb1.AutoSize = true;
             this.lb1.Font = new System.Drawing.Font("Segoe UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
             this.lb1.ForeColor = System.Drawing.Color.DimGray;
-            this.lb1.Location = new System.Drawing.Point(102, 154);
+            this.lb1.Location = new System.Drawing.Point(154, 184);
             this.lb1.Name = "lb1";
             this.lb1.Size = new System.Drawing.Size(77, 31);
             this.lb1.TabIndex = 107;
@@ -274,7 +281,7 @@
             this.cbNome.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbNome.ForeColor = System.Drawing.Color.DimGray;
             this.cbNome.FormattingEnabled = true;
-            this.cbNome.Location = new System.Drawing.Point(102, 188);
+            this.cbNome.Location = new System.Drawing.Point(154, 218);
             this.cbNome.Name = "cbNome";
             this.cbNome.Size = new System.Drawing.Size(377, 36);
             this.cbNome.TabIndex = 106;
@@ -285,7 +292,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(904, 480);
+            this.ClientSize = new System.Drawing.Size(1008, 541);
             this.Controls.Add(this.mtbCelular);
             this.Controls.Add(this.mtbCpf);
             this.Controls.Add(this.lbcelular);
@@ -303,9 +310,11 @@
             this.Controls.Add(this.lb1);
             this.Controls.Add(this.cbNome);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(1026, 588);
             this.Name = "FormInserirProf";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Inserir";
+            this.Text = "Inscrever Professor";
             this.Load += new System.EventHandler(this.FormInserirProf_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

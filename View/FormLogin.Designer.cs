@@ -32,7 +32,7 @@ namespace projetofinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.tbSenha = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btlogin = new System.Windows.Forms.Button();
+            this.btLogin = new System.Windows.Forms.Button();
             this.cbNome = new System.Windows.Forms.ComboBox();
             this.lbSair = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -51,12 +51,12 @@ namespace projetofinal
             // 
             this.tbSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tbSenha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.tbSenha.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.tbSenha.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tbSenha.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tbSenha.Location = new System.Drawing.Point(680, 362);
+            this.tbSenha.Location = new System.Drawing.Point(680, 365);
             this.tbSenha.MaxLength = 30;
             this.tbSenha.Name = "tbSenha";
-            this.tbSenha.Size = new System.Drawing.Size(414, 43);
+            this.tbSenha.Size = new System.Drawing.Size(414, 39);
             this.tbSenha.TabIndex = 2;
             this.tbSenha.UseSystemPasswordChar = true;
             // 
@@ -64,42 +64,42 @@ namespace projetofinal
             // 
             this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(680, 21);
+            this.pictureBox1.Location = new System.Drawing.Point(680, 29);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(414, 300);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // btlogin
+            // btLogin
             // 
-            this.btlogin.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btlogin.BackColor = System.Drawing.Color.DimGray;
-            this.btlogin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btlogin.FlatAppearance.BorderSize = 2;
-            this.btlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btlogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btlogin.ForeColor = System.Drawing.Color.White;
-            this.btlogin.Location = new System.Drawing.Point(760, 448);
-            this.btlogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btlogin.Name = "btlogin";
-            this.btlogin.Size = new System.Drawing.Size(256, 59);
-            this.btlogin.TabIndex = 0;
-            this.btlogin.Text = "Login";
-            this.btlogin.UseVisualStyleBackColor = false;
-            this.btlogin.Click += new System.EventHandler(this.btLogin_Click);
+            this.btLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btLogin.BackColor = System.Drawing.Color.DimGray;
+            this.btLogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btLogin.FlatAppearance.BorderSize = 2;
+            this.btLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btLogin.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btLogin.ForeColor = System.Drawing.Color.White;
+            this.btLogin.Location = new System.Drawing.Point(760, 442);
+            this.btLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btLogin.Name = "btLogin";
+            this.btLogin.Size = new System.Drawing.Size(256, 59);
+            this.btLogin.TabIndex = 0;
+            this.btLogin.Text = "Login";
+            this.btLogin.UseVisualStyleBackColor = false;
+            this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
             // cbNome
             // 
             this.cbNome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.cbNome.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cbNome.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.cbNome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.cbNome.FormattingEnabled = true;
             this.cbNome.Items.AddRange(new object[] {
             "Selecione"});
-            this.cbNome.Location = new System.Drawing.Point(680, 297);
+            this.cbNome.Location = new System.Drawing.Point(680, 305);
             this.cbNome.Name = "cbNome";
-            this.cbNome.Size = new System.Drawing.Size(414, 45);
+            this.cbNome.Size = new System.Drawing.Size(414, 39);
             this.cbNome.TabIndex = 1;
             // 
             // lbSair
@@ -115,6 +115,8 @@ namespace projetofinal
             // 
             // pictureBox2
             // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.pictureBox2.BackColor = System.Drawing.Color.DimGray;
             this.pictureBox2.Location = new System.Drawing.Point(0, -1);
             this.pictureBox2.Name = "pictureBox2";
@@ -128,9 +130,9 @@ namespace projetofinal
             this.pictureBox3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox3.BackColor = System.Drawing.Color.OldLace;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(634, 297);
+            this.pictureBox3.Location = new System.Drawing.Point(634, 305);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 45);
+            this.pictureBox3.Size = new System.Drawing.Size(40, 39);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 50;
             this.pictureBox3.TabStop = false;
@@ -140,9 +142,9 @@ namespace projetofinal
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.OldLace;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(634, 362);
+            this.pictureBox4.Location = new System.Drawing.Point(634, 365);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 45);
+            this.pictureBox4.Size = new System.Drawing.Size(40, 39);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 51;
             this.pictureBox4.TabStop = false;
@@ -200,7 +202,7 @@ namespace projetofinal
             this.Controls.Add(this.lbSair);
             this.Controls.Add(this.tbSenha);
             this.Controls.Add(this.cbNome);
-            this.Controls.Add(this.btlogin);
+            this.Controls.Add(this.btLogin);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox2);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -223,7 +225,7 @@ namespace projetofinal
         #endregion
         private System.Windows.Forms.TextBox tbSenha;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btlogin;
+        private System.Windows.Forms.Button btLogin;
         private System.Windows.Forms.ComboBox cbNome;
         private System.Windows.Forms.Label lbSair;
         private System.Windows.Forms.PictureBox pictureBox2;

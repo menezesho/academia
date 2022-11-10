@@ -67,32 +67,6 @@
         RiQ8IQnIsyCrWaotIyJRHaotQyQ8+C+KIq1CtUIBw/ACGp2aUJzn2xkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="btExcluir.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGPC/xhBQAAAblJREFUWEft
-        l7FugzAQhpnbzpkq9R06MeYZspMJRQk8VoZILIg3YSJjhj5AHqH9f3QWjTljOxBlyS99clvf3X9ywTbJ
-        S3NVluXX4XBI9/v9Gj9/Y1zJ1GMFowzGNbiCX5uiKH4wHjFuJGU5oXAOLsYsBDR8RjNbKXG/UOQDBSvb
-        IJJTlmXvUjJOeZ5/okBrFbyXlvWkdJhkBZZqwNCyrlj4hYS5/wIXlVhMC4F8CLUCS5GLlVsIUt+Cpml6
-        tDkbT+xFrHTJPqAl9kUpXyMhcfQRy7EQwI1ITSQ+g5AGhFosx8KkuhP+x2UU0QC5iuWt5CzQEkbYhpEN
-        9NBPrAdhIrUDpzDGXdf1Y0wDQirWg/CwrJXASUwDHLX5Kegn1oN4HGvBLh61EislUMU0YIzt30NQnwkK
-        ezvvA2qSwWUY2Yj+dlCYPFrBN/iMIhpx7xNYiY2S0BNqEBI3uWNSCDhriSzqa8DgiZ0+OyisxlZJXBL/
-        KUoh8GQlLkXYfYLa7XZvSHjuzYp6+h3TiJ2jwNyrXhW9AppQKPq7AzA+7CGMEd9vFHZ+gQH+vfbuA0tJ
-        7h/9tyhH51nwUrCS5A/Gc7SEIZK55AAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btEditar.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGPC/xhBQAAAcxJREFUWEft
-        V7tKxEAUXcEvsLUQLKz9Ay0s/AlRWYtNYrGPfgmYbfyAZbFLoYWfYKGChVtuvYoI9mIldvHccCPJndw8
-        yAOLPXCYycyZOYeZ2Um2s8IKeej1eieWZT1U4Xw+/xiPxz+Y62U0Gm3x1MWBSR7BoAqXy2X8+bt0EAyq
-        OwSxXBAMaCIEsXgQiI0Qg8EgGA6HKqVeCUEsFgTCRAgKkAfP8+JGWSGIr2ylAyJjJabTaTCbzVRKfVaI
-        fr8fsJUOCCufCd/3wyAa2UoHJqkcIo9spQOiVYgQEBkh6PRPJpPSlL+aiGylA6JECLoHqiDlHlmwlQ6I
-        Gl0J27Z32UoHhI2dCQRw2SYbEDcVYgHudbvdDbbSAWEjIWgbUN6Dn6ifs106IKo9BG0DylPR/oyPnn22
-        TQKdRoi8d4ekGL9wXXcd5btof2JLE+hMhCjyFpWg0NF43oaL6DnGA7Y0gU5jJfK+JySjcbQNjuPsxOdi
-        +myXDgjqOhPhpYTyWrQTt0MzDRDUEoK2ATxMac+/KyCsHCIyQv1S9L2heY36MsH/O+RJLsO/dwPmuhJ9
-        x9zVHmB6y+Zf4Bk3twtsyx1W4wbc5Kb2AfMjrv53dDq/XI62vUEv+tUAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="btbuscar.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACEAAAAhCAYAAABX5MJvAAAABGdBTUEAALGPC/xhBQAAAdJJREFUWEfN

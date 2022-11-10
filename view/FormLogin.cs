@@ -27,8 +27,6 @@ namespace projetofinal
             cbNome.DisplayMember = "Nome";
             cbNome.ValueMember = "ID";
             cbNome.Text = "Selecione";
-            cbNome.Text = "João da Silva";
-            tbSenha.Text = "321654";
         }
 
         private void btLogin_Click(object sender, EventArgs e)
@@ -60,12 +58,6 @@ namespace projetofinal
             {
                 MessageBox.Show(erro.Message, "Erro na conexão, tente novamente!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        private void btLimpar_Click(object sender, EventArgs e)
-        {//btLimpar
-            cbNome.Text = "Selecione";
-            tbSenha.Clear();
         }
 
         #region Sair

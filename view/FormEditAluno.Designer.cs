@@ -29,9 +29,9 @@ namespace projetofinal
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormEditAluno));
             this.dgalunos = new System.Windows.Forms.DataGridView();
             this.tbBusca = new System.Windows.Forms.TextBox();
@@ -84,37 +84,37 @@ namespace projetofinal
             this.dgalunos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgalunos.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgalunos.BackgroundColor = System.Drawing.Color.OldLace;
             this.dgalunos.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgalunos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgalunos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgalunos.Location = new System.Drawing.Point(612, 205);
             this.dgalunos.MultiSelect = false;
             this.dgalunos.Name = "dgalunos";
             this.dgalunos.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightGray;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgalunos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgalunos.RowHeadersVisible = false;
             this.dgalunos.RowHeadersWidth = 51;
             this.dgalunos.RowTemplate.Height = 29;
@@ -132,7 +132,7 @@ namespace projetofinal
             this.tbBusca.ForeColor = System.Drawing.Color.DimGray;
             this.tbBusca.Location = new System.Drawing.Point(612, 82);
             this.tbBusca.Name = "tbBusca";
-            this.tbBusca.Size = new System.Drawing.Size(724, 34);
+            this.tbBusca.Size = new System.Drawing.Size(729, 34);
             this.tbBusca.TabIndex = 18;
             this.tbBusca.TextChanged += new System.EventHandler(this.tbBusca_TextChanged);
             // 
@@ -154,6 +154,7 @@ namespace projetofinal
             this.btCancelar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btCancelar.BackColor = System.Drawing.Color.White;
             this.btCancelar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btCancelar.FlatAppearance.BorderSize = 2;
             this.btCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btCancelar.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btCancelar.ForeColor = System.Drawing.Color.DimGray;
@@ -172,6 +173,7 @@ namespace projetofinal
             this.btEditar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btEditar.BackColor = System.Drawing.Color.White;
             this.btEditar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btEditar.FlatAppearance.BorderSize = 2;
             this.btEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btEditar.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btEditar.ForeColor = System.Drawing.Color.DimGray;
@@ -189,6 +191,7 @@ namespace projetofinal
             this.btExcluir.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btExcluir.BackColor = System.Drawing.Color.White;
             this.btExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btExcluir.FlatAppearance.BorderSize = 2;
             this.btExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btExcluir.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btExcluir.ForeColor = System.Drawing.Color.DimGray;
@@ -206,6 +209,7 @@ namespace projetofinal
             this.btSalvar.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.btSalvar.BackColor = System.Drawing.Color.DimGray;
             this.btSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btSalvar.FlatAppearance.BorderSize = 2;
             this.btSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSalvar.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btSalvar.ForeColor = System.Drawing.Color.White;
@@ -235,13 +239,14 @@ namespace projetofinal
             // 
             this.btbuscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btbuscar.BackColor = System.Drawing.Color.Transparent;
+            this.btbuscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btbuscar.BackgroundImage")));
+            this.btbuscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btbuscar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btbuscar.FlatAppearance.BorderSize = 0;
             this.btbuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btbuscar.Image = ((System.Drawing.Image)(resources.GetObject("btbuscar.Image")));
-            this.btbuscar.Location = new System.Drawing.Point(1336, 77);
+            this.btbuscar.Location = new System.Drawing.Point(1347, 82);
             this.btbuscar.Name = "btbuscar";
-            this.btbuscar.Size = new System.Drawing.Size(46, 38);
+            this.btbuscar.Size = new System.Drawing.Size(35, 34);
             this.btbuscar.TabIndex = 1;
             this.btbuscar.UseVisualStyleBackColor = true;
             this.btbuscar.Click += new System.EventHandler(this.tbBusca_TextChanged);
@@ -740,7 +745,7 @@ namespace projetofinal
             this.Name = "FormEditAluno";
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ajustes";
+            this.Text = "Ajustes de Aluno";
             this.Load += new System.EventHandler(this.FormEditAluno_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FormListAluno_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgalunos)).EndInit();
