@@ -1,4 +1,5 @@
 ﻿using academia;
+using academia.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,6 +72,12 @@ namespace projetofinal
         {//btInserirProf
             FormInserirProf Fip = new FormInserirProf();
             Fip.ShowDialog();
+        }
+
+        private void btEditarParticipantes_Click(object sender, EventArgs e)
+        {//btEditarParticipantes
+            FormEditarParticipantes Feparticipantes = new FormEditarParticipantes();
+            Feparticipantes.ShowDialog();
         }
 
         #endregion
